@@ -1,0 +1,336 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/1465.jpg"><div class="preeln-entityname">Jay Robert Inslee </div>
+	  (Dem)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">360-902-4111 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">206-533-0575 (Main campaign number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://www.governor.wa.gov/">http://www.governor.wa.gov/</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">&#160;</span><span class="field"><a href="http://www.jayinslee.com/">http://www.jayinslee.com/</a></span>
+</div>
+<a href="../finance/1465.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1951-2-9</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">Seattle, WA </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">Bainbridge Island, WA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Christian</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">2012</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Democratic</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">Governor</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/WA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">WA</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Incumbent</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2016</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          University of Washington
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">BA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+<h2 class="preeln-secthead">Graduate education: 
+          Willamette University
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">JD</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">Jay Inslee was born and raised in Seattle and now lives on Bainbridge Island, Wash. He earned a bachelor's degree from the University of Washington and a law degree from Willamette University.</p>
+        <p class="preeln-paradata">Inslee practiced law in Selah, a small community near Yakima in central Washington. He served in the Washington state House from 1988 to 1992.</p>
+        <p class="preeln-paradata">Inslee was elected in 1992 to represent the state's 4th Congressional District, but he lost his re-election bid in 1994. He ran unsuccessfully for governor in 2006 and spent two years as regional director of the U.S. Department of Health and Human Services before again winning election to the U.S. House in 1998, this time in the state's 1st District. He resigned from that seat in March 2012 to focus on running for governor.</p>
+        <p class="preeln-paradata">Inslee and his wife, Trudi, have three sons.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">Jay Inslee is a longtime advocate of alternative and renewable energy, an issue he's now incorporated into his economic package as a candidate for governor in Washington.</p>
+        <p class="preeln-paradata">In March 2012, Inslee resigned his seat in the U.S. House, representing Washington's 4th Congressional District, to focus on his gubernatorial campaign.</p>
+        <p class="preeln-paradata">Even though other Democratic political leaders in the state said throughout 2012 that new taxes are needed to pay for education and other state services, Inslee argues that he can provide new funding while avoiding new taxes. He believes economic growth will provide new revenue and that the state can find savings in health care and possibly repealing some tax deductions.</p>
+        <p class="preeln-paradata">To boost the economy, Inslee has proposed a $4,000 small-business tax credit for every job created. He would also provide tax credits for clean technology companies.</p>
+        <p class="preeln-paradata">On his gubernatorial campaign website, Inslee says a key part of his platform is improving education in the state. "At a time when resources are scarce, we have to prioritize the things that make the most difference for our students, such as early learning, smaller class sizes in the early grades, and greater focus on science, technology, engineering, and math," he says.</p>
+        <p class="preeln-paradata">While serving in the U.S. House, Inslee partnered with Republican Rep. Doc Hastings in 2010 in opposing plans by President Barack Obama's administration to permanently abandon a proposed nuclear waste repository in Nevada, a project that has been widely opposed by Nevada officials, including Senate Majority Leader Harry Reid.</p>
+        <p class="preeln-paradata">In 2009, Inslee founded the Sustainable Energy and Environment Coalition to work on clean energy and climate-change issues. He also worked on privacy, media consolidation and technology issues, including sponsoring legislation that dealt with Internet-radio royalty rates.</p>
+        <p class="preeln-paradata">Inslee also has advocated for reforms in Social Security and health care. He pushed for legislation that Obama signed into law in February 2009 to expand health coverage to 4 million uninsured children.</p>
+        <p class="preeln-paradata">Inslee voted in October 2008 against the second version of the $700 billion bailout of the financial industry, and he was the only Washington Democrat in the House to vote against the measure when it was rejected the first time.</p>
+        <p class="preeln-paradata">After years of calling for a "new Apollo Project" focused on energy independence, Inslee in 2007 co-authored a book, "Apollo's Fire," that laid out a passionate argument for an economic shift to ease America into a clean-energy revolution.</p>
+        <p class="preeln-paradata">Inslee was a critic of President George W. Bush's war policy in Iraq, voting against a $100 million spending bill in May 2007.</p>
+        <p class="preeln-paradata">Also in 2007, Inslee won House approval of a plan to designate a national historic site on Bainbridge Island commemorating the hundreds of Japanese-Americans who were forced from their homes en route to World War II-era internment camps.</p>
+        <p class="preeln-paradata">Inslee supports abortion rights and co-sponsored legislation requiring government health insurance plans with prescription-drug coverage to cover contraceptives.</p>
+        <p class="preeln-paradata">American Conservative Union Rating: 0</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: 100</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">Jay Inslee is not up for re-election in 2014.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on August 7, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_candidates/WA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

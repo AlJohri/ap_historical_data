@@ -1,0 +1,332 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/1131.jpg"><div class="preeln-entityname">Raul M. Grijalva </div>
+	  (Dem)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">202-225-2435 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">520-629-0050 (Main campaign number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://www.house.gov/grijalva/">http://www.house.gov/grijalva/</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">&#160;</span><span class="field"><a href="http://www.grijalvaforcongress.com/%20">http://www.grijalvaforcongress.com/ </a></span>
+</div>
+<a href="../finance/1131.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1948-2-19</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">Tucson, AZ </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">Tucson, AZ</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Catholic</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">2002</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Democratic</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">House</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/AZ.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">AZ</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">District:</span><span class="field"><a href="../profilesdistricts/AZ03.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">District 3</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Incumbent</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2014</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          University of Arizona
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">BA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">Raul Grijalva was born and lives in Tucson, Ariz. He earned a bachelor's degree from the University of Arizona.</p>
+        <p class="preeln-paradata">He began his career as a community organizer and was instrumental in starting El Rio Community Health Center in Tucson. He is the former director of El Pueblo Neighborhood Center and a former assistant dean for Hispanic Student Affairs at the University of Arizona.</p>
+        <p class="preeln-paradata">Grijalva was a member of the Tucson Unified School District Governing Board from 1974 to 1986, and he served as a member of the Pima County Board of Supervisors from 1989 to 2002.</p>
+        <p class="preeln-paradata">He was elected to the U.S. House in 2002 with 59 percent of the vote in the general election.</p>
+        <p class="preeln-paradata">Grijalva and his wife, Mona, have three daughters.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">Raul Grijalva easily fended off two challengers in the August 2012 Democratic primary in Arizona's 3rd Congressional District. He faces Republican Gabriela Saucedo Mercer in the November general election.</p>
+        <p class="preeln-paradata">The sprawling 3rd District borders Mexico in southwestern Arizona and includes the western half of Tucson, parts of Yuma and portions of several western suburbs of Phoenix. The district became even more solidly Democratic after the boundaries were redrawn from the former 7th Congressional District following the 2010 census.</p>
+        <p class="preeln-paradata">Grijalva has already slammed Mercer for saying that all immigrants from Middle Eastern nations plan to harm the U.S.</p>
+        <p class="preeln-paradata">Mercer said in an interview with an online news site in 2011 that harming the U.S. is the "only goal in life" for middle-eastern immigrants, so "why do we want them here, legally or illegally."</p>
+        <p class="preeln-paradata">Grijalva said he has many policy differences with his GOP rival and his re-election campaign has focused on those differences.</p>
+        <p class="preeln-paradata">"The allegations, the statements that she's made publicly about me being a Marxist and a Communist and anti-American, that's the other level on which unfortunately this campaign is going to be waged," Grijalva said in August 2010.</p>
+        <p class="preeln-paradata">Grijalva made new enemies in 2009 when he called for a boycott of his home state after the governor signed a bill cracking down on illegal immigrants. The boycott cost the state conventions and other tourist cash. He called for the boycott to be suspended after a federal judge put most of the law on hold in late July 2010.</p>
+        <p class="preeln-paradata">He voted for health care reform in 2010, and his other priorities have included oil drilling industry oversight, promoting a second jobs bill, protecting the Grand Canyon from proposed uranium mining and reducing military involvement in Iraq and Afghanistan.</p>
+        <p class="preeln-paradata">Grijalva's name was floated in early 2009 as a possible candidate for Interior Secretary in President Barack Obama's administration but Sen. Ken Salazar of Colorado got the job. Grijalva was appointed to the House Ways and Means Committee but declined, saying he'd have lost his seniority and subcommittee chairmanship on the House Natural Resources Subcommittee on National Parks, Forests and Public Lands.</p>
+        <p class="preeln-paradata">He initially backed former Sen. John Edwards in the 2008 presidential race, but switched to Obama in January 2008. Grijalva has developed a solid working relationship with the president since then.</p>
+        <p class="preeln-paradata">As a lawmaker in a border district, Grijalva has concentrated much of his attention on drug wars and violence along the Arizona-Mexico border. He and Rep. Gabrielle Giffords, a fellow border representative, met with Secretary of State Hillary Clinton in 2009 before Clinton visited Mexico.</p>
+        <p class="preeln-paradata">Grijalva is co-chair of the Congressional Progressive Caucus, through which he has pushed for reinvesting in infrastructure, the public education system and alternative energy programs that produce new, green-focused jobs. He is a member of the Congressional Hispanic Caucus.</p>
+        <p class="preeln-paradata">Grijalva's measure in August 2005 returned a 25-square mile tract known as La Paz to the Colorado River Indian Tribes. Grijalva accomplished with two years of gathering bi-partisan support what the late Sen. Barry Goldwater twice attempted to do.</p>
+        <p class="preeln-paradata">"Sometimes when we do legislation we think in the abstract ... But then afterward, when you feel and when you sense and when you see the impact, you go, 'OK, this was a very good thing,'" he told The Associated Press in December 2005.</p>
+        <p class="preeln-paradata">Grijalva is for abortion rights, and he supports laws that prevent violence and harassment at reproductive health providers. He also supports enforcing pay equity for men and women doing equivalent work and supports Social Security and health plans that serve senior citizens.</p>
+        <p class="preeln-paradata">Committee Assignments: Education and the Workforce; Natural Resources</p>
+        <p class="preeln-paradata">American Conservative Union Rating: 8</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: 100</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">Raul Grijalva won his August 2014 primary, he will face Gabby Saucedo Mercer in November.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on September 5, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_districts/AZ.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__#3"><span class="bracket">[</span>districts in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../state_candidates/AZ.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

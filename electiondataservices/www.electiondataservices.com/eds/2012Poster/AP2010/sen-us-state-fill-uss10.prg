@@ -1,0 +1,56 @@
+close all
+
+use c:\ap2010\dbfs\statesen in 100 alias sen
+use c:\ap2010\states in 99 alias states
+sele sen
+index on id_ to indstategov
+sele states
+set relation to id_ into sen
+
+doit=0
+IF doit=1
+
+** Fill Uss_Part10 -------------------------------------------------------
+sele sen
+repl all uss_part10 with ' '
+repl all uss_part10 with Win_party
+repl all uss_part10 with sen_part08 for Win_party = ' '
+
+** Fill uss10 for mapping ------------------------------------------------
+**
+** RETAINED BY
+** Retained by Republicans
+repl all uss10 with 1001 for uss_part10 = "GOP" .and. sen_part08 = "GOP"
+** Retained by Democratas
+repl all uss10 with 1002 for uss_part10 = "Dem" .and. sen_part08 = "Dem"
+** Retained by Independents
+repl all uss10 with 1003 for uss_part10 = "Ind" .and. sen_part08 = "Ind"
+** 
+** SWITCHED TO 
+** Switched to Republicans
+repl all uss10 with 10001 for uss_part10 = "GOP" .and. sen_part08 = "Dem"
+** Switched to Democrats
+repl all uss10 with 10002 for uss_part10 = "Dem" .and. sen_part08 = "GOP"
+**Switched to Independents
+repl all uss10 with 10003 for uss_part10 = 'Ind' .and. (sen_part08='GOP' .or. sen_part08='Dem')
+**
+** NO ELECTION
+** No Elec - GOP Control
+repl all uss10 with 101 for win_party = ' ' .and. (uss08=101 .or. uss08=1001 .or. uss08=10001)
+** No Elec - Dem Control
+repl all uss10 with 102 for win_party = ' ' .and. (uss08=102 .or. uss08=1002 .or. uss08=10002)
+** No Elec - Ind Control
+repl all uss10 with 103 for win_party = ' ' .and. (uss08=103 .or. uss08=1003 .or. uss08=10003)
+** No Elec - Divided/Tied
+
+** No US Sen Race in 2010
+repl all Uss10 with 100000 for win_party = ' '
+
+** UNCALLED??????
+**REPL ALL uss10 with 0 for winnerx = 'Z'
+
+ENDIF 
+** doit
+
+sele states
+repl all uss10 with sen->uss10

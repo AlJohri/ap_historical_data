@@ -1,0 +1,340 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/350.jpg"><div class="preeln-entityname">Eddie Bernice Johnson </div>
+	  (Dem)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">202-225-8885 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">214-871-9291 (Main campaign number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://www.house.gov/ebjohnson/">http://www.house.gov/ebjohnson/</a></span>
+</div>
+<a href="../finance/350.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1935-12-3</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">Waco, TX </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">Dallas, TX</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Baptist</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">1992</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Democratic</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">House</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/TX.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">TX</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">District:</span><span class="field"><a href="../profilesdistricts/TX30.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">District 30</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Incumbent</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2014</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          Texas Christian University
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">BA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+<h2 class="preeln-secthead">Graduate education: 
+          Southern Methodist University
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">MPA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">Eddie Bernice Johnson was born in Waco, Texas, and now lives in Dallas. She earned a bachelor's in nursing at Texas Christian University in 1967 and a master's in public administration in 1976 from Southern Methodist University.</p>
+        <p class="preeln-paradata">Johnson then served as chief psychiatric nurse and psychotherapist at the Veterans' Administration Hospital in Dallas.</p>
+        <p class="preeln-paradata">In 1972, she became the first black woman from Dallas County elected to the Texas House of Representatives. She held the seat until 1977, when she was appointed regional director of the Department of Health, Education and Welfare. She worked in the department's Washington office as executive assistant to the administrator for primary health care from 1979 to 1981.</p>
+        <p class="preeln-paradata">Johnson was elected to the Texas Senate in 1986 and was first elected to the U.S. House in 1992.</p>
+        <p class="preeln-paradata">She is divorced and has a son.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">Eddie Bernice Johnson, the first black U.S. representative from the Dallas area, has established her credentials as a reliable liberal and pro-business pragmatist.</p>
+        <p class="preeln-paradata">Johnson faced her first primary challenge in May 2012, defeating two other candidates, a challenge that stemmed from revelations in 2010 that she had directed scholarships to her relatives or the relatives of her staff.</p>
+        <p class="preeln-paradata">Johnson is the ranking member of the House Science, Space, and Technology Committee, and in May 2012 she commended NASA and SpaceX on the successful docking of the Dragon cargo vehicle at the International Space Station.</p>
+        <p class="preeln-paradata">"If the promise of the International Space Station is to be achieved, it is essential that a reliable and cost-effective means to transport cargo to the ISS be available ... I want to congratulate NASA and SpaceX and their dedicated and talented employees on this significant accomplishment," she said in a press release.</p>
+        <p class="preeln-paradata">Johnson stepped into the immigration arena in 2009, joining Democratic Rep. Luis Gutierrez of Chicago on a nationwide tour seeking testimony from families that had been split up by enforcement of immigration policy. Johnson supports reforming the immigration system.</p>
+        <p class="preeln-paradata">She has adopted health care and job training as her key issues. She has cast votes in favor of the family leave bill and against parental notification for abortions for minors in federally funded clinics. She also voted against the ban on a procedure critics call "partial birth abortions."</p>
+        <p class="preeln-paradata">She opposed efforts by Republican Rep. Joe Barton to extend clean air deadlines for Dallas area communities. She said children should not have to suffer longer because industry has a friend in Congress.</p>
+        <p class="preeln-paradata">Johnson has used her post on the Transportation and Infrastructure Committee to support an amendment that allows commercial flights out of Dallas' Love Field.</p>
+        <p class="preeln-paradata">She co-sponsored a bill after Sept. 11 to provide funding for increased security on commercial buses such as Greyhound.</p>
+        <p class="preeln-paradata">Johnson opposed an effort by lawmakers to allow commercial airline pilots to carry guns in the cockpit, saying if a hijacking occurs, "pilots must concentrate on maintaining control and landing the plane as soon as possible and not on confronting terrorists with weapons."</p>
+        <p class="preeln-paradata">In 2007, she was appointed chairwoman of the House Transportation and Infrastructure subcommittee on water resources and the environment. She also serves on the subcommittee on aviation and the subcommittee on railroad, pipelines and hazardous materials.</p>
+        <p class="preeln-paradata">Johnson reintroduced a bill in February 2009 promoting gender equity among university faculty in science, technology, engineering and mathematics.</p>
+        <p class="preeln-paradata">She authored a House resolution in March 2010 that recognized contributions of African-American scientists.</p>
+        <p class="preeln-paradata">Johnson is a former chair of the Congressional Black Caucus.</p>
+        <p class="preeln-paradata">Committee Assignments:  Transportation and Infrastructure; Science, Space, and Technology</p>
+        <p class="preeln-paradata">American Conservative Union Rating: 4</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: 95</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">Eddie Bernice Johnson won her March 2014 primary, she will seek re-election in November.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on June 6, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_districts/TX.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__#30"><span class="bracket">[</span>districts in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../state_candidates/TX.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

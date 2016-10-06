@@ -1,0 +1,7 @@
+| ra_number  |re_number  |dist_type|dist_number|dist_name   |dist_precincts|st_postal|
+|  0|  20003|CD   |  1|Congressional District 1|   189|ME   |
+|  0|  20004|CD   |  2|Congressional District 2|   424|ME   |
+|  0|  28006|CD   |  1|District 1  |   577|NE   |
+|  0|  28007|CD   |  2|District 2  |   423|NE   |
+|  0|  28008|CD   |  3|District 3  |   708|NE   |
+

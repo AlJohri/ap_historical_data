@@ -1,0 +1,337 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/60686.jpg"><div class="preeln-entityname">Amerish 'Ami'  Bera </div>
+	  (Dem)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">202-225-5716 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">877-750-2372 (Main campaign number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://bera.house.gov/">http://bera.house.gov/</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">&#160;</span><span class="field"><a href="http://www.beraforcongress.com">http://www.beraforcongress.com</a></span>
+</div>
+<a href="../finance/60686.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1965-3-2</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">La Palma, CA </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">Elk Grove, CA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Unitarian</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">2012</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Democratic</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">House</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/CA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">CA</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">District:</span><span class="field"><a href="../profilesdistricts/CA07.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">District 7</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Incumbent</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2014</span>
+</div>
+<h2 class="preeln-secthead">Graduate education: 
+          University of California-Irvine
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">MD</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          University of California-Irvine
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">BA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">Ami Bera was born in La Palma, Calif., and now resides in Elk Grove. He earned a bachelor's and a medical degree at the University of California-Irvine.</p>
+        <p class="preeln-paradata">Bera completed his medical residency in internal medicine, then served as medical director for care management at Mercy hospital in Sacramento. He served as chief medical officer for Sacramento County for nearly five years.</p>
+        <p class="preeln-paradata">Bera joined the University of California-Davis in 2004 as associate dean of admissions for the medical school. He stepped down from that position in 2007 but continues to serve as a clinical professor of medicine at the school.</p>
+        <p class="preeln-paradata">Bera and his wife, Janine, also a physician, have a daughter.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">Ami Bera is running for the second consecutive time in one of California's most competitive congressional races. In the November 2012 general election, he is seeking to unseat Republican Rep. Dan Lungren in a suburban Sacramento County district where Republicans and Democrats are evenly split in voter registration.</p>
+        <p class="preeln-paradata">Congressional Democrats are targeting the seat as they attempt to win back the majority in the House of Representatives. The matchup is one of 38 "Red to Blue" races nationwide where the Democratic Congressional Campaign Committee says it will provide financial, communications and strategic support as Democrats try to regain control in the House.</p>
+        <p class="preeln-paradata">The National Republican Congressional Committee is offering Lungren similar support through its Patriot Program.</p>
+        <p class="preeln-paradata">Lungren narrowly defeated Bera in 2010, with 51 percent of the vote. Lungren is seeking re-election in a newly drawn congressional district that includes 65 percent of his old district, but is 2 percentage points lower in Republican voter registration.</p>
+        <p class="preeln-paradata">Moreover, Bera, whose parents emigrated from India, has had strong fundraising support from the Indian-American community. In both campaigns, he has raised more campaign funds than the incumbent going into the June primary, which is unusual.</p>
+        <p class="preeln-paradata">Bera's background as a physician and educator has shaped his campaign. Bera calls the 2010 health care reform bill an important first step in getting people basic medical coverage. But he says on his website that "we must continue fighting the insurance companies to truly reduce costs." He also advocates strengthening paid family leave for medical emergencies, citing his experience as a doctor.</p>
+        <p class="preeln-paradata">He says he would bring a doctor's perspective to reforming the Medicare system, protecting the safety net while fighting fraud and abuse. Medicare already was an issue in the 2012 primary campaign, with Congressional Democrats and independent groups running ads and making robocalls against Lungren, while other outside groups sent out political mailers supporting the incumbent's stance.</p>
+        <p class="preeln-paradata">In an opinion piece published in March 2012 and posted on his website, Bera criticizes Lungren and other Republicans in Congress for trying to dictate whether insurance companies should cover oral contraceptives or other health programs, or whether employers should be able to deny coverage. His frustration, he wrote, is that none of them had ever gone to medical school.</p>
+        <p class="preeln-paradata">"Why are individuals with no health care expertise about to decide how a doctor takes care of their patients?" he asked.</p>
+        <p class="preeln-paradata">On other issues, Bera promises to oppose offshore drilling and promote alternative energy programs to create jobs without harming the environment.</p>
+        <p class="preeln-paradata">American Conservative Union Rating: Not rated</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: Not rated</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">Ami Bera won his June 2014 primary, he will face Doug Ose in November.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on June 12, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_districts/CA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__#7"><span class="bracket">[</span>districts in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../state_candidates/CA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

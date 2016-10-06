@@ -1,0 +1,306 @@
+INITIALIZATION FILES
+9/1/08
+
+WHAT ARE INITIALIZATION FILES? 
+
+Initialization files are made available prior to every election test, and before the general election. They are updated when when changes are made to the AP Elections System state databases. 
+
+Use of the initialization files is not required, and your database or web pages may be built entirely "on-the-fly" from the data feeds provided at ftp://electionsonline.ap.org during the election. 
+
+However, if you want to pre-initialize your database or web site with static information, you can download the initialization files from: ftp://electionsonline.ap.org/inits/<ST>/ e.g., ftp://electionsonline.ap.org/inits/VA/ 
+
+(<SP> = State Postal Code, e.g., AK, CA, TX)
+
+- The <SP>_ru.txt file contains a list of all "reporting units" (all counties (towns and cities for New England states), and the state) for that state. 
+- The <SP>_pol.txt contains an entry for each candidate running in each AP-covered race for that state. 
+- The <ST>_race.txt file contains a list of all active races (contested and uncontested) covered by the AP in an upcoming election for that state.
+- The <ST>_rura.txt file lists all the reporting units that are participating in each race.
+- The <ST>_fusion.txt file lists all active candidates running for the same race under two parties (currently CT, SC, NY, DE support fusion).
+- The <ST_dist.txt lists, during Presidential Primaries, the Delegate Districts in an election where delegates are awarded by district. 
+
+See below for specific field definitions for each initialization file.
+
+Detailed information on the format of these files is provided as part of the AP Elections Online technical documentation, available at http://apdigitalsupport.ap.org.
+
+AP Customer Support: 877-836-9477 or email: apcustomersupport@ap.org 
+
+
+Initialization Files for 2008 AP Elections Online
+=================================================
+
+Below is a list of the five files (six for CT, DE, NY, SC - see fusion initialization file below) 
+provided before elections or election tests. 
+
+The fields within each file are described and the corresponding field in the 
+delimited results file is listed in parentheses.
+
+
+=================================
+Reporting Unit File - <SP>_ru.txt
+=================================
+
+This file lists all the reporting unit information for an AP-covered election.
+
+A reporting unit is a location that reports a vote total -- that can be a state, 
+a county, or a town or city (for New England states only).
+
+The fields in the file are:
+
+ru_number ("County Number" in delimited results file) - integer
+	Unique id within state for reporting unit.
+
+ru_parent (N/A - Not available in delimited results file) - integer
+	The integer ru_number of the parent of this reporting unit. For example, 
+	the ru_parent of a county is generally "1", which is the ru_number 
+	for the state.
+
+ru_name ("County name") - string
+	Full name of reporting unit, e.g. "Miami-Dade", or "Florida"
+
+ru_abbrv (NA) - string
+	Short Name of reporting unit, usually same as ru_name for counties.
+
+ru_type (NA) - string
+	"S" = state, "C" = county, "T" = town for this election. Other values are 
+	possible.
+
+rut_name (NA) - string
+	"State", "County", "Town"
+
+ru_fip ("FIPS Code") - integer 
+	For counties, the standard FIPS code, unique within the United States.
+
+ru_precincts ("Total Precincts") - integer 
+	Number of precincts contained within this reporting unit (county, town, state)).
+
+ru_reg_voters (NA) - integer 
+	Total number of registered voters in this reporting unit (county, town, state).
+
+
+========================================
+Politician/Candidate File - <SP>_pol.txt
+========================================
+
+This file contains a record for each candidate running in each AP-covered race for that state. 
+
+The fields in the file are:
+
+polra_number ("Candidate number" in delimited results file) - integer 
+	Unique id within state for this candidate for their race
+
+pol_first_name ("First Name") - string
+	Candidate's first name
+
+pol_middle_name ("Middle Name") - string
+	Candidate's middle name
+
+pol_last_name ("Last Name") - string
+	Candidate's last name
+
+pol_abbrv (NA) - string
+	Candidate's abbreviated name, usually last name with some vowels removed 
+	if too long.
+
+pol_junior ("Junior") - string
+	Candidate's suffix.
+
+polra_party ("Party") - string
+	Candidates main registered party.
+
+ra_number ("Race Number" in the delimited results file) - integer 
+	Unique id within state for this race. See Race File.
+
+pol_nat_id - (National Politician ID; "NPID") - integer
+	National politician number; Uniquely assigned id for this politician 
+	regardless of the state or races in which this politician is a candidate.
+
+polra_in_order - integer
+	Ballot order of this candidate.  There may be gaps in sequence in 
+	this order field.
+
+pol_number - integer
+	Unique politician id within state for this candidate.
+
+st_postal|- (State Postal) - string
+        Two character State postal abbreviation
+
+=========================
+Race File - <SP>_race.txt
+=========================
+
+This file contains a list of all active races (contested and uncontested) covered by the AP in an upcoming election for that state.
+
+The fields in the file are:
+
+ra_number ("Race Number" in the delimited results file) - integer 
+	Unique id within state for this race. A "race" describes the contest for a single 
+	office.
+
+of_number (NA) - integer 
+	Unique id for this office within a state. An office is comprised of an 
+	office type (e.g. "U.S. House") and a seat (e.g. District 1).
+
+se_number ("Seat Number") - integer 
+	Integer indicating district number or a proposition number. This may be 
+	zero ('0') for a statewide race.
+
+race_id ("Race ID") - char
+	Code indicating the type of race, generally "D" for Dem. primary, "R" 
+	for Rep. primary, "G" for general election.
+
+office_id ("Office ID") - char
+	Code indicating the office type. Some codes are standard in all states, whereas 
+	some are left up to the states to define on their own. 	National codes are: 
+	P=President, S=Senate, H=U.S. House, G=Governor, I=Init./Prop. This describes 
+	a category but not a unique id, i.e. all justices in a state may be code "J", 
+	but that may cover State Supreme Court Justice all the way down to a town judge.
+
+ra_num_winners ("Number of Winners") - integer
+	Maximum number of winners in this race. Usually 1.
+
+rt_number (NA) - integer
+	Unique id in state to indicate the race type, similar to race id but more specific. 
+	For example, both a Democratic Primary and a Special Democatic Primary have 
+	the race race_id ("D") but they would have different rt_numbers.
+
+rt_party_name ("Race Type Party") - string
+	Name of party race applies to, e.g. "GOP" if a Republican Primary.	
+
+of_description (NA) - string
+	Describes the office if the office_type name does not full describe 
+	office -- usually used where a seat covers a particular geographic area. 
+	For example, and office with the office type of "Governor" does not need any
+	further of_description. However, an office with the office style of 
+	"State Legislature" and seat number 47, may have the of_description "Santa Ana".
+
+ot_number (NA) - integer
+	Office type number, unique id within state for this office type, uniquely 
+	describes a particular office type. For example, in the "Justice" example above,
+	the office for Supreme Court Justice would be a different office type (ot_number)
+	from Town Judge. However, all Town Judge offices would have the same ot_number.
+
+ot_name (NA) - string
+	Office type name, one to one correspondence with the ot_number, 
+	office type number id. For example: "Governor".
+
+se_name (NA) - string
+	Seat name, one to one correspondence with the se_number. For example: "District 12A".
+
+of_scope - string
+	Office scope - Local (L) or Statewide (S) race.
+
+race_order - integer
+	Unique order number of race within an election
+
+el_date - integer
+	Date of the election, in YYYYMMDD format.
+
+ra_uncontested - boolean
+	Binary flag used to indicate if the race is uncontested.  
+	A value of "0" indicates the race is contested.  
+	A value of "1" indicates the race is uncontested.
+
+ra_tabulate - boolean
+	Binary flag used to indicate if the race is to be tabulated.  
+	A value of "0" indicates the race is not to be tabulated.  
+	A value of "1" indicates the race is to be tabulated.
+
+st_postal|- (State Postal) - string
+        Two character State postal abbreviation
+
+ra_national_b (National race flag) - boolean
+	Binary flag used to indicate if the race is a national race (by definition, Pres, Gov, US Sen, and US House are national races; 
+	certain ballot issues/initiatives may be deemed national races.)
+	A value of "0" indicates the race is not a national race.  
+	A value of "1" indicates the race is a national race.
+
+
+
+========================================
+Race/Reporting Unit File - <SP>_rura.txt
+========================================
+
+This file lists all the reporting units that are participating in each race.
+
+Some races for smaller offices may only touch a single county or town, whereas races 
+for statewide offices will be linked to every county in the state.
+
+The fields in the file are:
+
+ra_number ("Race Number" in the delimited results file) - integer 
+	Unique id within state for this race. A "race" describes the contest for a single
+	office. See Race File.
+
+ru_number ("County Number" in delimited results file) - integer
+	Unique id within state for reporting unit.
+
+rura_tot_pcts - integer
+	Total number of precincts in this reporting unit (county, town, state) that are 
+	participating in this race.
+
+rura_voters - integer
+	Total number of registered voters in this reporting unit (county, town, state) 
+	for this race.
+
+
+==================================================
+Fused Candidate Information File - <SP>_fusion.txt
+==================================================
+
+This file lists all active candidates running for the same 
+race under two parties, i.e., George Bush running for president as both a Republican 
+and a Conservative, within a state. Note fusion is state specific, and does not apply to primaries. 
+
+The existence of a <SP>_fusion.txt initialization file indicates fusion exists for that state.
+Current states that regularly have fused candidates are CT, DE, NY, and SC.
+
+ra_number - integer
+	Unique id within state for this race.
+
+polra_number ("Candidate number" in delimited results file) - integer 
+	Unique id within state for this candidate
+
+polra_party ("Party") - string
+	Abbreviation for a particular party-line of this candidate.
+
+polra_to_be_fused - boolean
+	Binary flag used to indicate if the candidate is to be fused.  
+	A value of "0" indicates the major party line.  A value of "1" indicates a 
+	minor party line.
+
+pol_nat_id - integer
+	National politician number; Uniquely assigned id for this politician regardless 
+	of the state or races in which this politician is a candidate.
+
+pol_number - integer
+	Unique politician id within state for this candidate.
+
+
+=============================
+District File - <SP>_dist.txt
+=============================
+
+During Presidential Primaries, this file lists the Delegate Districts in an election where 
+delegates are awarded by district. One record for each district in the state per race 
+(different races sometimes have different district identifiers).
+
+ra_number ("Race Number" in the delimited results file) - integer 
+	Unique id within state for this race. A "race" describes the contest for 
+	a single office. See Race File.
+
+re_number - integer 
+	Unique id within the state for the district, regardless of district type.
+
+dist_type - string
+	Type of district, such as CD for congressional district, PL for PLEO, A
+	L for At Large
+
+dist_number - integer
+	District number within the district type, e.g.. 4 for Congressional District 4.
+
+dist_name - string
+	Distict 1, PLEO, At Large, for example.
+
+dist_precincts - integer
+	Total number of precincts within this district
+***********

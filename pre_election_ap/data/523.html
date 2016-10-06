@@ -1,0 +1,345 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/523.jpg"><div class="preeln-entityname">Robert Brown Aderholt </div>
+	  (Rep)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">202-225-4876 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">205-486-2605 (Main campaign number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://www.house.gov/aderholt">http://www.house.gov/aderholt</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">&#160;</span><span class="field"><a href="http://www.robertaderholtforcongress.com">http://www.robertaderholtforcongress.com</a></span>
+</div>
+<a href="../finance/523.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1965-7-22</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">Haleyville, AL </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">Haleyville, AL</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Congregationalist</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">1996</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Republican</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">House</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/AL.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">AL</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">District:</span><span class="field"><a href="../profilesdistricts/AL04.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">District 4</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Incumbent</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2014</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          Birmingham Southern University
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">BA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+<h2 class="preeln-secthead">Graduate education: 
+          Samford University
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">JD</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">Robert Aderholt was born in Haleyville, Ala., where he still resides. He received a bachelor's degree from Birmingham Southern University in 1987 and a law degree from Samford University in 1990.</p>
+        <p class="preeln-paradata">Aderholt was elected to be a delegate for George H. W. Bush at the 1992 Republican National Convention. That year he was appointed a Haleyville municipal judge and served for four years.</p>
+        <p class="preeln-paradata">Aderholt served as legal assistant to Alabama Gov. Fob James. He was elected to the U.S. House in 1996.</p>
+        <p class="preeln-paradata">He and his wife, Caroline, have two children.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">Robert Aderholt is one of the most conservative members of Alabama's U.S. House delegation, representing the 4th Congressional District. He is the only member of the delegation to join the new congressional Tea Party Caucus. He announced in 2010 he was joining the caucus in a posting on his Facebook page, in which he said he supports the goals of the tea party movement.</p>
+        <p class="preeln-paradata">The only area where Aderholt has separated with the tea party movement is on the issue of budget earmarks, which the congressman has used regularly to pump money into his mostly rural district.</p>
+        <p class="preeln-paradata">He is a member of the Appropriations Committee and is chairman of the panel's homeland security subcommittee. He says he supports fiscal responsibility, truth in budgeting and a federal government that operates within its means.</p>
+        <p class="preeln-paradata">Aderholt in 2012 proposed a provision in a Homeland Security spending bill to bar Immigration and Customs Enforcement from providing abortions for illegal immigrant detainees. The measure would block ICE from using agency funding to provide abortion services for detainees except in the case of rape, incest or if there life of the mother would be endangered.</p>
+        <p class="preeln-paradata">Aderholt voted against the 2009 approximately $800 billion economic stimulus package. He has opposed other stimulus bills and efforts to bail out the financial industry.</p>
+        <p class="preeln-paradata">Aderholt said he sympathizes with those who have lost their jobs but said stimulus measures are not the best way to address the country's failing economy. He said he believes stimulus efforts will not energize the economy quickly and will disproportionately benefit large, urban areas more than rural, working class states like Alabama.</p>
+        <p class="preeln-paradata">Several Alabama communities that were hardest hit by April 2011 tornadoes are located in Aderholt's district. He made a speech on the floor of Congress praising the work of first responders in those communities.</p>
+        <p class="preeln-paradata">"Despite the carnage, they performed their duties with valor and perseverance. Many of them were working to assist others while not knowing whether their own families were safe," Aderholt said in April 2012 concerning police officers, fire fighters and others who responded following the tornadoes.</p>
+        <p class="preeln-paradata">Aderholt cast a deciding vote in 2005 for the Central American Free Trade Agreement, which passed the House by two votes only after he reversed his opposition to the pact in a deal with the White House.</p>
+        <p class="preeln-paradata">The White House agreement was supposed to shield the 4th District's sock manufacturers from cheap imports, but constituents who feared major job losses nonetheless criticized Aderholt's vote. Cheaper sock imports escalated rapidly after CAFTA's implementation and the textile sector in the district has seen considerable cuts.</p>
+        <p class="preeln-paradata">Many of the residents of Aderholt's district are employed in the space industry, and he has fought efforts by President Barack Obama's administration to cut funding for NASA's programs.</p>
+        <p class="preeln-paradata">Aderholt said he supported a NASA authorization bill, which passed the House in July 2010, because it "strongly rejects the Administration's proposal to kill Constellation by providing a well thought-out strategy for maintaining a strong and well-rounded American space program."</p>
+        <p class="preeln-paradata">Aderholt announced in March 2009 that he would co-sponsor legislation that would prevent the regulation or taxation of gas emissions from farm animals, which are not subject to regulation by the Environmental Protection Agency.</p>
+        <p class="preeln-paradata">Aderholt has vocally supported prayer in schools and the posting of the Ten Commandments in public places.</p>
+        <p class="preeln-paradata">He is a member of the Helsinki Commission and is active in international humanitarian issues. He traveled to Sudan in 2006 to urge its government to end the violence in the Darfur region.</p>
+        <p class="preeln-paradata">"This is one of those issues that sort of gripped me when I first heard about what was happening with the genocide," Aderholt said. "I've always said I'm pro-life. I think being pro-life means you're pro-life not just on the abortion issue but with all life."</p>
+        <p class="preeln-paradata">Aderholt had no opposition in the 2012 GOP primary. In the general election, he faces Democratic state Rep. Daniel Boman, a lawyer from Sulligent.</p>
+        <p class="preeln-paradata">Committee Assignments: Appropriations</p>
+        <p class="preeln-paradata">American Conservative Union Rating: 76</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: 10</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">Robert Aderholt won his June 2014 primary, he will seek re-election in November.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on June 12, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_districts/AL.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__#4"><span class="bracket">[</span>districts in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../state_candidates/AL.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

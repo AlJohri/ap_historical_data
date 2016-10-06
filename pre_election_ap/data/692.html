@@ -1,0 +1,340 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/692.jpg"><div class="preeln-entityname">Gerald 'Jerry' W. Moran </div>
+	  (Rep)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">202-224-6521 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">785-301-2310  (Main campaign number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://moran.senate.gov/">http://moran.senate.gov/</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">&#160;</span><span class="field"><a href="http://www.moranforkansas.com/">http://www.moranforkansas.com/</a></span>
+</div>
+<a href="../finance/692.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1954-5-29</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">Great Bend, KS </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">Hays, KS</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Methodist</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">2010</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Republican</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">Senate</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/KS.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">KS</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Incumbent</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2016</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          University of Kansas
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">BA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+<h2 class="preeln-secthead">Graduate education: 
+          University of Kansas
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">JD</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">Jerry Moran was born in Great Bend, Kan., and now lives in Manhattan, where he moved in June 2012 from his longtime home of Hays. He received a bachelor's degree in economics and a law degree from the University of Kansas.</p>
+        <p class="preeln-paradata">Moran practiced law for 15 years. He said the political bug bit him in the summer of 1974 when, between his sophomore and junior years in college, he served as a congressional intern.</p>
+        <p class="preeln-paradata">Moran served eight years in the Kansas Senate, including two as majority leader, before winning election to the U.S. House in 1996. He was elected to the U.S. Senate in 2010.</p>
+        <p class="preeln-paradata">Moran and his wife, Robba, have two daughters.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">Jerry Moran has cultivated a folksy image as a member of Congress, emphasizing weekend trips back to Kansas and attending hundreds of town hall meetings. The effort helped foster an impression that he is a GOP moderate, and he was listed as such in the Almanac of American Politics ahead of his 2010 race for the U.S. Senate.</p>
+        <p class="preeln-paradata">But Moran's voting record actually has been fairly conservative, both during a long stint in the House and now as a freshman senator. He's compiled an American Conservative Union rating of 92 percent as a senator, matching his lifetime rating in the House.</p>
+        <p class="preeln-paradata">Like other members of the state's all-GOP congressional delegation, Moran has been a frequent critic of President Barack Obama.</p>
+        <p class="preeln-paradata">He's criticized the Environmental Protection Agency over what he's seen as its overreaching in imposing new environmental rules and cheered an August 2012 court decision blocking some air pollution rules. He also took the Department of Labor to task over safety rules, since scrapped, limiting the work children could do on the farm, saying the rules would have endangered a way of life.</p>
+        <p class="preeln-paradata">Moran co-sponsored legislation designed to stop online piracy of movies and music but quickly dropped his backing on grounds the bill could undermine innovation and Internet freedom. Moran said in January 2012 that the "uprising" of so many people with similar concerns was a "major turnaround, and in my experience it is something that has happened very rarely." Congress indefinitely postponed consideration of the bill and a companion measure in the House.</p>
+        <p class="preeln-paradata">When Boeing Co. announced in 2012 that it was closing its plant in Wichita, Moran called the decision "a blow to our mental health as well as our pocketbooks." Kansas officials are still willing to do what it takes to keep the Boeing plant open, he said, but "it's difficult to negotiate with someone who hasn't kept their word." Boeing had been awarded a $35 million contract to build refueling tankers, and Kansas had expected to get a share of the work.</p>
+        <p class="preeln-paradata">Moran cruised to victory in the general election in 2010, winning 70 percent of the vote against a relatively unknown Democratic candidate.</p>
+        <p class="preeln-paradata">The 2010 primary was another matter, however, with Moran taking just 50 percent of the vote against fellow U.S. Rep. Todd Tiahrt.</p>
+        <p class="preeln-paradata">In the lead up to that year's primary, some Republicans questioned Moran's toughness because he never had a hard time winning election to the U.S. House. Moran represented the 1st District in western Kansas, among the nation's safest for the GOP.</p>
+        <p class="preeln-paradata">But Moran ran hard to the right in the primary against Tiahrt and didn't hesitate to hit back when Tiahrt attacked his record.</p>
+        <p class="preeln-paradata">He accused Tiahrt of supporting amnesty for illegal immigrants by backing legislation to help some of them with college tuition, a position Tiahrt repudiated. Moran's campaign also sent out tough mailers raising questions about Tiahrt's budget earmarking as a member of the House Appropriations Committee.</p>
+        <p class="preeln-paradata">Moran bragged during the campaign that he'd never voted for any economic bailouts, and that immediately after the passage of the 2010 health care reform bill, he filed a bill to repeal it. Moran has backed a so-called fair tax proposal to replace federal income and estate taxes with a national sales tax.</p>
+        <p class="preeln-paradata">Yet his focus on agriculture has caused him to break in the past with Republicans. As a House member, he differed with President George W. Bush on farm policy and with the administration's policies toward Cuba, hoping that changes would result in more sales of agricultural products.</p>
+        <p class="preeln-paradata">He also called for the repeal of the No Child Left Behind Act, saying education policy should be left to states and local school boards.</p>
+        <p class="preeln-paradata">After Moran's election as senator, Gov. Sam Brownback appointed Moran's wife, Robba, to the Kansas Board of Regents, which oversees the state's higher education system. The Moran's also moved from their longtime hometown of Hays in western Kansas to Manhattan, home to Kansas State University.</p>
+        <p class="preeln-paradata">Moran considered running for governor in 2002 and 2006 but ultimately opted out of those contests.</p>
+        <p class="preeln-paradata">Committee Assignments: Veterans' Affairs; Aging; Banking, Housing and Urban Affairs ; Appropriations; Homeland Security and Governmental Affairs</p>
+        <p class="preeln-paradata">American Conservative Union Rating: 85</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: 10</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">Jerry Moran is not up for re-election in 2014.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on August 6, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_candidates/KS.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

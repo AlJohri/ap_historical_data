@@ -1,0 +1,327 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/62406.jpg"><div class="preeln-entityname">Daniel 'Dan' Timothy Kildee </div>
+	  (Dem)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">202-225-3611 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">810-213-7199 (Main campaign number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://dankildee.house.gov/">http://dankildee.house.gov/</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">&#160;</span><span class="field"><a href="http://www.dankildee.com/">http://www.dankildee.com/</a></span>
+</div>
+<a href="../finance/62406.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1958-8-11</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">Flint, MI </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">Flint, MI</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Roman Catholic</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">2012</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Democratic</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">House</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/MI.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">MI</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">District:</span><span class="field"><a href="../profilesdistricts/MI05.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">District 5</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Incumbent</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2014</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          Central Michigan University
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">BS</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">Dan Kildee was born, raised and currently resides in Flint, Mich. He received a bachelor's degree in administration from Central Michigan University.</p>
+        <p class="preeln-paradata">Kildee was elected to the Flint Board of Education in 1977 at age 18. He served as a Genesee County commissioner from 1985 to 1997 and country treasurer from 1997 to 2009. Beginning in 2010, Kildee headed the Center for Community Progress, which promoted the reuse of vacant, abandoned and problem properties across the United States.</p>
+        <p class="preeln-paradata">Kildee ran the congressional campaigns for his uncle, veteran U.S. Rep. Dale Kildee, starting in 1992.</p>
+        <p class="preeln-paradata">Kildee and his wife, Jennifer, have three children.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">Dan Kildee, who has run the congressional campaigns for his uncle, U.S. Rep. Dale Kildee, since 1992, is seeking that same seat in 2012.</p>
+        <p class="preeln-paradata">Dale Kildee announced in 2011 that he would not seek re-election to the Flint-area U.S. House seat he had held since 1977.</p>
+        <p class="preeln-paradata">His nephew, Dan Kildee, a fellow Democrat who mounted a brief run for governor in 2010, jumped into the 5th Congressional District race, saying he had established a "proven record of making government work for the people."</p>
+        <p class="preeln-paradata">At age 18, Kildee was elected to the Flint Board of Education in 1977. He also served as a Genesee County commissioner from 1985 to 1997 and country treasurer from 1997 to 2009.</p>
+        <p class="preeln-paradata">In 2010, he announced a run for the state's highest office, jumping into the governor's race. "The way to sort of typify the reaction to my candidacy is that I'm a real Democrat that can win in November," he said at the time.</p>
+        <p class="preeln-paradata">Kildee said he was running for governor because it was time to make "a clean break from the mess in Lansing" and give "Michigan's working people a governor who gets the job done."</p>
+        <p class="preeln-paradata">Less than a month later, though, Kildee was out of the race, having failed to unite progressive groups and organized labor around his candidacy.</p>
+        <p class="preeln-paradata">Afterward, he continued his work heading up the Center for Community Progress, which promotes the reuse of vacant, abandoned and problem properties nationwide.</p>
+        <p class="preeln-paradata">Then his uncle decided against making another run for Congress. "This is something I'm driven to do, so I'm all in," Dan Kildee said.</p>
+        <p class="preeln-paradata">Kildee believes that Congress' first priority should be job creation and that more must be done to protect the middle class and working families.</p>
+        <p class="preeln-paradata">He believes in funding and strengthening the public education system and ensuring that everyone has the possibility of receiving a higher education degree.</p>
+        <p class="preeln-paradata">Regarding women's issues, Kildee is pro-abortion rights and favors the Paycheck Fairness Act and Violence Against Women Act. He criticized House Republicans for turning the Violence Against Women Act "into a political weapon in order to satisfy extremists in their own party."</p>
+        <p class="preeln-paradata">American Conservative Union Rating: Not rated</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: Not rated</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">Dan Kildee won his August 2014 primary, he will face Allen Hardwick in November.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on August 6, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_districts/MI.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__#5"><span class="bracket">[</span>districts in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../state_candidates/MI.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

@@ -1,0 +1,358 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/385.jpg"><div class="preeln-entityname">Rush Dew Holt Jr.</div>
+	  (Dem)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">202-225-5801 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">609-799-0800 (Main campaign number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://www.holt.house.gov">http://www.holt.house.gov</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">&#160;</span><span class="field"><a href="http://www.rushholt.com/">http://www.rushholt.com/</a></span>
+</div>
+<a href="../finance/385.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1948-10-15</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">Weston, WV </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">Hopewell Township, NJ</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Protestant</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">&#160;</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Democratic</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">House</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/NJ.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">NJ</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">District:</span><span class="field"><a href="../profilesdistricts/NJ12.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">District 12</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Not seeking re-election</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2014</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          Carleton College
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">BA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+<h2 class="preeln-secthead">Graduate education: 
+          New York University
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">MA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+<h2 class="preeln-secthead">Graduate education: 
+          New York University
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">PhD</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">Rush Holt was born in Weston, W.Va., and now resides in Pennington, N.J. He earned a bachelor's degree from Carleton College and master's and doctoral degrees from New York University.</p>
+        <p class="preeln-paradata">His father, also named Rush Holt, was a U.S. senator from West Virginia from 1935 to 1941, and his mother served as West Virginia's secretary of state.</p>
+        <p class="preeln-paradata">Holt worked as assistant director of Princeton Plasma Physics Laboratory from 1989 to 1997. He was acting chief of the nuclear and scientific division in the State Department's Office of Strategic Forces Analysis from 1987 to 1989.</p>
+        <p class="preeln-paradata">He was elected to the U.S. House in 1998.</p>
+        <p class="preeln-paradata">Holt and his wife, Margaret, have three children.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">Rush Holt, one of New Jersey's most liberal Democrats, was not a complete newcomer to Capitol Hill when he arrived there after his election to the House in 1998.</p>
+        <p class="preeln-paradata">His father was a senator from West Virginia, and Holt spent one year in the early 1980s working for Rep. Bob Edgar, a Democrat from Pennsylvania who served six terms in Congress.</p>
+        <p class="preeln-paradata">Holt is seeking re-election to the House from New Jersey's 12th Congressional District.</p>
+        <p class="preeln-paradata">He introduced an amendment in May 2012 that would have banned racial profiling by any department that receives federal money. He said wholesale surveillance has proven ineffective in disrupting terrorist plans. The amendment was to a resolution calling for an end to New York Police Department programs that infiltrated mosques and monitored even innocent conversations in cafes and bookstores.</p>
+        <p class="preeln-paradata">A month earlier, he joined nine other House Democrats in a letter that criticized New York Mayor Michael Bloomberg for his "underhanded and unprofessional" response to criticism of the New York Police Department's spying programs.</p>
+        <p class="preeln-paradata">Holt has been critical of federal policing of oil and natural gas drilling on public lands.</p>
+        <p class="preeln-paradata">He opposed the 2011 deficit reduction deal that also raised the borrowing limit for the federal government.</p>
+        <p class="preeln-paradata">In April 2011, he pushed President Barack Obama's administration to halt deportation proceedings against the same-sex spouses of U.S. citizens.</p>
+        <p class="preeln-paradata">Holt joined with three other members of Congress in April 2010, just after the Gulf Coast oil spill, in urging Obama not to allow offshore drilling in new areas.</p>
+        <p class="preeln-paradata">Bumper stickers around his central New Jersey district proclaim, accurately, "My Congressman IS a rocket scientist."</p>
+        <p class="preeln-paradata">He is a former assistant director of the Princeton Plasma Physics Laboratory. He has conducted extensive research on alternative energy, has a patent on a solar energy device and is a five-time winner on the TV game show "Jeopardy." In 2011, he topped the IBM computer "Watson" in a "Jeopardy"-style match of congressman vs. machine held at a Washington hotel.</p>
+        <p class="preeln-paradata">Holt has been a strong proponent of the idea that government should base its policies on sound science, appoint advisers based on their credentials and be honest about the science behind its decisions.</p>
+        <p class="preeln-paradata">Holt lauded Obama in March 2009 for issuing an executive order that lifted the ban on using federal funding for embryonic stem cell research, as well as a memorandum directing the White House Office of Science and Technology to develop a strategy for restoring scientific integrity to government decision-making.</p>
+        <p class="preeln-paradata">Holt voted in favor of the 2010 health care reform bill.</p>
+        <p class="preeln-paradata">He supported in early 2010 measures seeking the recovery of bonuses that American International Group and other companies that received federal bailout money had paid to some of their employees. He supported both President George W. Bush's October 2008 $700 billion financial industry bailout plan and Obama's 2009 approximately $800 billion economic stimulus package.</p>
+        <p class="preeln-paradata">Holt voted against permanent normalized trade relations with China, and in March 2009 proposed a resolution calling on U.S. officials to press China to find a path to lasting peace in Tibet. Holt takes a liberal stance on most social issues, including support of abortion rights, but he broke with his party to support Republican efforts to cut estate taxes and the so-called marriage penalty tax.</p>
+        <p class="preeln-paradata">He also fought for an amendment providing millions of dollars to protect open space. Holt received in 2008 a perfect score from the Environment New Jersey group for his support of environmental legislation.</p>
+        <p class="preeln-paradata">Committee Assignments: Education and the Workforce; Natural Resources</p>
+        <p class="preeln-paradata">American Conservative Union Rating: 4</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: 100</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">Rush Holt is not seeking re-election in 2014.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on June 11, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_districts/NJ.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__#12"><span class="bracket">[</span>districts in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../state_candidates/NJ.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

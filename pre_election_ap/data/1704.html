@@ -1,0 +1,324 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/1704.jpg"><div class="preeln-entityname">Dianne  Feinstein </div>
+	  (Dem)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">202-224-3841 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://www.feinstein.senate.gov">http://www.feinstein.senate.gov</a></span>
+</div>
+<a href="../finance/1704.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1933-6-22</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">San Francisco, CA </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">San Francisco, CA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Judaism</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">1992</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Democratic</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">Senate</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/CA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">CA</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Incumbent</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2018</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          Stanford University
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">BA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">Dianne Feinstein was born in San Francisco. She received a bachelor's degree in political science and history from Stanford University in 1955.</p>
+        <p class="preeln-paradata">She served on the California Women's Board of Terms and Parole, the San Francisco City and County Advisory Committee for Adult Detention and the Mayor's Committee on Crime. She served on the City and County Board of Supervisors from 1970 to 1978.</p>
+        <p class="preeln-paradata">Feinstein became acting mayor of San Francisco in 1978 following the assassination of Mayor George Moscone. She then won election to two consecutive terms.</p>
+        <p class="preeln-paradata">She was elected to the U.S. Senate in 1992.</p>
+        <p class="preeln-paradata">Feinstein and her husband, investor Richard C. Blum, live in San Francisco. She has a daughter from her first marriage and three stepchildren.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">Dianne Feinstein is in a strong position to win a fourth term in the U.S. Senate in 2012. In the November general election, she faces a little-known Republican, autism activist Elizabeth Emken, whose prior political experience includes finishing last among four Republicans in a 2010 congressional primary.</p>
+        <p class="preeln-paradata">In the June 2012 Democratic primary, Feinstein notched just under 50 percent of the vote in a field of 24 candidates, with a 1.7-million vote edge over the second place finisher, Emken, who had 13 percent. She comes to the race with all the conventional advantages, including a track record of winning statewide elections in the Democratic-leaning state.</p>
+        <p class="preeln-paradata">But there are potential challenges &#8212; voters view Congress unfavorably, and California's economy has been struggling.</p>
+        <p class="preeln-paradata">In 2012, Emken said Feinstein's neglect of social media showed she was out of touch with voters. Feinstein signed up for Twitter but her aides said the tweets were unrelated to taunting from Emken. The issue was a sly reminder of the age difference between the two  &#8212; Feinstein is 79; Emken is 49.</p>
+        <p class="preeln-paradata">In Washington, Feinstein has gained respect as a centrist legislator who will cross party lines to get things done. She is a pragmatist who supported the war in Iraq but later said she regretted her vote.</p>
+        <p class="preeln-paradata">She voted to approve former President George W. Bush's tax cuts and his Medicare prescription drug bill, both unpopular measures with many California Democrats.</p>
+        <p class="preeln-paradata">Feinstein, the first woman to chair the Senate Intelligence Committee, is among lawmakers who vowed to pursue leaks of sensitive information they believe came from President Barack Obama's administration on the use of covert drones and cyber wars against terrorism. A bill is being drafted to further limit who can access highly classified information &#8212; and possibly impose new penalties for revealing it. Feinstein said in June 2012 it's likely the bill will also require that the White House notify Congress when it decides to release classified information to the media.</p>
+        <p class="preeln-paradata">She has supported stimulus spending to boost the economy, and backed the 2010 health care reform bill.</p>
+        <p class="preeln-paradata">In 2012 she pushed an amendment that would have codified an agreement between egg producers and the Humane Society of the United States to increase the size of hen cages over the next 18 years and end the practice of depriving hens of food and water to increase egg production. Humane Society president Wayne Pacelle said other sectors of animal agribusiness lobbied against the measure out of concern that their sectors would also have to compromise on animal welfare issues. The amendment was not voted on in the Senate.</p>
+        <p class="preeln-paradata">Feinstein backed legislation in 2009 and 2010 that would wall off hundreds of thousands of acres in the Mojave Desert from being used for the production of solar energy. She pushed for changes in 2009 that would allow farmers in California's Central Valley to get more water &#8212; a move that has worried environmental groups trying to protect native fish &#8212; and she led efforts to try to ban BPA, a chemical used in some food and beverage containers.</p>
+        <p class="preeln-paradata">Feinstein showed her independent streak in 2009. She was the first Senate Democrat to say publicly that Roland Burris should be seated in the Senate despite the taint of corruption surrounding then-Illinois Gov. Rod Blagojevich, who appointed him. When Obama chose Leon Panetta to become head of the CIA, Feinstein voiced frustration at not being consulted, although she eventually supported Panetta for the job.</p>
+        <p class="preeln-paradata">She has been a tireless advocate for abortion rights.</p>
+        <p class="preeln-paradata">A standout moment in Feinstein's political career came years before her election to the Senate.</p>
+        <p class="preeln-paradata">Feinstein was president of the San Francisco Board of Supervisors in 1978 when former Supervisor Dan White murdered Mayor George Moscone and Supervisor Harvey Milk at City Hall.</p>
+        <p class="preeln-paradata">Feinstein found Milk's body, later telling how her finger slipped into a bullet hole as she felt for a pulse.</p>
+        <p class="preeln-paradata">She succeeded Moscone as mayor, heading San Francisco during one of the most turbulent periods in its history. Even her critics credited Feinstein with calming the city, and she gained statewide and national recognition.</p>
+        <p class="preeln-paradata">Feinstein was San Francisco's first female mayor, and she broke gender barriers throughout her career.</p>
+        <p class="preeln-paradata">Committee Assignments: Appropriations; Judiciary; Select Intelligence(Chair); Rules and Administration</p>
+        <p class="preeln-paradata">American Conservative Union Rating: 5</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: 90</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">Dianne Feinstein is not up for re-election in 2014.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on June 12, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_candidates/CA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

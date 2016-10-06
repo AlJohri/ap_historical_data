@@ -1,0 +1,16 @@
+**use dbfs\ushouse in 10 alias ushouse
+
+SET DEFA TO C:\AP2010
+CLEA
+SET SAFETY OFF
+
+
+sele 10
+use states alias states
+inde on name2_ to jjj
+
+use states-backside in 9 alias back
+sele 9
+set relation to name2_ into states
+
+repl all gov10 with states->gov10

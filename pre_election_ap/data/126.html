@@ -1,0 +1,334 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/126.jpg"><div class="preeln-entityname">Gary Gene Miller </div>
+	  (Rep)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">202-225-3201 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">909-444-1761 (Main campaign number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://garymiller.house.gov/">http://garymiller.house.gov/</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">&#160;</span><span class="field"><a href="http://www.garymillerforcongress.com/">http://www.garymillerforcongress.com/</a></span>
+</div>
+<a href="../finance/126.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1948-10-16</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">Huntsville, AR </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">Diamond Bar, CA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Christian</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">&#160;</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Republican</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">House</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/CA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">CA</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">District:</span><span class="field"><a href="../profilesdistricts/CA31.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">District 31</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Not seeking re-election</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2014</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          Mt. San Antonio College
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">Attended</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">Gary Miller was born in Huntsville, Ark., and grew up in Whittier, Calif. He now lives in Diamond Bar. He attended Mount San Antonio College and served in the Army from 1967 to 1968.</p>
+        <p class="preeln-paradata">Miller went through Army boot camp and was honorably discharged for health reasons in his seventh week of service because he had ulcers as a child.</p>
+        <p class="preeln-paradata">He is a businessman who founded several companies bearing his name, including G. Miller Development, G. Miller Masonry and G. Miller Framing. At the age of 20, he began his first company building single-family and custom homes.</p>
+        <p class="preeln-paradata">Miller's business expanded to the development of planned communities. He remains active in real estate through his development company.</p>
+        <p class="preeln-paradata">He served in the California state Assembly from 1995 to 1999. He was elected to the U.S. House in 1998.</p>
+        <p class="preeln-paradata">Miller and his wife, Cathy, have three children.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">Gary Miller's conservative philosophy holds that smaller government is better.</p>
+        <p class="preeln-paradata">"By allowing families to keep more of what they earn, they're able to spend their own money on the kind of products and services that grow the economy and create jobs," he said.</p>
+        <p class="preeln-paradata">Due to redistricting following the 2010 census, Miller is running in California's 31st Congressional District in 2012. He will face Republican state Sen. Bob Dutton in the November 2012 election. He currently represents the 42nd District.</p>
+        <p class="preeln-paradata">Miller sent a letter to the U.S. attorney general in July 2010 opposing a lawsuit the Justice Department planned to file against Arizona's 2010 immigration law. Miller called the law "a reasonable and constitutional approach to dealing with a problem that has been ignored &#8212; and exacerbated &#8212; by the Obama administration." The Supreme Court threw out major parts of the law in June 2012.</p>
+        <p class="preeln-paradata">Miller in 2006 focused most of his ire on illegal immigration, saying it imposed a burden on government services that hit taxpayers. While not on the border, Miller's district is deep in Southern California, where immigration looms large as a political issue.</p>
+        <p class="preeln-paradata">Miller voted for the 2009 approximately $800 billion economic stimulus package backed by President Barack Obama.</p>
+        <p class="preeln-paradata">Miller, who owns a real estate development company, has been a firm supporter of affordable housing, earning praise across party lines. He co-sponsored legislation in 2008 authorizing the temporary participation of mortgage brokers and lenders under the Federal Housing Administration's single-family housing mortgage insurance program.</p>
+        <p class="preeln-paradata">Miller's own land deals came under scrutiny in 2007 by the FBI following reports that he may have improperly used a tax break to avoid paying millions of dollars in taxes. The inquiry came after the Los Angeles Times reported in 2006 that Miller sold 165 acres to the Los Angeles suburb of Monrovia in 2002 for more than $10 million in profit. Following the sale, he told the IRS and the state that he was forced by the city to sell under threat of eminent domain.</p>
+        <p class="preeln-paradata">Miller is a history buff and he played a bit part in the 2003 movie "Gods and Generals."</p>
+        <p class="preeln-paradata">He has faced accusations that he used his staff for personal errands and pursued federal funding for projects beneficial to properties that he and his campaign contributors owned. He has denied any wrongdoing and calls media reports "lies" and "trash."</p>
+        <p class="preeln-paradata">The mother of Miller's three grandsons failed in 2007 to drop off the boys as part of a court order in a bitter custody battle, prompting a nationwide search. In a 16-page handwritten letter months later, the mother, Jennifer Dejongh, said the boys were safe and that she took them away from Miller's son, Brian, alleging Brian was an abusive father.</p>
+        <p class="preeln-paradata">Don Haslam, an attorney for Gary Miller and his son, said Dejongh made the same claims during the custody battle and nobody involved in the case substantiated her allegations.</p>
+        <p class="preeln-paradata">The Dejonghs started a new life in Mexico that went undetected until they moved to the border town of Mexicali in 2011 with the boys and her newborn daughter. There, they had a run-in with a Mexican customs official who discovered their identities.</p>
+        <p class="preeln-paradata">Authorities eventually tracked them to a house and walked in through the front door as they were just starting to eat dinner. They were taken to Tijuana, escorted across the border and turned over a Los Angeles County sheriff's deputy.</p>
+        <p class="preeln-paradata">The boys were turned over to child protective services, Jennifer Dejongh was taken to jail, and the baby girl stayed with her father.</p>
+        <p class="preeln-paradata">Dejongh pleaded not guilty to three felony counts of child custody deprivation.</p>
+        <p class="preeln-paradata">Committee Assignments: Financial Services; Transportation and Infrastructure</p>
+        <p class="preeln-paradata">American Conservative Union Rating: 96</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: 0</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">Gary Miller is not seeking re-election in 2014.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on June 13, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_districts/CA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__#31"><span class="bracket">[</span>districts in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../state_candidates/CA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

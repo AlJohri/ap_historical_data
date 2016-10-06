@@ -1,0 +1,326 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/54369.jpg"><div class="preeln-entityname">Stephen 'Steve' Joseph Scalise </div>
+	  (Rep)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">202-225-3015 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">504-831-3105 (Main campaign number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://www.scalise.house.gov/">http://www.scalise.house.gov/</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">&#160;</span><span class="field"><a href="http://stevescalise.com/">http://stevescalise.com/</a></span>
+</div>
+<a href="../finance/54369.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1965-10-6</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">New Orleans, LA </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">Jefferson, LA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Catholic</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">2008</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Republican</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">House</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/LA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">LA</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">District:</span><span class="field"><a href="../profilesdistricts/LA01.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">District 1</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Incumbent</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2012</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          Louisiana State University
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">BS</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">A New Orleans native, raised in suburban Jefferson Parish, Steve Scalise now lives in the town of Jefferson. He earned a bachelor's in computer programming from Louisiana State University and has worked as a systems engineer for New Orleans area technology companies, according to his campaign.</p>
+        <p class="preeln-paradata">A Republican, Scalise spent 12 years as a state legislator, building a reputation as a fiscal and social conservative with legislation fighting gay marriage and protecting gun manufacturers from lawsuits. He also was a sponsor of legislation granting tax breaks for Louisiana's growing film industry.</p>
+        <p class="preeln-paradata">Scalise won a special election to the U.S. House in 2008, filling the vacancy left after Bobby Jindal was elected governor of Louisiana.</p>
+        <p class="preeln-paradata">Scalise and his wife, Jennifer, have two children.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">A well-known billionaire's statements that tax rates for the rich are too low provided Steve Scalise with one of his latest high-profile effort to burnish his conservative credentials.</p>
+        <p class="preeln-paradata">Scalise sponsored the Buffett Rule Act, which creates a checkbox on tax forms allowing taxpayers to make donations above their normal tax liability for debt reduction. Passed by the House, it was the conservative answer to the original Buffett Rule bill, backed by President Barack Obama, which would have required top earners to pay at least 30 percent of their income in taxes. That bill failed in the Senate.</p>
+        <p class="preeln-paradata">Opposition to Obama has been a hallmark of Scalise's campaigns and congressional career, which has seen him rise to become a deputy Republican whip in the House.</p>
+        <p class="preeln-paradata">Scalise's district may be the most conservative in Louisiana. It includes part of New Orleans and a large swath of mostly white suburban areas north of Lake Pontchartrain.</p>
+        <p class="preeln-paradata">Having forged his conservative reputation in the state Legislature, Scalise easily beat three opponents in a special election in spring 2008 to replace Bobby Jindal, who had been elected governor. He went on to defeat self-financed millionaire Democrat Jim Harlan in that November's race for a full term, with 66 percent of the vote. His opposition was weak in 2010 and he drew no strong opponents for 2012.</p>
+        <p class="preeln-paradata">His 2008 campaign included television ads featuring, among other things, video of an arm-flailing, angry Rev. Jeremiah Wright, Obama's former pastor.</p>
+        <p class="preeln-paradata">After Obama won the 2008 presidential election, Scalise, with what was then a Republican minority in 2009, voted against an expansion of government-sponsored children's health insurance, against the 2009 approximately $800 billion economic stimulus package backed by Obama, and against a cap-and-trade climate bill.</p>
+        <p class="preeln-paradata">Scalise opposed the 2010 health care reform bill and spoke out against it at town hall meetings. After the 2010 BP oil spill in the Gulf of Mexico, Scalise opposed the Obama administration's moratorium on deep water oil drilling.</p>
+        <p class="preeln-paradata">Meanwhile, he has backed extension of George W. Bush-era tax cuts, expansion of domestic oil and gas drilling, and bipartisan coastal restoration efforts, such as the Restore Act, that directs most of the fines paid by BP over the 2010 Gulf oil spill to the Gulf Coast states that were affected by the spill and its aftermath.</p>
+        <p class="preeln-paradata">During his 12-year stint in the state Legislature, Scalise opposed abortion, tax increases and government spending. He sponsored legislation banning lawsuits against gun makers and cementing a prohibition on gay marriage into the state constitution. He has long touted his sponsorship of former Gov. Mike Foster's bills granting tax credits and incentives to bring movie and television production to the state.</p>
+        <p class="preeln-paradata">Committee Assignments: Energy and Commerce</p>
+        <p class="preeln-paradata">American Conservative Union Rating: 92</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: 0</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">Recent winning percentages for office currently held: 79% (2010), 66% (2008).</p>
+        <p class="preeln-paradata">(Last updated by Kevin McGill on October 5, 2012.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_districts/LA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__#1"><span class="bracket">[</span>districts in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../state_candidates/LA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

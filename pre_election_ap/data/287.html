@@ -1,0 +1,327 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/287.jpg"><div class="preeln-entityname">Kevin Patrick Brady </div>
+	  (Rep)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">202-225-4901 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">281-363-9297 (Main campaign number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://www.house.gov/brady">http://www.house.gov/brady</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">&#160;</span><span class="field"><a href="http://www.bradyforcongress.com/">http://www.bradyforcongress.com/</a></span>
+</div>
+<a href="../finance/287.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1955-4-11</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">Vermillion, SD </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">The Woodlands, TX</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Catholic</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">1996</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Republican</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">House</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/TX.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">TX</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">District:</span><span class="field"><a href="../profilesdistricts/TX08.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">District 8</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Incumbent</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2014</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          University of South Dakota
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">BS</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">Kevin Brady was born in Vermillion, S.D., and now lives in The Woodlands, Texas, a suburb north of Houston. He earned a bachelor's in mass communications from the University of South Dakota in December 1990.</p>
+        <p class="preeln-paradata">Brady was president of the South Montgomery County Woodlands Chamber of Commerce from 1985 to 1996. He served as chairman of the Council of Chambers of Greater Houston and is a former president of the East Texas and Gulf Coast chamber executive associations.</p>
+        <p class="preeln-paradata">Brady served in the Texas House from 1991 to 1996.</p>
+        <p class="preeln-paradata">He was elected to the U.S. House in 1996.</p>
+        <p class="preeln-paradata">Brady and his wife, Cathy, have two sons.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">Kevin Brady campaigned his way to Congress in 1996 on a promise to introduce legislation that would issue a deadline for every federal agency to prove its worth or lose funding.</p>
+        <p class="preeln-paradata">His Federal Sunset Act, which proposes abolishing obsolete agencies and eliminating duplication by forcing every federal program to justify its existence or face elimination, has yet to be approved by Congress.</p>
+        <p class="preeln-paradata">And it's not for lack of trying. Brady has submitted the act and related measures numerous times since being elected, most recently in 2011.</p>
+        <p class="preeln-paradata">Brady was involved in congressional negotiations in late 2011 and early 2012 over extending President Barack Obama's payroll tax cut. At one point during the negotiations, Brady commented on the partisanship of the process, saying he felt like Republicans were "re-enacting the Alamo, with no reinforcements and our friends shooting at us." After months of deadlock with both parties trying to find a way to pay for the tax cut, House Republicans relented and the measure was extended in February 2012.</p>
+        <p class="preeln-paradata">Brady, who has risen to deputy GOP whip in the House, has earned a reputation as a "nice guy" who prefers a low-key approach.</p>
+        <p class="preeln-paradata">He broke with that image in November 2009 during a testy confrontation with Treasury Secretary Timothy Geithner over government spending and the budget deficit. During Geithner's appearance before the Joint Economic Committee, where Brady was the senior minority member, Brady produced a giant multicolored chart showing the complexities of a proposed health care reform plan. The quarrel climaxed with Brady telling Geithner to resign and the treasury secretary firing back that he agreed with nearly nothing Brady had said.</p>
+        <p class="preeln-paradata">Brady has worked to guarantee state sales taxes are deductible in states that don't have an income tax &#8212; such as Texas. He embraces free trade agreements as key to economic recovery and has long has been an advocate for international trade.</p>
+        <p class="preeln-paradata">Brady touts as achievements the passage of the Teacher Liability Protection Act, which protects teachers seeking classroom discipline against frivolous lawsuits, and establishing a national network of university homeland security research centers, including one at Texas A&amp;M. Before redistricting, Texas A&amp;M was in his district, and during his tenure Brady has pushed to nearly triple federal research funding to the school.</p>
+        <p class="preeln-paradata">In November 2005, Brady pleaded no contest to driving under the influence in South Dakota and had his driving privileges in that state suspended for 30 days. "I was wrong and I deeply apologize. This is an extremely important law. Perhaps others, especially young people, can learn from my mistake as I have," Brady said.</p>
+        <p class="preeln-paradata">While a state lawmaker, Brady successfully authored legislation in the Texas House requiring convicted murderers serve a minimum of 40 years of a life sentence. A gunman killed Brady's father in 1967 and Brady was one of only two Republicans in the state House who voted against a measure legalizing concealed handguns.</p>
+        <p class="preeln-paradata">Committee Assignments: Ways and Means;  Joint Economic</p>
+        <p class="preeln-paradata">American Conservative Union Rating: 92</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: 0</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">Kevin Brady won his March 2014 primary, he will seek re-election in November.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on June 6, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_districts/TX.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__#8"><span class="bracket">[</span>districts in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../state_candidates/TX.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

@@ -1,0 +1,344 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/52561.jpg"><div class="preeln-entityname">Kevin Owen McCarthy </div>
+	  (Rep)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">202-225-2915 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">661-324-3424 (Main campaign number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://kevinmccarthy.house.gov/">http://kevinmccarthy.house.gov/</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">&#160;</span><span class="field"><a href="http://www.mccarthyforcongress.com/">http://www.mccarthyforcongress.com/</a></span>
+</div>
+<a href="../finance/52561.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1965-1-26</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">Bakersfield, CA </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">Bakersfield, CA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">2006</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Republican</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">House</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/CA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">CA</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">District:</span><span class="field"><a href="../profilesdistricts/CA23.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">District 23</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Incumbent</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2014</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          California State University - Bakersfield
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">BA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+<h2 class="preeln-secthead">Graduate education: 
+          California State University - Bakersfield
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">MBA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">Kevin McCarthy was born in Bakersfield, Calif., where he still resides. He earned bachelor's and master's degrees in business from California State University-Bakersfield.</p>
+        <p class="preeln-paradata">McCarthy began his career as a small business owner and entrepreneur, starting a deli before he turned 21. He also served as an elected trustee on the Kern Community College District Board.</p>
+        <p class="preeln-paradata">He was elected in 2002 to the California Assembly, where he served two terms and was the Republican minority leader.</p>
+        <p class="preeln-paradata">He was elected to the U.S. House in 2006.</p>
+        <p class="preeln-paradata">McCarthy and his wife, Judy, have two children.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">Kevin McCarthy's political career earned him a posting to the position of majority whip in 2011.</p>
+        <p class="preeln-paradata">Also in 2011, McCarthy criticized President Barack Obama and said the president wasn't doing enough to create jobs. Obama at the time was publicly pushing legislators to act on a jobs bill and other economic proposals he had put forth, claiming that it was the GOP who was holding things up. McCarthy said it was Obama not Republicans who was playing partisan games.</p>
+        <p class="preeln-paradata">"Americans deserve progress, not partisanship," McCarthy said at the time. "Americans deserve a long-term solution to our nation's spending problem so that we don't run up trillion-dollar annual deficits."</p>
+        <p class="preeln-paradata">He joined the majority of his fellow Republicans in 2010 in voting against President Obama's signature legislative initiatives: the health care reform bill and the overhaul of regulations governing the financial industry.</p>
+        <p class="preeln-paradata">McCarthy voted against both the 2008 $700 billion bank bailout and the approximately $800 billion economic stimulus package in 2009.</p>
+        <p class="preeln-paradata">The former owner of a deli, McCarthy has often said his goal in Washington, D.C., is to be the voice for small business, and he has worked to support job growth and legislation supporting small businesses.</p>
+        <p class="preeln-paradata">His political career is tied to the man he replaced in Congress, former Ways and Means Chairman Bill Thomas.</p>
+        <p class="preeln-paradata">Thomas, a fellow Republican, was a political mentor for McCarthy, who served as Thomas' district director before joining the California Assembly. When Thomas announced his retirement from Congress in March 2006, McCarthy quickly announced his bid for the 22nd District seat, a move that had been widely expected.</p>
+        <p class="preeln-paradata">McCarthy easily won the Republican nomination in the GOP-friendly Central Valley district, which gave President George W. Bush his highest percentage of the vote in the state &#8212; 68 percent &#8212; in the 2004 presidential election.</p>
+        <p class="preeln-paradata">McCarthy worked in the House on the revised farm bill and, as the freshman representative on the Republican Steering Committee, he helped other freshmen secure committee assignments. The newspaper Roll Call named him "Rookie of the Year" of the 110th Congress.</p>
+        <p class="preeln-paradata">He was chosen to serve as chairman of the 2008 Republican Platform Committee, which outlined the party's key positions ahead of that year's Republican National Convention in Minnesota.</p>
+        <p class="preeln-paradata">McCarthy was appointed in 2009 to serve as Chief Deputy Republican Whip. He has also helped lead the GOP effort to recruit and elect candidates to the House.</p>
+        <p class="preeln-paradata">McCarthy, as a freshman state legislator, was selected by his Republican colleagues to be minority leader, and the nonpartisan California Journal named him "Rookie of the Year."</p>
+        <p class="preeln-paradata">McCarthy worked in the California Assembly with Gov. Arnold Schwarzenegger on a legislative redistricting measure that Schwarzenegger brought to the ballot in 2005 as part of a package of reforms ultimately rejected by voters. McCarthy's measure would have established an independent commission to draw legislative districts.</p>
+        <p class="preeln-paradata">McCarthy also focused in the Assembly on measures promoting "pay as you go" infrastructure building in California.</p>
+        <p class="preeln-paradata">Committee Assignments: Financial Services</p>
+        <p class="preeln-paradata">American Conservative Union Rating: 80</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: 0</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">Kevin McCarthy won his June 2014 primary, he will seek re-election in November.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on June 13, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_districts/CA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__#23"><span class="bracket">[</span>districts in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../state_candidates/CA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

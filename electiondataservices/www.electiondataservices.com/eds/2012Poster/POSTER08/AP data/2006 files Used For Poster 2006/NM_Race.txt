@@ -1,0 +1,595 @@
+l;2148054833580;33510;2006-11-07;NM;32008;35013;Dona Ana;S;G;0;U.S. Senate;;;General;;1;0;122;122;
+l;2149665446316;33510;2006-11-07;NM;32032;35059;Union;S;G;0;U.S. Senate;;;General;;1;0;8;8;
+l;2147920812460;33702;2006-11-07;NM;32006;35009;Curry;I;G;0;Bond;2-Higher Ed;;General;;1;0;47;47;
+l;2148860318124;33684;2006-11-07;NM;32020;35035;Otero;I;G;2;Amendment;Amendment 2-Building Lease;;General;;1;0;42;42;
+l;2148054490540;33175;2006-11-07;NM;32008;35013;Dona Ana;0;G;2;Pub Reg Commission;District 2;;General;;1;0;9;9;
+l;2147852013996;32052;2006-11-07;NM;32005;35007;Colfax;H;G;3;U.S. House;District 3;;General;;1;0;21;21;
+l;2149330079148;33683;2006-11-07;NM;32027;35049;Santa Fe;I;G;1;Amendment;Amendment 1-Property Protection;;General;;1;0;88;88;
+l;2148793208236;33683;2006-11-07;NM;32019;35033;Mora;I;G;1;Amendment;Amendment 1-Property Protection;;General;;1;0;14;14;
+l;2148256337324;33683;2006-11-07;NM;32011;35019;Guadalupe;I;G;1;Amendment;Amendment 1-Property Protection;;General;;1;0;8;8;
+l;2147719466412;33683;2006-11-07;NM;32003;35005;Chaves;I;G;1;Amendment;Amendment 1-Property Protection;;General;;1;0;52;52;
+l;2149597034924;32238;2006-11-07;NM;32031;35057;Torrance;G;G;0;Governor;;;General;;1;0;18;18;
+l;2149060164012;32238;2006-11-07;NM;32023;35041;Roosevelt;G;G;0;Governor;;;General;;1;0;23;23;
+l;2148523293100;32238;2006-11-07;NM;32015;35027;Lincoln;G;G;0;Governor;;;General;;1;0;21;21;
+l;2147986422188;32238;2006-11-07;NM;32007;35011;DeBaca;G;G;0;Governor;;;General;;1;0;6;6;
+l;2149530038700;32348;2006-11-07;NM;32030;35055;Taos;T;G;0;Treasurer;;;General;;1;0;37;37;
+l;2148993167788;32348;2006-11-07;NM;32022;35039;Rio Arriba;T;G;0;Treasurer;;;General;;1;0;43;44;
+l;2148456296876;32348;2006-11-07;NM;32014;35025;Lea;T;G;0;Treasurer;;;General;;1;0;45;45;
+l;2147919425964;32348;2006-11-07;NM;32006;35009;Curry;T;G;0;Treasurer;;;General;;1;0;47;47;
+l;2149732214188;33177;2006-11-07;NM;32033;35061;Valencia;0;G;4;Pub Reg Commission;District 4;;General;;1;0;1;1;
+l;2148926060972;32350;2006-11-07;NM;32021;35037;Quay;A;G;0;Attorney General;;;General;;1;0;32;32;
+l;101601708;33684;2006-11-07;NM;1;0;New Mexico;I;G;2;Amendment;Amendment 2-Building Lease;;General;;1;0;1560;1562;
+l;2149397190060;33685;2006-11-07;NM;32028;35051;Sierra;I;G;3;Amendment;Amend 3-Water Trust;;General;;1;0;11;11;
+l;2148860319148;33685;2006-11-07;NM;32020;35035;Otero;I;G;3;Amendment;Amend 3-Water Trust;;General;;1;0;42;42;
+l;2147583644076;32116;2006-11-07;NM;32001;35001;Bernalillo;Y;G;23;State House;District 23;;General;;1;0;9;10;
+l;2147786577324;33685;2006-11-07;NM;32004;35006;Cibola;I;G;3;Amendment;Amend 3-Water Trust;;General;;1;0;21;21;
+l;2148055019948;33692;2006-11-07;NM;32008;35013;Dona Ana;0;G;0;District Court;DistCt 3-Div8;;General;;1;0;122;122;
+l;2148927445420;33702;2006-11-07;NM;32021;35037;Quay;I;G;0;Bond;2-Higher Ed;;General;;1;0;32;32;
+l;2147786591660;33699;2006-11-07;NM;32004;35006;Cibola;0;G;0;District Court;DistCt 13-Div7;;General;;1;0;21;21;
+l;2149262989740;33702;2006-11-07;NM;32026;35047;San Miguel;I;G;0;Bond;2-Higher Ed;;General;;1;0;42;42;
+l;2149597149612;32350;2006-11-07;NM;32031;35057;Torrance;A;G;0;Attorney General;;;General;;1;0;18;18;
+l;2149060278700;32350;2006-11-07;NM;32023;35041;Roosevelt;A;G;0;Attorney General;;;General;;1;0;23;23;
+l;2148523407788;32350;2006-11-07;NM;32015;35027;Lincoln;A;G;0;Attorney General;;;General;;1;0;21;21;
+l;2147986536876;32350;2006-11-07;NM;32007;35011;DeBaca;A;G;0;Attorney General;;;General;;1;0;6;6;
+l;2148524793260;33703;2006-11-07;NM;32015;35027;Lincoln;I;G;0;Bond;3-Libraries;;General;;1;0;21;21;
+l;2148457665964;33685;2006-11-07;NM;32014;35025;Lea;I;G;3;Amendment;Amend 3-Water Trust;;General;;1;0;45;45;
+l;2147987922348;33703;2006-11-07;NM;32007;35011;DeBaca;I;G;0;Bond;3-Libraries;;General;;1;0;6;6;
+l;2149464315308;33701;2006-11-07;NM;32029;35053;Socorro;I;G;0;Bond;1-Senior Citizen;;General;;1;0;28;28;
+l;2148122130860;33694;2006-11-07;NM;32009;35015;Eddy;0;G;0;District Court;DistCt 5-Div10;;General;;1;0;43;43;
+l;2148390573484;33701;2006-11-07;NM;32013;35023;Hidalgo;I;G;0;Bond;1-Senior Citizen;;General;;1;0;8;8;
+l;2147853702572;33701;2006-11-07;NM;32005;35007;Colfax;I;G;0;Bond;1-Senior Citizen;;General;;1;0;21;21;
+l;2147652378028;33703;2006-11-07;NM;32002;35003;Catron;I;G;0;Bond;3-Libraries;;General;;1;0;8;8;
+l;2149127389612;32352;2006-11-07;NM;32024;35043;Sandoval;0;G;0;Land Commissioner;;;General;;1;0;83;83;
+l;2148590518700;32352;2006-11-07;NM;32016;35028;Los Alamos;0;G;0;Land Commissioner;;;General;;1;0;19;19;
+l;2148053647788;32352;2006-11-07;NM;32008;35013;Dona Ana;0;G;0;Land Commissioner;;;General;;1;0;122;122;
+l;2149664260524;32352;2006-11-07;NM;32032;35059;Union;0;G;0;Land Commissioner;;;General;;1;0;8;8;
+l;2148927444396;33701;2006-11-07;NM;32021;35037;Quay;I;G;0;Bond;1-Senior Citizen;;General;;1;0;32;32;
+l;2149128754604;33685;2006-11-07;NM;32024;35043;Sandoval;I;G;3;Amendment;Amend 3-Water Trust;;General;;1;0;83;83;
+l;2149531426220;33703;2006-11-07;NM;32030;35055;Taos;I;G;0;Bond;3-Libraries;;General;;1;0;37;37;
+l;2148994555308;33703;2006-11-07;NM;32022;35039;Rio Arriba;I;G;0;Bond;3-Libraries;;General;;1;0;43;44;
+l;2148457684396;33703;2006-11-07;NM;32014;35025;Lea;I;G;0;Bond;3-Libraries;;General;;1;0;45;45;
+l;2148321776044;32052;2006-11-07;NM;32012;35021;Harding;H;G;3;U.S. House;District 3;;General;;1;0;4;4;
+l;2148524791212;33701;2006-11-07;NM;32015;35027;Lincoln;I;G;0;Bond;1-Senior Citizen;;General;;1;0;21;21;
+l;2149194225068;32085;2006-11-07;NM;32025;35045;San Juan;Y;G;2;State House;District 2;;General;;1;0;15;15;
+l;99972524;32093;2006-11-07;NM;1;0;New Mexico;Y;G;7;State House;District 7;;General;;1;0;20;20;
+l;2148994016684;33177;2006-11-07;NM;32022;35039;Rio Arriba;0;G;4;Pub Reg Commission;District 4;;General;;1;0;6;7;
+l;2148255923628;33279;2006-11-07;NM;32011;35019;Guadalupe;H;G;2;U.S. House;District 2;;General;;1;0;8;8;
+l;2147719052716;33279;2006-11-07;NM;32003;35005;Chaves;H;G;2;U.S. House;District 2;;General;;1;0;52;52;
+l;2147786057132;33177;2006-11-07;NM;32004;35006;Cibola;0;G;4;Pub Reg Commission;District 4;;General;;1;0;21;21;
+l;2147583530412;32005;2006-11-07;NM;32001;35001;Bernalillo;H;G;1;U.S. House;District 1;;General;;1;0;414;414;
+l;2149127146924;32115;2006-11-07;NM;32024;35043;Sandoval;Y;G;22;State House;District 22;;General;;1;0;4;4;
+l;2149330080172;33684;2006-11-07;NM;32027;35049;Santa Fe;I;G;2;Amendment;Amendment 2-Building Lease;;General;;1;0;88;88;
+l;2148793209260;33684;2006-11-07;NM;32019;35033;Mora;I;G;2;Amendment;Amendment 2-Building Lease;;General;;1;0;14;14;
+l;2148256338348;33684;2006-11-07;NM;32011;35019;Guadalupe;I;G;2;Amendment;Amendment 2-Building Lease;;General;;1;0;8;8;
+l;2147719467436;33684;2006-11-07;NM;32003;35005;Chaves;I;G;2;Amendment;Amendment 2-Building Lease;;General;;1;0;52;52;
+l;2149464119724;33510;2006-11-07;NM;32029;35053;Socorro;S;G;0;U.S. Senate;;;General;;1;0;28;28;
+l;2148457413036;33438;2006-11-07;NM;32014;35025;Lea;0;G;0;District Court;Position 5-Division 5;;General;;1;0;45;45;
+l;2148724726188;32342;2006-11-07;NM;32018;35031;McKinley;R;G;0;Secretary of State;;;General;;1;0;55;55;
+l;101188012;33280;2006-11-07;NM;1;0;New Mexico;Y;G;8;State House;District 8;;General;;1;0;21;21;
+l;2147650984364;32342;2006-11-07;NM;32002;35003;Catron;R;G;0;Secretary of State;;;General;;1;0;8;8;
+l;2149463415212;32822;2006-11-07;NM;32029;35053;Socorro;0;G;0;Auditor;;;General;;1;0;28;28;
+l;2148926544300;32822;2006-11-07;NM;32021;35037;Quay;0;G;0;Auditor;;;General;;1;0;32;32;
+l;2148389673388;32822;2006-11-07;NM;32013;35023;Hidalgo;0;G;0;Auditor;;;General;;1;0;8;8;
+l;2147852802476;32822;2006-11-07;NM;32005;35007;Colfax;0;G;0;Auditor;;;General;;1;0;21;21;
+l;101602732;33685;2006-11-07;NM;1;0;New Mexico;I;G;3;Amendment;Amend 3-Water Trust;;General;;1;0;1560;1562;
+l;2147583630764;32103;2006-11-07;NM;32001;35001;Bernalillo;Y;G;15;State House;District 15;;General;;1;0;18;19;
+l;2149397191084;33686;2006-11-07;NM;32028;35051;Sierra;I;G;4;Amendment;Amend4-Affordable Housing;;General;;1;0;11;11;
+l;2148860320172;33686;2006-11-07;NM;32020;35035;Otero;I;G;4;Amendment;Amend4-Affordable Housing;;General;;1;0;42;42;
+l;2148323449260;33686;2006-11-07;NM;32012;35021;Harding;I;G;4;Amendment;Amend4-Affordable Housing;;General;;1;0;4;4;
+l;2147786578348;33686;2006-11-07;NM;32004;35006;Cibola;I;G;4;Amendment;Amend4-Affordable Housing;;General;;1;0;21;21;
+l;2147583659436;32131;2006-11-07;NM;32001;35001;Bernalillo;Y;G;31;State House;District 31;;General;;1;0;19;20;
+l;2149261603244;32348;2006-11-07;NM;32026;35047;San Miguel;T;G;0;Treasurer;;;General;;1;0;42;42;
+l;99971500;32092;2006-11-07;NM;1;0;New Mexico;Y;G;6;State House;District 6;;General;;1;0;19;19;
+l;2149128773036;33703;2006-11-07;NM;32024;35043;Sandoval;I;G;0;Bond;3-Libraries;;General;;1;0;83;83;
+l;2149396670892;33178;2006-11-07;NM;32028;35051;Sierra;0;G;5;Pub Reg Commission;District 5;;General;;1;0;11;11;
+l;2149598337452;33510;2006-11-07;NM;32031;35057;Torrance;S;G;0;U.S. Senate;;;General;;1;0;18;18;
+l;2149061466540;33510;2006-11-07;NM;32023;35041;Roosevelt;S;G;0;U.S. Senate;;;General;;1;0;23;23;
+l;2148524595628;33510;2006-11-07;NM;32015;35027;Lincoln;S;G;0;U.S. Senate;;;General;;1;0;21;21;
+l;2147987724716;33510;2006-11-07;NM;32007;35011;DeBaca;S;G;0;U.S. Senate;;;General;;1;0;6;6;
+l;2148390574508;33702;2006-11-07;NM;32013;35023;Hidalgo;I;G;0;Bond;2-Higher Ed;;General;;1;0;8;8;
+l;2147853703596;33702;2006-11-07;NM;32005;35007;Colfax;I;G;0;Bond;2-Higher Ed;;General;;1;0;21;21;
+l;2149597994412;33175;2006-11-07;NM;32031;35057;Torrance;0;G;2;Pub Reg Commission;District 2;;General;;1;0;15;15;
+l;2149061123500;33175;2006-11-07;NM;32023;35041;Roosevelt;0;G;2;Pub Reg Commission;District 2;;General;;1;0;23;23;
+l;2148524252588;33175;2006-11-07;NM;32015;35027;Lincoln;0;G;2;Pub Reg Commission;District 2;;General;;1;0;6;6;
+l;2147987381676;33175;2006-11-07;NM;32007;35011;DeBaca;0;G;2;Pub Reg Commission;District 2;;General;;1;0;2;2;
+l;2148591902124;33703;2006-11-07;NM;32016;35028;Los Alamos;I;G;0;Bond;3-Libraries;;General;;1;0;19;19;
+l;2149262970284;33683;2006-11-07;NM;32026;35047;San Miguel;I;G;1;Amendment;Amendment 1-Property Protection;;General;;1;0;42;42;
+l;2148726099372;33683;2006-11-07;NM;32018;35031;McKinley;I;G;1;Amendment;Amendment 1-Property Protection;;General;;1;0;55;55;
+l;2148189228460;33683;2006-11-07;NM;32010;35017;Grant;I;G;1;Amendment;Amendment 1-Property Protection;;General;;1;0;45;45;
+l;99930540;32052;2006-11-07;NM;1;0;New Mexico;H;G;3;U.S. House;District 3;;General;;1;0;567;569;
+l;2149529926060;32238;2006-11-07;NM;32030;35055;Taos;G;G;0;Governor;;;General;;1;0;37;37;
+l;2148993055148;32238;2006-11-07;NM;32022;35039;Rio Arriba;G;G;0;Governor;;;General;;1;0;43;44;
+l;2148456184236;32238;2006-11-07;NM;32014;35025;Lea;G;G;0;Governor;;;General;;1;0;45;45;
+l;2147919313324;32238;2006-11-07;NM;32006;35009;Curry;G;G;0;Governor;;;General;;1;0;47;47;
+l;2149462929836;32348;2006-11-07;NM;32029;35053;Socorro;T;G;0;Treasurer;;;General;;1;0;28;28;
+l;2148926058924;32348;2006-11-07;NM;32021;35037;Quay;T;G;0;Treasurer;;;General;;1;0;32;32;
+l;2148389188012;32348;2006-11-07;NM;32013;35023;Hidalgo;T;G;0;Treasurer;;;General;;1;0;8;8;
+l;2147852317100;32348;2006-11-07;NM;32005;35007;Colfax;T;G;0;Treasurer;;;General;;1;0;21;21;
+l;99987884;32108;2006-11-07;NM;1;0;New Mexico;Y;G;18;State House;District 18;;General;;1;0;29;30;
+l;2149127147948;32116;2006-11-07;NM;32024;35043;Sandoval;Y;G;23;State House;District 23;;General;;1;0;5;5;
+l;2149330081196;33685;2006-11-07;NM;32027;35049;Santa Fe;I;G;3;Amendment;Amend 3-Water Trust;;General;;1;0;88;88;
+l;2148793210284;33685;2006-11-07;NM;32019;35033;Mora;I;G;3;Amendment;Amend 3-Water Trust;;General;;1;0;14;14;
+l;2148256339372;33685;2006-11-07;NM;32011;35019;Guadalupe;I;G;3;Amendment;Amend 3-Water Trust;;General;;1;0;8;8;
+l;2147719468460;33685;2006-11-07;NM;32003;35005;Chaves;I;G;3;Amendment;Amend 3-Water Trust;;General;;1;0;52;52;
+l;100030892;32150;2006-11-07;NM;1;0;New Mexico;Y;G;44;State House;District 44;;General;;1;0;23;23;
+l;2149530040748;32350;2006-11-07;NM;32030;35055;Taos;A;G;0;Attorney General;;;General;;1;0;37;37;
+l;2148993169836;32350;2006-11-07;NM;32022;35039;Rio Arriba;A;G;0;Attorney General;;;General;;1;0;43;44;
+l;2148456298924;32350;2006-11-07;NM;32014;35025;Lea;A;G;0;Attorney General;;;General;;1;0;45;45;
+l;2147919428012;32350;2006-11-07;NM;32006;35009;Curry;A;G;0;Attorney General;;;General;;1;0;47;47;
+l;2149195862444;33684;2006-11-07;NM;32025;35045;San Juan;I;G;2;Amendment;Amendment 2-Building Lease;;General;;1;0;74;74;
+l;2148390556076;33684;2006-11-07;NM;32013;35023;Hidalgo;I;G;2;Amendment;Amendment 2-Building Lease;;General;;1;0;8;8;
+l;2149732733356;33684;2006-11-07;NM;32033;35061;Valencia;I;G;2;Amendment;Amendment 2-Building Lease;;General;;1;0;52;52;
+l;2147583646124;32118;2006-11-07;NM;32001;35001;Bernalillo;Y;G;24;State House;District 24;;General;;1;0;28;29;
+l;2148657402284;32132;2006-11-07;NM;32017;35029;Luna;Y;G;32;State House;District 32;;General;;1;0;17;17;
+l;2148860335532;33701;2006-11-07;NM;32020;35035;Otero;I;G;0;Bond;1-Senior Citizen;;General;;1;0;42;42;
+l;2148323464620;33701;2006-11-07;NM;32012;35021;Harding;I;G;0;Bond;1-Senior Citizen;;General;;1;0;4;4;
+l;2147786593708;33701;2006-11-07;NM;32004;35006;Cibola;I;G;0;Bond;1-Senior Citizen;;General;;1;0;21;21;
+l;2148793227692;33702;2006-11-07;NM;32019;35033;Mora;I;G;0;Bond;2-Higher Ed;;General;;1;0;14;14;
+l;2149597151660;32352;2006-11-07;NM;32031;35057;Torrance;0;G;0;Land Commissioner;;;General;;1;0;18;18;
+l;2149060280748;32352;2006-11-07;NM;32023;35041;Roosevelt;0;G;0;Land Commissioner;;;General;;1;0;23;23;
+l;2148523409836;32352;2006-11-07;NM;32015;35027;Lincoln;0;G;0;Land Commissioner;;;General;;1;0;21;21;
+l;2149530032556;32342;2006-11-07;NM;32030;35055;Taos;R;G;0;Secretary of State;;;General;;1;0;37;37;
+l;2148724470188;32092;2006-11-07;NM;32018;35031;McKinley;Y;G;6;State House;District 6;;General;;1;0;10;10;
+l;2149464317356;33703;2006-11-07;NM;32029;35053;Socorro;I;G;0;Bond;3-Libraries;;General;;1;0;28;28;
+l;2149328409004;32052;2006-11-07;NM;32027;35049;Santa Fe;H;G;3;U.S. House;District 3;;General;;1;0;83;83;
+l;2148791538092;32052;2006-11-07;NM;32019;35033;Mora;H;G;3;U.S. House;District 3;;General;;1;0;14;14;
+l;2147853704620;33703;2006-11-07;NM;32005;35007;Colfax;I;G;0;Bond;3-Libraries;;General;;1;0;21;21;
+l;100245932;32360;2006-11-07;NM;1;0;New Mexico;Y;G;1;State House;District 1;;General;;1;0;15;15;
+l;2148725685676;33279;2006-11-07;NM;32018;35031;McKinley;H;G;2;U.S. House;District 2;;General;;1;0;4;4;
+l;2148188814764;33279;2006-11-07;NM;32010;35017;Grant;H;G;2;U.S. House;District 2;;General;;1;0;45;45;
+l;2149127034284;32005;2006-11-07;NM;32024;35043;Sandoval;H;G;1;U.S. House;District 1;;General;;1;0;15;15;
+l;2148858992044;32389;2006-11-07;NM;32020;35035;Otero;Y;G;57;State House;District 57;;General;;1;0;4;4;
+l;2149262971308;33684;2006-11-07;NM;32026;35047;San Miguel;I;G;2;Amendment;Amendment 2-Building Lease;;General;;1;0;42;42;
+l;2148726100396;33684;2006-11-07;NM;32018;35031;McKinley;I;G;2;Amendment;Amendment 2-Building Lease;;General;;1;0;55;55;
+l;2148189229484;33684;2006-11-07;NM;32010;35017;Grant;I;G;2;Amendment;Amendment 2-Building Lease;;General;;1;0;45;45;
+l;2147652358572;33684;2006-11-07;NM;32002;35003;Catron;I;G;2;Amendment;Amendment 2-Building Lease;;General;;1;0;8;8;
+l;2149732734380;33685;2006-11-07;NM;32033;35061;Valencia;I;G;3;Amendment;Amend 3-Water Trust;;General;;1;0;52;52;
+l;2149194488236;32342;2006-11-07;NM;32025;35045;San Juan;R;G;0;Secretary of State;;;General;;1;0;74;74;
+l;2148657617324;32342;2006-11-07;NM;32017;35029;Luna;R;G;0;Secretary of State;;;General;;1;0;17;17;
+l;2148120746412;32342;2006-11-07;NM;32009;35015;Eddy;R;G;0;Secretary of State;;;General;;1;0;43;43;
+l;2149731359148;32342;2006-11-07;NM;32033;35061;Valencia;R;G;0;Secretary of State;;;General;;1;0;52;52;
+l;2148054493612;33178;2006-11-07;NM;32008;35013;Dona Ana;0;G;5;Pub Reg Commission;District 5;;General;;1;0;111;111;
+l;2148859435436;32822;2006-11-07;NM;32020;35035;Otero;0;G;0;Auditor;;;General;;1;0;42;42;
+l;2148322564524;32822;2006-11-07;NM;32012;35021;Harding;0;G;0;Auditor;;;General;;1;0;4;4;
+l;99988908;32109;2006-11-07;NM;1;0;New Mexico;Y;G;19;State House;District 19;;General;;1;0;20;21;
+l;2149330082220;33686;2006-11-07;NM;32027;35049;Santa Fe;I;G;4;Amendment;Amend4-Affordable Housing;;General;;1;0;88;88;
+l;2148793211308;33686;2006-11-07;NM;32019;35033;Mora;I;G;4;Amendment;Amend4-Affordable Housing;;General;;1;0;14;14;
+l;2148256340396;33686;2006-11-07;NM;32011;35019;Guadalupe;I;G;4;Amendment;Amend4-Affordable Housing;;General;;1;0;8;8;
+l;2147719469484;33686;2006-11-07;NM;32003;35005;Chaves;I;G;4;Amendment;Amend4-Affordable Housing;;General;;1;0;52;52;
+l;100046252;32165;2006-11-07;NM;1;0;New Mexico;Y;G;53;State House;District 53;;General;;1;0;11;11;
+l;2149732750764;33701;2006-11-07;NM;32033;35061;Valencia;I;G;0;Bond;1-Senior Citizen;;General;;1;0;52;52;
+l;2149329561004;33177;2006-11-07;NM;32027;35049;Santa Fe;0;G;4;Pub Reg Commission;District 4;;General;;1;0;14;14;
+l;2147583632812;32105;2006-11-07;NM;32001;35001;Bernalillo;Y;G;16;State House;District 16;;General;;1;0;14;15;
+l;2149195880876;33702;2006-11-07;NM;32025;35045;San Juan;I;G;0;Bond;2-Higher Ed;;General;;1;0;74;74;
+l;2149531228588;33510;2006-11-07;NM;32030;35055;Taos;S;G;0;U.S. Senate;;;General;;1;0;37;37;
+l;2148994357676;33510;2006-11-07;NM;32022;35039;Rio Arriba;S;G;0;U.S. Senate;;;General;;1;0;43;44;
+l;2148457486764;33510;2006-11-07;NM;32014;35025;Lea;S;G;0;U.S. Senate;;;General;;1;0;45;45;
+l;2147920615852;33510;2006-11-07;NM;32006;35009;Curry;S;G;0;U.S. Senate;;;General;;1;0;47;47;
+l;2148323465644;33702;2006-11-07;NM;32012;35021;Harding;I;G;0;Bond;2-Higher Ed;;General;;1;0;4;4;
+l;2147786594732;33702;2006-11-07;NM;32004;35006;Cibola;I;G;0;Bond;2-Higher Ed;;General;;1;0;21;21;
+l;2149732751788;33702;2006-11-07;NM;32033;35061;Valencia;I;G;0;Bond;2-Higher Ed;;General;;1;0;52;52;
+l;2148457143724;33175;2006-11-07;NM;32014;35025;Lea;0;G;2;Pub Reg Commission;District 2;;General;;1;0;45;45;
+l;2147920272812;33175;2006-11-07;NM;32006;35009;Curry;0;G;2;Pub Reg Commission;District 2;;General;;1;0;47;47;
+l;2149732735404;33686;2006-11-07;NM;32033;35061;Valencia;I;G;4;Amendment;Amend4-Affordable Housing;;General;;1;0;52;52;
+l;2149195861420;33683;2006-11-07;NM;32025;35045;San Juan;I;G;1;Amendment;Amendment 1-Property Protection;;General;;1;0;74;74;
+l;2148658990508;33683;2006-11-07;NM;32017;35029;Luna;I;G;1;Amendment;Amendment 1-Property Protection;;General;;1;0;17;17;
+l;2148122119596;33683;2006-11-07;NM;32009;35015;Eddy;I;G;1;Amendment;Amendment 1-Property Protection;;General;;1;0;43;43;
+l;2147585248684;33683;2006-11-07;NM;32001;35001;Bernalillo;I;G;1;Amendment;Amendment 1-Property Protection;;General;;1;0;423;424;
+l;2149462817196;32238;2006-11-07;NM;32029;35053;Socorro;G;G;0;Governor;;;General;;1;0;28;28;
+l;2148925946284;32238;2006-11-07;NM;32021;35037;Quay;G;G;0;Governor;;;General;;1;0;32;32;
+l;2148389075372;32238;2006-11-07;NM;32013;35023;Hidalgo;G;G;0;Governor;;;General;;1;0;8;8;
+l;2147852204460;32238;2006-11-07;NM;32005;35007;Colfax;G;G;0;Governor;;;General;;1;0;21;21;
+l;2149395820972;32348;2006-11-07;NM;32028;35051;Sierra;T;G;0;Treasurer;;;General;;1;0;11;11;
+l;2148858950060;32348;2006-11-07;NM;32020;35035;Otero;T;G;0;Treasurer;;;General;;1;0;42;42;
+l;2148322079148;32348;2006-11-07;NM;32012;35021;Harding;T;G;0;Treasurer;;;General;;1;0;4;4;
+l;2149597147564;32348;2006-11-07;NM;32031;35057;Torrance;T;G;0;Treasurer;;;General;;1;0;18;18;
+l;100275628;32389;2006-11-07;NM;1;0;New Mexico;Y;G;57;State House;District 57;;General;;1;0;23;23;
+l;100059564;32178;2006-11-07;NM;1;0;New Mexico;Y;G;61;State House;District 61;;General;;1;0;18;18;
+l;2147583881644;32348;2006-11-07;NM;32001;35001;Bernalillo;T;G;0;Treasurer;;;General;;1;0;423;424;
+l;2149262972332;33685;2006-11-07;NM;32026;35047;San Miguel;I;G;3;Amendment;Amend 3-Water Trust;;General;;1;0;42;42;
+l;2148726101420;33685;2006-11-07;NM;32018;35031;McKinley;I;G;3;Amendment;Amend 3-Water Trust;;General;;1;0;55;55;
+l;2148189230508;33685;2006-11-07;NM;32010;35017;Grant;I;G;3;Amendment;Amend 3-Water Trust;;General;;1;0;45;45;
+l;2147652359596;33685;2006-11-07;NM;32002;35003;Catron;I;G;3;Amendment;Amend 3-Water Trust;;General;;1;0;8;8;
+l;2148524255660;33178;2006-11-07;NM;32015;35027;Lincoln;0;G;5;Pub Reg Commission;District 5;;General;;1;0;13;13;
+l;2149462931884;32350;2006-11-07;NM;32029;35053;Socorro;A;G;0;Attorney General;;;General;;1;0;28;28;
+l;100719020;32822;2006-11-07;NM;1;0;New Mexico;0;G;0;Auditor;;;General;;1;0;1560;1562;
+l;2148389190060;32350;2006-11-07;NM;32013;35023;Hidalgo;A;G;0;Attorney General;;;General;;1;0;8;8;
+l;2147852319148;32350;2006-11-07;NM;32005;35007;Colfax;A;G;0;Attorney General;;;General;;1;0;21;21;
+l;2148726119852;33703;2006-11-07;NM;32018;35031;McKinley;I;G;0;Bond;3-Libraries;;General;;1;0;55;55;
+l;2148189248940;33703;2006-11-07;NM;32010;35017;Grant;I;G;0;Bond;3-Libraries;;General;;1;0;45;45;
+l;2147920813484;33703;2006-11-07;NM;32006;35009;Curry;I;G;0;Bond;3-Libraries;;General;;1;0;47;47;
+l;100018604;32138;2006-11-07;NM;1;0;New Mexico;Y;G;35;State House;District 35;;General;;1;0;21;21;
+l;2149330097580;33701;2006-11-07;NM;32027;35049;Santa Fe;I;G;0;Bond;1-Senior Citizen;;General;;1;0;88;88;
+l;2148055018924;33691;2006-11-07;NM;32008;35013;Dona Ana;0;G;0;District Court;DistCt 3-Div5;;General;;1;0;122;122;
+l;2148256355756;33701;2006-11-07;NM;32011;35019;Guadalupe;I;G;0;Bond;1-Senior Citizen;;General;;1;0;8;8;
+l;2147719484844;33701;2006-11-07;NM;32003;35005;Chaves;I;G;0;Bond;1-Senior Citizen;;General;;1;0;52;52;
+l;2149531425196;33702;2006-11-07;NM;32030;35055;Taos;I;G;0;Bond;2-Higher Ed;;General;;1;0;37;37;
+l;2149530042796;32352;2006-11-07;NM;32030;35055;Taos;0;G;0;Land Commissioner;;;General;;1;0;37;37;
+l;2148993171884;32352;2006-11-07;NM;32022;35039;Rio Arriba;0;G;0;Land Commissioner;;;General;;1;0;43;44;
+l;2148456300972;32352;2006-11-07;NM;32014;35025;Lea;0;G;0;Land Commissioner;;;General;;1;0;45;45;
+l;2147919430060;32352;2006-11-07;NM;32006;35009;Curry;0;G;0;Land Commissioner;;;General;;1;0;47;47;
+l;2148659010988;33703;2006-11-07;NM;32017;35029;Luna;I;G;0;Bond;3-Libraries;;General;;1;0;17;17;
+l;2149463779756;33178;2006-11-07;NM;32029;35053;Socorro;0;G;5;Pub Reg Commission;District 5;;General;;1;0;25;25;
+l;2148858762668;32165;2006-11-07;NM;32020;35035;Otero;Y;G;53;State House;District 53;;General;;1;0;2;2;
+l;2149598516652;33685;2006-11-07;NM;32031;35057;Torrance;I;G;3;Amendment;Amend 3-Water Trust;;General;;1;0;18;18;
+l;101620140;33702;2006-11-07;NM;1;0;New Mexico;I;G;0;Bond;2-Higher Ed;;General;;1;0;1560;1562;
+l;2149397208492;33703;2006-11-07;NM;32028;35051;Sierra;I;G;0;Bond;3-Libraries;;General;;1;0;11;11;
+l;2149261300140;32052;2006-11-07;NM;32026;35047;San Miguel;H;G;3;U.S. House;District 3;;General;;1;0;42;42;
+l;2148724429228;32052;2006-11-07;NM;32018;35031;McKinley;H;G;3;U.S. House;District 3;;General;;1;0;49;49;
+l;2147786595756;33703;2006-11-07;NM;32004;35006;Cibola;I;G;0;Bond;3-Libraries;;General;;1;0;21;21;
+l;2148859796908;33175;2006-11-07;NM;32020;35035;Otero;0;G;2;Pub Reg Commission;District 2;;General;;1;0;28;28;
+l;2148860336556;33702;2006-11-07;NM;32020;35035;Otero;I;G;0;Bond;2-Higher Ed;;General;;1;0;42;42;
+l;2148658576812;33279;2006-11-07;NM;32017;35029;Luna;H;G;2;U.S. House;District 2;;General;;1;0;17;17;
+l;2149596796332;32005;2006-11-07;NM;32031;35057;Torrance;H;G;1;U.S. House;District 1;;General;;1;0;18;18;
+l;2147584834988;33279;2006-11-07;NM;32001;35001;Bernalillo;H;G;2;U.S. House;District 2;;General;;1;0;1;2;
+l;2148524792236;33702;2006-11-07;NM;32015;35027;Lincoln;I;G;0;Bond;2-Higher Ed;;General;;1;0;21;21;
+l;2149128753580;33684;2006-11-07;NM;32024;35043;Sandoval;I;G;2;Amendment;Amendment 2-Building Lease;;General;;1;0;83;83;
+l;2147718141356;32389;2006-11-07;NM;32003;35005;Chaves;Y;G;57;State House;District 57;;General;;1;0;9;9;
+l;2148122120620;33684;2006-11-07;NM;32009;35015;Eddy;I;G;2;Amendment;Amendment 2-Building Lease;;General;;1;0;43;43;
+l;2147585249708;33684;2006-11-07;NM;32001;35001;Bernalillo;I;G;2;Amendment;Amendment 2-Building Lease;;General;;1;0;423;424;
+l;2149665624492;33684;2006-11-07;NM;32032;35059;Union;I;G;2;Amendment;Amendment 2-Building Lease;;General;;1;0;8;8;
+l;100233644;32348;2006-11-07;NM;1;0;New Mexico;T;G;0;Treasurer;;;General;;1;0;1560;1562;
+l;2149127379372;32342;2006-11-07;NM;32024;35043;Sandoval;R;G;0;Secretary of State;;;General;;1;0;83;83;
+l;2148590508460;32342;2006-11-07;NM;32016;35028;Los Alamos;R;G;0;Secretary of State;;;General;;1;0;19;19;
+l;2148053637548;32342;2006-11-07;NM;32008;35013;Dona Ana;R;G;0;Secretary of State;;;General;;1;0;122;122;
+l;2149664250284;32342;2006-11-07;NM;32032;35059;Union;R;G;0;Secretary of State;;;General;;1;0;8;8;
+l;2149329197484;32822;2006-11-07;NM;32027;35049;Santa Fe;0;G;0;Auditor;;;General;;1;0;88;88;
+l;2148792326572;32822;2006-11-07;NM;32019;35033;Mora;0;G;0;Auditor;;;General;;1;0;14;14;
+l;2148255455660;32822;2006-11-07;NM;32011;35019;Guadalupe;0;G;0;Auditor;;;General;;1;0;8;8;
+l;2147718584748;32822;2006-11-07;NM;32003;35005;Chaves;0;G;0;Auditor;;;General;;1;0;52;52;
+l;2149462923692;32342;2006-11-07;NM;32029;35053;Socorro;R;G;0;Secretary of State;;;General;;1;0;28;28;
+l;2149262973356;33686;2006-11-07;NM;32026;35047;San Miguel;I;G;4;Amendment;Amend4-Affordable Housing;;General;;1;0;42;42;
+l;2148726102444;33686;2006-11-07;NM;32018;35031;McKinley;I;G;4;Amendment;Amend4-Affordable Housing;;General;;1;0;55;55;
+l;99882412;32005;2006-11-07;NM;1;0;New Mexico;H;G;1;U.S. House;District 1;;General;;1;0;465;465;
+l;2147652360620;33686;2006-11-07;NM;32002;35003;Catron;I;G;4;Amendment;Amend4-Affordable Housing;;General;;1;0;8;8;
+l;2147852310956;32342;2006-11-07;NM;32005;35007;Colfax;R;G;0;Secretary of State;;;General;;1;0;21;21;
+l;2148189246892;33701;2006-11-07;NM;32010;35017;Grant;I;G;0;Bond;1-Senior Citizen;;General;;1;0;45;45;
+l;2148121868716;33438;2006-11-07;NM;32009;35015;Eddy;0;G;0;District Court;Position 5-Division 5;;General;;1;0;43;43;
+l;2148523223468;32170;2006-11-07;NM;32015;35027;Lincoln;Y;G;56;State House;District 56;;General;;1;0;6;6;
+l;2149731367340;32350;2006-11-07;NM;32033;35061;Valencia;A;G;0;Attorney General;;;General;;1;0;52;52;
+l;100005292;32125;2006-11-07;NM;1;0;New Mexico;Y;G;28;State House;District 28;;General;;1;0;23;24;
+l;100019628;32139;2006-11-07;NM;1;0;New Mexico;Y;G;36;State House;District 36;;General;;1;0;29;29;
+l;2148927248812;33510;2006-11-07;NM;32021;35037;Quay;S;G;0;U.S. Senate;;;General;;1;0;32;32;
+l;2148390377900;33510;2006-11-07;NM;32013;35023;Hidalgo;S;G;0;U.S. Senate;;;General;;1;0;8;8;
+l;2147853506988;33510;2006-11-07;NM;32005;35007;Colfax;S;G;0;U.S. Senate;;;General;;1;0;21;21;
+l;2149397189036;33684;2006-11-07;NM;32028;35051;Sierra;I;G;2;Amendment;Amendment 2-Building Lease;;General;;1;0;11;11;
+l;2147719485868;33702;2006-11-07;NM;32003;35005;Chaves;I;G;0;Bond;2-Higher Ed;;General;;1;0;52;52;
+l;100048300;32167;2006-11-07;NM;1;0;New Mexico;Y;G;54;State House;District 54;;General;;1;0;20;20;
+l;2148926905772;33175;2006-11-07;NM;32021;35037;Quay;0;G;2;Pub Reg Commission;District 2;;General;;1;0;32;32;
+l;2148323448236;33685;2006-11-07;NM;32012;35021;Harding;I;G;3;Amendment;Amend 3-Water Trust;;General;;1;0;4;4;
+l;100051372;32170;2006-11-07;NM;1;0;New Mexico;Y;G;56;State House;District 56;;General;;1;0;15;15;
+l;101592492;33675;2006-11-07;NM;1;0;New Mexico;0;G;0;District Court;Position 2-Division 12;;General;;1;0;423;424;
+l;2149731104172;32093;2006-11-07;NM;32033;35061;Valencia;Y;G;7;State House;District 7;;General;;1;0;20;20;
+l;2148457674156;33693;2006-11-07;NM;32014;35025;Lea;0;G;0;District Court;DistCt 5-Div9;;General;;1;0;45;45;
+l;2149128752556;33683;2006-11-07;NM;32024;35043;Sandoval;I;G;1;Amendment;Amendment 1-Property Protection;;General;;1;0;83;83;
+l;2148591881644;33683;2006-11-07;NM;32016;35028;Los Alamos;I;G;1;Amendment;Amendment 1-Property Protection;;General;;1;0;19;19;
+l;2148055010732;33683;2006-11-07;NM;32008;35013;Dona Ana;I;G;1;Amendment;Amendment 1-Property Protection;;General;;1;0;122;122;
+l;2149665623468;33683;2006-11-07;NM;32032;35059;Union;I;G;1;Amendment;Amendment 1-Property Protection;;General;;1;0;8;8;
+l;2149397206444;33701;2006-11-07;NM;32028;35051;Sierra;I;G;0;Bond;1-Senior Citizen;;General;;1;0;11;11;
+l;2149395708332;32238;2006-11-07;NM;32028;35051;Sierra;G;G;0;Governor;;;General;;1;0;11;11;
+l;2148858837420;32238;2006-11-07;NM;32020;35035;Otero;G;G;0;Governor;;;General;;1;0;42;42;
+l;2148321966508;32238;2006-11-07;NM;32012;35021;Harding;G;G;0;Governor;;;General;;1;0;4;4;
+l;2147785095596;32238;2006-11-07;NM;32004;35006;Cibola;G;G;0;Governor;;;General;;1;0;21;21;
+l;2149328712108;32348;2006-11-07;NM;32027;35049;Santa Fe;T;G;0;Treasurer;;;General;;1;0;88;88;
+l;2148791841196;32348;2006-11-07;NM;32019;35033;Mora;T;G;0;Treasurer;;;General;;1;0;14;14;
+l;2148254970284;32348;2006-11-07;NM;32011;35019;Guadalupe;T;G;0;Treasurer;;;General;;1;0;8;8;
+l;2147718099372;32348;2006-11-07;NM;32003;35005;Chaves;T;G;0;Treasurer;;;General;;1;0;52;52;
+l;2149732319660;33280;2006-11-07;NM;32033;35061;Valencia;Y;G;8;State House;District 8;;General;;1;0;21;21;
+l;2149195863468;33685;2006-11-07;NM;32025;35045;San Juan;I;G;3;Amendment;Amend 3-Water Trust;;General;;1;0;74;74;
+l;2148658992556;33685;2006-11-07;NM;32017;35029;Luna;I;G;3;Amendment;Amend 3-Water Trust;;General;;1;0;17;17;
+l;2148122121644;33685;2006-11-07;NM;32009;35015;Eddy;I;G;3;Amendment;Amend 3-Water Trust;;General;;1;0;43;43;
+l;2147585250732;33685;2006-11-07;NM;32001;35001;Bernalillo;I;G;3;Amendment;Amend 3-Water Trust;;General;;1;0;423;424;
+l;101349804;33438;2006-11-07;NM;1;0;New Mexico;0;G;0;District Court;Position 5-Division 5;;General;;1;0;140;140;
+l;2149732748716;33699;2006-11-07;NM;32033;35061;Valencia;0;G;0;District Court;DistCt 13-Div7;;General;;1;0;52;52;
+l;2149395823020;32350;2006-11-07;NM;32028;35051;Sierra;A;G;0;Attorney General;;;General;;1;0;11;11;
+l;2148858952108;32350;2006-11-07;NM;32020;35035;Otero;A;G;0;Attorney General;;;General;;1;0;42;42;
+l;2148322081196;32350;2006-11-07;NM;32012;35021;Harding;A;G;0;Attorney General;;;General;;1;0;4;4;
+l;2147785210284;32350;2006-11-07;NM;32004;35006;Cibola;A;G;0;Attorney General;;;General;;1;0;21;21;
+l;2147583769004;32238;2006-11-07;NM;32001;35001;Bernalillo;G;G;0;Governor;;;General;;1;0;423;424;
+l;2148457675180;33694;2006-11-07;NM;32014;35025;Lea;0;G;0;District Court;DistCt 5-Div10;;General;;1;0;45;45;
+l;2148726117804;33701;2006-11-07;NM;32018;35031;McKinley;I;G;0;Bond;1-Senior Citizen;;General;;1;0;55;55;
+l;2147719289260;33510;2006-11-07;NM;32003;35005;Chaves;S;G;0;U.S. Senate;;;General;;1;0;52;52;
+l;2147652375980;33701;2006-11-07;NM;32002;35003;Catron;I;G;0;Bond;1-Senior Citizen;;General;;1;0;8;8;
+l;2149462933932;32352;2006-11-07;NM;32029;35053;Socorro;0;G;0;Land Commissioner;;;General;;1;0;28;28;
+l;2148926063020;32352;2006-11-07;NM;32021;35037;Quay;0;G;0;Land Commissioner;;;General;;1;0;32;32;
+l;2148389192108;32352;2006-11-07;NM;32013;35023;Hidalgo;0;G;0;Land Commissioner;;;General;;1;0;8;8;
+l;2148523227564;32174;2006-11-07;NM;32015;35027;Lincoln;Y;G;59;State House;District 59;;General;;1;0;3;3;
+l;2148591901100;33702;2006-11-07;NM;32016;35028;Los Alamos;I;G;0;Bond;2-Higher Ed;;General;;1;0;19;19;
+l;2148189247916;33702;2006-11-07;NM;32010;35017;Grant;I;G;0;Bond;2-Higher Ed;;General;;1;0;45;45;
+l;2149128770988;33701;2006-11-07;NM;32024;35043;Sandoval;I;G;0;Bond;1-Senior Citizen;;General;;1;0;83;83;
+l;2149330099628;33703;2006-11-07;NM;32027;35049;Santa Fe;I;G;0;Bond;3-Libraries;;General;;1;0;88;88;
+l;2149194191276;32052;2006-11-07;NM;32025;35045;San Juan;H;G;3;U.S. House;District 3;;General;;1;0;74;74;
+l;2148256357804;33703;2006-11-07;NM;32011;35019;Guadalupe;I;G;0;Bond;3-Libraries;;General;;1;0;8;8;
+l;2147719486892;33703;2006-11-07;NM;32003;35005;Chaves;I;G;0;Bond;3-Libraries;;General;;1;0;52;52;
+l;2147583578540;32052;2006-11-07;NM;32001;35001;Bernalillo;H;G;3;U.S. House;District 3;;General;;1;0;5;6;
+l;2149731369388;32352;2006-11-07;NM;32033;35061;Valencia;0;G;0;Land Commissioner;;;General;;1;0;52;52;
+l;2147717919148;32172;2006-11-07;NM;32003;35005;Chaves;Y;G;58;State House;District 58;;General;;1;0;18;18;
+l;2149127209388;32176;2006-11-07;NM;32024;35043;Sandoval;Y;G;60;State House;District 60;;General;;1;0;16;16;
+l;2148054597036;33279;2006-11-07;NM;32008;35013;Dona Ana;H;G;2;U.S. House;District 2;;General;;1;0;122;122;
+l;101593516;33676;2006-11-07;NM;1;0;New Mexico;0;G;0;District Court;Position 2-Division 16;;General;;1;0;423;424;
+l;2149464296876;33683;2006-11-07;NM;32029;35053;Socorro;I;G;1;Amendment;Amendment 1-Property Protection;;General;;1;0;28;28;
+l;2147583635884;32108;2006-11-07;NM;32001;35001;Bernalillo;Y;G;18;State House;District 18;;General;;1;0;29;30;
+l;2148591882668;33684;2006-11-07;NM;32016;35028;Los Alamos;I;G;2;Amendment;Amendment 2-Building Lease;;General;;1;0;19;19;
+l;2148055011756;33684;2006-11-07;NM;32008;35013;Dona Ana;I;G;2;Amendment;Amendment 2-Building Lease;;General;;1;0;122;122;
+l;100121004;32238;2006-11-07;NM;1;0;New Mexico;G;G;0;Governor;;;General;;1;0;1560;1562;
+l;2149731850668;32822;2006-11-07;NM;32033;35061;Valencia;0;G;0;Auditor;;;General;;1;0;52;52;
+l;2149597141420;32342;2006-11-07;NM;32031;35057;Torrance;R;G;0;Secretary of State;;;General;;1;0;18;18;
+l;2149060270508;32342;2006-11-07;NM;32023;35041;Roosevelt;R;G;0;Secretary of State;;;General;;1;0;23;23;
+l;2147719215532;33438;2006-11-07;NM;32003;35005;Chaves;0;G;0;District Court;Position 5-Division 5;;General;;1;0;52;52;
+l;2147986528684;32342;2006-11-07;NM;32007;35011;DeBaca;R;G;0;Secretary of State;;;General;;1;0;6;6;
+l;2149262088620;32822;2006-11-07;NM;32026;35047;San Miguel;0;G;0;Auditor;;;General;;1;0;42;42;
+l;2148725217708;32822;2006-11-07;NM;32018;35031;McKinley;0;G;0;Auditor;;;General;;1;0;55;55;
+l;2148188346796;32822;2006-11-07;NM;32010;35017;Grant;0;G;0;Auditor;;;General;;1;0;45;45;
+l;2147651475884;32822;2006-11-07;NM;32002;35003;Catron;0;G;0;Auditor;;;General;;1;0;8;8;
+l;2149665643948;33703;2006-11-07;NM;32032;35059;Union;I;G;0;Bond;3-Libraries;;General;;1;0;8;8;
+l;2149195864492;33686;2006-11-07;NM;32025;35045;San Juan;I;G;4;Amendment;Amend4-Affordable Housing;;General;;1;0;74;74;
+l;2148658993580;33686;2006-11-07;NM;32017;35029;Luna;I;G;4;Amendment;Amend4-Affordable Housing;;General;;1;0;17;17;
+l;2148122122668;33686;2006-11-07;NM;32009;35015;Eddy;I;G;4;Amendment;Amend4-Affordable Housing;;General;;1;0;43;43;
+l;2147585251756;33686;2006-11-07;NM;32001;35001;Bernalillo;I;G;4;Amendment;Amend4-Affordable Housing;;General;;1;0;423;424;
+l;2148793226668;33701;2006-11-07;NM;32019;35033;Mora;I;G;0;Bond;1-Senior Citizen;;General;;1;0;14;14;
+l;100235692;32350;2006-11-07;NM;1;0;New Mexico;A;G;0;Attorney General;;;General;;1;0;1560;1562;
+l;2148390555052;33683;2006-11-07;NM;32013;35023;Hidalgo;I;G;1;Amendment;Amendment 1-Property Protection;;General;;1;0;8;8;
+l;101617068;33699;2006-11-07;NM;1;0;New Mexico;0;G;0;District Court;DistCt 13-Div7;;General;;1;0;156;156;
+l;2148858764716;32167;2006-11-07;NM;32020;35035;Otero;Y;G;54;State House;District 54;;General;;1;0;3;3;
+l;2149397010860;33510;2006-11-07;NM;32028;35051;Sierra;S;G;0;U.S. Senate;;;General;;1;0;11;11;
+l;2148860139948;33510;2006-11-07;NM;32020;35035;Otero;S;G;0;U.S. Senate;;;General;;1;0;42;42;
+l;2148323269036;33510;2006-11-07;NM;32012;35021;Harding;S;G;0;U.S. Senate;;;General;;1;0;4;4;
+l;2147786398124;33510;2006-11-07;NM;32004;35006;Cibola;S;G;0;U.S. Senate;;;General;;1;0;21;21;
+l;2149464297900;33684;2006-11-07;NM;32029;35053;Socorro;I;G;2;Amendment;Amendment 2-Building Lease;;General;;1;0;28;28;
+l;2147652377004;33702;2006-11-07;NM;32002;35003;Catron;I;G;0;Bond;2-Higher Ed;;General;;1;0;8;8;
+l;2148658991532;33684;2006-11-07;NM;32017;35029;Luna;I;G;2;Amendment;Amendment 2-Building Lease;;General;;1;0;17;17;
+l;99964332;32085;2006-11-07;NM;1;0;New Mexico;Y;G;2;State House;District 2;;General;;1;0;15;15;
+l;2149194506668;32360;2006-11-07;NM;32025;35045;San Juan;Y;G;1;State House;District 1;;General;;1;0;15;15;
+l;2148793228716;33703;2006-11-07;NM;32019;35033;Mora;I;G;0;Bond;3-Libraries;;General;;1;0;14;14;
+l;100007340;32127;2006-11-07;NM;1;0;New Mexico;Y;G;29;State House;District 29;;General;;1;0;15;16;
+l;2149061643692;33683;2006-11-07;NM;32023;35041;Roosevelt;I;G;1;Amendment;Amendment 1-Property Protection;;General;;1;0;23;23;
+l;2148524772780;33683;2006-11-07;NM;32015;35027;Lincoln;I;G;1;Amendment;Amendment 1-Property Protection;;General;;1;0;21;21;
+l;100021676;32141;2006-11-07;NM;1;0;New Mexico;Y;G;37;State House;District 37;;General;;1;0;16;16;
+l;2149328599468;32238;2006-11-07;NM;32027;35049;Santa Fe;G;G;0;Governor;;;General;;1;0;88;88;
+l;2148791728556;32238;2006-11-07;NM;32019;35033;Mora;G;G;0;Governor;;;General;;1;0;14;14;
+l;2148254857644;32238;2006-11-07;NM;32011;35019;Guadalupe;G;G;0;Governor;;;General;;1;0;8;8;
+l;2147717986732;32238;2006-11-07;NM;32003;35005;Chaves;G;G;0;Governor;;;General;;1;0;52;52;
+l;2149463778732;33177;2006-11-07;NM;32029;35053;Socorro;0;G;4;Pub Reg Commission;District 4;;General;;1;0;1;1;
+l;2148724732332;32348;2006-11-07;NM;32018;35031;McKinley;T;G;0;Treasurer;;;General;;1;0;55;55;
+l;2148187861420;32348;2006-11-07;NM;32010;35017;Grant;T;G;0;Treasurer;;;General;;1;0;45;45;
+l;2147650990508;32348;2006-11-07;NM;32002;35003;Catron;T;G;0;Treasurer;;;General;;1;0;8;8;
+l;2148858767788;32170;2006-11-07;NM;32020;35035;Otero;Y;G;56;State House;District 56;;General;;1;0;9;9;
+l;101608876;33691;2006-11-07;NM;1;0;New Mexico;0;G;0;District Court;DistCt 3-Div5;;General;;1;0;122;122;
+l;2147583636908;32109;2006-11-07;NM;32001;35001;Bernalillo;Y;G;19;State House;District 19;;General;;1;0;20;21;
+l;2148591883692;33685;2006-11-07;NM;32016;35028;Los Alamos;I;G;3;Amendment;Amend 3-Water Trust;;General;;1;0;19;19;
+l;2148055012780;33685;2006-11-07;NM;32008;35013;Dona Ana;I;G;3;Amendment;Amend 3-Water Trust;;General;;1;0;122;122;
+l;2149665625516;33685;2006-11-07;NM;32032;35059;Union;I;G;3;Amendment;Amend 3-Water Trust;;General;;1;0;8;8;
+l;2147717921196;32174;2006-11-07;NM;32003;35005;Chaves;Y;G;59;State House;District 59;;General;;1;0;17;17;
+l;2148122139052;33702;2006-11-07;NM;32009;35015;Eddy;I;G;0;Bond;2-Higher Ed;;General;;1;0;43;43;
+l;2149328714156;32350;2006-11-07;NM;32027;35049;Santa Fe;A;G;0;Attorney General;;;General;;1;0;88;88;
+l;2148791843244;32350;2006-11-07;NM;32019;35033;Mora;A;G;0;Attorney General;;;General;;1;0;14;14;
+l;2148254972332;32350;2006-11-07;NM;32011;35019;Guadalupe;A;G;0;Attorney General;;;General;;1;0;8;8;
+l;2147718101420;32350;2006-11-07;NM;32003;35005;Chaves;A;G;0;Attorney General;;;General;;1;0;52;52;
+l;2149195879852;33701;2006-11-07;NM;32025;35045;San Juan;I;G;0;Bond;1-Senior Citizen;;General;;1;0;74;74;
+l;2148659008940;33701;2006-11-07;NM;32017;35029;Luna;I;G;0;Bond;1-Senior Citizen;;General;;1;0;17;17;
+l;2148122138028;33701;2006-11-07;NM;32009;35015;Eddy;I;G;0;Bond;1-Senior Citizen;;General;;1;0;43;43;
+l;2147585267116;33701;2006-11-07;NM;32001;35001;Bernalillo;I;G;0;Bond;1-Senior Citizen;;General;;1;0;423;424;
+l;2149464316332;33702;2006-11-07;NM;32029;35053;Socorro;I;G;0;Bond;2-Higher Ed;;General;;1;0;28;28;
+l;2149395825068;32352;2006-11-07;NM;32028;35051;Sierra;0;G;0;Land Commissioner;;;General;;1;0;11;11;
+l;2148858954156;32352;2006-11-07;NM;32020;35035;Otero;0;G;0;Land Commissioner;;;General;;1;0;42;42;
+l;2148322083244;32352;2006-11-07;NM;32012;35021;Harding;0;G;0;Land Commissioner;;;General;;1;0;4;4;
+l;2147785212332;32352;2006-11-07;NM;32004;35006;Cibola;0;G;0;Land Commissioner;;;General;;1;0;21;21;
+l;101423532;33510;2006-11-07;NM;1;0;New Mexico;S;G;0;U.S. Senate;;;General;;1;0;1560;1562;
+l;2148994536876;33685;2006-11-07;NM;32022;35039;Rio Arriba;I;G;3;Amendment;Amend 3-Water Trust;;General;;1;0;43;44;
+l;2149262990764;33703;2006-11-07;NM;32026;35047;San Miguel;I;G;0;Bond;3-Libraries;;General;;1;0;42;42;
+l;2149127082412;32052;2006-11-07;NM;32024;35043;Sandoval;H;G;3;U.S. House;District 3;;General;;1;0;66;66;
+l;2148590211500;32052;2006-11-07;NM;32016;35028;Los Alamos;H;G;3;U.S. House;District 3;;General;;1;0;19;19;
+l;101080492;33175;2006-11-07;NM;1;0;New Mexico;0;G;2;Pub Reg Commission;District 2;;General;;1;0;323;324;
+l;2149663953324;32052;2006-11-07;NM;32032;35059;Union;H;G;3;U.S. House;District 3;;General;;1;0;8;8;
+l;2149195343276;33177;2006-11-07;NM;32025;35045;San Juan;0;G;4;Pub Reg Commission;District 4;;General;;1;0;74;74;
+l;2148524359084;33279;2006-11-07;NM;32015;35027;Lincoln;H;G;2;U.S. House;District 2;;General;;1;0;21;21;
+l;2147987488172;33279;2006-11-07;NM;32007;35011;DeBaca;H;G;2;U.S. House;District 2;;General;;1;0;6;6;
+l;2147584730540;33177;2006-11-07;NM;32001;35001;Bernalillo;0;G;4;Pub Reg Commission;District 4;;General;;1;0;70;71;
+l;2149598515628;33684;2006-11-07;NM;32031;35057;Torrance;I;G;2;Amendment;Amendment 2-Building Lease;;General;;1;0;18;18;
+l;2149061644716;33684;2006-11-07;NM;32023;35041;Roosevelt;I;G;2;Amendment;Amendment 2-Building Lease;;General;;1;0;23;23;
+l;2148524773804;33684;2006-11-07;NM;32015;35027;Lincoln;I;G;2;Amendment;Amendment 2-Building Lease;;General;;1;0;21;21;
+l;2147987902892;33684;2006-11-07;NM;32007;35011;DeBaca;I;G;2;Amendment;Amendment 2-Building Lease;;General;;1;0;6;6;
+l;2149127182764;32150;2006-11-07;NM;32024;35043;Sandoval;Y;G;44;State House;District 44;;General;;1;0;23;23;
+l;2148121705900;33279;2006-11-07;NM;32009;35015;Eddy;H;G;2;U.S. House;District 2;;General;;1;0;43;43;
+l;2148993161644;32342;2006-11-07;NM;32022;35039;Rio Arriba;R;G;0;Secretary of State;;;General;;1;0;43;44;
+l;2148456290732;32342;2006-11-07;NM;32014;35025;Lea;R;G;0;Secretary of State;;;General;;1;0;45;45;
+l;2147919419820;32342;2006-11-07;NM;32006;35009;Curry;R;G;0;Secretary of State;;;General;;1;0;47;47;
+l;2148390037932;33178;2006-11-07;NM;32013;35023;Hidalgo;0;G;5;Pub Reg Commission;District 5;;General;;1;0;8;8;
+l;2149194979756;32822;2006-11-07;NM;32025;35045;San Juan;0;G;0;Auditor;;;General;;1;0;74;74;
+l;2148658108844;32822;2006-11-07;NM;32017;35029;Luna;0;G;0;Auditor;;;General;;1;0;17;17;
+l;2148121237932;32822;2006-11-07;NM;32009;35015;Eddy;0;G;0;Auditor;;;General;;1;0;43;43;
+l;2147584367020;32822;2006-11-07;NM;32001;35001;Bernalillo;0;G;0;Auditor;;;General;;1;0;423;424;
+l;2149330098604;33702;2006-11-07;NM;32027;35049;Santa Fe;I;G;0;Bond;2-Higher Ed;;General;;1;0;88;88;
+l;101609900;33692;2006-11-07;NM;1;0;New Mexico;0;G;0;District Court;DistCt 3-Div8;;General;;1;0;122;122;
+l;2149128755628;33686;2006-11-07;NM;32024;35043;Sandoval;I;G;4;Amendment;Amend4-Affordable Housing;;General;;1;0;83;83;
+l;2148591884716;33686;2006-11-07;NM;32016;35028;Los Alamos;I;G;4;Amendment;Amend4-Affordable Housing;;General;;1;0;19;19;
+l;2148055013804;33686;2006-11-07;NM;32008;35013;Dona Ana;I;G;4;Amendment;Amend4-Affordable Housing;;General;;1;0;122;122;
+l;2149665626540;33686;2006-11-07;NM;32032;35059;Union;I;G;4;Amendment;Amend4-Affordable Housing;;General;;1;0;8;8;
+l;101186988;33279;2006-11-07;NM;1;0;New Mexico;H;G;2;U.S. House;District 2;;General;;1;0;517;518;
+l;2149597997484;33178;2006-11-07;NM;32031;35057;Torrance;0;G;5;Pub Reg Commission;District 5;;General;;1;0;1;1;
+l;2149397207468;33702;2006-11-07;NM;32028;35051;Sierra;I;G;0;Bond;2-Higher Ed;;General;;1;0;11;11;
+l;2149329901996;33510;2006-11-07;NM;32027;35049;Santa Fe;S;G;0;U.S. Senate;;;General;;1;0;88;88;
+l;2148793031084;33510;2006-11-07;NM;32019;35033;Mora;S;G;0;U.S. Senate;;;General;;1;0;14;14;
+l;2148256160172;33510;2006-11-07;NM;32011;35019;Guadalupe;S;G;0;U.S. Senate;;;General;;1;0;8;8;
+l;2149732215212;33178;2006-11-07;NM;32033;35061;Valencia;0;G;5;Pub Reg Commission;District 5;;General;;1;0;49;49;
+l;2149530524076;32822;2006-11-07;NM;32030;35055;Taos;0;G;0;Auditor;;;General;;1;0;37;37;
+l;2147585268140;33702;2006-11-07;NM;32001;35001;Bernalillo;I;G;0;Bond;2-Higher Ed;;General;;1;0;423;424;
+l;100237740;32352;2006-11-07;NM;1;0;New Mexico;0;G;0;Land Commissioner;;;General;;1;0;1560;1562;
+l;2149329558956;33175;2006-11-07;NM;32027;35049;Santa Fe;0;G;2;Pub Reg Commission;District 2;;General;;1;0;6;6;
+l;2148255817132;33175;2006-11-07;NM;32011;35019;Guadalupe;0;G;2;Pub Reg Commission;District 2;;General;;1;0;2;2;
+l;2147718946220;33175;2006-11-07;NM;32003;35005;Chaves;0;G;2;Pub Reg Commission;District 2;;General;;1;0;52;52;
+l;100057516;32176;2006-11-07;NM;1;0;New Mexico;Y;G;60;State House;District 60;;General;;1;0;16;16;
+l;2149531405740;33683;2006-11-07;NM;32030;35055;Taos;I;G;1;Amendment;Amendment 1-Property Protection;;General;;1;0;37;37;
+l;2148994534828;33683;2006-11-07;NM;32022;35039;Rio Arriba;I;G;1;Amendment;Amendment 1-Property Protection;;General;;1;0;43;44;
+l;2148457663916;33683;2006-11-07;NM;32014;35025;Lea;I;G;1;Amendment;Amendment 1-Property Protection;;General;;1;0;45;45;
+l;2147920793004;33683;2006-11-07;NM;32006;35009;Curry;I;G;1;Amendment;Amendment 1-Property Protection;;General;;1;0;47;47;
+l;2149261490604;32238;2006-11-07;NM;32026;35047;San Miguel;G;G;0;Governor;;;General;;1;0;42;42;
+l;2148724619692;32238;2006-11-07;NM;32018;35031;McKinley;G;G;0;Governor;;;General;;1;0;55;55;
+l;2148187748780;32238;2006-11-07;NM;32010;35017;Grant;G;G;0;Governor;;;General;;1;0;45;45;
+l;2147650877868;32238;2006-11-07;NM;32002;35003;Catron;G;G;0;Governor;;;General;;1;0;8;8;
+l;2149194494380;32348;2006-11-07;NM;32025;35045;San Juan;T;G;0;Treasurer;;;General;;1;0;74;74;
+l;2148657623468;32348;2006-11-07;NM;32017;35029;Luna;T;G;0;Treasurer;;;General;;1;0;17;17;
+l;2148120752556;32348;2006-11-07;NM;32009;35015;Eddy;T;G;0;Treasurer;;;General;;1;0;43;43;
+l;2149731365292;32348;2006-11-07;NM;32033;35061;Valencia;T;G;0;Treasurer;;;General;;1;0;52;52;
+l;99980716;32101;2006-11-07;NM;1;0;New Mexico;Y;G;14;State House;District 14;;General;;1;0;17;18;
+l;99995052;32115;2006-11-07;NM;1;0;New Mexico;Y;G;22;State House;District 22;;General;;1;0;18;19;
+l;100009388;32129;2006-11-07;NM;1;0;New Mexico;Y;G;30;State House;District 30;;General;;1;0;22;23;
+l;2149061645740;33685;2006-11-07;NM;32023;35041;Roosevelt;I;G;3;Amendment;Amend 3-Water Trust;;General;;1;0;23;23;
+l;2148524774828;33685;2006-11-07;NM;32015;35027;Lincoln;I;G;3;Amendment;Amend 3-Water Trust;;General;;1;0;21;21;
+l;2147987903916;33685;2006-11-07;NM;32007;35011;DeBaca;I;G;3;Amendment;Amend 3-Water Trust;;General;;1;0;6;6;
+l;2149061663148;33702;2006-11-07;NM;32023;35041;Roosevelt;I;G;0;Bond;2-Higher Ed;;General;;1;0;23;23;
+l;101621164;33703;2006-11-07;NM;1;0;New Mexico;I;G;0;Bond;3-Libraries;;General;;1;0;1560;1562;
+l;2149261605292;32350;2006-11-07;NM;32026;35047;San Miguel;A;G;0;Attorney General;;;General;;1;0;42;42;
+l;2148724734380;32350;2006-11-07;NM;32018;35031;McKinley;A;G;0;Attorney General;;;General;;1;0;55;55;
+l;2148053456300;32165;2006-11-07;NM;32008;35013;Dona Ana;Y;G;53;State House;District 53;;General;;1;0;9;9;
+l;2147650992556;32350;2006-11-07;NM;32002;35003;Catron;A;G;0;Attorney General;;;General;;1;0;8;8;
+l;2149731014060;32005;2006-11-07;NM;32033;35061;Valencia;H;G;1;U.S. House;District 1;;General;;1;0;15;15;
+l;101610924;33693;2006-11-07;NM;1;0;New Mexico;0;G;0;District Court;DistCt 5-Div9;;General;;1;0;140;140;
+l;2147583653292;32125;2006-11-07;NM;32001;35001;Bernalillo;Y;G;28;State House;District 28;;General;;1;0;23;24;
+l;2148591900076;33701;2006-11-07;NM;32016;35028;Los Alamos;I;G;0;Bond;1-Senior Citizen;;General;;1;0;19;19;
+l;2148055029164;33701;2006-11-07;NM;32008;35013;Dona Ana;I;G;0;Bond;1-Senior Citizen;;General;;1;0;122;122;
+l;2149665641900;33701;2006-11-07;NM;32032;35059;Union;I;G;0;Bond;1-Senior Citizen;;General;;1;0;8;8;
+l;2149328716204;32352;2006-11-07;NM;32027;35049;Santa Fe;0;G;0;Land Commissioner;;;General;;1;0;88;88;
+l;2148791845292;32352;2006-11-07;NM;32019;35033;Mora;0;G;0;Land Commissioner;;;General;;1;0;14;14;
+l;2148120567212;32167;2006-11-07;NM;32009;35015;Eddy;Y;G;54;State House;District 54;;General;;1;0;17;17;
+l;2147718103468;32352;2006-11-07;NM;32003;35005;Chaves;0;G;0;Land Commissioner;;;General;;1;0;52;52;
+l;2148523399596;32342;2006-11-07;NM;32015;35027;Lincoln;R;G;0;Secretary of State;;;General;;1;0;21;21;
+l;2147585240492;33675;2006-11-07;NM;32001;35001;Bernalillo;0;G;0;District Court;Position 2-Division 12;;General;;1;0;423;424;
+l;2149195881900;33703;2006-11-07;NM;32025;35045;San Juan;I;G;0;Bond;3-Libraries;;General;;1;0;74;74;
+l;2149059973548;32052;2006-11-07;NM;32023;35041;Roosevelt;H;G;3;U.S. House;District 3;;General;;1;0;23;23;
+l;2148122140076;33703;2006-11-07;NM;32009;35015;Eddy;I;G;0;Bond;3-Libraries;;General;;1;0;43;43;
+l;2147585269164;33703;2006-11-07;NM;32001;35001;Bernalillo;I;G;0;Bond;3-Libraries;;General;;1;0;423;424;
+l;2148457250220;33279;2006-11-07;NM;32014;35025;Lea;H;G;2;U.S. House;District 2;;General;;1;0;45;45;
+l;2148726118828;33702;2006-11-07;NM;32018;35031;McKinley;I;G;0;Bond;2-Higher Ed;;General;;1;0;55;55;
+l;2149328473516;32115;2006-11-07;NM;32027;35049;Santa Fe;Y;G;22;State House;District 22;;General;;1;0;3;3;
+l;2149531406764;33684;2006-11-07;NM;32030;35055;Taos;I;G;2;Amendment;Amendment 2-Building Lease;;General;;1;0;37;37;
+l;2148994535852;33684;2006-11-07;NM;32022;35039;Rio Arriba;I;G;2;Amendment;Amendment 2-Building Lease;;General;;1;0;43;44;
+l;2148457664940;33684;2006-11-07;NM;32014;35025;Lea;I;G;2;Amendment;Amendment 2-Building Lease;;General;;1;0;45;45;
+l;2147920794028;33684;2006-11-07;NM;32006;35009;Curry;I;G;2;Amendment;Amendment 2-Building Lease;;General;;1;0;47;47;
+l;2147986538924;32352;2006-11-07;NM;32007;35011;DeBaca;0;G;0;Land Commissioner;;;General;;1;0;6;6;
+l;2148323447212;33684;2006-11-07;NM;32012;35021;Harding;I;G;2;Amendment;Amendment 2-Building Lease;;General;;1;0;4;4;
+l;101082540;33177;2006-11-07;NM;1;0;New Mexico;0;G;4;Pub Reg Commission;District 4;;General;;1;0;268;270;
+l;2148926052780;32342;2006-11-07;NM;32021;35037;Quay;R;G;0;Secretary of State;;;General;;1;0;32;32;
+l;2148389181868;32342;2006-11-07;NM;32013;35023;Hidalgo;R;G;0;Secretary of State;;;General;;1;0;8;8;
+l;2148859799980;33178;2006-11-07;NM;32020;35035;Otero;0;G;5;Pub Reg Commission;District 5;;General;;1;0;12;12;
+l;2149127870892;32822;2006-11-07;NM;32024;35043;Sandoval;0;G;0;Auditor;;;General;;1;0;83;83;
+l;2148590999980;32822;2006-11-07;NM;32016;35028;Los Alamos;0;G;0;Auditor;;;General;;1;0;19;19;
+l;2148054129068;32822;2006-11-07;NM;32008;35013;Dona Ana;0;G;0;Auditor;;;General;;1;0;122;122;
+l;2149664741804;32822;2006-11-07;NM;32032;35059;Union;0;G;0;Auditor;;;General;;1;0;8;8;
+l;99996076;32116;2006-11-07;NM;1;0;New Mexico;Y;G;23;State House;District 23;;General;;1;0;14;15;
+l;2149262988716;33701;2006-11-07;NM;32026;35047;San Miguel;I;G;0;Bond;1-Senior Citizen;;General;;1;0;42;42;
+l;2149598517676;33686;2006-11-07;NM;32031;35057;Torrance;I;G;4;Amendment;Amend4-Affordable Housing;;General;;1;0;18;18;
+l;2149061646764;33686;2006-11-07;NM;32023;35041;Roosevelt;I;G;4;Amendment;Amend4-Affordable Housing;;General;;1;0;23;23;
+l;2148524775852;33686;2006-11-07;NM;32015;35027;Lincoln;I;G;4;Amendment;Amend4-Affordable Housing;;General;;1;0;21;21;
+l;2147987904940;33686;2006-11-07;NM;32007;35011;DeBaca;I;G;4;Amendment;Amend4-Affordable Housing;;General;;1;0;6;6;
+l;2147719476652;33693;2006-11-07;NM;32003;35005;Chaves;0;G;0;District Court;DistCt 5-Div9;;General;;1;0;52;52;
+l;2148053428652;32138;2006-11-07;NM;32008;35013;Dona Ana;Y;G;35;State House;District 35;;General;;1;0;21;21;
+l;100053420;32172;2006-11-07;NM;1;0;New Mexico;Y;G;58;State House;District 58;;General;;1;0;18;18;
+l;2149598514604;33683;2006-11-07;NM;32031;35057;Torrance;I;G;1;Amendment;Amendment 1-Property Protection;;General;;1;0;18;18;
+l;2147987901868;33683;2006-11-07;NM;32007;35011;DeBaca;I;G;1;Amendment;Amendment 1-Property Protection;;General;;1;0;6;6;
+l;2148994554284;33702;2006-11-07;NM;32022;35039;Rio Arriba;I;G;0;Bond;2-Higher Ed;;General;;1;0;43;44;
+l;2149128234412;33177;2006-11-07;NM;32024;35043;Sandoval;0;G;4;Pub Reg Commission;District 4;;General;;1;0;26;26;
+l;101611948;33694;2006-11-07;NM;1;0;New Mexico;0;G;0;District Court;DistCt 5-Div10;;General;;1;0;140;140;
+l;2149262793132;33510;2006-11-07;NM;32026;35047;San Miguel;S;G;0;U.S. Senate;;;General;;1;0;42;42;
+l;2148725922220;33510;2006-11-07;NM;32018;35031;McKinley;S;G;0;U.S. Senate;;;General;;1;0;55;55;
+l;2148189051308;33510;2006-11-07;NM;32010;35017;Grant;S;G;0;U.S. Senate;;;General;;1;0;45;45;
+l;2147652180396;33510;2006-11-07;NM;32002;35003;Catron;S;G;0;U.S. Senate;;;General;;1;0;8;8;
+l;2148055030188;33702;2006-11-07;NM;32008;35013;Dona Ana;I;G;0;Bond;2-Higher Ed;;General;;1;0;122;122;
+l;2149665642924;33702;2006-11-07;NM;32032;35059;Union;I;G;0;Bond;2-Higher Ed;;General;;1;0;8;8;
+l;2148189231532;33686;2006-11-07;NM;32010;35017;Grant;I;G;4;Amendment;Amend4-Affordable Housing;;General;;1;0;45;45;
+l;2147651943852;33279;2006-11-07;NM;32002;35003;Catron;H;G;2;U.S. House;District 2;;General;;1;0;8;8;
+l;2148390575532;33703;2006-11-07;NM;32013;35023;Hidalgo;I;G;0;Bond;3-Libraries;;General;;1;0;8;8;
+l;2149732555180;33510;2006-11-07;NM;32033;35061;Valencia;S;G;0;U.S. Senate;;;General;;1;0;52;52;
+l;2148927425964;33683;2006-11-07;NM;32021;35037;Quay;I;G;1;Amendment;Amendment 1-Property Protection;;General;;1;0;32;32;
+l;2147585241516;33676;2006-11-07;NM;32001;35001;Bernalillo;0;G;0;District Court;Position 2-Division 16;;General;;1;0;423;424;
+l;2147853684140;33683;2006-11-07;NM;32005;35007;Colfax;I;G;1;Amendment;Amendment 1-Property Protection;;General;;1;0;21;21;
+l;2149194381740;32238;2006-11-07;NM;32025;35045;San Juan;G;G;0;Governor;;;General;;1;0;74;74;
+l;2148657510828;32238;2006-11-07;NM;32017;35029;Luna;G;G;0;Governor;;;General;;1;0;17;17;
+l;2148120639916;32238;2006-11-07;NM;32009;35015;Eddy;G;G;0;Governor;;;General;;1;0;43;43;
+l;2149731252652;32238;2006-11-07;NM;32033;35061;Valencia;G;G;0;Governor;;;General;;1;0;52;52;
+l;2149127385516;32348;2006-11-07;NM;32024;35043;Sandoval;T;G;0;Treasurer;;;General;;1;0;83;83;
+l;2148590514604;32348;2006-11-07;NM;32016;35028;Los Alamos;T;G;0;Treasurer;;;General;;1;0;19;19;
+l;2148053643692;32348;2006-11-07;NM;32008;35013;Dona Ana;T;G;0;Treasurer;;;General;;1;0;122;122;
+l;2149664256428;32348;2006-11-07;NM;32032;35059;Union;T;G;0;Treasurer;;;General;;1;0;8;8;
+l;2147785208236;32348;2006-11-07;NM;32004;35006;Cibola;T;G;0;Treasurer;;;General;;1;0;21;21;
+l;2149531407788;33685;2006-11-07;NM;32030;35055;Taos;I;G;3;Amendment;Amend 3-Water Trust;;General;;1;0;37;37;
+l;2148254974380;32352;2006-11-07;NM;32011;35019;Guadalupe;0;G;0;Land Commissioner;;;General;;1;0;8;8;
+l;2147852321196;32352;2006-11-07;NM;32005;35007;Colfax;0;G;0;Land Commissioner;;;General;;1;0;21;21;
+l;2147920795052;33685;2006-11-07;NM;32006;35009;Curry;I;G;3;Amendment;Amend 3-Water Trust;;General;;1;0;47;47;
+l;101083564;33178;2006-11-07;NM;1;0;New Mexico;0;G;5;Pub Reg Commission;District 5;;General;;1;0;300;300;
+l;2149194496428;32350;2006-11-07;NM;32025;35045;San Juan;A;G;0;Attorney General;;;General;;1;0;74;74;
+l;2148657625516;32350;2006-11-07;NM;32017;35029;Luna;A;G;0;Attorney General;;;General;;1;0;17;17;
+l;2148120754604;32350;2006-11-07;NM;32009;35015;Eddy;A;G;0;Attorney General;;;General;;1;0;43;43;
+l;2147583883692;32350;2006-11-07;NM;32001;35001;Bernalillo;A;G;0;Attorney General;;;General;;1;0;423;424;
+l;99982764;32103;2006-11-07;NM;1;0;New Mexico;Y;G;15;State House;District 15;;General;;1;0;18;19;
+l;2148323466668;33703;2006-11-07;NM;32012;35021;Harding;I;G;0;Bond;3-Libraries;;General;;1;0;4;4;
+l;100011436;32131;2006-11-07;NM;1;0;New Mexico;Y;G;31;State House;District 31;;General;;1;0;19;20;
+l;2149598533036;33701;2006-11-07;NM;32031;35057;Torrance;I;G;0;Bond;1-Senior Citizen;;General;;1;0;18;18;
+l;2149061662124;33701;2006-11-07;NM;32023;35041;Roosevelt;I;G;0;Bond;1-Senior Citizen;;General;;1;0;23;23;
+l;2147719477676;33694;2006-11-07;NM;32003;35005;Chaves;0;G;0;District Court;DistCt 5-Div10;;General;;1;0;52;52;
+l;2148053429676;32139;2006-11-07;NM;32008;35013;Dona Ana;Y;G;36;State House;District 36;;General;;1;0;29;29;
+l;2149128772012;33702;2006-11-07;NM;32024;35043;Sandoval;I;G;0;Bond;2-Higher Ed;;General;;1;0;83;83;
+l;2149261607340;32352;2006-11-07;NM;32026;35047;San Miguel;0;G;0;Land Commissioner;;;General;;1;0;42;42;
+l;2148724736428;32352;2006-11-07;NM;32018;35031;McKinley;0;G;0;Land Commissioner;;;General;;1;0;55;55;
+l;2148858771884;32174;2006-11-07;NM;32020;35035;Otero;Y;G;59;State House;District 59;;General;;1;0;6;6;
+l;2147650994604;32352;2006-11-07;NM;32002;35003;Catron;0;G;0;Land Commissioner;;;General;;1;0;8;8;
+l;2148860337580;33703;2006-11-07;NM;32020;35035;Otero;I;G;0;Bond;3-Libraries;;General;;1;0;42;42;
+l;2148658473388;33178;2006-11-07;NM;32017;35029;Luna;0;G;5;Pub Reg Commission;District 5;;General;;1;0;17;17;
+l;2147583655340;32127;2006-11-07;NM;32001;35001;Bernalillo;Y;G;29;State House;District 29;;General;;1;0;15;16;
+l;2148992864684;32052;2006-11-07;NM;32022;35039;Rio Arriba;H;G;3;U.S. House;District 3;;General;;1;0;43;44;
+l;2148055031212;33703;2006-11-07;NM;32008;35013;Dona Ana;I;G;0;Bond;3-Libraries;;General;;1;0;122;122;
+l;2147919122860;32052;2006-11-07;NM;32006;35009;Curry;H;G;3;U.S. House;District 3;;General;;1;0;47;47;
+l;2149463883180;33279;2006-11-07;NM;32029;35053;Socorro;H;G;2;U.S. House;District 2;;General;;1;0;28;28;
+l;2147583875500;32342;2006-11-07;NM;32001;35001;Bernalillo;R;G;0;Secretary of State;;;General;;1;0;423;424;
+l;2148390141356;33279;2006-11-07;NM;32013;35023;Hidalgo;H;G;2;U.S. House;District 2;;General;;1;0;8;8;
+l;2149328360876;32005;2006-11-07;NM;32027;35049;Santa Fe;H;G;1;U.S. House;District 1;;General;;1;0;3;3;
+l;2148523447724;32389;2006-11-07;NM;32015;35027;Lincoln;Y;G;57;State House;District 57;;General;;1;0;10;10;
+l;2148927426988;33684;2006-11-07;NM;32021;35037;Quay;I;G;2;Amendment;Amendment 2-Building Lease;;General;;1;0;32;32;
+l;2149529735596;32052;2006-11-07;NM;32030;35055;Taos;H;G;3;U.S. House;District 3;;General;;1;0;37;37;
+l;2147853685164;33684;2006-11-07;NM;32005;35007;Colfax;I;G;2;Amendment;Amendment 2-Building Lease;;General;;1;0;21;21;
+l;2149395814828;32342;2006-11-07;NM;32028;35051;Sierra;R;G;0;Secretary of State;;;General;;1;0;11;11;
+l;2148858943916;32342;2006-11-07;NM;32020;35035;Otero;R;G;0;Secretary of State;;;General;;1;0;42;42;
+l;2148322073004;32342;2006-11-07;NM;32012;35021;Harding;R;G;0;Secretary of State;;;General;;1;0;4;4;
+l;2147785202092;32342;2006-11-07;NM;32004;35006;Cibola;R;G;0;Secretary of State;;;General;;1;0;21;21;
+l;2149597632940;32822;2006-11-07;NM;32031;35057;Torrance;0;G;0;Auditor;;;General;;1;0;18;18;
+l;2149060762028;32822;2006-11-07;NM;32023;35041;Roosevelt;0;G;0;Auditor;;;General;;1;0;23;23;
+l;2148523891116;32822;2006-11-07;NM;32015;35027;Lincoln;0;G;0;Auditor;;;General;;1;0;21;21;
+l;2147987020204;32822;2006-11-07;NM;32007;35011;DeBaca;0;G;0;Auditor;;;General;;1;0;6;6;
+l;2148457683372;33702;2006-11-07;NM;32014;35025;Lea;I;G;0;Bond;2-Higher Ed;;General;;1;0;45;45;
+l;2148256356780;33702;2006-11-07;NM;32011;35019;Guadalupe;I;G;0;Bond;2-Higher Ed;;General;;1;0;8;8;
+l;2149261597100;32342;2006-11-07;NM;32026;35047;San Miguel;R;G;0;Secretary of State;;;General;;1;0;42;42;
+l;2148994537900;33686;2006-11-07;NM;32022;35039;Rio Arriba;I;G;4;Amendment;Amend4-Affordable Housing;;General;;1;0;43;44;
+l;2148457666988;33686;2006-11-07;NM;32014;35025;Lea;I;G;4;Amendment;Amend4-Affordable Housing;;General;;1;0;45;45;
+l;2147920796076;33686;2006-11-07;NM;32006;35009;Curry;I;G;4;Amendment;Amend4-Affordable Housing;;General;;1;0;47;47;
+l;2148187863468;32350;2006-11-07;NM;32010;35017;Grant;A;G;0;Attorney General;;;General;;1;0;45;45;
+l;99998124;32118;2006-11-07;NM;1;0;New Mexico;Y;G;24;State House;District 24;;General;;1;0;28;29;
+l;100012460;32132;2006-11-07;NM;1;0;New Mexico;Y;G;32;State House;District 32;;General;;1;0;17;17;
+l;2148456122796;32178;2006-11-07;NM;32014;35025;Lea;Y;G;61;State House;District 61;;General;;1;0;18;18;
+l;2149195684268;33510;2006-11-07;NM;32025;35045;San Juan;S;G;0;U.S. Senate;;;General;;1;0;74;74;
+l;2148658813356;33510;2006-11-07;NM;32017;35029;Luna;S;G;0;U.S. Senate;;;General;;1;0;17;17;
+l;2148121942444;33510;2006-11-07;NM;32009;35015;Eddy;S;G;0;U.S. Senate;;;General;;1;0;43;43;
+l;2147585071532;33510;2006-11-07;NM;32001;35001;Bernalillo;S;G;0;U.S. Senate;;;General;;1;0;423;424;
+l;2147987921324;33702;2006-11-07;NM;32007;35011;DeBaca;I;G;0;Bond;2-Higher Ed;;General;;1;0;6;6;
+l;100055468;32174;2006-11-07;NM;1;0;New Mexico;Y;G;59;State House;District 59;;General;;1;0;26;26;
+l;2148121599404;33175;2006-11-07;NM;32009;35015;Eddy;0;G;2;Pub Reg Commission;District 2;;General;;1;0;43;43;
+l;2147584728492;33175;2006-11-07;NM;32001;35001;Bernalillo;0;G;2;Pub Reg Commission;District 2;;General;;1;0;13;14;
+l;2149397188012;33683;2006-11-07;NM;32028;35051;Sierra;I;G;1;Amendment;Amendment 1-Property Protection;;General;;1;0;11;11;
+l;2148860317100;33683;2006-11-07;NM;32020;35035;Otero;I;G;1;Amendment;Amendment 1-Property Protection;;General;;1;0;42;42;
+l;2148323446188;33683;2006-11-07;NM;32012;35021;Harding;I;G;1;Amendment;Amendment 1-Property Protection;;General;;1;0;4;4;
+l;2147786575276;33683;2006-11-07;NM;32004;35006;Cibola;I;G;1;Amendment;Amendment 1-Property Protection;;General;;1;0;21;21;
+l;2149127272876;32238;2006-11-07;NM;32024;35043;Sandoval;G;G;0;Governor;;;General;;1;0;83;83;
+l;2148590401964;32238;2006-11-07;NM;32016;35028;Los Alamos;G;G;0;Governor;;;General;;1;0;19;19;
+l;2148053531052;32238;2006-11-07;NM;32008;35013;Dona Ana;G;G;0;Governor;;;Gñâˆ ~
+-ﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂﬂSí∫`∏˜a7º¢œŒÂŒ|pH$®fÖÄ≠â∆ºIDå'˛7¸˛x&‚nÌ±¯]‚ú‹æﬂÎTc∑ï.ÊC≈÷ÉÀ [?kï(®T<h~I»ÃHºvK‘æù])L·õ||i˘éÅŒoA°jö{ŒìJmu∆m˛üó—/-õıæ0YßqK˙U‚4ï3,Åe≤f‡î≈äÏi°˙˛⁄åiìm	ÕÆﬁÅ•àıw^€˘PÔÙÀ07pI 0+•ÂÍînìÔhÍeı:¿µÁﬂ1A>∑H`QglÇ0˝ÓÅâkmÆ%„T7§J@É´åWmx`G[˜’Y*[˙êAjdÌ#˜ÿ$Fiñ¨n˝îØ‘≤Ÿ{p+XÙ
+_÷˜vüÜ)¯SÉßv˝õˇlç"ö/—#¡íY«ï=rªjz.t*”ΩhX…SD‘È\“l∑≤Íªm P\πNvÍ»ïBÇÊÙi≠ˇá6§+¥ï¸«ñ\å#Ö_%G∏©ﬂ£πê.g.i@≈E∏r°ôî9Ü ÜÖf4≤bÉ◊&ΩìnNo®:~AîÂ|v∫1	môSÎ‰„„,{)Õq O_∞ÄˇA∑7‹afÄ∂xê#≤ÿnªº![^MI”/¢¸<5‡’‡`Ê«Áæ’q9<+™4‰t gGìΩÅƒbsnÇbΩü¨ï°ç˘Õòêèl_qtñ(‘ˇ[˜ê™}IÅ~ª_ª•Ùv˚¢úå/:( ç'M…Ñ]3Ì‰
+KHY™éÏﬂNMNC”mAîYÒaU?Çê
+Û4"iï&LÒR≤"VÉµ† ksüå–´ S±ˆèQO÷¿…ï=∏5ÍÅ’*Ï°Ã0s∆Tomë	|íÁ.¨œWª.6#‘+o…(epéìˆ/Ëx5Åî!?⁄@≈Ä5nl“À}äÒbˆ}¿∆‘Ïù}è—à“}¡.ü1,ŒØmcºM›Øn≈‹¨ˆSdâ|Í7õ5àÒPDæÅø“)ÕÆÿm”…‰Ú◊ó‘öÑ_ 73oóq åõô˛ô›ÈèE,âyã|NÎ¯@¨ø˛Pœ3”Ù{‹≠‰‚Óæ°’ïÆÿÎœŸÀX∏4Ê€EÀ•¿ÏîØ≈‘ÑQü+¥Øîˆµb˘ÏqÄ]ûu˘o/Z`JOc‹§9$‰cº*ıBÚY¶ë–zrê^Ìo=TπÂN†7ŸÔXø˝®ÛàΩÙçÊ@Ã‚L·W^ÒrèGƒÌ]/N5†T≤ëT92™¿è)`ÕãΩ	¨¿P.h¥Õ&≈<(BÏÙ¿•ï«µ~fÁ+‚'¯1SAp≤û'Sÿ+\â1â°˜÷`;Õ⁄6ACK=®⁄w–B€Ùu$©I'€xù J˛.^d◊-‹∑KÜa≈ºP?sfyΩ&Eå ≤ÿçx9v»¶CY†GEö∆ˇ:üÖñ∂π€„`6#Ò≤Í0¨5Qüá	ôÈp.p-òlo[≤w\˝aßìÔŒ·4‡'¶îfZh„»u[s≥–™ÌÔ‹ C"	˝ÒjÂ„÷ÊUW%E™U$<∑‰`‡ßqsˇÁVÃ¡˝/˚P≤îÓ?Lü£eÎ°t◊Ÿ…?PÎ!«7(˛°_I—9¥ëıΩ2µP®ú7s∂zÆU.kˆ\LÈ≤xpˇW_.ŸÚVosG'Vì§ÚKgœig^£h)}ıpÙU‰MØvı·Ì)ª˙≤ˆ.Ë–¨¶¿X+€5˝€tpÛBnïKóß£A◊é—,p`ˇëã∏}y„G%gIG	≈Ï"uπèrı∫‰Ï)?õ:Õ©´≠]c(◊UúπÍ
+ÌTêßíÈdáO0∑g'o˘ıÉˆ≥O+¢ÕI◊ÂwgÀÈªb0ıÎ“ë`æÄJÁúïåó}˚£ÏñÆaûV-b„J›:òDõÇÙaÇ:<í/ù¶Qüê}“X‹Ù,z°#{“G‚[L4…Ô5Vƒ¶ œ}005°¶iú¸=íÖi∏$†≥—n¸Iïõï£“Z »z´∆ñ5‡ ôR»âu¡ŒÕÏTÒıjUJ_M˝§ÚˇJeº¯üÌﬂSi åºSâå≈=N|p¢uéxÎ¨ˆÈÙ09oô“*Œ˙/ÍƒÁ‡wE≠|	’ü\ «‘sâB±¶á_˙•?óx™\ÃCæTs$÷H·	•7ß∂<#◊v‰sÆg∑&jCπUØ!¿Á0VbÁXLthâËôÓNQWùö”Sº∫G‡ù,§ˆ∂^S!¢ÔŒ
+	aa≤§[‹8òIàÔØ ˘ôf˛à3!û˜0¶Mƒ™ã∞ç`Èë»^ö›¡≤˜∆ˆê¥‘ØFUâ+ÂaJgQ—ˆ˝¯Õ
+£h1Bﬁ,o›•©mõ‘æe-íîs7E¥e)ü∏@pïhjªüÍY¨œn∫jgLSm#[ö>Wπaπigå‡†çy&"ÙTñ≠é…—ûÆP;^’èÊuÌÉ±˝ZÖñ%±>i‹\∑∞V‘4±"H“SÈxêV7ÓëàATëAΩ≥‡Ã<o?◊∂@(cô≤9CÉpY√¸¿']ƒ†ıOß“ié˝vG“…Öh.IMTAM4P¶áC·É`7™ZÖdÓÆp>v«X˚[‹'0F¸oèÏ˜xG∑z\Øk/õ˛FF∏ÙqK2p¿ı†µ-¨°üëU◊KngìUè’∞œ‚≈'ﬂù',≠’è@/%Èùk˛Ö.ù˜rÈMˆx™ÖDìE±â|“r`rA\‚ÊÖ@)‚Wõ§Ú}Æ…%¬ï7≈§sµû∏RvÜ0º˝ƒ+,óS⁄™®@ïS˜±1/Ö—â'"'Tõ™Óu‘∂iß6HöπäŸô"Ø,˜áyÃ	≤nen(ã† ˆ/&DÕ]Ä'76ï†`gˆ¸…™å°ùy,jbŸNÖ¯À¸¯BÌ€h9˝∂‹≠˘Ø ´πJ$Ì–˝–yÚáè:8êΩ‘Ÿi_<Ÿ2Òï~ıtlÀ∑G7}ªÔá>ˆ¨–Õ◊~«äVú!æ~tbyK˙Ø™)ã‘(û“øL˛—7í◊∫Œ„<Â⁄S#t
+Ös&¬ lîR˛0X7ïêZJ»/&˚îìgó"˜Çlg€€ÚÙ≤ß§rõjûëR◊_Ÿ]gwÿ—¿e§§!ˇKZ¸U÷Âø˙ç⁄ú≤(¶ÎΩ ﬂ£b≥œ™˚ÉÊÙÑ“8Ãl˜Âp∑46Q«3ÖY	“èµ_`¶vkvåuw†eGè#˜O‹É,‚í®⁄Ûr6DzTÉ˝ìq4⁄/P≥Ò¶¶È®àí≤∫Ã˝vÏa9±á≥XÄ ìóMÛ~Îk§ˇx˜÷´d-0çiÆÏ[n…$Ä—ÓÙN˛áUâm‰’n„íJ˘)ß,r@¢w£oqƒÑ`tZ&ÃÒ ï~oc›FòMù¨r)5ÿ-3+CÂ´ÂˇÂuÊÇÜœ	A6ám«'óágüçS◊&sT∑X\…ˇ!Azóı
+…ñ©wEÕÅ5£ß˙¥ˇΩmõ∆åÃ›sw∂¥ˆS&Foˇb\+Õ+ÅƒpÍ7ƒ÷ÀI£[‰tö∂6ôJ¯õöP“˙9<÷H∞ërî
+°òßYÆcwô≤c†∞x£È®»ñ–ƒœ°'¸+ôB<ÕŒîÙv
+«84≤V,·«r0≤˝¡Ñ±Y˛/çügï'6˚zÒ}ÛígBíZ∫Bd:^_kbÅKZräbNq T:…rgJ háöDäÖ˚,∫:%†IeÕ
+,
+)ñED æE18M-É§_áá.4≥†€_hµÌ∂«!9ı÷DqLBTô!Ω‘Z<¨ïy◊-ÃöÁËÛ≤{vµı…±á´~j‹ã§g¯ﬁ¬;n&˝bjÚ)“∂&-ÿÓÃ]Ì{z»ÀàœXDà˛(Ûπ?ËV÷Ä˘:◊ôÍûJå7˙ôpp”#QOd.ÀŸNwµiJ¶YÕÔﬁˆo¢z≠{h≥DŒSK'”H◊·∑WäR§"¶qjy"C`Ùv+¬AìJ‚j&£)≠jˆ∫dº1òR˙wØ[Â÷æ≥1Å±:\u+†√Z«◊»=ñ¸ì[Qqﬁ:ÊAa≈AÂ¬∫˙,l»z4H/=◊∑∑ü

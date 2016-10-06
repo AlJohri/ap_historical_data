@@ -1,0 +1,332 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/1705.jpg"><div class="preeln-entityname">Barbara  Boxer </div>
+	  (Dem)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">202-224-3553 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">323-836-0820 (Main campaign number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://www.boxer.senate.gov">http://www.boxer.senate.gov</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">&#160;</span><span class="field"><a href="http://www.barbaraboxer.com">http://www.barbaraboxer.com</a></span>
+</div>
+<a href="../finance/1705.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1940-11-11</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">Brooklyn, NY  </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">Oakland and Rancho Mirage, CA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Judaism</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">1992</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Democratic</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">Senate</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/CA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">CA</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Incumbent</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2016</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          Brooklyn College
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">BA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">Barbara Boxer was raised in Brooklyn, N.Y., and now splits her time between homes in Oakland, Ca., and Rancho Mirage. She earned a bachelor's in economics from Brooklyn College in 1962 and worked on Wall Street as a stockbroker before moving to California.</p>
+        <p class="preeln-paradata">Boxer was active in Marin County politics and worked for a local newspaper and radio station before becoming a district aide to Rep. John Burton in 1974. She was elected two years later to the Marin County Board of Supervisors.</p>
+        <p class="preeln-paradata">She was elected to the U.S. House in 1982 and served until her election to the U.S. Senate in 1992.</p>
+        <p class="preeln-paradata">Boxer and her husband, Stewart, have a son and a daughter.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">Barbara Boxer gained newfound prominence as chair of the Environment and Public Works Committee when Democrats regained control of the Senate in 2006. One of her top priorities since has been to pass legislation that seeks to reduce carbon emissions through the creation of a cap-and-trade system.</p>
+        <p class="preeln-paradata">Boxer used her committee post to expose what she viewed as political motivations behind President George W. Bush's environmental policies. She focused in particular on the Environmental Protection Agency's 2007 decision to deny California permission to limit greenhouse gas emissions from cars and trucks.</p>
+        <p class="preeln-paradata">But with Democrats holding only a narrow majority in the Senate, and the White House in Republican hands, legislative accomplishments were few during the Bush administration. Her committee passed global warming legislation that would have required major reductions of greenhouse gas emissions, but after a week of acrimonious Senate debate supporters failed to overcome a Republican filibuster.</p>
+        <p class="preeln-paradata">Democrats renewed their efforts to pass climate change legislation in 2010, but the legislation faced another filibuster and 60-vote support was again elusive.</p>
+        <p class="preeln-paradata">She won re-election in 2010, defeating former Hewlett-Packard CEO Carly Fiorina by 9 percentage points in a race that saw Boxer buoyed by trips to the state by President Barack Obama, who has been a backer of Boxer's energy initiatives.</p>
+        <p class="preeln-paradata">Though cap-and-trade legislation took a back seat to the economy during Obama's first term, he has continued his calls for action on the proposal and an Obama re-election in 2012 could be a boon for Boxer's signature issue.</p>
+        <p class="preeln-paradata">She sponsored a bill, which passed the Senate in late 2010, which would significantly reduce exposures to lead in drinking water. She was also active in late 2010 in pressuring the Environmental Protection Agency to tighten standards to address potential health risks from chromium 6, a carcinogen that has been found in drinking water.</p>
+        <p class="preeln-paradata">When Obama announced in June 2011 he was pulling home 33,000 U.S. troops from Afghanistan by the following summer, Boxer was among Democrats who applauded the move but lamented its lack of urgency.</p>
+        <p class="preeln-paradata">"I am glad this war is ending, but it's ending at far too slow a pace," she said.</p>
+        <p class="preeln-paradata">As part of a 2012 bill seeking to prevent officials from using non-public information for insider trading, Boxer and Republican Johnny Isakson of Georgia successfully pushed for an amendment that would force disclosure of all residential mortgages by members of Congress, the president, the vice president and most Senate-confirmed appointees.</p>
+        <p class="preeln-paradata">Boxer sponsored a highway and student loan bill, which passed Congress in June 2012, preserving jobs on transportation projects from coast to coast and avoiding interest rate increases on new loans to millions of college students.</p>
+        <p class="preeln-paradata">"We have a bill that will boost this economy," Boxer said, claiming the measure would create or save 2.8 million jobs. "We have a bill that is supported by conservatives and liberals, progressives and moderates. I think this is a great day."</p>
+        <p class="preeln-paradata">Boxer considered retiring when her second term ended in 2004. A post-Sept. 11 speech given by former Senate Majority Leader Tom DeLay in which he chided Democrats for criticizing the Bush administration, made her decide to stay so she could "speak the truth," Boxer has said.</p>
+        <p class="preeln-paradata">She has continued since to be a leading liberal voice in the Senate.</p>
+        <p class="preeln-paradata">Boxer led opposition in 2004 to Condoleezza Rice's nomination as secretary of state and provided the one Senate signature that forced the House and Senate to meet separately to debate a complaint about how Ohio's electoral votes were tallied during that year's general election.</p>
+        <p class="preeln-paradata">Boxer voted against the use of force in Iraq in 2003, against Bush's tax cut plan and against the Medicare prescription drug bill. She is a staunch supporter of abortion rights.</p>
+        <p class="preeln-paradata">Critics contend that Boxer is more of a show horse than a workhorse, a criticism she strongly disputes. She cites her work with Republicans, such as pushing for countermeasures on commercial aircraft to combat shoulder-fired missiles. She is the chair of the Senate Ethics Committee.</p>
+        <p class="preeln-paradata">A highlight of Boxer's political career was in 1991 when she and six other female members of the House marched over to the Senate to push for consideration of Anita Hill's allegations of sexual harassment against then-Supreme Court nominee Clarence Thomas.</p>
+        <p class="preeln-paradata">Boxer is a quotable, dynamic, media-savvy campaigner. She stands barely five feet tall but turns her height to her advantage, telling audiences that when she stands on their shoulders she feels much taller. She also plays on her last name, telling listeners that "my name is Boxer and I'm a fighter."</p>
+        <p class="preeln-paradata">Boxer published a novel in November 2005 called "A Time to Run," about a feisty left-wing senator from California named Ellen Fischer who confronts a conservative Supreme Court nominee. She followed up with a sequel in 2009 called "Blind Trust." She published her political autobiography, "Strangers in the Senate," in 1993.</p>
+        <p class="preeln-paradata">Committee Assignments: Environment and Public Works(Chair); Commerce, Science, and Transportation; Foreign Relations; Select Ethics(Chair)</p>
+        <p class="preeln-paradata">American Conservative Union Rating: 0</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: 95</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">Barbara Boxer is not up for re-election in 2014.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on June 12, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_candidates/CA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

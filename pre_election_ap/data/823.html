@@ -1,0 +1,331 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/823.jpg"><div class="preeln-entityname">Clarence Saxby Chambliss </div>
+	  (Rep)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">202-224-3521 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://www.chambliss.senate.gov/">http://www.chambliss.senate.gov/</a></span>
+</div>
+<a href="../finance/823.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1943-11-10</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">Warrenton, NC </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">Moultrie, GA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Episcopalian</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">&#160;</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Republican</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">Senate</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/GA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">GA</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Not seeking re-election</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2014</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          University of Georgia
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">BBA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+<h2 class="preeln-secthead">Graduate education: 
+          University of Tennessee
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">JD</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">Saxby Chambliss was born in Warrenton, N.C., and now resides in Moultrie, Ga. He earned a bachelor's degree from the University of Georgia in 1966 and a law degree from the University of Tennessee in 1968.</p>
+        <p class="preeln-paradata">Chambliss was a partner in a Moultrie law firm, where he practiced for 25 years.</p>
+        <p class="preeln-paradata">He was elected to the U.S. House in 1994 and re-elected three times. He was elected to the U.S. Senate in 2002.</p>
+        <p class="preeln-paradata">Chambliss and his wife, Julianne, have two children.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">Saxby Chambliss has become one of the most influential farming voices on Capitol Hill. As the top Republican on the Senate Agriculture Committee, he played a lead role in crafting the five-year farm law that Congress passed in 2008 and that largely maintains the traditional system of subsidies for crops like wheat, cotton, peanuts and rice.</p>
+        <p class="preeln-paradata">When Chambliss supported the 2008 $700 billion financial industry bailout, however, he angered some conservatives and, when a third-party candidate siphoned enough votes, his re-election that year was forced into a runoff.</p>
+        <p class="preeln-paradata">Though he eventually won re-election, the political price Chambliss paid for supporting the bailout became a cautionary lesson within the GOP, and he seemed to take the lesson to heart when he voted against the 2009 $800 billion economic stimulus package.</p>
+        <p class="preeln-paradata">He resurfaced as a target of arch-conservatives in 2011, when he joined the "Gang of Six" in proposing a deficit-reduction compromise amid gridlock over the federal budget and national debt ceiling.  Three Republican senators and three Democratic senators together crafted a plan projected to reduce the deficit by $3.7 trillion over 10 years. But Chambliss, who led the group along with Democrat Mark Warner of Virginia, took heat for agreeing to a deal that included tax increases.</p>
+        <p class="preeln-paradata">Heading into his 2014 re-election campaign, the question is whether Chambliss's record on fiscal issues will subject him to a credible primary challenge.</p>
+        <p class="preeln-paradata">In 2010, Chambliss removed a Senate staffer after it was revealed that the employee had posted a derogatory slur on an Internet discussion forum regarding the rights of gays to serve in the U.S. military.</p>
+        <p class="preeln-paradata">Chambliss opposed the July 2010 financial industry overhaul bill. He joined fellow Georgia Sen. Johnny Isakson in sponsoring legislation that September designed to fix Atlanta's looming water crisis. The measure faces opposition from Florida and Alabama, the states with which Georgia has been locked in a water rights battle.</p>
+        <p class="preeln-paradata">Chambliss was generally loyal to President George W. Bush over the years, a position that got him into trouble with some conservative constituents in 2007 when he supported Bush on a compromise immigration bill that critics blasted as a measure granting amnesty for illegal immigrants.</p>
+        <p class="preeln-paradata">Thousands of angry calls flooded his office and he was booed at a Republican Party event back home. He eventually bowed to the pressure and opposed the bill.</p>
+        <p class="preeln-paradata">Two years after his 2002 election to the Senate, Chambliss was handed the gavel of the agriculture panel &#8212; an unusual position of power for a freshman. But his ascent was fleeting, as Democrats took control of Congress in 2006 and he lost the chairmanship.</p>
+        <p class="preeln-paradata">Chambliss' 2002 campaign against then-Democratic Sen. Max Cleland cemented Chambliss' reputation as a tough campaigner. One Chambliss ad juxtaposed the face of Cleland with those of Osama bin Laden and Saddam Hussein &#8212; drawing howls of national criticism that Chambliss was likening Cleland to a terrorist. Chambliss insisted the spot was aimed only at highlighting Cleland's vote against the creation of the Department of Homeland Security. Cleland supported creating the department but opposed certain labor provisions in the bill.</p>
+        <p class="preeln-paradata">Chambliss' Senate tenure has not been immune from controversy. The New York Times reported a recorded phone conversation between Chambliss and former Senate Majority Leader Bill Frist during which Chambliss asked for Frist's support in appointing a friend and Republican donor to an ambassadorship. Frist agreed to help, but the donor was never tapped.</p>
+        <p class="preeln-paradata">Democrats meanwhile said the two GOP lawmakers were "selling ambassadorships to the highest bidder."</p>
+        <p class="preeln-paradata">Committee Assignments: Armed Services; Agriculture, Nutrition, and Forestry; Rules and Administration; Select Intelligence; Special Aging</p>
+        <p class="preeln-paradata">American Conservative Union Rating: 80</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: 20</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">Saxby Chambliss is not seeking re-election in 2014.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on June 9, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_candidates/GA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

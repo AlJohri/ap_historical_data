@@ -1,0 +1,358 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/60997.jpg"><div class="preeln-entityname">Christopher 'Chris' Andrew Coons </div>
+	  (Dem)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field"> 202-224-5042 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">302-322-1140 (Main campaign number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://www.coons.senate.gov/">http://www.coons.senate.gov/</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">&#160;</span><span class="field"><a href="http://www.chriscoons.com/">http://www.chriscoons.com/</a></span>
+</div>
+<a href="../finance/60997.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1963-9-9</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">Greenwich, CT </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">Wilmington, DE</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Presbyterian</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">2010</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Democratic</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">Senate</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/DE.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">DE</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Incumbent</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2014</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          Amherst College
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">BA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          University of Nairobi 
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">Attended</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+<h2 class="preeln-secthead">Graduate education: 
+          Yale University
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">MA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+<h2 class="preeln-secthead">Graduate education: 
+          Yale University
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">JD</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">Chris Coons was born in Greenwich, Conn., and currently lives in Wilmington, Del. He received a bachelor's degree from Amherst College, a master's degree from Yale Divinity School and a law degree from Yale University.</p>
+        <p class="preeln-paradata">Coons did volunteer work in Kenya and worked in New York City with a homeless coalition. He also served as an issues director in the 1988 Delaware Senate campaign.</p>
+        <p class="preeln-paradata">Coons started work as in-house counsel for W.L. Gore &amp; Associates in 1996, which was founded by his stepfather, Robert Gore, who created Gore-Tex fabrics.</p>
+        <p class="preeln-paradata">He was elected county council president in 2000, and county executive in 2004, winning a second term in 2008. He was elected to the Senate in 2010.</p>
+        <p class="preeln-paradata">Coons and his wife, Annie, have twin sons and a daughter.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">Chris Coons' path to the Senate was marked by political fortune. He became the Democratic candidate for the special election to fill the seat formerly held by Vice President Joe Biden after Biden's son, Delaware Attorney General Beau Biden, shocked party leaders early in 2010 by deciding not to run. Coons then easily defeated Republican Christine O'Donnell after her tea party-fueled upset over longtime congressman Mike Castle in the GOP primary.</p>
+        <p class="preeln-paradata">Coons campaigned as a teenager for Ronald Reagan and helped found the Amherst College Republicans. But he became a Democrat after traveling during his junior year to Kenya, where he confronted widespread poverty and struggled to defend the Reagan administration's policy of constructive engagement with the apartheid government in South Africa.</p>
+        <p class="preeln-paradata">Coons described the impact of his Kenya experience in an opinion piece for his college newspaper titled, "Chris Coons: The Making of a Bearded Marxist."  Political opponents seized on the article in 2010 to try to portray Coons as outside the mainstream, but he played down the issue, saying the article title was a sarcastic response to ribbing from his college buddies.</p>
+        <p class="preeln-paradata">As a candidate, Coons pledged to try to maintain a balanced budget without raising taxes. The first measure he co-sponsored was legislation to provide federal funding for medical monitoring and treatment for first responders and survivors of the Sept. 11 terrorist attacks, at a potential cost of more than $7 billion.</p>
+        <p class="preeln-paradata">Shortly after taking office, Coons traveled to Afghanistan and Pakistan, declaring that the greatest obstacle to success in the war in Afghanistan was lack of cooperation from Pakistani forces in targeting al-Qaida and Taliban leaders.</p>
+        <p class="preeln-paradata">As chairman of the House Foreign Relations subcommittee on African affairs, he supported President Barack Obama's decision to dispatch U.S. forces to central Africa against the Lord's Resistance Army and to help hunt down its leader, Joseph Kony. Coons later said Kony "epitomizes the worst of mankind and evil in the modern day." Coons also says the U.S. goal of promoting open societies in Africa has been complicated by China offering no-strings-attached infrastructure investment for repressive regimes.</p>
+        <p class="preeln-paradata">Also a member of the Judiciary Committee, Coons chaired a panel hearing on legislation he co-sponsored to overturn the federal Defense of Marriage Act, which made same-sex couples ineligible for federal benefits extended to married, heterosexual couples. Coons delivered the sermon on New Year's Day 2012 when two lesbians were united in Delaware's first same-sex civil union.</p>
+        <p class="preeln-paradata">In 2012, Coons was part of a bipartisan group of senators who unveiled a non-binding resolution ruling out containment of a nuclear weapons-capable Iran and backing U.S. policy to prevent Tehran from acquiring nuclear weapons capability.</p>
+        <p class="preeln-paradata">Coons was elected county council president in New Castle County, a Democratic stronghold and the most populous of Delaware's three counties, in 2000. He ran for county executive in 2004, easily winning a primary against Chief Administrator Sherry Freebery, who along with Coons' predecessor, Tom Gordon, had been indicted on federal racketeering and fraud charges.</p>
+        <p class="preeln-paradata">Committee Assignments: Judiciary; Foreign Relations; Energy and Natural Resources; Budget</p>
+        <p class="preeln-paradata">American Conservative Union Rating: 0</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: 95</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">Chris Coons won his September 2014 primary, he will face Kevin Wade in November.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on September 10, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_candidates/DE.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

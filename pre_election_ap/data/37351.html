@@ -1,0 +1,344 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/37351.jpg"><div class="preeln-entityname">Tom Allen Coburn </div>
+	  (Rep)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">202-224-5754 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">918-684-4308 (Main campaign number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://coburn.senate.gov/">http://coburn.senate.gov/</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">&#160;</span><span class="field"><a href="http://www.coburnforsenate.com">http://www.coburnforsenate.com</a></span>
+</div>
+<a href="../finance/37351.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1948-3-14</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">Casper, WY </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">Muskogee, OK</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Protestant</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">2004</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Republican</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">Senate</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/OK.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">OK</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Incumbent</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2016</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          Oklahoma State University
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">BA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+<h2 class="preeln-secthead">Graduate education: 
+          University of Oklahoma
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">MD</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">Tom Coburn was born in Casper, Wyo., and now lives in Muskogee, Okla. He earned a bachelor's in accounting from Oklahoma State University.</p>
+        <p class="preeln-paradata">He was manufacturing manager for the Ophthalmic Division of Coburn Opticals in Virginia from 1970 to 1978.</p>
+        <p class="preeln-paradata">He later earned a medical degree from the University of Oklahoma and has maintained a medical practice in Muskogee since 1988, specializing in family medicine and obstetrics.</p>
+        <p class="preeln-paradata">Coburn was elected to the U.S. House in 1994 and did not seek re-election in 2000, keeping a term-limit pledge he made to voters.</p>
+        <p class="preeln-paradata">He was elected to the U.S. Senate in 2004.</p>
+        <p class="preeln-paradata">He and his wife, Carolyn, have three children.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">Tom Coburn was known as a conservative maverick during his three terms in Congress representing Oklahoma's 2nd District, and he has continued that role in the Senate.</p>
+        <p class="preeln-paradata">He has been most vocal in opposing the earmarking of special projects, and he is among the few members of Congress who do not seek such projects for their state.</p>
+        <p class="preeln-paradata">"I've got a flat forehead from beating my head against the wall," Coburn told voters during a town hall meeting in July 2010.</p>
+        <p class="preeln-paradata">He has been a fierce critic of the growth of the federal deficit and the size of government, releasing a series of oversight reports that detailed what he said was wasteful government spending.</p>
+        <p class="preeln-paradata">A 37-page report in 2011, dubbed "Subsidies of the Rich and Famous" detailed nearly $30 billion spent annually in government subsidies, tax breaks and federal grant programs to millionaires.</p>
+        <p class="preeln-paradata">He sponsored the Earmark Transparency Act in 2010, legislation that would create an online database for the public to obtain detailed data on earmark spending.</p>
+        <p class="preeln-paradata">Coburn drew some constituent complaints after a newspaper photograph showed the senator hugging President Barack Obama after the president's first speech to a joint session of the House and Senate.</p>
+        <p class="preeln-paradata">He said he and the president "are very good friends," though they do not share the same political philosophy. Coburn said he and Obama hit it off during orientation as freshmen senators in 2004.</p>
+        <p class="preeln-paradata">Coburn's thwarting of legislation considered worthy by Democrats has frustrated Senate Majority Leader Harry Reid. "You cannot negotiate with Coburn," Reid declared in 2008. "It's just something you learn over the years is a waste of time."</p>
+        <p class="preeln-paradata">Coburn's ideological bent on spending did not keep him from voting for the 2008 financial bailout bill, which was opposed by some conservatives.</p>
+        <p class="preeln-paradata">Some angry constituents at a town hall meeting in Oklahoma City questioned his vote for the measure, but the senator stood his ground. Without the bailout, Coburn said, the nation's economy could shrink to its level in 1990. "How many of you think you'd still have a job?" he asked.</p>
+        <p class="preeln-paradata">He said he did not like the legislation but voted for it in effort to prevent a repeat of the Great Depression, which he said was caused by the failure of the nation's leaders to act after the 1929 stock market crash.</p>
+        <p class="preeln-paradata">Coburn is an obstetrician and has continued to deliver babies for free, despite the threat of censure for violating conflict-of-interest rules of the Senate. He said he welcomed debate on the issue on the Senate floor.</p>
+        <p class="preeln-paradata">He kept his pledge to leave Congress after three terms and returned full time to his medical practice in Muskogee, Okla. As a doctor, he has delivered more than 4,000 babies.</p>
+        <p class="preeln-paradata">Coburn has had several health scares, including surgery for prostate cancer that was discovered at an early stage in 2011. His spokesman said at the time that Coburn was expected to make a full recovery. He underwent surgery and chemotherapy for colon cancer in 2003 and had a benign tumor removed from his pituitary gland in 2007.</p>
+        <p class="preeln-paradata">He ignored pressure from the Republican establishment when he decided to run for the GOP Senate nomination in 2004. U.S. Sen. Jim Inhofe and other prominent GOP officials were backing former Oklahoma City Mayor Kirk Humphreys, who was the early favorite but finished second to Coburn.</p>
+        <p class="preeln-paradata">Coburn pledged to serve no more than two terms in the Senate if he won.</p>
+        <p class="preeln-paradata">Despite a four-way race against a Democrat and two independents in the November 2010 general election, Coburn had the widest margin of victory among statewide candidates with more than 70 percent of the vote.</p>
+        <p class="preeln-paradata">Committee Assignments: Homeland Security and Governmental Affairs; Judiciary; Finance</p>
+        <p class="preeln-paradata">American Conservative Union Rating: 100</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: 5</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">Tom Coburn will finish out the current congressional session and then resign from his seat in January 2015, nearly two years before his term is scheduled to end.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on June 24, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_candidates/OK.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

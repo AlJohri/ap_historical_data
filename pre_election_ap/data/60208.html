@@ -1,0 +1,331 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/60208.jpg"><div class="preeln-entityname">Randal 'Rand' Howard Paul </div>
+	  (Rep)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">202-224-4343 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://paul.senate.gov/">http://paul.senate.gov/</a></span>
+</div>
+<a href="../finance/60208.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1963-1-7</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">Pittsburgh, PA </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">Bowling Green, KY</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Presbyterian</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">2010</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Republican</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">Senate</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/KY.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">KY</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Incumbent</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2016</span>
+</div>
+<h2 class="preeln-secthead">Graduate education: 
+          Duke University
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">MD</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          Baylor University
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">Attended</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">Rand Paul was born in Pittsburgh and grew up in Lake Jackson, Texas. He attended Baylor University but did not earn a degree. He received a medical degree from Duke University.</p>
+        <p class="preeln-paradata">Paul, the son of Rep. Ron Paul of Texas, is an ophthalmologist who practiced in Bowling Green, Ky., until he was elected in 2010. He had never before run for elective office but had picked up political experience by campaigning on behalf of his father who ran for president three times, first as a Libertarian and later as a Republican.</p>
+        <p class="preeln-paradata">Voters in Kentucky, a solidly Democratic state by registration, chose Paul over Democratic rival Jack Conway in the 2010 election.</p>
+        <p class="preeln-paradata">Pundits often mention Paul as a potential Republican presidential candidate in 2016.</p>
+        <p class="preeln-paradata">Paul and his wife, Kelley, have three children.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">Rand Paul was elected to the U.S. Senate in 2010 by running as a political outsider at a time of intense anti-incumbent sentiment in Kentucky. Paul has the support of the tea party movement at both the state and national levels.</p>
+        <p class="preeln-paradata">In the Senate, Paul has remained true to his tea party philosophy of ending congressional earmarks, whittling down the federal bureaucracy and opposing taxes. He also has remained a harsh critic of the 2010 federal health care reform bill.</p>
+        <p class="preeln-paradata">He has distinguished himself in Washington by a relentless push for a balanced federal budget and a smaller federal government. He introduced a plan to balance to the federal budget shortly after his arrival at the Capitol. But his Senate colleagues have refused to accept the broad cuts to longstanding government programs and services that Paul's plan would require.</p>
+        <p class="preeln-paradata">Paul's 2012 budget plan called for elimination of four cabinet departments and a 17 percent flat tax on individuals and corporations.</p>
+        <p class="preeln-paradata">In 2012, the Senate rejected an effort by Paul to drastically cut food stamp spending and replace the food aid program with block grants to the states. The amendment would have saved $322 billion over 10 years.</p>
+        <p class="preeln-paradata">He believes that the government has overstepped its authority when it comes civil liberties. He sponsored legislation in 2012 that would bar the government from using a drone to gather evidence or other information without a warrant. "I just don't like the concept of drones flying over barbeques in New York to see whether you have a Big Gulp in your backyard or whether you are separating out your recyclables according to the city mandates," he said.</p>
+        <p class="preeln-paradata">Some of his views have been more controversial. Paul touched off a political firestorm when he expressed misgivings about the 1964 Civil Rights Act, saying that private businesses should be able to choose whether to serve minorities. That comment triggered a protest outside Kentucky's Republican Party headquarters the weekend after Kentucky's 2010 primary, providing political fodder for Democratic opponents and creating angst among national GOP leaders.</p>
+        <p class="preeln-paradata">Paul also caused a furor when he faulted President Barack Obama's handling of the Gulf oil spill, saying Obama's criticism of BP, the company responsible for the spill, was "un-American."</p>
+        <p class="preeln-paradata">Paul's father is Rep. Ron Paul, a three-time presidential candidate. That family connection led to an outpouring of out-of-state campaign contributions that allowed him to mount an effective campaign against Republican primary challenger Trey Grayson in 2010. Paul raised about $3 million, largely from small-sum donors, staying even with Grayson who was backed by the Republican establishment.</p>
+        <p class="preeln-paradata">Senate GOP leader Mitch McConnell welcomed Paul as his new colleague, and praised the newcomer for his message of "reining in outrageous Washington spending and the overreaching policies of the Obama administration." The two have worked closely together since Paul's arrival in Washington.</p>
+        <p class="preeln-paradata">As a candidate, Paul talked about possible future changes to Social Security and Medicare as growing numbers of baby boomers retire, but opposed changes for current recipients. And he denounced Obama's environmental policies as harmful to Kentucky coal.</p>
+        <p class="preeln-paradata">To win, Paul had to overcome a much-maligned TV ad that asked why Paul was a member in college of a secret campus society that mocked Christians and once allegedly tied up a woman and told her to worship an idol called "Aqua Buddha."</p>
+        <p class="preeln-paradata">Committee Assignments: Energy and Natural Resources; Health, Education, Labor, and Pensions; Homeland Security and Governmental Affairs; Small Business and Entrepreneurship</p>
+        <p class="preeln-paradata">American Conservative Union Rating: 100</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: 15</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">Rand Paul is not up for re-election in 2014.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on June 10, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_candidates/KY.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

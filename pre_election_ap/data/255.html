@@ -1,0 +1,332 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/255.jpg"><div class="preeln-entityname">Michael 'Mike' F. Doyle </div>
+	  (Dem)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">202-225-2135 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">412-244-9101 (Main campaign number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://www.house.gov/doyle/">http://www.house.gov/doyle/</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">&#160;</span><span class="field"><a href="http://mikedoyleforcongress.com/">http://mikedoyleforcongress.com/</a></span>
+</div>
+<a href="../finance/255.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1953-8-5</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">Pittsburgh, PA </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">Forest Hills, PA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Catholic</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">1994</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Democratic</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">House</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/PA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">PA</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">District:</span><span class="field"><a href="../profilesdistricts/PA14.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">District 14</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Incumbent</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2014</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          Pennsylvania State University
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">BS</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">Mike Doyle was born in Pittsburgh and now resides in the suburb of Forest Hills. He earned a bachelor's in community planning at Pennsylvania State University and is a licensed insurance agent.</p>
+        <p class="preeln-paradata">Doyle was elected to a borough council at the age of 22. He served as a staffer for state Sen. Frank Pecora from 1978 to 1994.</p>
+        <p class="preeln-paradata">He was elected to the U.S. House in 1994.</p>
+        <p class="preeln-paradata">Doyle and his wife, Susan, have four children.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">Mike Doyle represents a Rust Belt region that is still recovering from the collapse of the steel sector and other heavy industries. He has focused his efforts in the House toward revitalizing communities in his district through economic development.</p>
+        <p class="preeln-paradata">He is seeking a 10th term representing Pennsylvania's 14th Congressional District.</p>
+        <p class="preeln-paradata">In 2011, he voted against a deficit reduction plan that allowed the country to continue borrowing money.</p>
+        <p class="preeln-paradata">Doyle said he voted against it because he believes it will hurt the growth of payrolls and deny help to struggling households while giving a free pass to profitable companies and the wealthiest Americans by leaving their tax breaks untouched. "That's not my idea of shared sacrifice," Doyle said in a statement.</p>
+        <p class="preeln-paradata">He favors extending middle class tax cuts and increasing taxes on very wealthy Americans &#8212; the so-called "Buffet Rule."</p>
+        <p class="preeln-paradata">He also voted for the 2010 health care reform bill, saying the legislation would make health care more affordable, extend coverage to the uninsured and put an end to discrimination based on pre-existing conditions. He called the June 2012 Supreme Court ruling on the bill a "very welcome development."</p>
+        <p class="preeln-paradata">In 2009, he supported the approximately $800 billion economic stimulus plan backed by President Barack Obama.</p>
+        <p class="preeln-paradata">Doyle's political career began at the age of 22, when he was elected to a borough council as a Republican soon after graduating from Pennsylvania State University.</p>
+        <p class="preeln-paradata">He switched to the Democratic Party in 1991. At the time, he was chief of staff for state Sen. Frank Pecora, who became a Democrat to seek the party nomination for Congress in the 18th District.</p>
+        <p class="preeln-paradata">Doyle has opposed efforts to reduce funding for energy research and development, as some of the fossil-fuel research by the U.S. Department of Energy is conducted in his district.</p>
+        <p class="preeln-paradata">He has advocated reducing the nation's dependence on imported oil, and he co-sponsored an amendment to a 2005 House energy bill that called for doubling federal funding for research on hydrogen fuel cells over the next five years.</p>
+        <p class="preeln-paradata">Doyle joined fellow Democrats in 2000 in voting against giving China permanent normal trade status.</p>
+        <p class="preeln-paradata">He voted in 1999 in favor of requiring gun show dealers to conduct criminal background checks, and in favor of banning the procedure critics call partial-birth abortion.</p>
+        <p class="preeln-paradata">Doyle has championed a Steel Heritage Area in Pittsburgh, which would designate what's left of the old U.S. Steel Homestead Works as a national historic site. He also sponsored legislation that would make permanent a program to protect consumers from unwanted phone calls from telemarketers.</p>
+        <p class="preeln-paradata">Doyle fell into controversy in 2003 when it was revealed that he lives with a handful of other congressmen and senators in a Washington house owned by The Fellowship, a secretive religious organization.</p>
+        <p class="preeln-paradata">The lawmakers paid $600 in monthly rent &#8212; far below Washington's normal rate &#8212; to live in a $1 million Capitol Hill mansion. The deal raised questions about the religious group's influence over members of Congress. Doyle said at the time that his living arrangements were "totally appropriate and within the House rules."</p>
+        <p class="preeln-paradata">Committee Assignments: Energy and Commerce</p>
+        <p class="preeln-paradata">American Conservative Union Rating: 8</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: 95</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">Mike Doyle won his May 2014 primary, he will seek re-election in November.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on June 10, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_districts/PA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__#14"><span class="bracket">[</span>districts in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../state_candidates/PA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

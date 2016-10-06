@@ -1,0 +1,57 @@
+
+ 
+ 
+ ALL CALLED RACES (NOT CALLED SUBTRACTED OUT)            
+ 
+notcalled=           1
+ 
+all seats on Nov 3
+allBEFORE=            51
+repsBEFORE=             10
+demsBEFORE=              12
+ 
+incsBEFORE=             22
+repincsBEFORE=             10
+demincsBEFORE=              12
+ 
+openseatsBEFORE=              18
+reps openseatsBEFORE=               0
+dems openseatsBEFORE=                0
+ 
+all seats on Nov 5
+all=          50
+reps=          23
+dems=           13
+ 
+incs=          22
+repincs=          12
+demincs=           10
+ 
+openseats=           17
+reps openseats=           11
+dems openseats=             3
+ 
+allswitch=          16
+repswitch=           2
+demswitch=            0
+ 
+allswitchInc=           2
+repswitchInc=           2
+demswitchInc=            0
+ 
+allswitchOpen=           14
+repswitchOpen=            0
+demswitchOpen=              0
+ 
+allretain=          34
+repretain=          10
+demretain=           10
+ 
+allretainINc=          20
+repretainInc=          10
+demretainInc=          10
+ 
+allretainOpen=           3
+repretainOpen=            0
+demretainOpen=             0
+ 

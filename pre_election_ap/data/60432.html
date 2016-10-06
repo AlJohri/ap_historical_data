@@ -1,0 +1,341 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/60432.jpg"><div class="preeln-entityname">Patrick 'Pat' Leo Meehan </div>
+	  (Rep)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">202-225-2011 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">484-454-3203 (Main campaign number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://meehan.house.gov/">http://meehan.house.gov/</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">&#160;</span><span class="field"><a href="http://www.meehanforcongress.com">http://www.meehanforcongress.com</a></span>
+</div>
+<a href="../finance/60432.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1955-10-20</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">Cheltenham, PA </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">Drexel Hill, PA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Roman Catholic</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">2010</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Republican</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">House</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/PA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">PA</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">District:</span><span class="field"><a href="../profilesdistricts/PA07.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">District 7</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Incumbent</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2014</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          Bowdoin College
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">BA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+<h2 class="preeln-secthead">Graduate education: 
+          Temple University
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">JD</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">Pat Meehan was born in Cheltenham, Pa., and now resides in Drexel Hill. He earned a bachelor's degree from Bowdoin College in 1978 and spent the next few years officiating professional hockey games, including a stint with the NHL.</p>
+        <p class="preeln-paradata">He earned a law degree from Temple University in 1986,  and then joined the law firm of Dilworth, Paxson, Kalish &amp; Kauffman.</p>
+        <p class="preeln-paradata">Meehan joined U.S. Sen. Arlen Specter's staff as special counsel in 1990. He managed Specter's 1992 re-election campaign and former Sen. Rick Santorum's successful 1994 campaign.</p>
+        <p class="preeln-paradata">Meehan served as district attorney of Delaware County from 1995 to 2001, when he was appointed U.S. Attorney for the Eastern District of Pennsylvania. He resigned in 2008 to explore a run for governor, which he ultimately decided against. In 2010, he beat Democrat Bryan Lentz for the open seat in Pennsylvania's 7th Congressional District.</p>
+        <p class="preeln-paradata">Meehan and his wife, Carolyn, have three sons.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">Pat Meehan was already a veteran campaigner when he launched his own run for Pennsylvania's 7th Congressional District in 2010.</p>
+        <p class="preeln-paradata">He was swept into Congress in the wave of Republican victories across the country. He beat Democrat Bryan Lentz for the open seat that had been vacated by Rep. Joe Sestak for an ultimately unsuccessful run for U.S. Senate.</p>
+        <p class="preeln-paradata">In the November 2012 general election, Meehan will face Democrat George Badey.</p>
+        <p class="preeln-paradata">Perhaps the biggest local crisis in his first term has been the threatened closure of two oil refineries in the district, affecting hundreds of jobs.  Meehan worked with local and state officials to help broker the 2012 sale of the ConocoPhillips refinery to Delta Air Lines, keeping it open. Later, a Brazilian chemical company bought some assets of the second refinery from Sunoco, retaining some jobs on-site.</p>
+        <p class="preeln-paradata">Meehan opposes the 2010 health care reform bill. He was not in office when it passed in 2010, but he voted to repeal it within weeks of joining the House in 2011.</p>
+        <p class="preeln-paradata">Notably, the 7th District has been redrawn since the 2010 election. The new borders add tentacles into two new counties that essentially make it a majority Republican district.</p>
+        <p class="preeln-paradata">Before his own run for Congress, Meehan successfully managed Sen. Arlen Specter's 1992 re-election campaign and former Sen. Rick Santorum's upset victory in 1994.</p>
+        <p class="preeln-paradata">During his tenure as district attorney of Pennsylvania's Delaware County, his office prosecuted chemical-fortune heir John DuPont for the 1996 shooting death of Olympic gold medal-winning wrestler David Schultz. His office also oversaw the case against Arthur Bomar, now on death row for the 1996 rape and murder of 22-year-old Aimee Willard, a George Mason University lacrosse star from suburban Philadelphia.</p>
+        <p class="preeln-paradata">In 2001, President George W. Bush nominated Meehan for U.S. Attorney for the Eastern District of Pennsylvania. The office brought charges in a number of high-profile political corruption cases, including that of state Sen. Vince Fumo, now serving 55 months in prison for defrauding the Senate and two nonprofits of several million dollars.</p>
+        <p class="preeln-paradata">Meehan's office also probed corruption at Philadelphia City Hall through a secret investigation that was uncovered when police found an FBI bug in Mayor John Street's office in 2003.</p>
+        <p class="preeln-paradata">The probe targeted, among others, Street-campaign fundraiser Ronald White and city Treasurer Corey Kemp. White died before his case went to trial; Kemp is serving a 10-year sentence for accepting cash, trips, a favorable mortgage and other bribes. Street was never charged. To date, more than a dozen people have been convicted as a result of the probe.</p>
+        <p class="preeln-paradata">Meehan stepped down as U.S. attorney in July 2008 to explore a run for governor, ultimately deciding against entering the race. He declared his candidacy for Congress in September 2009.</p>
+        <p class="preeln-paradata">Committee Assignments: Homeland Security; Oversight and Government Reform; Transportation and Infrastructure</p>
+        <p class="preeln-paradata">American Conservative Union Rating: 52</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: 15</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">Pat Meehan won his May 2014 primary, he will face Mary Ellen Balchunis in November.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on June 10, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_districts/PA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__#7"><span class="bracket">[</span>districts in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../state_candidates/PA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

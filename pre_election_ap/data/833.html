@@ -1,0 +1,347 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/833.jpg"><div class="preeln-entityname">John Robert Lewis </div>
+	  (Dem)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">202-225-3801 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">404-880-0190 (Main campaign number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://www.house.gov/johnlewis/">http://www.house.gov/johnlewis/</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">&#160;</span><span class="field"><a href="http://www.johnlewisforcongress.com/">http://www.johnlewisforcongress.com/</a></span>
+</div>
+<a href="../finance/833.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1940-2-21</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">Troy, AL </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">Atlanta, GA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Baptist</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">1986</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Democratic</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">House</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/GA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">GA</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">District:</span><span class="field"><a href="../profilesdistricts/GA05.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">District 5</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Incumbent</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2014</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          Fisk University
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">BA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+<h2 class="preeln-secthead">Graduate education: 
+          American Baptist Theological Seminary
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">MA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">John Lewis was born in Troy, Ala., and lives in Atlanta. He earned a bachelor's degree from Fisk University and a master's in theology at American Baptist Theological Seminary.</p>
+        <p class="preeln-paradata">He was a major leader of the civil rights movement alongside the Rev. Martin Luther King Jr., and served as chairman of the Student Nonviolent Coordinating Committee from 1963 to 1966.</p>
+        <p class="preeln-paradata">He headed the Atlanta-based Voter Education Project from 1970 to 1976. He was director of ACTION from 1977 to 1980.</p>
+        <p class="preeln-paradata">Lewis was elected to the Atlanta City Council in 1981, serving from 1982 to 1986.</p>
+        <p class="preeln-paradata">He was elected to the U.S. House in 1986.</p>
+        <p class="preeln-paradata">Lewis and his wife, Lillian, have one child.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">John Lewis is an icon of the civil rights movement and is considered the dean of Georgia's congressional delegation as its longest serving member.</p>
+        <p class="preeln-paradata">In February 2012, he was awarded the Presidential Medal of Freedom, the nation's highest civilian honor for contributions to society.</p>
+        <p class="preeln-paradata">A product of the 1960s civil rights movement, Lewis was chairman of the Student Nonviolent Coordinating Committee and helped organize sit-ins at segregated lunch counters in the South.</p>
+        <p class="preeln-paradata">In 1965, as he led a peaceful march for voting rights from Selma to Montgomery, Ala., he and others were severely beaten by Alabama state troopers in what became known as "Bloody Sunday." The event is credited with helping to spur passage of the 1965 Voting Rights Act.</p>
+        <p class="preeln-paradata">"Generations from now, when parents teach their children what is meant by courage, the story of John Lewis will come to mind: an American who knew that change could not wait for some other person or some other time," President Barack Obama said at the medal ceremony.</p>
+        <p class="preeln-paradata">Lewis, at the time, said the award was even more special coming from Obama. "If someone had told me that one day I would be standing in the White House and an African-American president would be presenting me the Medal of Freedom I would say, 'Are you crazy? Are you out of your mind?'" he told reporters afterward. "It's just an impossible dream."</p>
+        <p class="preeln-paradata">Lewis made headlines in March 2010 during the vitriolic health care debate when he was among a few black congressmen who said some demonstrators &#8212; many of them tea party activists &#8212; yelled a racial epithet as they walked from House office buildings to the Capitol.</p>
+        <p class="preeln-paradata">Lewis pleaded successfully in summer 2010 for unemployment benefits from the House floor, but the bill failed in the Senate before the August recess.</p>
+        <p class="preeln-paradata">During the 2008 presidential election, Lewis drew criticism from some black leaders and also a Democratic primary challenger after initially endorsing Sen. Hillary Rodham Clinton. He later changed his mind and supported then-Sen. Barack Obama.</p>
+        <p class="preeln-paradata">Lewis was among four other members of Congress who were arrested while protesting the expulsion of aid groups from Darfur in front of the Sudanese Embassy in Washington. Other lawmakers included Democratic Reps. Keith Ellison of Minnesota, Jim McGovern of Massachusetts, Donna Edwards of Maryland and Lynn Woolsey of California.</p>
+        <p class="preeln-paradata">Lewis voted for the approximately $800 billion economic stimulus package backed by the Obama administration in February 2009.</p>
+        <p class="preeln-paradata">When Democrats took control of Congress in 2006, the 22-year incumbent gave the delegation renewed clout when House Speaker Nancy Pelosi selected him as part of her leadership team. He is the Democrats' senior deputy whip, a behind-the-scenes post in which he helps develop party policy and persuades colleagues to stand behind it.</p>
+        <p class="preeln-paradata">Lewis' prestige hasn't always translated into legislative success. As one of the most liberal members of Congress, he is often on the losing end of policy battles on budgets, war, education and social issues.</p>
+        <p class="preeln-paradata">Still, Lewis has built a long legislative record. After 15 years of trying, he won congressional approval for a Smithsonian museum dedicated to black history to be built on the National Mall. Lewis' influence again played a crucial role in 2006 in overcoming opposition to renewing the 1965 Voting Rights Act that gives the Justice Department oversight of some states' voting procedures.</p>
+        <p class="preeln-paradata">Lewis also wins kudos from arts groups and conservationists, whose agendas he has quietly helped advance over the years. He sponsored a bill that would give artists a fair-market tax deduction for donating their works to nonprofit museums and collections.</p>
+        <p class="preeln-paradata">He has encountered occasional criticism, such as for a 2006 political ad in which he compared a Republican takeover of the Fulton County Commission to a return to segregation. Lewis alleged in 1997 that fellow Georgian Newt Gingrich, a Republican, was unfit to be House Speaker. The House later sanctioned Lewis after he called Gingrich a liar on the House floor.</p>
+        <p class="preeln-paradata">Lewis easily defeated his Democratic primary challenger in 2012, winning 81 percent of the vote over former Superior Court judge Michael Johnson.</p>
+        <p class="preeln-paradata">Committee Assignments: Ways and Means</p>
+        <p class="preeln-paradata">American Conservative Union Rating: 8</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: 100</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">John Lewis won his May 2014 primary, he will seek re-election in November.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on June 9, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_districts/GA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__#5"><span class="bracket">[</span>districts in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../state_candidates/GA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

@@ -1,0 +1,341 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/967.jpg"><div class="preeln-entityname">James 'Jim' R. Langevin </div>
+	  (Dem)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">202-225-2735 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">401-737-7177 (Main campaign number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://www.house.gov/langevin/">http://www.house.gov/langevin/</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">&#160;</span><span class="field"><a href="http://www.jimlangevin.com/">http://www.jimlangevin.com/</a></span>
+</div>
+<a href="../finance/967.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1964-4-22</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">Providence, RI </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">Warwick, RI</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Catholic</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">2000</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Democratic</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">House</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/RI.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">RI</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">District:</span><span class="field"><a href="../profilesdistricts/RI02.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">District 2</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Incumbent</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2014</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          Rhode Island College
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">BA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+<h2 class="preeln-secthead">Graduate education: 
+          Harvard University
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">MPA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">Jim Langevin was born in Providence, R.I., and now resides in Warwick. He received a bachelor's degree from Rhode Island College and a master's degree from Harvard University.</p>
+        <p class="preeln-paradata">When Langevin was 16 years old, he was accidentally shot while working with the Warwick Police Department as a cadet in the Boy Scout Explorer program. The accident left him paralyzed and Langevin is confined to a wheelchair.</p>
+        <p class="preeln-paradata">He was elected in 1988 to the Rhode Island House of Representatives and then, in 1994, was elected secretary of state.</p>
+        <p class="preeln-paradata">He was elected to the U.S. House in 2000.</p>
+        <p class="preeln-paradata">Langevin is single.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">Jim Langevin, the first quadriplegic to serve in Congress, has advocated for stem cell research, increasing workplace access for those with disabilities and improving the nation's cybersecurity.</p>
+        <p class="preeln-paradata">Langevin is a cofounder of the Congressional Cybersecurity Caucus and has called the consequences of congressional inaction on cybersecurity legislation "perilously high." He has said the federal government must do more to protect against cyber risks, which officials say will soon overtake terrorism as the biggest national security threat in the United States. He has also focused on the potential for job creation in the cybersecurity field and says it's important to encourage students to learn the computer skills needed for careers in the growing field of cybersecurity.</p>
+        <p class="preeln-paradata">In July 2012, as Internet service providers were dealing with a deluge of customer requests for help because of a spate of so-called malware that infected computers across the country, Langevin said computer users have a responsibility to practice good sense and make sure their computers are not infected or being hijacked by criminals.</p>
+        <p class="preeln-paradata">"These types of issues are only going to increase as our society relies more and more on the Internet, so it is a reminder that everyone can do their part," he said.</p>
+        <p class="preeln-paradata">Langevin is a founder and co-chair of the Bipartisan Disabilities Caucus, which draws attention to employment barriers faced by people with disabilities. He supported plans by House leaders to install wheelchair lifts in their chamber so that people with disabilities could have access to the speaker's podium. He also introduced legislation to change Medicare restrictions that limit coverage of wheelchairs only to those that are needed within the patient's home.</p>
+        <p class="preeln-paradata">In July 2010, on the 20th anniversary of the passage of the Americans with Disabilities Act, Langevin presided over the House using a newly installed mechanical lift system to gain access to the speaker's podium in his motorized wheelchair. He met that day with President Barack Obama, who singled him out for praise.</p>
+        <p class="preeln-paradata">Langevin has been among the most outspoken advocates of stem cell research in Congress. The issue, which is personal to Langevin since he was paralyzed in a gun accident as a teenager, took on added prominence in March 2009 when Obama signed legislation expanding federal funding for stem cell research.</p>
+        <p class="preeln-paradata">Langevin attended the signing ceremony at the White House and was photographed shaking Obama's hand. He has said he hopes stem cell research can lead to a cure for spinal cord injuries as well as Parkinson's and Alzheimer's.</p>
+        <p class="preeln-paradata">Despite his support for stem cell research, Langevin is against abortion except in cases of rape, incest or when the life of the mother is in danger.</p>
+        <p class="preeln-paradata">He was a vocal opponent of the war in Iraq. He voted against the 2002 resolution to authorize the president to use unilateral force against Iraq.</p>
+        <p class="preeln-paradata">He has also made efforts in firearms safety and education.</p>
+        <p class="preeln-paradata">Before he came to Congress, Langevin served six years as a state legislator and five years as secretary of state. He used the office as a bully pulpit for open government, a key issue in a state where corruption is a perennial problem. He created a public information center in the Statehouse and gained notice for pushing the Democratic-led General Assembly to comply with open meeting laws.</p>
+        <p class="preeln-paradata">Committee Assignments: Armed Services; Select Intelligence</p>
+        <p class="preeln-paradata">American Conservative Union Rating: 0</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: 85</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">Jim Langevin won his September 2014 primary, he will face Rhue Reis in November.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on September 10, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_districts/RI.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__#2"><span class="bracket">[</span>districts in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../state_candidates/RI.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

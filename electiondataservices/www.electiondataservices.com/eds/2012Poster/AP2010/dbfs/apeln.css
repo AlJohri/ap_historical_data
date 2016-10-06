@@ -1,0 +1,98 @@
+/* Temporary for Demo */
+
+a:link { color: #990000; text-decoration: none }
+a:link.visited { color: #666666 }
+body { font-size: 8pt; font-family: Verdana, Arial, sans-serif; background-color: #eeeeee }
+body.white { font-size: 8pt; font-family: Verdana, Arial, sans-serif; background-color: #ffffff }
+
+/* Global */
+p.apeln { font-size: 9pt; font-family: Verdana, Arial, sans-serif }
+p.apelnmenu { font-size: 7pt; font-family: Verdana, Arial, sans-serif }
+b.apeln { font-family: Verdana, Arial, sans-serif; font-weight: bold }
+i.apeln { font-family: Verdana, Arial, sans-serif; font-style: italic }
+h1.apeln { font-size: 16pt; font-family: Arial, sans-serif } 
+h3.apeln { font-size: 10pt; font-family: Arial, sans-serif }
+h5.apeln { font-size: 9pt; font-family: Arial, sans-serif }
+hr.apeln { width: 33% }
+ul.apeln { font-size: 9pt; font-family: Verdana, Arial, sans-serif }
+
+/* Votes */
+table.apelnvote { width: 100% }
+tr.apelnvoteprecincts { background-color: yellow }
+td.apelnvoteprecincts { font-size: 9pt; font-family: Verdana, Arial, sans-serif; text-align: left }
+tr.apelnvotedem { color: red }
+tr.apelnvotegop { color: blue }
+tr.apelnvoteind { color: black }
+tr.apelnvoteoth { color: black }
+tr.apelnvotesum { color: black }
+tr.apelnvotediv { color: black }
+tr.apelnrowodd { background-color: white }
+tr.apelnroweven { background-color: lightblue }
+td.apelnvotewon { text-align: right }
+td.apelnvotecand { text-align: left; vertical-align: top; }
+td.apelnvotewon { text-align: center; vertical-align: top; }
+td.apelnvoteparty { text-align: left; vertical-align: top; }
+td.apelnvotevote { text-align: right }
+td.apelnvotepercent { text-align: right }
+td.apelnvotedel { text-align: right }
+
+/* Trend */
+table.apelntrend { width: 100% }
+th.apelntrenddem { color: red; text-align: center }
+th.apelntrendgop { color: blue; text-align: center }
+th.apelntrendoth { color: black; text-align: center }
+th.apelntrendsplit { color: black; text-align: center }
+th.apelntrenddiv { color: black; text-align: center }
+td.apelntrenddem { background-color: red; text-align: right }
+td.apelntrendgop { background-color: blue; text-align: right }
+td.apelntrendoth { background-color: white; text-align: right }
+td.apelntrendsplit { background-color: white; text-align: right }
+td.apelntrendname { font-family: Verdana, Arial, sans-serif; font-weight: bold; text-align: left }
+tr.apelntrendparty { font-family: Verdana, Arial, sans-serif; font-weight: bold }
+tr.apelntrendwon { text-align: center }
+tr.apelntrendleading { text-align: center }
+tr.apelntrendholdovers { text-align: center }
+tr.apelntrendtrend { text-align: center }
+tr.apelntrendcurrent { text-align: center }
+tr.apelntrendnet { text-align: center }
+
+/* District Profiles */
+table.apelndistricts { width: 100%; font-size: 9pt; font-family: Verdana, Arial, sans-serif }
+tr.apelndistricts { }
+td.apelndistrictsalpha { text-align: left }
+td.apelndistrictsnumeric { text-align: right }
+
+/* States */
+/** Symbols Table: Three columns all text **/
+table.apelnstatessymbols { width: 100%; font-size: 9pt; font-family: Verdana, Arial, sans-serif }
+tr.apelnstatessymbols { }
+td.apelnstatessymbolsalphaleft { width: 33%; text-align: left }
+td.apelnstatessymbolsalphamiddle { width: 33%; text-align: center }
+td.apelnstatessymbolsalpharight { width: 34%; text-align: right }
+/** Census Table: Two columns both text **/
+table.apelnstatescensus { width: 100%; font-size: 9pt; font-family: Verdana, Arial, sans-serif }
+tr.apelnstatescensus { }
+td.apelnstatescensus { font-size: 9pt; font-family: Verdana, Arial, sans-serif; width: 50%; text-align: left }
+
+/* Past Votes */
+table.apelnpastvotes { width: 100%; font-size: 9pt; font-family: Verdana, Arial, sans-serif }
+tr.apelnpastvotes { background-color: grey }
+td.apelnpastvotes { font-size: 9pt; font-family: Verdana, Arial, sans-serif;text-align: left; width: 33% }
+
+/* Past Votes Indexes */
+/* Links Table: Three colunns all text */
+table.apelnpastvotesindex { width: 100%; font-size: 9pt; font-family: Verdana, Arial, sans-serif }
+tr.apelnpastvotesindex { background-color: grey }
+td.apelnpastvotesindex { width: 33%; text-align: left }
+td.apelnpastvotescand { width: 37%; text-align: left }
+td.apelnpastvotesvote { width: 20%; text-align: right }
+td.apelnpastvotesparty { width: 10%; text-align: left}
+td.apelnpastvotespct { width: 10%; text-align: right }
+
+/* Money */
+table.apelnmoney { width: 100%; font-size: 9pt; font-family: Verdana, Arial, sans-serif }
+tr.apelnmoney { }
+td.apelnmoneyalpha { text-align: left }
+td.apelnmoneynumeric { text-align: right }
+td.apelnmoneywide { text-align: left }
+

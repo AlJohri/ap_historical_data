@@ -1,0 +1,343 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/62244.jpg"><div class="preeln-entityname">Elizabeth  Warren </div>
+	  (Dem)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">202-224-4543 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">617-286-6715 (Main campaign number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://www.warren.senate.gov/">http://www.warren.senate.gov/</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">&#160;</span><span class="field"><a href="http://www.elizabethwarren.com">http://www.elizabethwarren.com</a></span>
+</div>
+<a href="../finance/62244.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1949-6-22</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">Oklahoma City, OK </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">Cambridge, MA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Methodist</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">2012</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Democratic</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">Senate</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/MA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">MA</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Incumbent</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2018</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          University of Houston
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">BS</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+<h2 class="preeln-secthead">Graduate education: 
+          Rutgers University
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">JD</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">Elizabeth Warren was born in Oklahoma City. Her father sold carpeting and worked as a maintenance man, her mother answered phones at Sears and her three brothers served in the military. Warren began waiting tables in her aunt's Mexican restaurant when she was 13.</p>
+        <p class="preeln-paradata">After earning a bachelor's from the University of Houston in 1970 she started teaching in elementary school. She married Jim Warren, an engineer with NASA, when she was 19 and had her first daughter when she was 22. The two would have a second child, a son, but later divorce.</p>
+        <p class="preeln-paradata">Warren earned a law degree from Rutgers University in 1976 and began a career as a law professor.</p>
+        <p class="preeln-paradata">She taught at a series of universities before landing a position at Harvard University's Law School, where she's taught for about two decades.</p>
+        <p class="preeln-paradata">Warren served as chair of the Congressional Oversight Panel for the Troubled Asset Relief Program and later helped create the Consumer Financial Protection Bureau.</p>
+        <p class="preeln-paradata">She and her second husband, Bruce Mann, also a Harvard law professor, live in Cambridge, Mass.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">Elizabeth Warren is Massachusetts' 2012 Democratic candidate for U.S. Senate. She is a law professor at Harvard University, has published nine books and in more recent years has made a name for herself as a consumer advocate.</p>
+        <p class="preeln-paradata">She came to prominence nationally following the financial collapse of 2008 when she was tapped to serve as chair of the Congressional Oversight Panel for the Troubled Asset Relief Program, which authorized the U.S. Treasury to spend $700 billion to stabilize the economy.</p>
+        <p class="preeln-paradata">The panel headed by Warren was charged with reviewing the nation's financial markets and regulatory system and reporting back to Congress.</p>
+        <p class="preeln-paradata">The panel found that while TARP provided critical support to markets at a moment of crisis, the program also left a "troublesome legacy" of market distortions, public anger toward policymakers, and a lack of full transparency and accountability.</p>
+        <p class="preeln-paradata">Warren's next undertaking was to push for the creation of a new federal agency which she said would hold the nation's largest financial institutions accountable by protecting consumers from "tricks and traps" hidden in mortgages, credit cards and other products.</p>
+        <p class="preeln-paradata">President Barack Obama charged Warren with setting up the Consumer Financial Protection Bureau, but Senate Republicans blocked him from putting Warren in charge of the agency.</p>
+        <p class="preeln-paradata">That decision opened the door for Warren to launch what would be her first campaign for elected office &#8212; the U.S. Senate seat held by incumbent Republican Sen. Scott Brown.</p>
+        <p class="preeln-paradata">Democrats quickly began to rally around Warren. They saw her as their best chance to win back the seat held for nearly a half century by Sen. Edward Kennedy, who died from a brain tumor in 2009.</p>
+        <p class="preeln-paradata">Warren quickly jumped to the head of a field of Democratic Senate hopefuls and began raising millions in political contributions, much of it from out-of-state backers. One by one her Democratic challengers fell away.</p>
+        <p class="preeln-paradata">When the party met at their state nominating convention in June 2012, Warren emerged as the sole candidate.</p>
+        <p class="preeln-paradata">Although she's raised huge sums of campaign cash and energized the liberal base of the party, Warren has had trouble breaking away from Brown. Most polls show a close race between the two.</p>
+        <p class="preeln-paradata">Warren's campaign was also tripped up by her occasionally awkward responses to revelations that she had described herself as part Native American on law school directories. Warren said she was told growing up that her mother was part Cherokee and Delaware, but has been unable to provide proof.</p>
+        <p class="preeln-paradata">Both candidates have cast their opponents in the worst possible light, and the race is already the most expensive in Massachusetts history.</p>
+        <p class="preeln-paradata">Warren has portrayed Brown as beholden to Wall Street and said his re-election would help Republicans recapture the Senate and push a more radical conservative agenda.</p>
+        <p class="preeln-paradata">Brown has tried to cast Warren as a classic tax-and-spend liberal and philosophical godmother of the Occupy movement even as he's portrayed himself as someone who can reach across the party divide in Washington.</p>
+        <p class="preeln-paradata">Warren's campaign may have gotten a bump after Democrats gave her a prime time speaking slot at their national convention. Warren hit on many of the themes of her campaign, arguing "the system is rigged" in Washington against middle class families and small businesses.</p>
+        <p class="preeln-paradata">She's lamented what she said has been a renewed attack on a slew of women's issues, from equal pay for equal work, to insurance coverage for birth control and access to abortion.</p>
+        <p class="preeln-paradata">She's also pointed to soaring student loan debt and said the nation should be putting more people to work rebuilding the country's roads, bridges and other infrastructure.</p>
+        <p class="preeln-paradata">American Conservative Union Rating: Not rated</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: Not rated</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">Elizabeth Warren is not up for re-election in 2014.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on September 10, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_candidates/MA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

@@ -1,0 +1,335 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/57891.jpg"><div class="preeln-entityname">Jeffrey 'Jeff' Darren Duncan </div>
+	  (Rep)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">202-225-5301 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">864-915-4059 (Main campaign number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://jeffduncan.house.gov/">http://jeffduncan.house.gov/</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">&#160;</span><span class="field"><a href="http://www.jeffduncan.com">http://www.jeffduncan.com</a></span>
+</div>
+<a href="../finance/57891.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1966-1-7</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">Simpsonville, SC </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">Laurens, SC</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Baptist</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">2010</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Republican</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">House</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/SC.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">SC</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">District:</span><span class="field"><a href="../profilesdistricts/SC03.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">District 3</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Incumbent</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2014</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          Clemson University
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">BA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">Jeff Duncan was born in Simpsonville, S.C., and now resides in Laurens. He earned a bachelor's degree in political science in 1988 from Clemson University, where he played football.</p>
+        <p class="preeln-paradata">Duncan was a deacon at the First Baptist Church in Clinton. He was on the Clinton Zoning Appeals Board from 1995 to 1999 and on the board of the state Waterfowl Association from 1997 to 2002.</p>
+        <p class="preeln-paradata">He is a real estate broker, auctioneer, avid hunter and gun rights advocate.</p>
+        <p class="preeln-paradata">He won election to South Carolina House in 2002 and served as vice chairman of his freshman caucus.</p>
+        <p class="preeln-paradata">He was elected to Congress in 2010, filling the seat left open by U.S. Rep. Gresham Barrett who unsuccessfully ran for governor.</p>
+        <p class="preeln-paradata">Duncan and his wife, Melody, have three children.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">Jeff Duncan first garnered national attention 10 months into his first term in Congress, when he compared the country's illegal immigration issues to a house without a door that allows "any kind of vagrant or animal" to come in.</p>
+        <p class="preeln-paradata">It was not a new issue for Duncan, who, during his campaign for South Carolina's 3rd District seat, had blasted the federal government for not stopping the flow of illegal workers.</p>
+        <p class="preeln-paradata">"It's kind of like having a house ... taking the door off the hinges and allowing any kind of vagrant or animal or just somebody that's hungry, or somebody that wants to do your dishes for you, to come in," Duncan said in November 2011 during a forum at Furman University. "And you can't say, 'No you can't come in.' ... We're giving those benefits away, which we earn as citizens of this nation, of being legalized citizens."</p>
+        <p class="preeln-paradata">After the forum, he defended his comments, saying through a spokesman that he was likening the importance of border security to protecting one's home.</p>
+        <p class="preeln-paradata">Duncan was elected to Congress in 2010, winning the seat vacated by Rep. Gresham Barrett, who ran unsuccessfully for governor.</p>
+        <p class="preeln-paradata">He will face Brian Doyle in the November 2012 general election. Duncan did not face a primary challenge.</p>
+        <p class="preeln-paradata">In June 2012, Duncan joined with other South Carolina Republicans, Gov. Nikki Haley and U.S. Senator Lindsey Graham to support federal legislation that would allow drilling for gas and oil off South Carolina's coast, arguing the state's need for jobs and income outweighed potential problems.</p>
+        <p class="preeln-paradata">During his 2010 campaign, Duncan said he supported replacing all income and payroll-related taxes with a national sales tax. He said Congress needs to curtail spending and pass balanced budgets. He vowed to push for repeal of the 2010 health care reform bill or, if that's impractical, vote against funding the additional IRS agents he said were needed to implement it.</p>
+        <p class="preeln-paradata">In January 2011, shortly after his election, Duncan said the health care legislation was a "job-killing, socialistic" approach to health care.</p>
+        <p class="preeln-paradata">Duncan does not believe in setting his own term limits. He says he supports term limits only if everyone in Congress abides by them. Otherwise, he says, such pledges would only put South Carolina at a disadvantage.</p>
+        <p class="preeln-paradata">Duncan was a member of a state House committee that studied offshore drilling for natural gas, and he says drilling should be allowed nearer to shore. In Congress, Duncan has pushed for federal legislation that would allow drilling of gas and oil off South Carolina's coast.</p>
+        <p class="preeln-paradata">Before his election to Congress, Duncan was a conservative state legislator known for his support of gun rights.</p>
+        <p class="preeln-paradata">He is an avid hunter, an outdoor enthusiast and the former chairman of the state House Sportsmen's Caucus. He touts his 100 percent rating with the National Rifle Association, but has also been willing to buck the group.</p>
+        <p class="preeln-paradata">"We ask the NRA to back off," Duncan said at a June 2008 news conference, surrounded by fellow gun enthusiasts. The legislators complained that specific wording the NRA wanted could kill a proposed amendment to the state constitution guaranteeing hunting and fishing rights. The amendment died days later as the session ended.</p>
+        <p class="preeln-paradata">Duncan sponsored a bill in 2007 allowing concealed-weapon permit holders to carry guns onto public school campuses, from elementary schools to universities. He filed the bill a week after an armed student, Seung-Hui Cho, killed 33 people, including himself, at Virginia Tech. Having trained and armed gun owners in schools could prevent such massacres, Duncan said.</p>
+        <p class="preeln-paradata">"He walked in that building without anybody having the ability to stop him," Duncan said about the incident. "That guy was fairly certain no one on that campus other than security had firearms and could protect themselves."</p>
+        <p class="preeln-paradata">The bill died on the House floor, with opponents fearing that more guns would mean more accidental shootings.</p>
+        <p class="preeln-paradata">Committee Assignments: Natural Resources; Homeland Security; Foreign Affairs</p>
+        <p class="preeln-paradata">American Conservative Union Rating: 96</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: 5</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">Jeff Duncan won his June 2014 primary, he will face Barbara Jo Mullis in November.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on June 17, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_districts/SC.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__#3"><span class="bracket">[</span>districts in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../state_candidates/SC.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

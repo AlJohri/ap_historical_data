@@ -1,0 +1,339 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/81.jpg"><div class="preeln-entityname">Michael 'Mike' D. Crapo </div>
+	  (Rep)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">202-224-6142 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">208-368-7988 (Main campaign number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://www.crapo.senate.gov">http://www.crapo.senate.gov</a></span>
+</div>
+<a href="../finance/81.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1951-5-20</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">Idaho Falls, ID </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">Idaho Falls, ID</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Mormon</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">1998</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Republican</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">Senate</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/ID.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">ID</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Incumbent</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2016</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          Brigham Young University
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">BA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+<h2 class="preeln-secthead">Graduate education: 
+          Harvard University
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">JD</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">Mike Crapo (pronounced CRAY-poh) was born in Idaho Falls, Idaho, where he still resides. He earned a bachelor's degree from Brigham Young University in 1973 and a law degree from Harvard University in 1977.</p>
+        <p class="preeln-paradata">He was a law clerk in 1978 for Judge James Carter of the 9th U.S. Circuit Court of Appeals.</p>
+        <p class="preeln-paradata">He practiced law in San Diego for a year and returned to Idaho Falls to join the law firm where his late brother Terry was a partner.</p>
+        <p class="preeln-paradata">He was elected to the state Senate in 1984 after a court-ordered legislative reapportionment plan expanded the size of the chamber from 35 to 42 members.</p>
+        <p class="preeln-paradata">Crapo won election to the U.S. House in 1992 and to the U.S. Senate in 1998.</p>
+        <p class="preeln-paradata">He and his wife, Susan, have five children.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">Mike Crapo campaigned for his U.S. Senate seat on a platform of change, something he learned from his brother who didn't seem destined for the political spotlight but ended up winning as an outsider.</p>
+        <p class="preeln-paradata">After his brother Terry, a one-time rising star in the GOP, contracted a deadly form of leukemia, Mike Crapo launched his own political career.</p>
+        <p class="preeln-paradata">He was elected to the House in 1992 and to the Senate in 1998, when he defeated Bill Mauk, a former Democratic chairman in Idaho.</p>
+        <p class="preeln-paradata">Crapo said he wanted to check government growth and give people more control over their lives. "I take stands," he said. "The point is that you let people express their point of view and include them in the process."</p>
+        <p class="preeln-paradata">He was one of five Republicans to co-sponsor legislation in 2012 that would renew and expand a law that fights violence against women.</p>
+        <p class="preeln-paradata">On taxes, he said in 2012 that any savings realized from closing loopholes in the tax code should be used to lower taxes not reduce the deficit, as former Federal Reserve Chairman Alan Greenspan had recommended.</p>
+        <p class="preeln-paradata">Crapo was a member of the Senate's Gang of Six, the bipartisan group that worked for months in 2010 and 2011 on a sweeping plan to bring the federal deficit under control with a mix of tax cuts and new revenue sources.</p>
+        <p class="preeln-paradata">He was among six U.S. senators appointed in early 2010 to President Barack Obama's deficit commission. The 18-member panel was charged with creating a plan to rein in the government's red ink and reduce annual deficits to 3 percent of the national economy by 2015.</p>
+        <p class="preeln-paradata">After Obama signed the health care reform bill in 2010, Crapo said in a statement that he would join with some of his colleagues in seeking its repeal.</p>
+        <p class="preeln-paradata">Crapo won a long-sought legislative victory to preserve an incredible tract of land in southwestern Idaho. In March 2009, Congress approved as part of a larger public lands bill legislation designating 517,000 acres of wilderness in and around the Owyhee Canyonlands, along with protecting 316 miles of rivers and streams.</p>
+        <p class="preeln-paradata">Crapo worked for eight years with ranchers, environmentalists, tribal leaders and local government officials to preserve the rivers, canyons, landscape and cultural heritage of the area. He forged agreements with groups that are typically hard to get in the same room, let alone agree on broad public lands policy, to bring about the first Idaho wilderness in decades.</p>
+        <p class="preeln-paradata">During his four terms in the state Senate, three in the U.S. House and two in the U.S. Senate, Crapo has never been in a close race. In 2004 he became the first Republican U.S. Senate candidate in Idaho history to go unchallenged by Democrats.</p>
+        <p class="preeln-paradata">His challenges have instead mirrored those of his late brother. Crapo was diagnosed with prostate cancer in 2000 and underwent surgery. But the cancer returned early in 2005 and he began radiation treatments, driving from his Washington-area home to a Baltimore hospital each weekday for three months.</p>
+        <p class="preeln-paradata">Crapo has used his family's experience with cancer &#8212; his sister is also a cancer survivor &#8212; to fuel his determination to improve federal compensation for so-called downwinders, westerners who believe their cancer is linked to fallout from nuclear bomb testing in Nevada during the Cold War.</p>
+        <p class="preeln-paradata">Crapo gave up a seat on the U.S. Senate's Environment and Public Works Committee at the beginning of the 109th Congress to take an assignment on the Finance Committee, even though he was relinquishing direct input into revisions to the Endangered Species Act. As a member of the Finance Committee, Crapo joined President George W. Bush's push for Social Security reforms, but found widespread resistance across Idaho.</p>
+        <p class="preeln-paradata">Crapo bucked the White House in 2005 and opposed the Central American Free Trade Agreement, which Bush had signed in 2004. Crapo voted against ratifying CAFTA because he said it could cost Idaho's sugar beet industry thousands of jobs.</p>
+        <p class="preeln-paradata">Committee Assignments: Finance;  Banking, Housing, and Urban Affairs;  Environment and Public Works;  Indian Affairs;  Budget</p>
+        <p class="preeln-paradata">American Conservative Union Rating: 95</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: 10</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">Mike Crapo is not up for re-election in 2014.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on June 10, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_candidates/ID.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

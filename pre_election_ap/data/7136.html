@@ -1,0 +1,345 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/7136.jpg"><div class="preeln-entityname">John Raymond Garamendi </div>
+	  (Dem)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">202-225-1880 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">916-863-6881  (Main campaign number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://garamendi.house.gov">http://garamendi.house.gov</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">&#160;</span><span class="field"><a href="http://www.garamendi.org">http://www.garamendi.org</a></span>
+</div>
+<a href="../finance/7136.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1945-1-24</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">Camp Blanding, FL </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">Walnut Grove, CA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Christian</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">2009</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Democratic</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">House</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/CA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">CA</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">District:</span><span class="field"><a href="../profilesdistricts/CA03.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">District 3</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Incumbent</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2014</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          University of California - Berkeley
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">BA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+<h2 class="preeln-secthead">Graduate education: 
+          Harvard University
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">MBA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">John Garamendi was born in Camp Blanding, Fla., and raised in Mokelumne Hill, Calif. He currently resides in Walnut Grove. He earned a bachelor's degree in business from the University of California-Berkeley and a master's degree in business administration from Harvard University.</p>
+        <p class="preeln-paradata">Garamendi was a second team All-American offensive guard in football, a two-time member of the All-Pacific Coast Conference team and the 1964 West Coast heavyweight wrestling champion.</p>
+        <p class="preeln-paradata">He was a Peace Corps volunteer in Ethiopia, and he served in both the state House and the state Senate. He was elected lieutenant governor in 2006.</p>
+        <p class="preeln-paradata">He joined the U.S. House in 2009, winning a special election to fill the seat of Rep. Ellen Tauscher who left for a position in President Barack Obama's administration.</p>
+        <p class="preeln-paradata">He and his wife, Patti, have six children.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">John Garamendi &#8212; a handsome, wealthy and idealistic politician &#8212; has drawn comparisons to his political idol, former President John F. Kennedy.</p>
+        <p class="preeln-paradata">The representative for California's 10th District, Garamendi joined the U.S. House in 2009, winning a special election to fill the seat of Rep. Ellen Tauscher, who left for a position in President Barack Obama's administration.</p>
+        <p class="preeln-paradata">In 2012, following dramatic redistricting in California, he opted to run for a seat in the new 3rd District slightly to the north of the district he currently represents.</p>
+        <p class="preeln-paradata">Garamendi campaigned in 2009 on a broad agenda that included everything from climate change to investment in higher education, overcoming his opponent's effort to capitalize on voter angst over bailouts for automakers and banks.</p>
+        <p class="preeln-paradata">In June 2012 Garamendi co-wrote legislation to prevent the president from branding a U.S. citizen as an enemy of the state and indefinitely detaining them. The legislation would ensure that all individuals accused of being associated with terrorist organizations will be transferred immediately to federal courts for charges and trial.</p>
+        <p class="preeln-paradata">"Anyone can be falsely accused of a crime. Everyone accused of a crime deserves a fair trial," Garamendi said.</p>
+        <p class="preeln-paradata">He has followed through on his campaign promise to be a solid vote in favor of Obama's domestic agenda. He backed the 2010 health care reform bill, the 2010 repeal of "don't ask, don't tell," the 2010 overhaul of financial industry regulations and the approximately $800 billion economic stimulus package.</p>
+        <p class="preeln-paradata">Garamendi wrote unsuccessful legislation in April 2010 in the wake of BP's Deepwater Horizon oil spill in the Gulf of Mexico that called for a permanent ban on new offshore drilling in federal waters near California, Oregon and Washington.</p>
+        <p class="preeln-paradata">Garamendi served for several years in the California Legislature, where he was known as a top budget writer. During his time as a state lawmaker, he ran unsuccessfully for statewide office, losing two gubernatorial bids.</p>
+        <p class="preeln-paradata">He was tapped by President Bill Clinton to become deputy secretary of the interior in 1995.</p>
+        <p class="preeln-paradata">He served twice as state insurance commissioner, and one of his biggest political liabilities remains his handling of a failed insurance company.</p>
+        <p class="preeln-paradata">Garamendi approved as commissioner the sale of Executive Life and its junk bond portfolio for $3.25 billion to an investor group financed by French bank Credit Lyonnais. The bonds were later resold for billions more. The state Department of Insurance sued the French investors and recovered only a portion of what Garamendi said was due.</p>
+        <p class="preeln-paradata">During his time as lieutenant governor, Garamendi served as chairman of the three-member State Lands Commission, where he opposed raising tax revenue through expanded offshore oil drilling despite the state's ongoing budget deficits. He led the commission in June 2009 in passing a resolution urging the Legislature to oppose oil drilling off the coast of Santa Barbara, which supporters said could bring in $1.8 billion to state coffers over time.</p>
+        <p class="preeln-paradata">Throughout more than 30 years in public office, one thing has eluded Garamendi: the governor's seat.</p>
+        <p class="preeln-paradata">He announced plans to run as a replacement for then-Gov. Gray Davis during the 2003 recall election but withdrew under pressure from fellow Democrats.</p>
+        <p class="preeln-paradata">He was contemplating a fourth run for the governorship when Tauscher gave up her House seat and he won the election to replace her.</p>
+        <p class="preeln-paradata">Committee Assignments: Natural Resources ; Armed Services</p>
+        <p class="preeln-paradata">American Conservative Union Rating: 0</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: 90</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">John Garamendi won his June 2014 primary, he will face Dan Logue in November.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on June 12, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_districts/CA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__#3"><span class="bracket">[</span>districts in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../state_candidates/CA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

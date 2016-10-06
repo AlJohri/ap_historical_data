@@ -1,0 +1,346 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/883.jpg"><div class="preeln-entityname">James 'Jim' Patrick McGovern </div>
+	  (Dem)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">202-225-6101 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">508-795-1998 (Main campaign number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://mcgovern.house.gov/">http://mcgovern.house.gov/</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">&#160;</span><span class="field"><a href="http://jimmcgovern.com/">http://jimmcgovern.com/</a></span>
+</div>
+<a href="../finance/883.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1959-11-20</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">Worcester, MA </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">Worcester, MA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Catholic</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">1996</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Democratic</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">House</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/MA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">MA</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">District:</span><span class="field"><a href="../profilesdistricts/MA02.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">District 2</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Incumbent</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2014</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          American University
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">BA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+<h2 class="preeln-secthead">Graduate education: 
+          American University
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">MPA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">Jim McGovern was born in Worcester, Mass., where he now resides. He attended American University where he earned a bachelor's degree in history in 1981 and a master's degree in public administration in 1984. While earning his bachelor's he worked for Sen. George McGovern (no relation).</p>
+        <p class="preeln-paradata">In 1982, Jim McGovern joined the staff of then-U.S. Rep. J. Joseph Moakley and worked there until 1996. He ran unsuccessfully in 1994 for Massachusetts' 3rd Congressional District seat, losing in the Democratic primary.</p>
+        <p class="preeln-paradata">He was elected to the U.S. House in 1996.</p>
+        <p class="preeln-paradata">McGovern and his wife, Lisa, have two children.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">Jim McGovern is a former congressional staffer who has enjoyed success climbing the ranks of Capitol Hill as a lawmaker.</p>
+        <p class="preeln-paradata">In 2010, when a Senate version of a child nutrition bill proposed to get most of its money from future funding of food stamp programs, McGovern was among more than 100 Democrats who opposed the plan.</p>
+        <p class="preeln-paradata">"It's just plain wrong," said McGovern, who has been a longtime advocate for childhood nutrition programs. "The way you are going to pay for a child nutrition bill is by dipping into people's food stamps? Give me a break."</p>
+        <p class="preeln-paradata">In 2012, McGovern is running in the redrawn 2nd Congressional District. He easily beat challenger William Feegbeh in the September primary and faces no Republican opponent in the November general election.</p>
+        <p class="preeln-paradata">McGovern has been a strong human rights advocate. In 2012, he was arrested alongside several other congressmen and actor George Clooney during a protest outside the Sudanese Embassy in Washington. The protesters accused Sudan's president, Omar al-Bashir, of provoking a humanitarian crisis and blocking food and aid from entering the Nuba Mountains in the county's border region with South Sudan.</p>
+        <p class="preeln-paradata">After the U.S. looked into allegations in August 2012 that Honduras' new national police chief once ran a death squad, McGovern, who in past years introduced legislation pressing for human rights in Honduras, said through his spokesman that he "strongly believes that those who have committed or allegedly are currently committing human rights abuses should not receive any form of U.S. assistance until they have been fully investigated and, if warranted, prosecuted."</p>
+        <p class="preeln-paradata">When House Republicans criticized a $410 billion measure to boost domestic programs on the heels of the 2009 approximately $800 billion economic stimulus package, McGovern blasted the party for deficits amassed under President George W. Bush's administration.</p>
+        <p class="preeln-paradata">"The same people who drove the economy into the ditch are now complaining about the size of the tow truck," McGovern said.</p>
+        <p class="preeln-paradata">McGovern voted in favor of the revised 2008 $700 billion Wall Street bailout bill, although he expressed reservations. "This bill will hopefully stabilize our economy. I can't guarantee that it will work; but I do know that killing this package would be serious mistake," he said.</p>
+        <p class="preeln-paradata">He has continued efforts to normalize relations with Cuba, making an agreement with Fidel Castro to have copies of Ernest Hemingway's Cuba writings brought to the John F. Kennedy Library in Boston. McGovern called the January 2009 arrival of the documents a turning point toward a more rational relationship between the two countries.</p>
+        <p class="preeln-paradata">He called in 2000 for ending the trade embargo, establishing diplomatic relations and lifting all restrictions on travel to the country.</p>
+        <p class="preeln-paradata">McGovern opposed the war in Iraq and voted against funding it, saying the war shortchanged priorities at home.</p>
+        <p class="preeln-paradata">"Yes, we should build schools and hospitals and roads and bridges in Iraq but we should build them in this country, too," he said.</p>
+        <p class="preeln-paradata">McGovern notes that he introduced the first bill in Congress to end funding for the Iraq war and provide for a U.S. troop withdrawal.</p>
+        <p class="preeln-paradata">In July 2010, he filed legislation calling for "a flexible timetable for withdrawal of troops from Afghanistan as a matter of national security and fiscal responsibility."</p>
+        <p class="preeln-paradata">He led the charge in 2004 for keeping the image of President Franklin Delano Roosevelt on the dime, rather than replacing it with President Ronald Reagan's likeness. He quickly gathered more than 130 co-sponsors.</p>
+        <p class="preeln-paradata">McGovern has been a leading opponent of a proposed liquefied natural gas terminal for Fall River. He inserted language into a House bill that would prevent the old Brightman Street Bridge from being destroyed, a move project foes hope will block tanker access to the facility.</p>
+        <p class="preeln-paradata">When a proposal was floated to build an offshore berth to accept deliveries, McGovern maintained his opposition, saying the gas would still be stored in Fall River and the offshore site was still in a heavily trafficked area.</p>
+        <p class="preeln-paradata">Committee Assignments: Rules; Agriculture</p>
+        <p class="preeln-paradata">American Conservative Union Rating: 4</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: 100</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">Jim McGovern won his September 2014 primary, he will seek re-election in November.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on September 10, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_districts/MA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__#2"><span class="bracket">[</span>districts in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../state_candidates/MA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

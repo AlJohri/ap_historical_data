@@ -1,0 +1,340 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/1760.jpg"><div class="preeln-entityname">Patrick Joseph Leahy </div>
+	  (Dem)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">202-224-4242 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">802-793-0876  (Main campaign number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://leahy.senate.gov/">http://leahy.senate.gov/</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">&#160;</span><span class="field"><a href="http://www.leahyforvermont.com/">http://www.leahyforvermont.com/</a></span>
+</div>
+<a href="../finance/1760.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1940-3-31</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">Montpelier, VT </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">Middlesex, VT</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Roman Catholic</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">1974</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Democratic</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">Senate</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/VT.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">VT</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Incumbent</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2016</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          Saint Michael's College
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">BA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+<h2 class="preeln-secthead">Graduate education: 
+          Georgetown University
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">JD</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">Patrick Leahy was born in Montpelier, Vt., and now resides in Middlesex. He earned a bachelor's degree from St. Michael's College in 1961 and a law degree from Georgetown University in 1964.</p>
+        <p class="preeln-paradata">Leahy practiced law and was state attorney of Chittenden County from 1966 to 1974, when he was elected to the U.S. Senate.</p>
+        <p class="preeln-paradata">A photography buff, Leahy often carries a camera on the job, and it comes in handy. His photographs, which have been displayed at St. Michael's College show bill-signing shots of Presidents Ronald Reagan, Bill Clinton and George W. Bush. He also has taken photos of the Dalai Lama and members of the Grateful Dead, of whom he was a big fan.</p>
+        <p class="preeln-paradata">He's a "Batman'' fan, too: In 1997, Leahy had a small part in "Batman and Robin," and had cameo appearances in the 2008 movie "The Dark Knight" and 2012's "The Dark Knight Rises."</p>
+        <p class="preeln-paradata">Leahy and his wife, Marcelle, have three children. In August 2012, they celebrated their 50th wedding anniversary.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">Patrick Leahy, second in seniority in the U.S. Senate behind Hawaii Democrat Daniel Inouye, chairs the Senate Judiciary Committee and deals with some of the most polarizing issues facing the country, as well as often-contentious nominations to the Supreme Court and the nation's federal courts.</p>
+        <p class="preeln-paradata">His re-elections have come with increasingly wide margins every six years, reaching their zenith with his 1998 campaign that imitated art. Leahy campaigned that year against Republican Fred Tuttle, who earlier had portrayed himself in a satirical regional movie about a retired dairy farmer who runs for Congress because he needs the paycheck &#8212; and wins. Once Tuttle won his party's primary, he endorsed Leahy.</p>
+        <p class="preeln-paradata">Leahy has used his years &#8212; and seniority &#8212; in the Senate to promote the causes dear to him that he feels are best for America. For example, he was a backer of the 2011 America Invents Act, the first significant change in patent law since 1952. Its passage in September 2011 was a rare example of congressional bipartisanship. Leahy called it "an opportunity to show the American people that Democrats and Republicans can come together to enact meaningful legislation for the American people."</p>
+        <p class="preeln-paradata">Leahy was the author of the bill re-charter of the Violence Against Women Act.</p>
+        <p class="preeln-paradata">Early in his tenure, he focused his energy on agricultural issues. He was chairman of the Agriculture Committee from 1987 to 1995 and helped push through the 1996 Freedom to Farm Act, which phased out a number of farm subsidies.</p>
+        <p class="preeln-paradata">Leahy first became chairman of the Judiciary Committee in 2001. Republicans accused him of holding up judicial nominations when he was chairman, and then of working to slow them when Republicans took over the majority. Leahy took some heat from his fellow Democrats, however, when he voted to confirm Chief Justice John Roberts.</p>
+        <p class="preeln-paradata">Leahy voted in 2010 to confirm Elena Kagan to the Supreme Court. With Kagan's confirmation, Leahy said, "the Supreme Court will better reflect the diversity that made our country great."</p>
+        <p class="preeln-paradata">Leahy was among Senate Democrats who subpoenaed Attorney General Michael Mukasey for testimony and documents about the Justice Department's legal advice to the White House on detention and interrogation policies since Sept. 11.</p>
+        <p class="preeln-paradata">When conservatives criticized the nomination of Andrew David Hurwitz as a U.S. appellate judge in 2012 because he had clerked for a federal judge in Connecticut who wrote two opinions that were the forerunners of the 1973 Supreme Court decision legalizing abortion, Leahy said, "If we start doing that sort of thing, then we can vote down anybody for anything."</p>
+        <p class="preeln-paradata">He also chairs the Senate Appropriations subcommittee on foreign operations. In 2012, he and the panel's top Republican said money for Pakistan was cut 58 percent from the request by President Barack Obama's administration because of questions about Islamabad's commitment to the fight against terrorism. The panel also cut the request for funds for Iraq.</p>
+        <p class="preeln-paradata">"Because the Iraqi police training program has not progressed as hoped, and our relations with Pakistan have been stalled for months, Sen. Graham and I have not used $881 million that the full committee initially recommended for the subcommittee. That is money we are saving the taxpayers," Leahy said.</p>
+        <p class="preeln-paradata">He has crusaded against anti-personnel landmines, sponsoring legislation banning U.S. exports of mines, which led to an international treaty on landmines.</p>
+        <p class="preeln-paradata">Leahy, who represents a state where dairy farms are king, champions dairy farmers' causes on the Agriculture, Nutrition and Forestry Committee, where he has fought for dairy price support for New England dairy farmers and helped win passage of the Northeast Interstate Dairy Compact and the Milk Income Loss Contract program.</p>
+        <p class="preeln-paradata">Leahy was chief sponsor of a bill passed by the Senate in July 2010 that would protect American authors, journalists and publishers from foreign libel judgments that undermine the United States' guarantee of free speech. Some countries with weak free speech protections make it easy to sue foreigners for libel, a practice known as libel tourism.</p>
+        <p class="preeln-paradata">"On a broad scale, libel tourism results in a race to the bottom, and can cause Americans to defer to the country with the most chilling and restrictive free speech standard, to determine what they can write or publish," Leahy said. "This undermines our First Amendment."</p>
+        <p class="preeln-paradata">Committee Assignments: Appropriations; Judiciary(Chair); Agriculture, Nutrition, and Forestry; Rules and Administration</p>
+        <p class="preeln-paradata">American Conservative Union Rating: 5</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: 95</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">Patrick Leahy is not up for re-election in 2014.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on September 8, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_candidates/VT.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

@@ -1,0 +1,10 @@
+l;604056296546;9191;2006-11-07;DC;9001;11001;District of Columbia;N;G;0;City Council;Ward 6;;General;;1;0;16;17;
+l;604056294498;9189;2006-11-07;DC;9001;11001;District of Columbia;N;G;0;City Council;Ward 3;;General;;1;0;17;17;
+l;604056292450;9187;2006-11-07;DC;9001;11001;District of Columbia;N;G;0;City Council;At-Large;;General;;2;0;139;142;
+l;76519522;9190;2006-11-07;DC;1;0;District of Columbia;N;G;0;City Council;Ward 5;;General;;1;0;17;18;
+l;76513378;9184;2006-11-07;DC;1;0;District of Columbia;M;G;0;Mayor;;;General;;1;0;139;142;
+l;604056295522;9190;2006-11-07;DC;9001;11001;District of Columbia;N;G;0;City Council;Ward 5;;General;;1;0;17;18;
+l;76520546;9191;2006-11-07;DC;1;0;District of Columbia;N;G;0;City Council;Ward 6;;General;;1;0;16;17;
+l;604056289378;9184;2006-11-07;DC;9001;11001;District of Columbia;M;G;0;Mayor;;;General;;1;0;139;142;
+l;76518498;9189;2006-11-07;DC;1;0;District of Columbia;N;G;0;City Council;Ward 3;;General;;1;0;17;17;
+l;76516450;9187;2006-11-07;DC;1;0;District of Columbia;N;G;0;City Council;At-Large;;General;;2;0;139;142;

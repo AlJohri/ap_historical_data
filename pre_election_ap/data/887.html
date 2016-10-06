@@ -1,0 +1,339 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/887.jpg"><div class="preeln-entityname">John F. Tierney </div>
+	  (Dem)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">202-225-8020 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">978-531-2533 (Main campaign number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://tierney.house.gov/">http://tierney.house.gov/</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">&#160;</span><span class="field"><a href="http://www.johntierney.com/">http://www.johntierney.com/</a></span>
+</div>
+<a href="../finance/887.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1951-9-18</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">Salem, MA </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">Salem, MA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">&#160;</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Democratic</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">House</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/MA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">MA</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">District:</span><span class="field"><a href="../profilesdistricts/MA06.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">District 6</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">No longer a candidate</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2014</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          Salem State College
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">BA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+<h2 class="preeln-secthead">Graduate education: 
+          Suffolk University
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">JD</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">John Tierney was born in Salem, Mass. He earned a bachelor's degree from Salem State College and a law degree from Suffolk University.</p>
+        <p class="preeln-paradata">Tierney became a founding partner in 1978 of a community law firm, Tierney, Kalis and Lucas. He is a past president of the Salem Chamber of Commerce and a member of the board of trustees at Salem State College. Just out of law school, he ran unsuccessfully for state Senate.</p>
+        <p class="preeln-paradata">He won a hard-fought Democratic primary for a U.S. House seat in 1994. He faltered during the general election, losing to incumbent Republican Rep. Peter Torkildsen by a narrow margin. He defeated Torkildsen to join the U.S. House in 1996.</p>
+        <p class="preeln-paradata">Tierney and his wife, Patrice, live in Salem.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">John Tierney was elected to the U.S. House in 1996 and faces in 2012 what could be his stiffest re-election challenge to date. Republicans have targeted Tierney's seat as their best hope for cracking Massachusetts' all-Democratic U.S. House delegation and his opponent, former state Sen. Richard Tisei, has been identified as one of the GOP's so-called young guns in the November election.</p>
+        <p class="preeln-paradata">Tierney has struggled to contain the fallout from a federal criminal case involving his wife, Patrice, and her family. Patrice Tierney agreed in October 2010 to plead guilty to federal charges that she helped her brothers conceal an illegal offshore gambling operation. She was sentenced to 30 days in prison.</p>
+        <p class="preeln-paradata">One of Tierney's brothers-in-law, Daniel Eremian, said after being sentenced in June 2012 to three years in federal prison that the congressman "knew everything" about the gambling ring. Another of Patrice Tierney's brothers, Robert Eremian &#8212; a fugitive from justice &#8212; made similar claims in an interview with The Boston Globe.</p>
+        <p class="preeln-paradata">Tierney said he was aware of the online gambling operation in Antigua, and had visited the operation with his wife in the past, but did not know it was illegal. He said at a July 2012 news conference that his brothers-in-law were trying to "blame everyone but themselves." Patrice Tierney has also rejected her brothers' statements.</p>
+        <p class="preeln-paradata">Tisei's campaign has said the Democrat is misleading the public and insulting the intelligence of voters by claiming he was unaware of the illegal nature of the gambling operation.</p>
+        <p class="preeln-paradata">Tierney serves on the House Committee on Education and the Workforce, the House Committee on Oversight and Government Reform, and is the ranking Democrat on the National Security, Homeland Defense and Foreign Operations Subcommittee.</p>
+        <p class="preeln-paradata">As then-chair of the House national security and foreign affairs subcommittee, Tierney led a congressional delegation to Afghanistan in February 2009. He expressed worries about President Barack Obama's plan to ramp up military efforts in the region and said the sooner Afghan forces are trained the sooner troops can come home.</p>
+        <p class="preeln-paradata">Tierney initially voted against the historic October 2008 $700 billion Wall Street bailout bill, but later reversed course and supported it, saying the Senate-approved version was the best among a bunch of bad alternatives.</p>
+        <p class="preeln-paradata">Tierney has pushed legislation aimed at strengthening America's public schools, providing access to high quality health care for all Americans &#8212; including a prescription drug benefit for seniors &#8212; and addressing workforce development issues such as literacy, job training and lifelong learning.</p>
+        <p class="preeln-paradata">Tierney served on the Ethics Committee, which probed the relationship between organized crime and the FBI in Boston. The panel found the FBI's use and protection of informants "must be considered one of the greatest failures in the history of federal law enforcement," and Tierney has pushed for further inquiries into the FBI's failure to cooperate with the congressional oversight efforts.</p>
+        <p class="preeln-paradata">Tierney co-sponsored the College Affordability and Accountability Act in 2003, which would reinvigorate the federal-state-school partnership for affordable higher education by providing incentives and promoting best practices to keep tuition low.</p>
+        <p class="preeln-paradata">Committee Assignments: Oversight and Government Reform; Education and the Workforce</p>
+        <p class="preeln-paradata">American Conservative Union Rating: 4</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: 100</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">John Tierney lost his September 2014 primary to Seth Moulton.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on September 10, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_districts/MA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__#6"><span class="bracket">[</span>districts in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../state_candidates/MA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

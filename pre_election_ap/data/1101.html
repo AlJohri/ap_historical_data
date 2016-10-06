@@ -1,0 +1,344 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/1101.jpg"><div class="preeln-entityname">Thomas 'Tom' Evert Petri </div>
+	  (Rep)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">202-225-2476 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">920-923-4050 (Main campaign number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://petri.house.gov/">http://petri.house.gov/</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">&#160;</span><span class="field"><a href="http://www.petripeople.org/">http://www.petripeople.org/</a></span>
+</div>
+<a href="../finance/1101.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1940-5-28</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">Marinette, WI </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">Fond du Lac, WI</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Lutheran</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">&#160;</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Republican</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">House</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/WI.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">WI</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">District:</span><span class="field"><a href="../profilesdistricts/WI06.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">District 6</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Not seeking re-election</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2014</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          Harvard University
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">AB</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+<h2 class="preeln-secthead">Graduate education: 
+          Harvard University
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">JD</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">Tom Petri was born in Marinette, Wis., and resides in Fond du Lac. He earned a bachelor's degree and a law degree from Harvard University.</p>
+        <p class="preeln-paradata">Petri served in the Peace Corps in Somalia, from 1966 to 1967, and was an aide in the White House in 1969. He began practicing law in Fond du Lac in 1970 and served in the Wisconsin Senate from 1973 to 1979.</p>
+        <p class="preeln-paradata">Petri won a special election in 1979 to fill the seat of the late U.S. Rep. William Steiger, who had a heart attack at age 40. He won the race by a narrow margin but has rolled through his re-election bids with increasing margins of victory.</p>
+        <p class="preeln-paradata">Petri and his wife, Anne, have one daughter.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">Tom Petri has represented the traditionally Republican 6th District of Wisconsin since 1979, portraying himself as a moderate Republican.</p>
+        <p class="preeln-paradata">Petri easily defeated tea party candidate Lauren Stephens in the August 2012 GOP primary. Petri had a huge financial advantage over Stephens &#8212; $930,000 to $6,000 through July. He faces a rematch with Democrat Joe Kallas, whom he defeated in 2010 with 70 percent of the vote, in the November 2012 general election.</p>
+        <p class="preeln-paradata">In August 2012, he voted to support House measures that would simplify the federal tax code and extend tax cuts from 2001 and 2003 by another year.</p>
+        <p class="preeln-paradata">In July 2012, Petri voted in support of a bill that would ban abortions in Washington, D.C., beyond the 20th week of pregnancy. The bill ultimately failed for lack of a two-thirds majority vote.</p>
+        <p class="preeln-paradata">In June 2012, he voted in support of a measure that extended the 3.4 percent interest rate on federal student loans and reauthorized federal highway programs through 2014. President Barack Obama signed the bill into law in July 2012. Petri said he voted for the measure because it will continue the formula for distributing federal highway aid to Wisconsin and enable transit reforms in Green Bay.</p>
+        <p class="preeln-paradata">In 2011 Petri, along with Michigan Reps. Dan Benishek and Bill Huizenga, worked to amend a maritime transportation bill to prohibit the U.S. Environmental Protection Agency from toughening regulations on ships on the National Historic Landmark list. The move was intended to allow the S.S. Badger, a ferry that hauls passengers and vehicles across Lake Michigan between Ludington, Mich., and Manitowoc, Wis., to continue dumping waste ash into the lake after an exemption expires in December 2012. The bill passed the House but has languished in the Senate.</p>
+        <p class="preeln-paradata">Petri introduced a bill in November 2010, along with fellow Wisconsin Republican Reps. Jim Sensenbrenner and Paul Ryan, which would allow states to return federal funds earmarked for high-speed rail projects. They introduced the bill after newly elected Wisconsin Gov. Scott Walker, a Republican, said he didn't want $810 million in federal money slotted for a high-speed rail line between Madison and Milwaukee.</p>
+        <p class="preeln-paradata">Petri sided with his fellow Republicans voting against the 2010 health care reform bill. He said the measure would cost too much and concentrate too much power in the hands of the federal government.</p>
+        <p class="preeln-paradata">In July 2010, at the height of the BP oil spill disaster in the Gulf of Mexico, he voted for a bill that would grant whistleblower protections to workers in the offshore oil and gas industries. That same month he voted against a measure that would restructure the Minerals Management Service, implement new regulations on offshore oil and gas development and lift the liability cap in case of spills, among other provisions. He said some of the new regulations would inhibit domestic energy production.</p>
+        <p class="preeln-paradata">He also voted that month in support of a measure to extend unemployment benefits.</p>
+        <p class="preeln-paradata">Amid foreclosure concerns across the nation in 2009, Petri opposed a bill in March that would authorize bankruptcy judges to reconfigure mortgage loans. He said he worried the move would lead to higher interest rates for responsible homeowners, and would make bankruptcy more attractive than other viable options.</p>
+        <p class="preeln-paradata">He voted against a $14 billion rescue package for the nation's auto industry in December 2008. He voted against the 2009 approximately $800 billion economic stimulus package, saying it contained too much irrelevant spending.</p>
+        <p class="preeln-paradata">Petri has repeatedly supported efforts to protect the Great Lakes. He co-sponsored a number of 2008 measures, including one bill to fund efforts to clean up the lakes and another to give adjoining states more power to regulate use of the fresh water. Both measures became law.</p>
+        <p class="preeln-paradata">He often voted with Democrats on measures to limit troop and spending escalations in the Iraq war. He suggested in February 2007 that Iraq be partitioned by religious community, "to form a loose federation where the Shias, the Sunnis and the Kurds can each govern themselves while leaving the others alone."</p>
+        <p class="preeln-paradata">Petri has long championed the Earned Income Tax Credit, which provides a tax credit to low-income people who work.</p>
+        <p class="preeln-paradata">Petri opposes abortion and favors the death penalty. He also opposes a proposed constitutional amendment to ban gay marriage, saying constitutional amendments should be reserved for only "the most serious problems.</p>
+        <p class="preeln-paradata">Committee Assignments: Transportation and Infrastructure; Education and the Workforce</p>
+        <p class="preeln-paradata">American Conservative Union Rating: 72</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: 15</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">Tom Petri is not seeking re-election in 2014.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on August 14, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_districts/WI.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__#6"><span class="bracket">[</span>districts in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../state_candidates/WI.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

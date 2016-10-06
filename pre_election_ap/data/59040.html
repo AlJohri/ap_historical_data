@@ -1,0 +1,344 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/59040.jpg"><div class="preeln-entityname">Gerald 'Gerry' E. Connolly </div>
+	  (Dem)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">202-225-1492 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">703-375-9374 (Main campaign number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://connolly.house.gov/">http://connolly.house.gov/</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">&#160;</span><span class="field"><a href="http://gerryconnolly.com/">http://gerryconnolly.com/</a></span>
+</div>
+<a href="../finance/59040.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1950-3-30</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">Boston, MA </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">Mantua, VA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Catholic</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">2008</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Democratic</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">House</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/VA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">VA</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">District:</span><span class="field"><a href="../profilesdistricts/VA11.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">District 11</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Incumbent</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2014</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          Maryknoll College
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">BA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+<h2 class="preeln-secthead">Graduate education: 
+          Harvard University
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">MA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">Gerry Connolly was born in Boston and now lives in Mantua, Va. He earned a bachelor's degree in literature from Maryknoll College and a master's degree in public administration from Harvard University.</p>
+        <p class="preeln-paradata">Connolly worked for the Senate Foreign Relations Committee for 10 years before becoming vice president of the Washington office of SRI International. He later became the community relations director for SAIC, a technology company.</p>
+        <p class="preeln-paradata">Connolly was elected to the U.S. House in 2008.</p>
+        <p class="preeln-paradata">He and his wife, Cathy, have a daughter.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">Gerry Connolly was elected to Congress in 2008 from Virginia's 11th District, a suburban Washington, D.C., area that often votes Democratic but had kept a Republican in the U.S. House for 14 years. The Republican, Thomas M. Davis, retired in 2008.</p>
+        <p class="preeln-paradata">Connolly was carried into the House on Barack Obama's coattails, and he has shown himself to be a loyal supporter of the president but is not afraid to speak his mind.</p>
+        <p class="preeln-paradata">Two years later he won re-election by a slim margin, the only Virginia freshman to survive a Republican comeback as voters vented their wrath over a torpid economy, the 2010 health care reform law and deficit government spending.</p>
+        <p class="preeln-paradata">In his bid for a third term, Connolly will face Republican Chris Perkins in 2012.</p>
+        <p class="preeln-paradata">Connolly praised the 2012 Supreme Court decision upholding the 2010 health care reform law and singled out Chief Justice John Roberts, who, he said, "has guaranteed his place in history books as a jurist who, in this instance, put the law above politics."</p>
+        <p class="preeln-paradata">Connolly opposed the 2012 House decision to hold Attorney General Eric Holder in contempt in a fight over documents related to the so-called Fast and Furious gun-tracking operation. He said Republicans were pursuing "an extraordinarily shameful political witch hunt aimed at trashing an honorable man."</p>
+        <p class="preeln-paradata">In 2011, he was one of 100 senators to ask a congressional supercommittee to consider all options as they sought ways to reduce the $14.8 trillion national debt.</p>
+        <p class="preeln-paradata">He also was a leader of an effort in Congress in 2011 to ask the independent Postal Regulatory Commission to block the Postal Service's plans to close as many as 3,700 local offices around the country.</p>
+        <p class="preeln-paradata">In December 2010, he backed a temporary extension of the George W. Bush-era tax cuts</p>
+        <p class="preeln-paradata">In early 2009, Connolly co-sponsored the Credit Cardholder's Bill of Rights, which he said was designed to shield consumers from deceptive and anti-competitive credit card practices.</p>
+        <p class="preeln-paradata">Connolly and other anti-war Democrats chafed in July 2010 when President Obama sought billions more in funding for the war in Afghanistan.</p>
+        <p class="preeln-paradata">Connolly is a member of the Foreign Affairs Committee and he joined three colleagues in introducing legislation that ties military aid for Pakistan to U.S. access to nuclear scientist A.Q. Khan. Khan was convicted in absentia by the Dutch government for nuclear espionage and was widely believed to have provided nuclear weapons technology to Iran, North Korea, Libya and possibly Syria and Iraq. Connolly said the proposed legislation would allow the United States to evaluate the full extent of Khan's proliferation activities.</p>
+        <p class="preeln-paradata">Connolly also joined two colleagues in sponsoring legislation to close missing links and protect the scenic vistas of the eight National Scenic Trails.</p>
+        <p class="preeln-paradata">With the 2011 Republican takeover of the House, however, Connolly lost his most prized committee assignment &#8212; a seat on the Budget Committee he had used to route millions in federal appropriations to his district.</p>
+        <p class="preeln-paradata">Before his election to Congress, Connolly served on the Fairfax County Board of Supervisors and on the Northern Virginia Transportation Commission.</p>
+        <p class="preeln-paradata">He is familiar with the permanent and severe traffic gridlock in the Washington, D.C., area and he was a sponsor in 2010 of legislation that allows federal employees in Washington's suburbs to make greater use of telecommuting.</p>
+        <p class="preeln-paradata">Committee Assignments: Foreign Affairs; Oversight and Government Reform; Budget</p>
+        <p class="preeln-paradata">American Conservative Union Rating: 4</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: 85</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">Gerry Connolly won his June 2014 primary, he will face Suzanne Scholte in November.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on June 17, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_districts/VA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__#11"><span class="bracket">[</span>districts in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../state_candidates/VA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

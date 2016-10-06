@@ -1,0 +1,334 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/1710.jpg"><div class="preeln-entityname">Thomas 'Tom' Richard Carper </div>
+	  (Dem)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">202-224-2441 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">302-328-5774 (Main campaign number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://www.carper.senate.gov/">http://www.carper.senate.gov/</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">&#160;</span><span class="field"><a href="http://carperfordelaware.com">http://carperfordelaware.com</a></span>
+</div>
+<a href="../finance/1710.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1947-1-23</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">Beckley, WV </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">Wilmington, DE</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Presbyterian</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">2000</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Democratic</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">Senate</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/DE.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">DE</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Incumbent</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2018</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          Ohio State University
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">BA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+<h2 class="preeln-secthead">Graduate education: 
+          University of Delaware
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">MBA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">Tom Carper was born in Beckley, W.Va., and currently lives in Wilmington, Del. He attended Ohio State University as a Navy ROTC midshipman and earned a bachelor's degree in 1968 before serving five years as a naval flight officer, including duty in Southeast Asia during the Vietnam War.</p>
+        <p class="preeln-paradata">Carper earned a master's degree from the University of Delaware.</p>
+        <p class="preeln-paradata">He was elected Delaware treasurer in 1976. He served as treasurer until 1982, when he was elected to the U.S. House.</p>
+        <p class="preeln-paradata">Carper served five terms in Congress, and then ran for governor in 1992. He served two terms as governor, then defeated Republican incumbent William Roth Jr. in the 2000 U.S. Senate race.</p>
+        <p class="preeln-paradata">Carper and his wife, Martha, have two sons.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">Tom Carper, one of the most successful and long-serving politicians in Delaware history, became Delaware's senior senator in 2009 after fellow Democrat Joe Biden was elected vice president.</p>
+        <p class="preeln-paradata">Led by Carper, the Senate voted in 2010 to roll back efforts to give states more consumer finance powers, siding with federally chartered banks opposed to meddling by state regulators. Carper, representing a state that has welcomed large credit card banks, argued that having 50 sets of rules would be confusing. Carper also has sided with big banks on several other issues, including debit-card swipe fees paid by merchants.</p>
+        <p class="preeln-paradata">As a member of the Finance Committee's health care subcommittee, Carper played a role in the health care reform debate, including whether the government should be allowed to compete with private insurers. At one point, he proposed allowing states to decide whether to offer public coverage, instead of having it decreed from Washington.</p>
+        <p class="preeln-paradata">As chairman of the Senate subcommittee on federal financial management, government information, federal services and international security, Carper has worked to eliminate wasteful government spending and to stabilize the financially troubled U.S. Postal Service. He co-authored a postal service reform bill that passed the Senate in 2012, but the House refused to act on it. While pushing to make the postal service more efficient, Carper nevertheless led a successful fight against a USPS proposal to close a processing facility in Delaware and move its operations to New Jersey.</p>
+        <p class="preeln-paradata">Carper was one of four senators who pushed to have a line-item veto provision considered by the subcommittee that failed to come up with a comprehensive plan to reduce the deficit in 2011. Those same senators called on the Senate to take up a line-item veto bill that was passed by the House in 2012.</p>
+        <p class="preeln-paradata">In June 2012, Carper co-authored a bill to create a National Center for Cybersecurity and Communications, with authority to direct federal efforts to secure the cyber networks of government and the private sector. The bill failed in the Senate.</p>
+        <p class="preeln-paradata">Carper is the chairman of the Senate subcommittee on clean air and nuclear safety. He temporarily blocked a 2005 confirmation vote for President George W. Bush's choice to head the Environmental Protection Agency in a dispute over competing air-pollution proposals. Carper co-authored amendments to the Clean Air Act in 2010 to reduce emissions from coal-fired power plants in the eastern U.S. In August 2012, he urged President Barack Obama's  administration to challenge a court ruling overturning the EPA's cross-state air pollution rule, aimed at reducing downwind pollution from power plants.</p>
+        <p class="preeln-paradata">Carper's pet project is an effort to end Delaware's status as the only state in the country without a National Park Service unit. His initial idea was for a "coastal heritage" park composed of four interpretive centers along Delaware's shoreline. A 2008 NPS study concluded that a park focusing on early European settlements and Delaware's role in the birth of the nation was the most feasible alternative. Carper introduced such a proposal in 2009 incorporating several separate sites throughout Delaware. The proposal appeared to gain little traction until it was paired in 2012 with plans by the Conservation Fund, a national preservation group, to turn 1,100 acres in the scenic Brandywine Valley north of Wilmington into Delaware's first national park.</p>
+        <p class="preeln-paradata">During his time in the House and Senate, Carper has developed a reputation as a moderate Democrat. The centrist Democratic Leadership Council appointed him chairman for "New Democrat Best Practices" in 2002, and he became vice-chairman of the DLC in 2005. In 2003, Carper was appointed co-chair of the 18-member Senate New Democrat Coalition, another centrist group seeking a pragmatic "third way." He was one of three leaders of a 15-member coalition of moderate Senate Democrats formed in 2009 with the potential of becoming a formidable voting bloc in the Senate, where the required 60 votes to avoid procedural hurdles for a bill can be hard to come by.</p>
+        <p class="preeln-paradata">Committee Assignments: Homeland Security and Governmental Affairs; Environment and Public Works; Finance</p>
+        <p class="preeln-paradata">American Conservative Union Rating: 5</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: 90</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">Tom Carper is not up for re-election in 2014.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on September 10, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_candidates/DE.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

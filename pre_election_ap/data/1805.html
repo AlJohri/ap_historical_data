@@ -1,0 +1,323 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/1805.jpg"><div class="preeln-entityname">Maria  Cantwell </div>
+	  (Dem)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">202-224-3441 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">206-285-2012 (Main campaign number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://www.cantwell.senate.gov/">http://www.cantwell.senate.gov/</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">&#160;</span><span class="field"><a href="http://www.cantwell.com/">http://www.cantwell.com/</a></span>
+</div>
+<a href="../finance/1805.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1958-10-13</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">Indianapolis, IN </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">Edmonds, WA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Catholic</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">2000</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Democratic</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">Senate</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/WA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">WA</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Incumbent</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2018</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          Miami University
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">BA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">Maria Cantwell was born and raised in Indianapolis and now lives in Edmonds, Wash. She was the first in her family to graduate from college, earning a bachelor's in public policy from Miami University.</p>
+        <p class="preeln-paradata">Now Washington's junior senator, she originally moved to the Evergreen State to work on Democrat Alan Cranston's 1984 presidential campaign. She was elected to the state House in 1986, at age 28, and served six years, during which time she helped write the state's Growth Management Act.</p>
+        <p class="preeln-paradata">She was elected to the U.S. House in 1992, but lost her seat in 1994 in the so-called Republican Revolution.</p>
+        <p class="preeln-paradata">She became senior vice president of RealNetworks, a Seattle company that produces audio and video technology for the Internet. Cantwell took a leave of absence from the company to make a successful run in 2000 for the U.S. Senate.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">Maria Cantwell, long considered one of Washington's most vulnerable Democrats, looks to have an easier path to re-election in 2012 as she seeks her third term in the U.S. Senate.</p>
+        <p class="preeln-paradata">Cantwell was elected to the U.S. House in 1992, but lost in 1994 as part of a Republican wave that saw the party regain control of the House of Representatives for the first time in 40 years. She then went on to a successful career in Seattle's tech sector, working as a vice president at RealNetworks, before running for the Senate in 2000. She defeated incumbent Slade Gorton by just over 2,000 votes, a contest so close that it went to a mandatory recount. She spent more than $10 million of her own money to win the seat.</p>
+        <p class="preeln-paradata">In 2006, she faced former insurance executive Mike McGavick in a race that national GOP strategists thought the party could win. Cantwell won easily.</p>
+        <p class="preeln-paradata">In 2012, no major challenger stepped forward, and Cantwell is running against Michael Baumgartner, a Republican state senator.</p>
+        <p class="preeln-paradata">During her time in the Senate, Cantwell has made clean energy a top priority. In 2009 she was named chairwoman of the Senate Energy and Natural Resources subcommittee on energy. She has vowed to jump-start the nation's transition to cleaner energy, reduce oil imports and promote greater use of domestically produced biofuels.</p>
+        <p class="preeln-paradata">Cantwell was one of two Democrats in 2010 opposing a version of a bill overhauling financial industry regulations. She ultimately backed the legislation after the bill's enforcement powers over derivatives trading were strengthened. She has kept up her scrutiny of the financial industry recently, and has become one of her party's most outspoken critics of Wall Street.</p>
+        <p class="preeln-paradata">She has also aggressively pushed for Congress to make the state sales tax deduction for federal taxes permanent.</p>
+        <p class="preeln-paradata">She supported the 2010 health care reform bill, writing several key provisions, including a new Medicare reimbursement formula that rewards doctors for quality care.</p>
+        <p class="preeln-paradata">Cantwell co-sponsored a 2003 law to give consumers new protections against identity theft and helped push through a 2004 measure allowing residents of Washington and other states without an income tax to deduct their sales tax from federal tax returns.</p>
+        <p class="preeln-paradata">Cantwell split with her fellow Washington Democrat, Sen. Patty Murray, by voting in favor of the Iraq war in 2002. She has worked with Murray and other members of the delegation to support Boeing in its ongoing battles with Northrop Grumman and its European partner on a controversial deal to supply the U.S. Air Force with refueling tankers.</p>
+        <p class="preeln-paradata">In 2006, the state's active peace community criticized Cantwell for having supported the Iraq war. She quieted that by criticizing President George W. Bush's administration for its handling of the war.</p>
+        <p class="preeln-paradata">Committee Assignments: Commerce, Science, and Transportation;  Finance;  Energy and Natural Resources; Small Business and Entrepreneurship;  Indian Affairs</p>
+        <p class="preeln-paradata">American Conservative Union Rating: 10</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: 95</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">Maria Cantwell is not up for re-election in 2014.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on August 7, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_candidates/WA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

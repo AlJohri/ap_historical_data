@@ -1,0 +1,91 @@
+*** Senate-US-Cnty.PRG
+*** President-US-Cnty.PRG also
+
+SET SAFETY OFF
+CLOSE data
+SET SAFETY off
+CLEAR MEMO
+**SET DEFAULT TO "p:\j089 election poster\poster06\"
+SET DEFA TO C:\AP2010\
+
+USE "dbfs\2006 County Senate-NewYork02" in 10 ALIAS sencnty
+
+USE dbfs\statetemplate in 20 ALIAS statetemplate
+
+USE dbfs\USSenresults IN 1 ALIAS res
+
+USE dbfs\USSencandidate IN 2 ALIAS cand
+
+USE dbfs\USSenrace IN 3 ALIAS ra
+
+SELECT cand
+ZAP
+SELE statetemplate
+GO TOP
+DO WHILE .NOT. EOF()
+  IF flag = '1' 
+ thisst = stabbr
+ thisstfile = "dbfs\" + stabbr + "_" + "candidate.txt"
+ SELE cand
+ APPEND FROM &thisstfile TYPE DELIMITED WITH CHARACTER ';'
+ SELE statetemplate
+  ENDIF 
+ SKIP
+ENDDO
+SELE cand
+GO top
+INDEX ON candid TO indcandid
+************************************cand
+
+SELECT res
+ZAP
+SELE statetemplate
+GO TOP
+DO WHILE .NOT. EOF()
+  IF flag = '1' 
+ thisst = stabbr
+ thisstfile = "dbfs\" + stabbr + "_" + "results.txt"
+ SELE res
+ APPEND FROM &thisstfile TYPE DELIMITED WITH CHARACTER ';'
+ SELE statetemplate
+   ENDIF 
+ SKIP
+ENDDO
+SELE res
+***repl all votecount with 1
+GO top
+INDEX ON racecntyid TO rcid
+SET RELATION TO candid INTO cand
+************************************res
+
+SELECT ra
+ZAP
+SELE statetemplate
+GO TOP
+DO WHILE .NOT. EOF()
+  IF flag = '1' 
+ thisst = stabbr
+ thisstfile = "dbfs\" + stabbr + "_" + "race.txt"
+ SELE ra
+ APPEND FROM &thisstfile TYPE DELIMITED WITH CHARACTER ';'
+ SELE statetemplate
+   ENDIF 
+ SKIP
+ENDDO
+
+SELE ra
+SET FILTER TO officeid = 'S' and cntyno<>1 and .not.(statepost='NY' and seatno = 2)
+GO TOP
+INDEX ON val(cntyfips) TO indstatepost
+SET RELATION TO racecntyid INTO res
+
+*************************************ra
+
+** SET FILTER TO officeid = 'G'
+** SET FILTER TO officeid = 'H'
+** Go TOP
+
+SELE sencnty
+INDEX ON stcty TO stcty
+SET RELATION TO val(stcty) INTO ra
+GO TOP

@@ -1,0 +1,330 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/57239.jpg"><div class="preeln-entityname">Robert 'Bob' Brian Gibbs </div>
+	  (Rep)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">202-225-6265 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">330-936-5233 (Main campaign number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="https://gibbs.house.gov/">https://gibbs.house.gov/</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">&#160;</span><span class="field"><a href="http://www.bobgibbsforcongress.com">http://www.bobgibbsforcongress.com</a></span>
+</div>
+<a href="../finance/57239.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1954-6-14</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">Peru, IN </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">Lakeville, OH</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Methodist</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">2010</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Republican</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">House</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/OH.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">OH</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">District:</span><span class="field"><a href="../profilesdistricts/OH07.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">District 7</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Incumbent</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2014</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          Ohio State University - Agricultural Technical Institute
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">AS</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">Bob Gibbs was born in Peru, Ind., and now lives in Lakeville, Ohio. He earned an associate degree from Ohio State University's Agricultural Technical Institute in 1974.</p>
+        <p class="preeln-paradata">Gibbs founded a livestock production farm, Hidden Hollow Farms, in Holmes County in northeast Ohio, where he worked as an owner-operator.</p>
+        <p class="preeln-paradata">Gibbs was elected to the state House in 2002 and served three terms. In 2008 he was elected to the state Senate. He was elected to the U.S. House in 2010.</p>
+        <p class="preeln-paradata">He served two terms as president of the Ohio Farm Bureau Federation and he has been a member of the federation's board since 1985.</p>
+        <p class="preeln-paradata">He is a member of the National Rifle Association.</p>
+        <p class="preeln-paradata">Gibbs and his wife, Jody, have three children.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">Bob Gibbs, representing Ohio's 18th District, said his first vote in Congress was to repeal the 2010 health care reform bill because he believes it would cost jobs and fail to address high health care costs.</p>
+        <p class="preeln-paradata">"We must reform the health care process, but the public has told us time and time again, 'We don't like this bill,'" he said in January 2011. "We must replace it with a common-sense plan that will actually lower costs and increase access to more options for quality insurance for every American."</p>
+        <p class="preeln-paradata">In June 2012, when the Supreme Court upheld the health care legislation, Gibbs expressed his disappointment saying he would continue to press for repeal.</p>
+        <p class="preeln-paradata">Gibb serves on the House Agriculture Committee and the chamber's Transportation and Infrastructure Committee, and he chaired a subcommittee that oversees federal regulation of clean water. He raised concerns alleging that the Environmental Protection Agency was issuing rules as "guidance" that circumvented the policy-changing process and was issuing an increased number of regulations.</p>
+        <p class="preeln-paradata">The House in March 2011 approved a bill sponsored by Gibbs that would bar the EPA from requiring farmers or companies to comply with the Clean Water Act when using pesticides on or near water sources. "This legislation cuts through the red-tape so that hundreds of thousands of farmers, foresters, public health officials and others will not be crippled by unnecessary compliance costs, threats of lawsuits and exorbitant fines," Gibb said in a statement.</p>
+        <p class="preeln-paradata">In 2011, he also criticized an EPA proposal for new regulations on wastewater generated from the drilling practice of hydraulic fracturing, saying he feared they'd be "needlessly restrictive" in his home state and elsewhere.</p>
+        <p class="preeln-paradata">Gibbs says the best way to create jobs is by cutting taxes, reducing regulations, controlling spending and embracing energy policy that "encourages the responsible development of our own natural resources."</p>
+        <p class="preeln-paradata">As a member of the Ohio House, Gibbs sponsored a bill in 2007 to ban local governments from seizing personal property for economic development and establish stricter requirements for defining blight &#8212; a prerequisite for governments to use their property-seizing power. The bill was merged with a Senate bill and signed that year by Gov. Ted Strickland.</p>
+        <p class="preeln-paradata">Gibbs has supported a constitutional amendment to keep local governments from using economic development as a justification for seizing people's homes, but the proposal lacked enough support, with Democrats arguing it would overly restrain cities' urban redevelopment efforts.</p>
+        <p class="preeln-paradata">Gibbs' efforts were in response to a 2005 U.S. Supreme Court decision that allows governments to seize a homeowner's property that has been deemed blighted and develop it for commercial use.</p>
+        <p class="preeln-paradata">The Ohio Supreme Court ruled unanimously in 2006 that private development on its own &#8212; even to improve economic conditions &#8212; isn't a public use allowed under the Ohio Constitution.</p>
+        <p class="preeln-paradata">Gibbs sponsored a bill in the Ohio House that permits substance abuse tests on workers suspected of abusing drugs or alcohol while suffering an on-the-job injury. Gibbs said the goal of the bill, which was signed into law in 2004, was to improve safety at the workplace.</p>
+        <p class="preeln-paradata">Committee Assignments: Transportation and Infrastructure; Agriculture</p>
+        <p class="preeln-paradata">American Conservative Union Rating: 79</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: 0</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">Bob Gibbs won his May 2014 primary, he will seek re-election in November.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on June 7, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_districts/OH.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__#7"><span class="bracket">[</span>districts in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../state_candidates/OH.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

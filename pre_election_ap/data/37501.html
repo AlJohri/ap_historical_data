@@ -1,0 +1,327 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/37501.jpg"><div class="preeln-entityname">Mary Copeland Fallin </div>
+	  (Rep)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">405-521-2342 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">405-778-8900 (Main campaign number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://www.ok.gov/governor">http://www.ok.gov/governor</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">&#160;</span><span class="field"><a href="http://www.maryfallin.org/">http://www.maryfallin.org/</a></span>
+</div>
+<a href="../finance/37501.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1954-12-9</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">Warrensburg, MO </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">Oklahoma City, OK</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Christian</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">2010</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Republican</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">Governor</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/OK.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">OK</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Incumbent</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2014</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          Oklahoma State University
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">BS</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">Mary Fallin was born in Warrensburg, Mo., grew up in Tecumseh, Okla., and now resides in Oklahoma City. She received her bachelor's degree from Oklahoma State University.</p>
+        <p class="preeln-paradata">She worked in business before first running for the state House, where she served two terms from Oklahoma City.</p>
+        <p class="preeln-paradata">She was elected as Oklahoma's first Republican and first female lieutenant governor in 1994. She served three terms before running for the U.S. House in the 5th Congressional District, which includes Oklahoma City.</p>
+        <p class="preeln-paradata">Fallin decided in 2010 not to seek re-election to a third term in the U.S. House and instead ran for Oklahoma's open governor's seat.</p>
+        <p class="preeln-paradata">In 2010, she defeated Democrat and then-Lt. Gov. Jari Askins to become Oklahoma's first-ever female governor.</p>
+        <p class="preeln-paradata">Fallin remarried in 2009. She and her husband, Wade Christensen, have six children between them.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">Mary Fallin, a force in Oklahoma politics for more than two decades, took advantage of energized Republican voters in 2010 and smashed a gender barrier by becoming the state's first female governor and leading a GOP sweep of state government.</p>
+        <p class="preeln-paradata">After fending off a pesky GOP primary challenge from a tea party backed state senator, Fallin received 60 percent of the general election vote over then-Lt. Gov. Jari Askins. Republicans also increased their majorities in the House and Senate and captured every Democrat-held statewide office on the ballot.</p>
+        <p class="preeln-paradata">Falling garnered some high-powered endorsements during the 2010 primary, including 2008 GOP vice presidential nominee and former Alaska Gov. Sarah Palin and former Florida Gov. Jeb Bush.</p>
+        <p class="preeln-paradata">Fallin is a conservative who seldom strayed from GOP leadership positions while in Congress.</p>
+        <p class="preeln-paradata">She has been sharply critical of the 2010 health care reform law, as well as spending and stimulus plans. She called the Democratic proposal to levy a 90 percent tax on American International Group executive bonuses "a cynical, unconstitutional measure."</p>
+        <p class="preeln-paradata">Fallin was able to get much of her agenda approved by the Republican-controlled Legislature during her first session in 2011, including the consolidation of several state agencies, and changes to the state's workers' compensation and civil justice systems.</p>
+        <p class="preeln-paradata">In 2012, however, Fallin failed to deliver on her top priority &#8212; tax cuts &#8212; when the Legislature balked at several proposals to reduce the top income tax rate. She outlined her ambitious proposal at the start of the legislative session to reduce the top rate from 5.25 percent to 3.5 percent and then impose a series of revenue triggers to further reduce the rate over time.</p>
+        <p class="preeln-paradata">But her proposal counted on the elimination of dozens of exemptions and deductions to make up for the lost revenue, and lawmakers failed to reach an agreement on how to accomplish that.</p>
+        <p class="preeln-paradata">In early August 2012, Fallin visited towns in Oklahoma devastated by raging wildfires, spending time meeting with residents and local officials and saying the state was doing all it could to assist in putting out the flames.</p>
+        <p class="preeln-paradata">"This has really stretched the resources of the state of Oklahoma," she said at the time. "It's just been a huge fight."</p>
+        <p class="preeln-paradata">In 2007, in her first year in the U.S. House, Fallin sponsored legislation to help small businesses owned by women. She easily won re-election in 2008, the same year she spoke at her party's national convention.</p>
+        <p class="preeln-paradata">During her 2008 re-election bid, Fallin said national security was at the top of her agenda, along with immigration changes to secure the country's borders and an energy policy designed to provide alternatives to fossil fuels while allowing expanded drilling for oil.</p>
+        <p class="preeln-paradata">Fallin filed for divorce in 1999 from her husband, dentist Joseph Fallin, accusing him of extreme mental cruelty. The husband accused the then-lieutenant governor of having an affair with a state trooper who was her bodyguard.</p>
+        <p class="preeln-paradata">An investigator testified at a divorce hearing about seeing the married trooper kiss Fallin on the lips. The trooper, who denied having an affair, resigned but later was reinstated. An internal investigation that included a lie detector test determined there was no sexual relationship between Fallin and the trooper.</p>
+        <p class="preeln-paradata">American Conservative Union Rating: 96</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: 0</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">Mary Fallin won her June 2014 primary, she will face Joe Dorman in November.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on June 25, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_candidates/OK.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

@@ -1,0 +1,347 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/89.jpg"><div class="preeln-entityname">Adam Bennett Schiff </div>
+	  (Dem)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">202-225-4176 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">626-583-8581 (Main campaign number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://schiff.house.gov/">http://schiff.house.gov/</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">&#160;</span><span class="field"><a href="http://www.schiff4congress.com/">http://www.schiff4congress.com/</a></span>
+</div>
+<a href="../finance/89.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1960-6-22</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">Framingham, MA </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">Burbank, CA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Judaism</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">2000</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Democratic</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">House</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/CA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">CA</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">District:</span><span class="field"><a href="../profilesdistricts/CA28.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">District 28</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Incumbent</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2014</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          Stanford University
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">BA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+<h2 class="preeln-secthead">Graduate education: 
+          Harvard University
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">JD</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">Adam Schiff was born in Framingham, Mass., and now lives in Burbank, Calif. He earned a bachelor's degree from Stanford University and a law degree from Harvard University.</p>
+        <p class="preeln-paradata">Schiff became a prosecutor with the U.S. attorney's office in 1990, winning all his cases. He was chosen by the Department of Justice in 1992 to aid the government of the Czech Republic in reforming its criminal justice system. He was elected to the California Senate in 1996.</p>
+        <p class="preeln-paradata">He won election to the U.S. House in 2000.</p>
+        <p class="preeln-paradata">Schiff and his wife, Eve, have two children.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">Adam Schiff's interests and influence extend beyond his northern Los Angeles district.</p>
+        <p class="preeln-paradata">In 2010, he supported a major overhaul of U.S. financial regulations. He also saw President Barack Obama sign into law a bill he helped craft that will help determine sources of illicit nuclear material by strengthening efforts to develop techniques for what is known as "fingerprinting."</p>
+        <p class="preeln-paradata">Schiff supported the 2010 health care reform bill, and said he was pleased with the June 2012 Supreme Court decision upholding the law.</p>
+        <p class="preeln-paradata">"These hard-passed reforms will be beneficial to the country &#8212; already, 17 million children with pre-existing conditions can no longer be denied coverage by insurers, seniors have received additional help with prescription drug prices, college graduates can stay on their parents policies, small employers and the self-employed will soon be able to purchase health insurance at bulk discount rates, and millions of Americans will have health insurance for the first time," Schiff said.</p>
+        <p class="preeln-paradata">He introduced bills in 2009 to expand government purchasing of clean energy, curtail gang violence and strengthen press freedom around the world. He also sought to close the Guantanamo Bay, Cuba, military detention facility and try detainees in military courts in the United States.</p>
+        <p class="preeln-paradata">Schiff sits on the House Appropriations and Select Intelligence committees. As a member of the latter, he is the ranking member of its subcommittee on technical and tactical intelligence, which oversees the technical aspects of intelligence gathering, including cyber security.</p>
+        <p class="preeln-paradata">Although active in defense matters, Schiff says his top priority is to create jobs. He believes small businesses have been the true engine of growth in challenging economic times and has been fighting to enact tax deductions for small businesses that can be used for start-up expenses, to eliminate payroll taxes for new hires and to lessen regulations for small businesses. Schiff also believes the United States must once again become a manufacturing powerhouse.</p>
+        <p class="preeln-paradata">Early in his congressional career, Schiff helped shape what would become the Patriot Act, authoring provisions creating penalties for developing a so-called dirty bomb and giving new powers to law enforcement to combat weapons of mass destruction. He was the only Judiciary Committee Democrat to join Republicans in seeking immigration restrictions after Sept. 11.</p>
+        <p class="preeln-paradata">He spent six years on the International Relations Committee, where he included language in a House-approved foreign aid bill recognizing the Armenian genocide of 1915. The language was removed later at the insistence of Republican leaders.</p>
+        <p class="preeln-paradata">Schiff supported the U.S.-led war in Iraq. He voted for a resolution that declared the world a safer place after the invasion. He later co-sponsored legislation to create an independent commission reviewing the intelligence-gathering process that led to the war.</p>
+        <p class="preeln-paradata">He also supported a successful amendment to the Patriot Act in 2005 that blocked federal authorities from examining library records and bookstore sales slips, and he supported a measure tightening court control of wiretapping in the wake of the National Security Administration's eavesdropping controversy.</p>
+        <p class="preeln-paradata">His proposals to improve port and rail security became part of a terrorism-prevention bill in March 2006. He previously worked to protect nuclear material in the former Soviet Union to prevent it from being used by terrorists.</p>
+        <p class="preeln-paradata">Schiff, a moderate Democrat, is a member of the Democratic Blue Dog Coalition, and he joined Republicans in passing the McCain-Feingold campaign-finance reform bill in 2002.</p>
+        <p class="preeln-paradata">He supported legislation making identity theft a crime in 2004. He and California Republican Mary Bono authored a 2007 bill to set up a national registry to track convicted arsonists.</p>
+        <p class="preeln-paradata">President George W. Bush signed a public lands bill in 2008 that included Schiff's proposal to study the size of the Santa Monica Mountains National Recreation Area.</p>
+        <p class="preeln-paradata">Schiff introduced an amendment that would make more children eligible for pre-kindergarten Head Start programs. He also supported efforts to reduce class sizes in public elementary schools and expand programs to forgive teachers' college loans.</p>
+        <p class="preeln-paradata">Schiff represents a diverse district that includes a large Armenian-American population.</p>
+        <p class="preeln-paradata">He came to Washington in 2001 after surviving a contentious and expensive House race; he and his Republican opponent combined raised more than $10 million.</p>
+        <p class="preeln-paradata">Before his election to Congress he was a member of the California state Senate from 1996 to 2000. During that time he was chairman of the Senate Judiciary Committee, the Joint Committee on the Arts and the Senate Select Committee on Juvenile Justice.</p>
+        <p class="preeln-paradata">Committee Assignments: Select Intelligence; Appropriations</p>
+        <p class="preeln-paradata">American Conservative Union Rating: 0</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: 85</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">Adam Schiff won his June 2014 primary, he will face Steve Stokes in November.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on June 13, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_districts/CA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__#28"><span class="bracket">[</span>districts in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../state_candidates/CA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

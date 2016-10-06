@@ -1,0 +1,333 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/1167.jpg"><div class="preeln-entityname">Jefferson 'Jeff' Beauregard Sessions III</div>
+	  (Rep)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">202-224-4124 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://www.sessions.senate.gov">http://www.sessions.senate.gov</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">&#160;</span><span class="field"><a href="http://www.jeffsessions.com">http://www.jeffsessions.com</a></span>
+</div>
+<a href="../finance/1167.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1946-12-24</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">Selma, AL </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">Mobile, AL</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Methodist</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">1996</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Republican</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">Senate</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/AL.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">AL</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Incumbent</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2014</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          Huntingdon College
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">BA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+<h2 class="preeln-secthead">Graduate education: 
+          University of Alabama
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">JD</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">Jeff Sessions was born in Selma, Ala., and raised in Hybart, where his father ran a country store. He now resides in Mobile. He received a bachelor's degree from Huntingdon College in 1969 and a law degree from the University of Alabama in 1972.</p>
+        <p class="preeln-paradata">Sessions worked in private law practice in Russellville from 1973 to 1975 and then served as assistant U.S. attorney in Mobile from 1975 to 1977.</p>
+        <p class="preeln-paradata">He worked at a Mobile law firm from 1977 to 1981, and then became U.S. attorney for Alabama's Southern District. In 1986, then-President Ronald Reagan nominated him for a federal judgeship in Mobile, but his confirmation failed in the Senate Judiciary Committee after he was accused of making racist comments to a black assistant. He left the U.S. attorney's post in 1993 to return to private law practice, where he worked until he was elected state attorney general in November 1994, defeating Democratic incumbent Jimmy Evans.</p>
+        <p class="preeln-paradata">Sessions was elected to the U.S. Senate in 1996.</p>
+        <p class="preeln-paradata">He and his wife, Mary, have three children.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">Jeff Sessions has earned a reputation as one of the Senate's most conservative members, both on social and fiscal issues.</p>
+        <p class="preeln-paradata">Nowhere is Sessions' ideology more apparent than on the Judiciary Committee, where he was a top defender of President George W. Bush's court nominees and a leading opponent of President Barack Obama's selections.</p>
+        <p class="preeln-paradata">In 2010, Sessions called Supreme Court nominee Elena Kagan "dangerous" and said he was more concerned about her becoming a justice than he was Sonia Sotomayor, Obama's first Supreme Court nominee.</p>
+        <p class="preeln-paradata">Sessions was the leading cheerleader for Bill Pryor, his successor as Alabama attorney general, who was named by Bush to the 11th U.S. Circuit Court of Appeals in a controversial recess appointment. Democrats targeted Pryor for his positions on abortion and gay rights, but Sessions insisted he was a top-notch lawyer and encouraged the recess appointment, which essentially circumvented the Senate confirmation process.</p>
+        <p class="preeln-paradata">Sessions' personal history as a rejected federal court nominee makes his role in the confirmation process one of the most watched aspects of his Senate service.</p>
+        <p class="preeln-paradata">He was a supporter of the wars in Iraq and Afghanistan. He has spoken out regularly during his Senate tenure on GOP social issues such as school prayer, abortion and funding for the National Endowment for the Arts. He played a key role in drafting a comprehensive juvenile crime bill, and lost an early but highly publicized fight to limit lawyers' fees in any tobacco settlement.</p>
+        <p class="preeln-paradata">Sessions joined other GOP senators in 2009 in unsuccessfully opposing the expansion of the federal hate crimes law to include physical attacks on people based on their sexual orientation.</p>
+        <p class="preeln-paradata">Sessions is a member of the Budget Committee and he voted against the 2009 approximately $800 billion economic stimulus package and Obama's nomination of Timothy Geithner as Treasury secretary. He also opposed the 2010 health care reform bill and called for its repeal after the U.S. Supreme Court upheld key provisions in June 2012. He called it a "2,700-page Rube Goldberg contraption" and said, "If it is not repealed, it will cause Americans' personal health costs &#8212; and our nation's debt &#8212; to rise disastrously."</p>
+        <p class="preeln-paradata">Sessions is a self-described "budget hawk" who has repeatedly criticized Obama's spending plans. In 2012, he tried but failed to mandate asset testing for food stamp recipients in the federal farm bill. He also criticized the 9th U.S. Circuit Court of Appeals for scheduling a conference in Maui in 2012. "Americans struggling to pay their bills are tired of watching the government throw lavish events on the taxpayer dime," he said.</p>
+        <p class="preeln-paradata">Sessions opposed the decision to rebid a military tanker contract worth $35 million originally won by Northrop Grumman Corp. and the European Aeronautic Defense and Space Co. The companies planned to assemble the refueling jets in Sessions' hometown of Mobile, creating 1,500 jobs. EADS decided in 2010 to participate in the rebidding without Northrop Grumman's involvement and said it would still assemble the planes in Mobile if it beat out Boeing for the contract. Boeing got the contract in 2011, but Sessions' hometown rebounded by landing a $600 million Airbus assembly plant in 2012.</p>
+        <p class="preeln-paradata">Sessions' support among Alabama voters has grown with each of his elections to the U.S. Senate. He beat Democratic state Sen. Roger Bedford in 1996 with 52 percent of the vote, Democratic state Auditor Susan Parker in 2002 with 59 percent, and Democratic state Sen. Vivian Davis Figures in 2008 with 63 percent. By 2008, Sessions was so entrenched that Figures was unable to raise significant campaign money in Washington or Alabama.</p>
+        <p class="preeln-paradata">Committee Assignments: Judiciary;  Armed Services; Environment and Public Works; Budget</p>
+        <p class="preeln-paradata">American Conservative Union Rating: 90</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: 5</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">Jeff Sessions won his June 2014 primary, he will seek re-election in November.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on June 12, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_candidates/AL.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

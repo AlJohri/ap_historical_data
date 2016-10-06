@@ -1,0 +1,304 @@
+| ru_number  |ru_parent  |ru_name |ru_abbrv  |ru_type|rut_name|ru_fip|ru_precincts|ru_reg_voters|st_postal|
+|  1|  0|South Dakota|SD|S  |State   |00000 | 762|   504327|SD   |
+|  1|  0|Montana |MT|S  |State   |00000 | 871|   691604|MT   |
+|  1|  0|New Mexico  |NM|S  |State   |00000 |1633|  1113156|NM   |
+|  1|  0|New Jersey  |NJ|S  |State   |00000 |6290|  4928499|NJ   |
+|  1|  0|New York|NY|S  |State   |00000 |   16314| 13162712|NY   |
+|  1|  0|California  |CA|S  |State   |00000 |   23180| 16123787|CA   |
+|   5001|  1|Alameda |Alameda   |C  |County  |06001 |1200|   725098|CA   |
+|   5002|  1|Alpine  |Alpine|C  |County  |06003 |   5|  783|CA   |
+|   5003|  1|Amador  |Amador|C  |County  |06005 |  59|20353|CA   |
+|   5004|  1|Butte   |Butte |C  |County  |06007 | 148|   115144|CA   |
+|   5005|  1|Calaveras   |Calaveras |C  |County  |06009 |  30|27222|CA   |
+|   5006|  1|Colusa  |Colusa|C  |County  |06011 |  18| 7533|CA   |
+|   5007|  1|Contra Costa|ContraCost|C  |County  |06013 | 772|   490954|CA   |
+|   5008|  1|Del Norte   |DelNorte  |C  |County  |06015 |  18|11854|CA   |
+|   5009|  1|El Dorado   |ElDorado  |C  |County  |06017 | 119|   102521|CA   |
+|   5010|  1|Fresno  |Fresno|C  |County  |06019 | 581|   353285|CA   |
+|   5011|  1|Glenn   |Glenn |C  |County  |06021 |  30|11870|CA   |
+|   5012|  1|Humboldt|Humboldt  |C  |County  |06023 | 132|75224|CA   |
+|   5013|  1|Imperial|Imperial  |C  |County  |06025 |  98|53565|CA   |
+|   5014|  1|Inyo|Inyo  |C  |County  |06027 |  26| 9918|CA   |
+|   5015|  1|Kern|Kern  |C  |County  |06029 | 442|   287672|CA   |
+|   5016|  1|Kings   |Kings |C  |County  |06031 | 182|44504|CA   |
+|   5017|  1|Lake|Lake  |C  |County  |06033 |  52|33143|CA   |
+|   5018|  1|Lassen  |Lassen|C  |County  |06035 |  36|13268|CA   |
+|   5019|  1|Los Angeles |LosAngeles|C  |County  |06037 |4783|  4062257|CA   |
+|   5020|  1|Madera  |Madera|C  |County  |06039 | 109|51114|CA   |
+|   5021|  1|Marin   |Marin |C  |County  |06041 | 189|   145616|CA   |
+|   5022|  1|Mariposa|Mariposa  |C  |County  |06043 |  21|11196|CA   |
+|   5023|  1|Mendocino   |Mendocino |C  |County  |06045 | 235|47804|CA   |
+|   5024|  1|Merced  |Merced|C  |County  |06047 | 118|91729|CA   |
+|   5025|  1|Modoc   |Modoc |C  |County  |06049 |  20| 5259|CA   |
+|   5026|  1|Mono|Mono  |C  |County  |06051 |  13| 6706|CA   |
+|   5027|  1|Monterey|Monterey  |C  |County  |06053 | 184|   147714|CA   |
+|   5028|  1|Napa|Napa  |C  |County  |06055 | 146|66665|CA   |
+|   5029|  1|Nevada  |Nevada|C  |County  |06057 |  64|60056|CA   |
+|   5030|  1|Orange  |Orange|C  |County  |06059 |2078|  1566951|CA   |
+|   5031|  1|Placer  |Placer|C  |County  |06061 | 340|   185204|CA   |
+|   5032|  1|Plumas  |Plumas|C  |County  |06063 |  29|13056|CA   |
+|   5033|  1|Riverside   |Riverside |C  |County  |06065 |1197|   763923|CA   |
+|   5034|  1|Sacramento  |Sacramento|C  |County  |06067 |1215|   625485|CA   |
+|   5035|  1|San Benito  |SanBenito |C  |County  |06069 |  56|23903|CA   |
+|   5036|  1|San Bernardino  |SanBernard|C  |County  |06071 | 997|   754978|CA   |
+|   5037|  1|San Diego   |SanDiego  |C  |County  |06073 |1893|  1369496|CA   |
+|   5038|  1|San Francisco   |SanFrancis|C  |County  |06075 | 580|   430259|CA   |
+|   5039|  1|San Joaquin |SanJoaquin|C  |County  |06077 | 441|   253148|CA   |
+|   5040|  1|San Luis Obispo |SanLuisObi|C  |County  |06079 | 146|   148616|CA   |
+|   5041|  1|San Mateo   |SanMateo  |C  |County  |06081 | 553|   360018|CA   |
+|   5042|  1|Santa Barbara   |SantaBarba|C  |County  |06083 | 316|   188277|CA   |
+|   5043|  1|Santa Clara |SantaClara|C  |County  |06085 |1113|   715492|CA   |
+|   5044|  1|Santa Cruz  |SantaCruz |C  |County  |06087 | 189|   139834|CA   |
+|   5045|  1|Shasta  |Shasta|C  |County  |06089 | 140|90700|CA   |
+|   5046|  1|Sierra  |Sierra|C  |County  |06091 |  23| 2253|CA   |
+|   5047|  1|Siskiyou|Siskiyou  |C  |County  |06093 |  60|25064|CA   |
+|   5048|  1|Solano  |Solano|C  |County  |06095 | 188|   174979|CA   |
+|   5049|  1|Sonoma  |Sonoma|C  |County  |06097 | 436|   234851|CA   |
+|   5050|  1|Stanislaus  |Stanislaus|C  |County  |06099 | 429|   217946|CA   |
+|   5051|  1|Sutter  |Sutter|C  |County  |06101 |  63|38525|CA   |
+|   5052|  1|Tehama  |Tehama|C  |County  |06103 |  47|29473|CA   |
+|   5053|  1|Trinity |Trinity   |C  |County  |06105 |  24| 8094|CA   |
+|   5054|  1|Tulare  |Tulare|C  |County  |06107 | 175|   138688|CA   |
+|   5055|  1|Tuolumne|Tuolumne  |C  |County  |06109 |  69|31834|CA   |
+|   5056|  1|Ventura |Ventura   |C  |County  |06111 | 361|   392088|CA   |
+|   5057|  1|Yolo|Yolo  |C  |County  |06113 | 146|93894|CA   |
+|   5058|  1|Yuba|Yuba  |C  |County  |06115 |  46|26731|CA   |
+|  27001|  1|Beaverhead  |Beavrhed  |C  |County  |30001 |  16| 6595|MT   |
+|  27002|  1|Big Horn|BigHorn   |C  |County  |30003 |  20| 7788|MT   |
+|  27003|  1|Blaine  |Blaine|C  |County  |30005 |  10| 4199|MT   |
+|  27004|  1|Broadwater  |Broadwtr  |C  |County  |30007 |   5| 3719|MT   |
+|  27005|  1|Carbon  |Carbon|C  |County  |30009 |  16| 7549|MT   |
+|  27006|  1|Carter  |Carter|C  |County  |30011 |   4|  953|MT   |
+|  27007|  1|Cascade |Cascade   |C  |County  |30013 |  38|57082|MT   |
+|  27008|  1|Chouteau|Chouteau  |C  |County  |30015 |  12| 4087|MT   |
+|  27009|  1|Custer  |Custer|C  |County  |30017 |  14| 6986|MT   |
+|  27010|  1|Daniels |Daniels   |C  |County  |30019 |   5| 1544|MT   |
+|  27011|  1|Dawson  |Dawson|C  |County  |30021 |  12| 6828|MT   |
+|  27012|  1|Deer Lodge  |Deerlodg  |C  |County  |30023 |  18| 6786|MT   |
+|  27013|  1|Fallon  |Fallon|C  |County  |30025 |   6| 1960|MT   |
+|  27014|  1|Fergus  |Fergus|C  |County  |30027 |  16| 8338|MT   |
+|  27015|  1|Flathead|Flathead  |C  |County  |30029 |  42|60688|MT   |
+|  27016|  1|Gallatin|Gallatin  |C  |County  |30031 |  46|66425|MT   |
+|  27017|  1|Garfield|Garfield  |C  |County  |30033 |   7|  902|MT   |
+|  27018|  1|Glacier |Glacier   |C  |County  |30035 |  16| 8716|MT   |
+|  27019|  1|Golden Valley   |Goldnvly  |C  |County  |30037 |   2|  629|MT   |
+|  27020|  1|Granite |Granite   |C  |County  |30039 |   4| 2547|MT   |
+|  27021|  1|Hill|Hill  |C  |County  |30041 |  22|10084|MT   |
+|  27022|  1|Jefferson   |Jeffrson  |C  |County  |30043 |  14| 8328|MT   |
+|  27023|  1|Judith Basin|Judithbs  |C  |County  |30045 |   4| 1642|MT   |
+|  27024|  1|Lake|Lake  |C  |County  |30047 |  22|18301|MT   |
+|  27025|  1|Lewis & Clark   |Lewisclk  |C  |County  |30049 |  56|40511|MT   |
+|  27026|  1|Liberty |Liberty   |C  |County  |30051 |   4| 1392|MT   |
+|  27027|  1|Lincoln |Lincoln   |C  |County  |30053 |  14|14285|MT   |
+|  27028|  1|McCone  |McCone|C  |County  |30055 |   3| 1394|MT   |
+|  27029|  1|Madison |Madison   |C  |County  |30057 |   8| 6184|MT   |
+|  27030|  1|Meagher |Meagher   |C  |County  |30059 |   1| 1461|MT   |
+|  27031|  1|Mineral |Mineral   |C  |County  |30061 |   6| 2666|MT   |
+|  27032|  1|Missoula|Missoula  |C  |County  |30063 | 101|80860|MT   |
+|  27033|  1|Musselshell |Muslshel  |C  |County  |30065 |   6| 3221|MT   |
+|  27034|  1|Park|Park  |C  |County  |30067 |  15|12287|MT   |
+|  27035|  1|Petroleum   |Petrolum  |C  |County  |30069 |   1|  355|MT   |
+|  27036|  1|Phillips|Phillips  |C  |County  |30071 |  13| 2899|MT   |
+|  27037|  1|Pondera |Pondera   |C  |County  |30073 |   8| 4055|MT   |
+|  27038|  1|Powder River|Powderrv  |C  |County  |30075 |   8| 1478|MT   |
+|  27039|  1|Powell  |Powell|C  |County  |30077 |  12| 3939|MT   |
+|  27040|  1|Prairie |Prairie   |C  |County  |30079 |   4|  944|MT   |
+|  27041|  1|Ravalli |Ravalli   |C  |County  |30081 |  22|30648|MT   |
+|  27042|  1|Richland|Richland  |C  |County  |30083 |  15| 6752|MT   |
+|  27043|  1|Roosevelt   |Roosvelt  |C  |County  |30085 |  13| 6685|MT   |
+|  27044|  1|Rosebud |Rosebud   |C  |County  |30087 |  12| 5855|MT   |
+|  27045|  1|Sanders |Sanders   |C  |County  |30089 |  10| 8009|MT   |
+|  27046|  1|Sheridan|Sheridan  |C  |County  |30091 |   6| 2779|MT   |
+|  27047|  1|Silver Bow  |Silverbw  |C  |County  |30093 |  45|21688|MT   |
+|  27048|  1|Stillwater  |Stilwatr  |C  |County  |30095 |   8| 6427|MT   |
+|  27049|  1|Sweet Grass |Sweetgrs  |C  |County  |30097 |   5| 2562|MT   |
+|  27050|  1|Teton   |Teton |C  |County  |30099 |   5| 4492|MT   |
+|  27051|  1|Toole   |Toole |C  |County  |30101 |  10| 3003|MT   |
+|  27052|  1|Treasure|Treasure  |C  |County  |30103 |   3|  642|MT   |
+|  27053|  1|Valley  |Valley|C  |County  |30105 |  11| 5341|MT   |
+|  27054|  1|Wheatland   |Wheatlnd  |C  |County  |30107 |   5| 1412|MT   |
+|  27055|  1|Wibaux  |Wibaux|C  |County  |30109 |   1|  768|MT   |
+|  27056|  1|Yellowstone |Yellowst  |C  |County  |30111 |  69|   103934|MT   |
+|  31001|  1|Atlantic|Atlantic  |C  |County  |34001 | 163|   161681|NJ   |
+|  31002|  1|Bergen  |Bergen|C  |County  |34003 | 553|   500819|NJ   |
+|  31003|  1|Burlington  |Burlington|C  |County  |34005 | 365|   251668|NJ   |
+|  31004|  1|Camden  |Camden|C  |County  |34007 | 331|   317388|NJ   |
+|  31005|  1|Cape May|Cape May  |C  |County  |34009 | 128|65433|NJ   |
+|  31006|  1|Cumberland  |Cumberland|C  |County  |34011 |  92|82560|NJ   |
+|  31007|  1|Essex   |Essex |C  |County  |34013 | 551|   412538|NJ   |
+|  31008|  1|Gloucester  |Gloucester|C  |County  |34015 | 226|   175685|NJ   |
+|  31009|  1|Hudson  |Hudson|C  |County  |34017 | 446|   316479|NJ   |
+|  31010|  1|Hunterdon   |Hunterdon |C  |County  |34019 | 114|81085|NJ   |
+|  31011|  1|Mercer  |Mercer|C  |County  |34021 | 257|   199962|NJ   |
+|  31012|  1|Middlesex   |Middlesex |C  |County  |34023 | 597|   421324|NJ   |
+|  31013|  1|Monmouth|Monmouth  |C  |County  |34025 | 452|   399616|NJ   |
+|  31014|  1|Morris  |Morris|C  |County  |34027 | 395|   297038|NJ   |
+|  31015|  1|Ocean   |Ocean |C  |County  |34029 | 384|   355812|NJ   |
+|  31016|  1|Passaic |Passaic   |C  |County  |34031 | 281|   247970|NJ   |
+|  31017|  1|Salem   |Salem |C  |County  |34033 |  45|41308|NJ   |
+|  31018|  1|Somerset|Somerset  |C  |County  |34035 | 263|   174500|NJ   |
+|  31019|  1|Sussex  |Sussex|C  |County  |34037 | 119|92430|NJ   |
+|  31020|  1|Union   |Union |C  |County  |34039 | 438|   268679|NJ   |
+|  31021|  1|Warren  |Warren|C  |County  |34041 |  90|64524|NJ   |
+|  32001|  1|Bernalillo  |Bernalillo|C  |County  |35001 | 442|   330140|NM   |
+|  32002|  1|Catron  |Catron|C  |County  |35003 |   8| 3410|NM   |
+|  32003|  1|Chaves  |Chaves|C  |County  |35005 |  53|30312|NM   |
+|  32004|  1|Cibola  |Cibola|C  |County  |35006 |  30|13429|NM   |
+|  32005|  1|Colfax  |Colfax|C  |County  |35007 |  21| 9752|NM   |
+|  32006|  1|Curry   |Curry |C  |County  |35009 |  48|18045|NM   |
+|  32007|  1|DeBaca  |DeBaca|C  |County  |35011 |   6| 1693|NM   |
+|  32008|  1|Dona Ana|DonaAna   |C  |County  |35013 | 136|78042|NM   |
+|  32009|  1|Eddy|Eddy  |C  |County  |35015 |  44|25287|NM   |
+|  32010|  1|Grant   |Grant |C  |County  |35017 |  47|28456|NM   |
+|  32011|  1|Guadalupe   |Guadalupe |C  |County  |35019 |   8| 4258|NM   |
+|  32012|  1|Harding |Harding   |C  |County  |35021 |   5|  832|NM   |
+|  32013|  1|Hidalgo |Hidalgo   |C  |County  |35023 |   8| 3682|NM   |
+|  32014|  1|Lea |Lea   |C  |County  |35025 |  46|22504|NM   |
+|  32015|  1|Lincoln |Lincoln   |C  |County  |35027 |  23|11143|NM   |
+|  32016|  1|Los Alamos  |LosAlamos |C  |County  |35028 |  19| 9809|NM   |
+|  32017|  1|Luna|Luna  |C  |County  |35029 |  18|10384|NM   |
+|  32018|  1|McKinley|McKinley  |C  |County  |35031 |  60|34986|NM   |
+|  32019|  1|Mora|Mora  |C  |County  |35033 |  13| 4319|NM   |
+|  32020|  1|Otero   |Otero |C  |County  |35035 |  43|24939|NM   |
+|  32021|  1|Quay|Quay  |C  |County  |35037 |  25| 8673|NM   |
+|  32022|  1|Rio Arriba  |RioArriba |C  |County  |35039 |  47|31436|NM   |
+|  32023|  1|Roosevelt   |Roosevelt |C  |County  |35041 |  24| 8311|NM   |
+|  32024|  1|Sandoval|Sandoval  |C  |County  |35043 |  92|88037|NM   |
+|  32025|  1|San Juan|SanJuan   |C  |County  |35045 |  78|58183|NM   |
+|  32026|  1|San Miguel  |SanMiguel |C  |County  |35047 |  41|23752|NM   |
+|  32027|  1|Santa Fe|SantaFe   |C  |County  |35049 |  92|   120332|NM   |
+|  32028|  1|Sierra  |Sierra|C  |County  |35051 |  11| 6368|NM   |
+|  32029|  1|Socorro |Socorro   |C  |County  |35053 |  29|13774|NM   |
+|  32030|  1|Taos|Taos  |C  |County  |35055 |  39|27453|NM   |
+|  32031|  1|Torrance|Torrance  |C  |County  |35057 |  18|10242|NM   |
+|  32032|  1|Union   |Union |C  |County  |35059 |   8| 2660|NM   |
+|  32033|  1|Valencia|Valencia  |C  |County  |35061 |  51|48513|NM   |
+|  33001|  1|Albany  |Albany|C  |County  |36001 | 345|   194953|NY   |
+|  33002|  1|Allegany|Allegany  |C  |County  |36003 |  40|28070|NY   |
+|  33003|  1|Bronx   |Bronx |C  |County  |36005 | 976|   975024|NY   |
+|  33004|  1|Broome  |Broome|C  |County  |36007 | 190|   122669|NY   |
+|  33005|  1|Cattaraugus |Catargus  |C  |County  |36009 |  79|50664|NY   |
+|  33006|  1|Cayuga  |Cayuga|C  |County  |36011 |  65|51240|NY   |
+|  33007|  1|Chautauqua  |Chataqua  |C  |County  |36013 | 125|90645|NY   |
+|  33008|  1|Chemung |Chemung   |C  |County  |36015 |  86|54137|NY   |
+|  33009|  1|Chenango|Chenang   |C  |County  |36017 |  42|31310|NY   |
+|  33010|  1|Clinton |Clinton   |C  |County  |36019 |  70|50524|NY   |
+|  33011|  1|Columbia|Columbia  |C  |County  |36021 |  58|44367|NY   |
+|  33012|  1|Cortland|Cortland  |C  |County  |36023 |  42|29454|NY   |
+|  33013|  1|Delaware|Delaware  |C  |County  |36025 |  59|29593|NY   |
+|  33014|  1|Dutchess|Dutchess  |C  |County  |36027 | 249|   169401|NY   |
+|  33015|  1|Erie|Erie  |C  |County  |36029 | 986|   675545|NY   |
+|  33016|  1|Essex   |Essex |C  |County  |36031 |  42|26944|NY   |
+|  33017|  1|Franklin|Franklin  |C  |County  |36033 |  49|27395|NY   |
+|  33018|  1|Fulton  |Fulton|C  |County  |36035 |  50|31823|NY   |
+|  33019|  1|Genesee |Genesee   |C  |County  |36037 |  53|36222|NY   |
+|  33020|  1|Greene  |Greene|C  |County  |36039 |  52|30958|NY   |
+|  33021|  1|Hamilton|Hamilton  |C  |County  |36041 |  11| 5202|NY   |
+|  33022|  1|Herkimer|Herkimer  |C  |County  |36043 |  58|40688|NY   |
+|  33023|  1|Jefferson   |Jefferson |C  |County  |36045 |  91|59683|NY   |
+|  33024|  1|Brooklyn|Brooklyn  |C  |County  |36047 |2032|  2029869|NY   |
+|  33025|  1|Lewis   |Lewis |C  |County  |36049 |  31|17299|NY   |
+|  33026|  1|Livingston  |Livingston|C  |County  |36051 |  61|40579|NY   |
+|  33027|  1|Madison |Madison   |C  |County  |36053 |  55|42815|NY   |
+|  33028|  1|Monroe  |Monroe|C  |County  |36055 | 810|   447233|NY   |
+|  33029|  1|Montgomery  |Montgomery|C  |County  |36057 |  48|31323|NY   |
+|  33030|  1|Nassau  |Nassau|C  |County  |36059 |1142|   909283|NY   |
+|  33031|  1|Manhattan   |Manhattan |C  |County  |36061 |1247|  1245753|NY   |
+|  33032|  1|Niagara |Niagara   |C  |County  |36063 | 181|   136660|NY   |
+|  33033|  1|Oneida  |Oneida|C  |County  |36065 | 192|   125781|NY   |
+|  33034|  1|Onondaga|Onondaga  |C  |County  |36067 | 459|   290405|NY   |
+|  33035|  1|Ontario |Ontario   |C  |County  |36069 |  92|68234|NY   |
+|  33036|  1|Orange  |Orange|C  |County  |36071 | 321|   200991|NY   |
+|  33037|  1|Orleans |Orleans   |C  |County  |36073 |  40|25484|NY   |
+|  33038|  1|Oswego  |Oswego|C  |County  |36075 | 124|79933|NY   |
+|  33039|  1|Otsego  |Otsego|C  |County  |36077 |  57|35592|NY   |
+|  33040|  1|Putnam  |Putnam|C  |County  |36079 |  86|61053|NY   |
+|  33041|  1|Queens  |Queens|C  |County  |36081 |1494|  1492308|NY   |
+|  33042|  1|Rensselaer  |Rensselaer|C  |County  |36083 | 134|   104684|NY   |
+|  33043|  1|Staten Island   |StatenIsl |C  |County  |36085 | 357|   356643|NY   |
+|  33044|  1|Rockland|Rockland  |C  |County  |36087 | 270|   174190|NY   |
+|  33045|  1|Saint Lawrence  |StLawrence|C  |County  |36089 | 102|61993|NY   |
+|  33046|  1|Saratoga|Saratoga  |C  |County  |36091 | 196|   149736|NY   |
+|  33047|  1|Schenectady |Schenectdy|C  |County  |36093 | 128|95040|NY   |
+|  33048|  1|Schoharie   |Schoharie |C  |County  |36095 |  27|18981|NY   |
+|  33049|  1|Schuyler|Schuyler  |C  |County  |36097 |  17|13508|NY   |
+|  33050|  1|Seneca  |Seneca|C  |County  |36099 |  27|20447|NY   |
+|  33051|  1|Steuben |Steuben   |C  |County  |36101 |  85|58147|NY   |
+|  33052|  1|Suffolk |Suffolk   |C  |County  |36103 |1047|   906803|NY   |
+|  33053|  1|Sullivan|Sullivan  |C  |County  |36105 |  63|60361|NY   |
+|  33054|  1|Tioga   |Tioga |C  |County  |36107 |  48|33979|NY   |
+|  33055|  1|Tompkins|Tompkins  |C  |County  |36109 |  74|61877|NY   |
+|  33056|  1|Ulster  |Ulster|C  |County  |36111 | 164|   121387|NY   |
+|  33057|  1|Warren  |Warren|C  |County  |36113 |  71|42847|NY   |
+|  33058|  1|Washington  |Washington|C  |County  |36115 |  52|36933|NY   |
+|  33059|  1|Wayne   |Wayne |C  |County  |36117 |  67|56876|NY   |
+|  33060|  1|Westchester |Wstchester|C  |County  |36119 |1033|   611229|NY   |
+|  33061|  1|Wyoming |Wyoming   |C  |County  |36121 |  41|25891|NY   |
+|  33062|  1|Yates   |Yates |C  |County  |36123 |  21|14054|NY   |
+|  42001|  1|Aurora  |Aurora|C  |County  |46003 |   7| 1944|SD   |
+|  42002|  1|Beadle  |Beadle|C  |County  |46005 |  14|11189|SD   |
+|  42003|  1|Bennett |Bennett   |C  |County  |46007 |   8| 2113|SD   |
+|  42004|  1|Bon Homme   |Bon Homme |C  |County  |46009 |   5| 4032|SD   |
+|  42005|  1|Brookings   |Brookings |C  |County  |46011 |  15|17443|SD   |
+|  42006|  1|Brown   |Brown |C  |County  |46013 |  22|23040|SD   |
+|  42007|  1|Brule   |Brule |C  |County  |46015 |   5| 3404|SD   |
+|  42008|  1|Buffalo |Buffalo   |C  |County  |46017 |   3| 1125|SD   |
+|  42009|  1|Butte   |Butte |C  |County  |46019 |  16| 5936|SD   |
+|  42010|  1|Campbell|Campbell  |C  |County  |46021 |   5| 1251|SD   |
+|  42011|  1|Charles Mix |CharlsMix |C  |County  |46023 |  13| 5662|SD   |
+|  42012|  1|Clark   |Clark |C  |County  |46025 |  13| 2816|SD   |
+|  42013|  1|Clay|Clay  |C  |County  |46027 |   7| 8238|SD   |
+|  42014|  1|Codington   |Codington |C  |County  |46029 |  33|16449|SD   |
+|  42015|  1|Corson  |Corson|C  |County  |46031 |  17| 2508|SD   |
+|  42016|  1|Custer  |Custer|C  |County  |46033 |  10| 5553|SD   |
+|  42017|  1|Davison |Davison   |C  |County  |46035 |   8|11469|SD   |
+|  42018|  1|Day |Day   |C  |County  |46037 |  14| 4390|SD   |
+|  42019|  1|Deuel   |Deuel |C  |County  |46039 |  11| 2964|SD   |
+|  42020|  1|Dewey   |Dewey |C  |County  |46041 |  13| 3652|SD   |
+|  42021|  1|Douglas |Douglas   |C  |County  |46043 |   5| 2323|SD   |
+|  42022|  1|Edmunds |Edmunds   |C  |County  |46045 |   7| 2818|SD   |
+|  42023|  1|Fall River  |Fall River|C  |County  |46047 |  16| 5160|SD   |
+|  42024|  1|Faulk   |Faulk |C  |County  |46049 |   7| 1655|SD   |
+|  42025|  1|Grant   |Grant |C  |County  |46051 |  11| 5156|SD   |
+|  42026|  1|Gregory |Gregory   |C  |County  |46053 |   3| 3027|SD   |
+|  42027|  1|Haakon  |Haakon|C  |County  |46055 |   6| 1480|SD   |
+|  42028|  1|Hamlin  |Hamlin|C  |County  |46057 |   7| 3571|SD   |
+|  42029|  1|Hand|Hand  |C  |County  |46059 |  10| 2647|SD   |
+|  42030|  1|Hanson  |Hanson|C  |County  |46061 |   5| 3354|SD   |
+|  42031|  1|Harding |Harding   |C  |County  |46063 |   4|  909|SD   |
+|  42032|  1|Hughes  |Hughes|C  |County  |46065 |  15|10702|SD   |
+|  42033|  1|Hutchinson  |Hutchinson|C  |County  |46067 |   7| 5152|SD   |
+|  42034|  1|Hyde|Hyde  |C  |County  |46069 |   5| 1074|SD   |
+|  42035|  1|Jackson |Jackson   |C  |County  |46071 |   8| 1697|SD   |
+|  42036|  1|Jerauld |Jerauld   |C  |County  |46073 |   5| 1527|SD   |
+|  42037|  1|Jones   |Jones |C  |County  |46075 |   3|  798|SD   |
+|  42038|  1|Kingsbury   |Kingsbury |C  |County  |46077 |   6| 3687|SD   |
+|  42039|  1|Lake|Lake  |C  |County  |46079 |  10| 7692|SD   |
+|  42040|  1|Lawrence|Lawrence  |C  |County  |46081 |  12|15913|SD   |
+|  42041|  1|Lincoln |Lincoln   |C  |County  |46083 |  29|24598|SD   |
+|  42042|  1|Lyman   |Lyman |C  |County  |46085 |   7| 2479|SD   |
+|  42043|  1|McCook  |McCook|C  |County  |46087 |   6| 3913|SD   |
+|  42044|  1|McPherson   |McPherson |C  |County  |46089 |   6| 1943|SD   |
+|  42045|  1|Marshall|Marshall  |C  |County  |46091 |   9| 2957|SD   |
+|  42046|  1|Meade   |Meade |C  |County  |46093 |  37|14820|SD   |
+|  42047|  1|Mellette|Mellette  |C  |County  |46095 |   4| 1288|SD   |
+|  42048|  1|Miner   |Miner |C  |County  |46097 |   8| 1726|SD   |
+|  42049|  1|Minnehaha   |Minnehaha |C  |County  |46099 |  66|   100596|SD   |
+|  42050|  1|Moody   |Moody |C  |County  |46101 |   6| 4346|SD   |
+|  42051|  1|Pennington  |Pennington|C  |County  |46103 |  49|59325|SD   |
+|  42052|  1|Perkins |Perkins   |C  |County  |46105 |  10| 2217|SD   |
+|  42053|  1|Potter  |Potter|C  |County  |46107 |   6| 1913|SD   |
+|  42054|  1|Roberts |Roberts   |C  |County  |46109 |  14| 6578|SD   |
+|  42055|  1|Sanborn |Sanborn   |C  |County  |46111 |   4| 1793|SD   |
+|  42056|  1|Shannon |Shannon   |C  |County  |46113 |  10| 7544|SD   |
+|  42057|  1|Spink   |Spink |C  |County  |46115 |   9| 4483|SD   |
+|  42058|  1|Stanley |Stanley   |C  |County  |46117 |   8| 2048|SD   |
+|  42059|  1|Sully   |Sully |C  |County  |46119 |   4| 1056|SD   |
+|  42060|  1|Todd|Todd  |C  |County  |46121 |   9| 5344|SD   |
+|  42061|  1|Tripp   |Tripp |C  |County  |46123 |  13| 3892|SD   |
+|  42062|  1|Turner  |Turner|C  |County  |46125 |   8| 5741|SD   |
+|  42063|  1|Union   |Union |C  |County  |46127 |  13| 9740|SD   |
+|  42064|  1|Walworth|Walworth  |C  |County  |46129 |  15| 3755|SD   |
+|  42065|  1|Yankton |Yankton   |C  |County  |46135 |  13|13156|SD   |
+|  42066|  1|Ziebach |Ziebach   |C  |County  |46137 |   8| 1556|SD   |
+

@@ -1,0 +1,322 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/44298.jpg"><div class="preeln-entityname">Gary Richard Herbert </div>
+	  (Rep)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">801-538-1000 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">801-290-2146 (Main campaign number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://www.utah.gov/governor/">http://www.utah.gov/governor/</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">&#160;</span><span class="field"><a href="http://www.garyherbert.com">http://www.garyherbert.com</a></span>
+</div>
+<a href="../finance/44298.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1947-5-7</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">American Fork, UT </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">Orem, UT</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Mormon</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">2009</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Republican</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">Governor</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/UT.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">UT</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Incumbent</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2016</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          Brigham Young University
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">Attended</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">Gary Herbert was born in American Fork, Utah, and now resides in Orem. He graduated from high school and then served a two-year mission in the Washington, D.C., area for the Church of Jesus Christ of Latter-day Saints. He attended, but did not graduate from, Brigham Young University.</p>
+        <p class="preeln-paradata">Herbert went into business as a realtor, eventually becoming head of the Utah Association of Realtors.</p>
+        <p class="preeln-paradata">He served as a county commissioner and was lieutenant governor under former Gov. Jon Huntsman. Hebert became governor in 2009 when Huntsman resigned to become U.S. ambassador to China.</p>
+        <p class="preeln-paradata">Herbert and his wife, Jeanette, have six children.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">Gary Herbert was unexpectedly thrust into Utah's most powerful job in August 2009, when then-Gov. Jon Huntsman resigned to become U.S. ambassador to China. Herbert had been serving as Huntsman's lieutenant governor for five years and was picked to be his running mate in an effort to shore up support among the state's highly conservative delegates.</p>
+        <p class="preeln-paradata">Herbert had long harbored gubernatorial ambitions, but he didn't plan on running for the state's job until Huntsman's second term expired in 2012. Instead, Herbert had to survive a special election in 2010 to fill out the remainder of Huntsman's term, defeating Salt Lake County Mayor Peter Corroon.</p>
+        <p class="preeln-paradata">He faces yet another election in 2012, this time against Democrat Peter Cooke. Should Herbert win that election, he would serve his first full four-year term.</p>
+        <p class="preeln-paradata">Herbert took over the Utah governorship as the economic downturn began to fully hit the state. He promised in his inauguration speech to be a steady hand at the wheel as Utah transitioned from one leader to the other.</p>
+        <p class="preeln-paradata">Herbert's policies somewhat mirrored those of his predecessor, at least initially. He retained most of the same cabinet at first, although it has changed in the intervening years as agency directors have retired or accepted jobs outside of state government.</p>
+        <p class="preeln-paradata">Herbert opposed raising tax to balance a shrinking state budget during the recession, although he did agree to an increase in the tobacco tax during his first legislative session.</p>
+        <p class="preeln-paradata">Herbert kept a four-day workweek for state employees that Huntsman instituted as a way to cut energy costs and boost employee morale, and he vetoed a 2011 bill requiring state offices to be open five days a week. Lawmakers, however, overrode the veto because of a lack of projected savings.</p>
+        <p class="preeln-paradata">Herbert has at times been a stark contrast to Huntsman. He's decidedly more conservative and doesn't believe that humans affect global warming. His stances on global warming and his opposition to cap-and-trade programs have made him a hit with the state's energy industry, which has donated heavily to his campaigns.</p>
+        <p class="preeln-paradata">Herbert also has earned plaudits from many conservatives in the state for not advocating for more legal protections for gay people. Herbert said he's opposed to discriminating against gays and lesbians, but he doesn't think there should be a law preventing it. Efforts to ban employment and housing discrimination against gays, lesbians and transgender residents have frequently been killed by state Republican lawmakers.</p>
+        <p class="preeln-paradata">In 2011, Herbert was a vocal supporter of a package of immigration bills known as "The Utah Compact" that sought to balance enforcement measures with a guest worker program.</p>
+        <p class="preeln-paradata">Herbert has aggressively challenged the federal government's control of public lands in the state, signing a 2012 bill that will require the federal government to relinquish ownership of all land by 2014. He also led a coalition of western states that sued the Interior Department over a proposed wild lands policy that could have designated millions of acres as wilderness.</p>
+        <p class="preeln-paradata">American Conservative Union Rating: Not rated</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: Not rated</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">Gary Herbert is not up for re-election in 2014.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on June 24, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_candidates/UT.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

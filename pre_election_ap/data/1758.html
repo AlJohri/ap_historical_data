@@ -1,0 +1,332 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/1758.jpg"><div class="preeln-entityname">Orrin Grant Hatch </div>
+	  (Rep)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">202-224-5251 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://www.hatch.senate.gov/">http://www.hatch.senate.gov/</a></span>
+</div>
+<a href="../finance/1758.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1934-3-22</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">Pittsburgh, PA </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">Salt Lake City, UT</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Mormon</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">1976</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Republican</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">Senate</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/UT.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">UT</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Incumbent</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2018</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          Brigham Young University
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">BA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+<h2 class="preeln-secthead">Graduate education: 
+          University of Pittsburgh
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">JD</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">Orrin Hatch was born in Pittsburgh and now lives in Salt Lake City. He earned a bachelor's in history in 1959 from Brigham Young University and a law degree in 1962 from the University of Pittsburgh.</p>
+        <p class="preeln-paradata">Hatch grew up playing basketball and boxing. He also learned how to write music, which he continues to write and sell, much of it Mormon hymnals and patriotic tunes.</p>
+        <p class="preeln-paradata">He practiced law in Utah for several years before winning election to the U.S. Senate in 1976.</p>
+        <p class="preeln-paradata">He ran for president in 2000, but dropped out of the race after winning only 1 percent of the vote in the Iowa caucuses.</p>
+        <p class="preeln-paradata">Hatch and his wife, Elaine, have six children.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">Orrin Hatch is the longest serving U.S. Senator to come from Utah, winning a record sixth term in 2006 while supporting an unpopular President George W. Bush and a worsening war in Iraq.</p>
+        <p class="preeln-paradata">Hatch's 2006 re-election victory meant he had surpassed in tenure former Sen. Reed Smoot, who served from 1903 to 1933.</p>
+        <p class="preeln-paradata">Hatch is well known in Utah for his constituent services and isn't shy about touting his clout in Washington as a reason he should represent the state. During his 2012 campaign for a seventh term, Hatch continually emphasized his seniority on the Senate Finance Committee that would likely make him chairman if the Republicans gained control of the Senate.</p>
+        <p class="preeln-paradata">His longevity had the potential to pose a problem for him in the 2012 election, as a vocal minority of state GOP delegates and the national tea party group FreedomWorks targeted him because of his incumbency. That forced him into a primary election against former state Sen. Dan Liljenquist, a fiscal conservative half of Hatch's age. However, Hatch prevailed at the state's 2012 GOP primary, winning more than 66 percent of the vote.</p>
+        <p class="preeln-paradata">The challenge to Hatch stemmed from 2010, when highly conservative delegates to the state GOP convention ousted his colleague, Bob Bennett, in part because Bennett had been in office for three terms.</p>
+        <p class="preeln-paradata">Hatch took note and campaigned extremely hard for more than two years. He also raised and spent nearly $5 million, making his campaign one of the most expensive is state history. He has repeatedly said that if he wins in 2012 he will retire in 2018.</p>
+        <p class="preeln-paradata">Hatch has argued that his seniority puts him into a strong position to stop President Barack Obama's agenda. To burnish that image, he voted against one of Obama's Supreme Court nominees, Justice Sonia Sotomayor, and opposed Elena Kagan, who Hatch previously voted to confirm as solicitor general.</p>
+        <p class="preeln-paradata">Hatch has taken a leading role criticizing the 2010 health care reform bill, which is generally disdained in conservative Utah.</p>
+        <p class="preeln-paradata">Hatch's unflinching conservatism is softened by a personal graciousness that has allowed him to forge productive working relationships with Democrats, most notably the late Sen. Edward Kennedy. The two often partnered on bills related to children and Kennedy once crossed the aisle to hug Hatch. When Kennedy died, Hatch said they were like fighting brothers and that it would take someone like the two of them to get a health care bill that Republicans and Democrats could both agree with.</p>
+        <p class="preeln-paradata">Hatch ran a long-shot presidential campaign in 2000, but he dropped out of the race after the Iowa caucuses. He became a stalwart supporter of President George W. Bush, championing the Patriot Act and other White House proposals. Hatch equated the war in Iraq to fighting terrorism and he supported former Secretary of Defense Donald Rumsfeld, who faced widespread criticism for his handling of the war, saying Rumsfeld did a good job.</p>
+        <p class="preeln-paradata">Hatch was chairman of the Judiciary Committee from 1995 to 2001. Self-imposed term limits for chairmen forced him to step down from the post. He then took over the Judiciary subcommittee on intellectual property, a posting that generated publicity when he moved against online piracy.</p>
+        <p class="preeln-paradata">Hatch was demonized on Internet forums for saying that he might support a program that destroys the computers of people who illegally download music. He later backpedaled, saying he was suggesting that zapping Internet pirates' computers might be acceptable only as a last resort.</p>
+        <p class="preeln-paradata">The piracy issue is personal for Hatch. He has written dozens of religious hymns and patriotic ballads, including "America United" and "America Rocks!" His work has been performed by the Osmonds and Gladys Knight, among other artists, and has helped inform his views on copyright issues.</p>
+        <p class="preeln-paradata">Committee Assignments: Judiciary;  Finance;  Health, Education, Labor, and Pensions;  Joint Taxation;  Special Aging</p>
+        <p class="preeln-paradata">American Conservative Union Rating: 100</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: 10</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">Orrin Hatch is not up for re-election in 2014.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on June 24, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_candidates/UT.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

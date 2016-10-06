@@ -1,0 +1,331 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/371.jpg"><div class="preeln-entityname">Frank A.  LoBiondo </div>
+	  (Rep)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">202-225-6572 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">856-794-2004 (Main campaign number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://lobiondo.house.gov">http://lobiondo.house.gov</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">&#160;</span><span class="field"><a href="http://www.lobiondoforcongress.com/">http://www.lobiondoforcongress.com/</a></span>
+</div>
+<a href="../finance/371.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1946-5-12</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">Bridgeton, NJ </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">Vineland, NJ</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Catholic</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">1994</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Republican</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">House</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/NJ.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">NJ</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">District:</span><span class="field"><a href="../profilesdistricts/NJ02.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">District 2</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Incumbent</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2014</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          Saint Joseph's University
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">BA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">Frank LoBiondo was born in Bridgeton, N.J., and now resides in Vineland. He earned a bachelor's degree in 1968 from St. Joseph's University.</p>
+        <p class="preeln-paradata">He worked at LoBiondo Brothers Motor Express Inc.</p>
+        <p class="preeln-paradata">LoBiondo was a Cumberland County freeholder from 1985 to 1988, and he served in the state Assembly from 1988 to 1994.</p>
+        <p class="preeln-paradata">He was elected to the U.S. House in 1994.</p>
+        <p class="preeln-paradata">LoBiondo and his second wife, Tina, were married in 2004. He has two daughters from his first marriage.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">Frank LoBiondo won election to Congress in 1994 during the so-called Republican Revolution, in part because of his promises to cut taxes, reduce wasteful spending and limit his stay in Washington to six terms. He has since reneged on this last promise.</p>
+        <p class="preeln-paradata">LoBiondo is a moderate on social issues and a fiscal conservative. He has focused on environmental and maritime issues during his time in office.</p>
+        <p class="preeln-paradata">In 2012, after the Supreme Court upheld the 2010 health care reform bill, LoBiondo said, "It is clear &#8212; and the Supreme Court today agrees &#8212; that President Obama's health care law is, in fact, a tax increase on the American people. Given how fragile our economy is and the unrelenting financial hardship South Jersey families and small businesses are already facing, the American people cannot afford and do not need another tax."</p>
+        <p class="preeln-paradata">He has called for the resignation of Attorney General Eric Holder because of his refusal to release documents related to the so-called Fast and Furious gun-running operation. The House voted in 2012 to hold Holder in contempt of Congress.</p>
+        <p class="preeln-paradata">LoBiondo also has been a vocal supporter of allowing sports betting in New Jersey, a potential boon to his southern New Jersey district, which includes Atlantic City. In 2012, he introduced a bill that would give all states until 2016 to legalize sports betting, which is legal now in only four states.</p>
+        <p class="preeln-paradata">He helped secure in July 2010 an extension of a moratorium blocking requirements that would otherwise force commercial fishing vessels to obtain permits allowing incidental discharges of such things as deck wash, bilge water, and the condensation from air conditioning units. The moratorium will now be in effect until December 2013.</p>
+        <p class="preeln-paradata">LoBiondo, along with other Republicans serving on the House Transportation and Infrastructure subcommittee on the Coast Guard and maritime transportation, introduced a bill in early 2009 that would provide the Coast Guard with greater authority to apprehend and prosecute those attempting to smuggle illegal aliens into the United States.</p>
+        <p class="preeln-paradata">LoBiondo opposed President George W. Bush's October 2008 $700 billion bailout plan and the 2009 approximately $800 billion stimulus bill, measures that divided New Jersey's House delegation. When gas prices soared during the summer of 2008, LoBiondo opposed Bush's proposal to lift a ban on offshore drilling for oil and natural gas.</p>
+        <p class="preeln-paradata">LoBiondo joined his Republican colleagues in 2006 in criticizing the Bush administration's deal to allow a Dubai-owned company to take over operations at six U.S. ports, including Port Newark. The company eventually backed out of the deal.</p>
+        <p class="preeln-paradata">LoBiondo sponsored legislation after Sept. 11 calling for a vulnerability assessment of U.S. ports. He also introduced a measure to prevent foreign companies from owning a majority share of a U.S. airline.</p>
+        <p class="preeln-paradata">LoBiondo helped derail a move that could have resulted in the closing of the Federal Aviation Administration's William J. Hughes Technical Center in Egg Harbor Township, a major employer in his district.</p>
+        <p class="preeln-paradata">He is a dogged campaigner and a popular politician who has benefited from his folksy demeanor and his consistent presence at fundraising events back home.</p>
+        <p class="preeln-paradata">He opposes gun control and favors abortion rights, although he opposes public funding for abortion.</p>
+        <p class="preeln-paradata">LoBiondo has won recognition for his strong commitment to animal welfare, including an award from the Humane Society of the United States.</p>
+        <p class="preeln-paradata">Committee Assignments: Armed Services; Transportation and Infrastructure; Intelligence</p>
+        <p class="preeln-paradata">American Conservative Union Rating: 44</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: 35</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">Frank LoBiondo won his June 2014 primary, he will face Bill Hughes in November.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on June 11, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_districts/NJ.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__#2"><span class="bracket">[</span>districts in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../state_candidates/NJ.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

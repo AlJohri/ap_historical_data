@@ -1,0 +1,339 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/210.jpg"><div class="preeln-entityname">Addison Mitchell 'Mitch' McConnell </div>
+	  (Rep)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">202-224-2541 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://www.mcconnell.senate.gov">http://www.mcconnell.senate.gov</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">&#160;</span><span class="field"><a href="http://www.teammitch.com/">http://www.teammitch.com/</a></span>
+</div>
+<a href="../finance/210.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1942-2-20</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">Tuscumbia, AL </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">Louisville, KY</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Baptist</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">1984</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Republican</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">Senate</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/KY.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">KY</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Incumbent</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2014</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          University of Louisville
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">BA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+<h2 class="preeln-secthead">Graduate education: 
+          University of Kentucky
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">JD</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">Mitch McConnell was born in Tuscumbia, Ala., and grew up in Louisville, Ky., which he still calls home. He overcame polio as a child. He earned a bachelor's degree from the University of Louisville in 1964 and a law degree from the University of Kentucky law school in 1967.</p>
+        <p class="preeln-paradata">He was a legislative assistant to then-Sen. Marlow Cook from 1968 to 1970. In 1977, he was elected to the influential position of judge-executive of Jefferson County and was re-elected in 1981. It was the springboard from which he launched his Senate career.</p>
+        <p class="preeln-paradata">McConnell was first elected to the U.S. Senate in 1984, when he defeated Democratic incumbent Walter Huddleston in a fierce contest. McConnell was chosen as Senate majority whip in November 2002, the No. 2 position in the Senate. In November 2006, he became Republican leader.</p>
+        <p class="preeln-paradata">McConnell underwent triple-bypass heart surgery in February 2003 after a stress test and other screenings revealed blockages.</p>
+        <p class="preeln-paradata">McConnell has three daughters from his first marriage. In 1993, he married Elaine Chao, who served as Labor Secretary under former President George W. Bush.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">Mitch McConnell, Kentucky's most influential politician, is the leader of the Republican minority in the Senate.</p>
+        <p class="preeln-paradata">With the U.S. slowly recovering from economic recession, McConnell has focused his political muscle on protecting jobs in Kentucky, where nearly one in 10 people remained unemployed in 2012.</p>
+        <p class="preeln-paradata">He was credited with helping preserve some 3,000 Kentucky jobs in the first six months of 2012, including 1,200 at the Paducah Gaseous Diffusion Plant through a deal brokered with Energy Secretary Steven Chu.</p>
+        <p class="preeln-paradata">McConnell's focus on protecting jobs, besides endearing him to Kentucky voters, sent a not-so-subtle message about why he should be re-elected in 2014.</p>
+        <p class="preeln-paradata">In February 2012, McConnell intervened when Federal Prison Industries tried to get government contracts now held by two small Kentucky factories that make military T-shirts and jackets. Had that happened, more than 200 Kentucky workers would have lost their jobs to federal prisoners.</p>
+        <p class="preeln-paradata">In a public display of outrage, the typically stoic McConnell was able to convince Federal Prison Industries to back off, saving those jobs.</p>
+        <p class="preeln-paradata">"Here you had one part of the government using, in effect, labor that they entirely controlled &#8212; prisoners who they could pay as little as they wanted to &#8212; to undercut a private sector government contractor. If that isn't outrageous," McConnell said at the time.</p>
+        <p class="preeln-paradata">In 2008, McConnell voted for the Troubled Asset Relief Program to prevent an economic collapse. McConnell, like most Republican senators, opposed the approximately $800 billion economic stimulus package of 2009. McConnell said the legislation was packed with wasteful spending.</p>
+        <p class="preeln-paradata">"A stimulus bill that was supposed to be timely, targeted and temporary is none of the above," McConnell said on the Senate floor. "And this means Congress is about to approve a stimulus that's unlikely to have much stimulative effect."</p>
+        <p class="preeln-paradata">Since 2009, McConnell has become a leading Republican voice against the policies of the Obama administration.</p>
+        <p class="preeln-paradata">"Millions of Americans are struggling to find jobs, and yet all they see in Washington are Democrats passing massive bills that, at their core, seem to have one thing in common: more job loss," McConnell said on the Senate floor in July 2010 after President Barack Obama signed a law overhauling lending and high-finance rules.</p>
+        <p class="preeln-paradata">McConnell is perhaps best known as an opponent of campaign finance reform. However, he lost a key battle when Congress passed legislation in 2002 that imposed new restrictions on how money is spent in federal elections.</p>
+        <p class="preeln-paradata">McConnell contends limits on spending and political advertising violate the constitutional rights of free speech. Even his opponents call McConnell consistent in his views. He cited the First Amendment in opposing a proposed constitutional amendment to outlaw flag burning, alienating veterans' organizations and some conservative Republicans.</p>
+        <p class="preeln-paradata">McConnell has been a strong fundraiser for his fellow Republicans. He supported Trey Grayson in the 2010 Republican primary for U.S. Senate but when Rand Paul won that race McConnell held a fundraiser for the party nominee in Washington.</p>
+        <p class="preeln-paradata">His fundraising efforts have not been limited to political campaigns. He founded and has raised millions for the McConnell Center for Political Leadership at the University of Louisville. McConnell's role in raising money for the center from undisclosed contributors has caused some faculty and outside experts on higher education to question the independence of the center.</p>
+        <p class="preeln-paradata">McConnell was a staunch congressional ally of President George W. Bush, but disagreed with him over legislation that would have made millions of illegal immigrants eligible for lawful status. The Kentucky senator helped block the bill in the Senate, acknowledging it wasn't popular back home.</p>
+        <p class="preeln-paradata">McConnell points to the 2004 national tobacco buyout as one of his most notable accomplishments in the Senate. The buyout ended the federal tobacco program that for decades had been a staple in Kentucky, the nation's top burley producer, by setting price and production controls on U.S. Leaf.</p>
+        <p class="preeln-paradata">Committee Assignments: Appropriations;  Agriculture, Nutrition, and Forestry;  Rules and Administration</p>
+        <p class="preeln-paradata">American Conservative Union Rating: 85</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: 10</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">Mitch McConnell won his May 2014 primary, he will face Alison Lundergan Grimes in November.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on June 10, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_candidates/KY.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

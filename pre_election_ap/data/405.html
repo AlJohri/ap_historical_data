@@ -1,0 +1,348 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/405.jpg"><div class="preeln-entityname">Marcy Carolyn Kaptur </div>
+	  (Dem)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">202-225-4146 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">419-693-0078  (Main campaign number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://www.house.gov/kaptur">http://www.house.gov/kaptur</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">&#160;</span><span class="field"><a href="http://www.marcykaptur.com/">http://www.marcykaptur.com/</a></span>
+</div>
+<a href="../finance/405.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1946-6-17</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">Toledo, OH </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">Toledo, OH</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Catholic</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">1982</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Democratic</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">House</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/OH.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">OH</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">District:</span><span class="field"><a href="../profilesdistricts/OH09.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">District 9</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Incumbent</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2014</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          University of Wisconsin
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">BA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+<h2 class="preeln-secthead">Graduate education: 
+          University of Michigan
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">MA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">Marcy Kaptur was born 1946 in Toledo, Ohio, where she still resides. She earned a bachelor's in history in 1968 from the University of Wisconsin and a master's in urban planning from the University of Michigan in 1974.</p>
+        <p class="preeln-paradata">She worked as an urban planner and was assistant director for urban affairs with the domestic policy office of the White House during former President Jimmy Carter's administration, from 1977 to 1979.</p>
+        <p class="preeln-paradata">Kaptur was elected to the U.S. House in 1982.</p>
+        <p class="preeln-paradata">She is single.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">Marcy Kaptur, the longest-serving Democratic woman in the U.S. House, has a strong independent streak and has never shied from speaking her mind.</p>
+        <p class="preeln-paradata">Despite her long tenure, Kaptur had faced few serious political challenges until her northern Ohio district was redrawn in 2010, setting up a Democratic primary fight in March 2012 against U.S. Rep. Dennis Kucinich.</p>
+        <p class="preeln-paradata">Kaptur spent more than $1 million defeating Kucinich, running ran a campaign that emphasized her record of bringing federal money and projects back to the state. She also tried to link Kucinich with a former official accused of bribery and racketeering and accused him of ignoring his home district.</p>
+        <p class="preeln-paradata">The primary race created a rift in their longtime friendship. Kucinich said Kaptur's campaign was "lacking in integrity."</p>
+        <p class="preeln-paradata">While Kaptur has portrayed herself as a "workhorse" who isn't an attention-seeker, her independent streak isn't always under wraps.</p>
+        <p class="preeln-paradata">She was one of the last House Democrats to determine her vote on the 2010 health care reform bill &#8212; eventually voting for the measure after becoming convinced that the bill would not put public money toward abortions.</p>
+        <p class="preeln-paradata">She scolded Toyota President Akio Toyoda in Feburary 2010 after he apologized to Congress about deadly defects in his car company's popular models. "Where is the remorse?" she said.</p>
+        <p class="preeln-paradata">She voted for the 2009 economic stimulus plan, but afterward said it would not put enough people to work. "People want to work and this bill doesn't do that," she said.</p>
+        <p class="preeln-paradata">Kaptur also drew attention in January 2009 with a fiery floor speech during debate about the federal bank bailout when she urged homeowners facing foreclosure to force banks to produce their original mortgage paperwork.</p>
+        <p class="preeln-paradata">"Don't leave your home," she said. "Because you know what? When those companies say they have your mortgage, unless you have a lawyer that can put his or her finger on that mortgage, you don't have that mortgage, and you are going to find they can't find the paper up there on Wall Street."</p>
+        <p class="preeln-paradata">Kaptur was a vocal supporter of the government's bailout of the auto industry in 2009, saying it saved thousands of jobs and helped the nation recover from the recession.</p>
+        <p class="preeln-paradata">She has criticized 2012 Republican presidential candidate Mitt Romney for opposing taxpayer loans for General Motors and Chrysler, calling the auto industry the heart and soul of not only Ohio but also the nation's economy.</p>
+        <p class="preeln-paradata">"At the time, I thought how could the son of a former governor of Michigan ... say that?" Kaptur told The (Toledo) Blade at a United Auto Workers in January 2012.</p>
+        <p class="preeln-paradata">Kaptur has become a big promoter of solar energy, helping secure new solar installments at military bases in Ohio. Toledo is home to almost a dozen solar-related companies, including one of the biggest U.S. makers of solar panels.</p>
+        <p class="preeln-paradata">She is heavily involved in trade issues, making a name for herself when she openly criticized President Bill Clinton for his support of the North American Free Trade, saying it cost Ohio thousands of jobs to Mexico.</p>
+        <p class="preeln-paradata">Despite their disagreements, in 1996 Clinton called Kaptur "perhaps the most ferocious defender of middle-class economics and middle-class values in the Congress."</p>
+        <p class="preeln-paradata">That year, she gave a rousing speech on trade issues for Ross Perot's United We Stand group and afterward turned down the candidate's offer of a vice presidential nomination.</p>
+        <p class="preeln-paradata">She enjoys strong support from labor leaders who in 2005 urged her to run for governor. She decided instead to seek a 13th term.</p>
+        <p class="preeln-paradata">Kaptur has spoken out against allowing foreigners to make political contributions, and she was one of the first supporters of a memorial for World War II veterans.</p>
+        <p class="preeln-paradata">She has led efforts to recruit Democratic candidates to challenge Ohio's Republican incumbents, saying the Ohio Democratic Party "has to build a farm team for the future."</p>
+        <p class="preeln-paradata">Committee Assignments: Appropriations; Budget</p>
+        <p class="preeln-paradata">American Conservative Union Rating: 4</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: 90</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">Marcy Kaptur won her May 2014 primary, she will face Richard May in November.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on June 8, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_districts/OH.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__#9"><span class="bracket">[</span>districts in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../state_candidates/OH.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

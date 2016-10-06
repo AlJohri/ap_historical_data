@@ -1,0 +1,333 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/50215.jpg"><div class="preeln-entityname">Dave George Reichert </div>
+	  (Rep)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">202-225-8901 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field"> 425-455-3283  (Main campaign number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://www.house.gov/reichert/">http://www.house.gov/reichert/</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">&#160;</span><span class="field"><a href="http://www.davereichert.com/">http://www.davereichert.com/</a></span>
+</div>
+<a href="../finance/50215.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1950-8-29</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">Detroit Lakes, MN </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">Auburn, WA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Lutheran</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">2004</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Republican</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">House</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/WA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">WA</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">District:</span><span class="field"><a href="../profilesdistricts/WA08.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">District 8</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Incumbent</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2014</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          Concordia Lutheran University
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">AA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">Dave Reichert was born in Detroit Lakes, Minn., grew up in suburban Seattle and now lives in Auburn, Wash. He earned an associate degree from Concordia University in Portland.</p>
+        <p class="preeln-paradata">Reichert started his law enforcement career in 1972 as a patrol officer in south King County. He became a detective five years later and was named the lead investigator of what became the Green River serial killings in 1982.</p>
+        <p class="preeln-paradata">The Green River case would define Reichert's career. A break in the case came in 2001, early in his second term as King County sheriff, when new DNA technology led to the arrest of a longtime suspect who later pleaded guilty to killing 48 women.</p>
+        <p class="preeln-paradata">Reichert was elected to the U.S. House in 2004.</p>
+        <p class="preeln-paradata">He and his wife, Julie, have three children.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">Dave Reichert was a top target for Democrats in 2008, but he responded by burnishing his image as a centrist who will cross party lines and sometimes defy Republican political priorities.</p>
+        <p class="preeln-paradata">He has focused on initiatives to help veterans and the environment during the past two years. He continues to work with Washington's two Democratic U.S. senators toward an expansion of the Alpine Lakes Wilderness Area in the Cascades, with the most recent bill introduced in February 2011.</p>
+        <p class="preeln-paradata">Redistricting pushed his district further east from Seattle and into the more conservative, small towns of the Cascade foothills.</p>
+        <p class="preeln-paradata">Commentators called the redrawn district a perfect fit for Reichert because it pushed him further from the Seattle suburbs, which are now considered a swing territory, having elected Democrats to the Legislature, the presidency and the governor's office in recent elections.</p>
+        <p class="preeln-paradata">He continues to voice the Republican Party line on the health care law.</p>
+        <p class="preeln-paradata">In June 2012, he accused AARP of misleading Congress on the Affordable Care Act, saying the organization expressed support for the law despite opposition from its members.</p>
+        <p class="preeln-paradata">Reichert worked across party lines in 2009 to create fellowships for wounded or disabled veterans within the House.</p>
+        <p class="preeln-paradata">He spoke against assistance for the financial industry in the 2009 approximately $800 billion economic stimulus package, pointing to a lack of government oversight regarding the way taxpayer dollars are spent by corporations like American International Group.</p>
+        <p class="preeln-paradata">Reichert remains a steadfast supporter of free trade and was appointed in 2010 to the President's Export Council. He also played a role that year in getting emergency funding to fix the Howard Hanson Dam, which engineers warned could breach.</p>
+        <p class="preeln-paradata">Reichert underwent brain surgery in 2010 to remove blood clotted on the surface of his brain.</p>
+        <p class="preeln-paradata">Months before the 2010 primary, recordings came out of Reichert telling a group of GOP supporters that he has tailored his pro-environment votes to keep environmental groups and their money out of his races, but the recordings seemingly had no adverse effect on his showing.</p>
+        <p class="preeln-paradata">Reichert pledged in 2008 to take a year off from seeking budget earmarks, saying the moratorium was in protest of a budget-writing system that can hurt taxpayers and encourage corruption. He said he supports creation of a bipartisan committee to examine earmarks, hold public hearings and recommend changes that guarantee greater transparency and accountability.</p>
+        <p class="preeln-paradata">Reichert's second term featured a determined effort to shore up his green credentials. He was jubilant when President George W. Bush signed into law a new federal wilderness area in western Washington, a project Reichert and his predecessor, the late GOP Rep. Jennifer Dunn, both pursued.</p>
+        <p class="preeln-paradata">Reichert has proposed and supported law enforcement and Homeland Security measures, including a bill to provide financial aid to tribal governments to help them with information sharing, and domestic violence legislation.</p>
+        <p class="preeln-paradata">He is known locally for his role in capturing Green River-killer Gary Ridgway. Reichert was involved in the almost 20-year effort to catch the killer, starting when he was assigned to the beginnings of the case as a detective.</p>
+        <p class="preeln-paradata">He sold the movie rights to his book about the case, but was later ambivalent about the resulting made-for-TV production, which he said overplayed his role and didn't emphasize enough other detectives.</p>
+        <p class="preeln-paradata">Committee Assignments: Ways and Means</p>
+        <p class="preeln-paradata">American Conservative Union Rating: 42</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: 25</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">Dave Reichert won his August 2014 primary, he will face Jason Ritchie in November.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on August 7, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_districts/WA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__#8"><span class="bracket">[</span>districts in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../state_candidates/WA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

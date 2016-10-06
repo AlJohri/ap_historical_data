@@ -1,0 +1,328 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/257.jpg"><div class="preeln-entityname">Patrick 'Pat' Joseph Toomey </div>
+	  (Rep)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">202-224-4254 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">484-809-7994 (Main campaign number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://www.toomey.senate.gov/">http://www.toomey.senate.gov/</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">&#160;</span><span class="field"><a href="http://www.toomeyforsenate.com">http://www.toomeyforsenate.com</a></span>
+</div>
+<a href="../finance/257.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1961-11-17</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">Providence, RI </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">Zionsville, PA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Catholic</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">2010</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Republican</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">Senate</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/PA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">PA</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Incumbent</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2016</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          Harvard University
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">BA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">Pat Toomey was born in Providence, R.I., and resides in Zionsville, Pa. He earned a bachelor's degree from Harvard University in 1984.</p>
+        <p class="preeln-paradata">He worked as an investment banker with Chemical Bank and later at the British merchant bank Morgan Grenfell Co., rising to become vice president and director.</p>
+        <p class="preeln-paradata">In 1990, he founded Toomey Enterprises Inc., a restaurant business in Allentown, with his two brothers. He sold it in 2001.</p>
+        <p class="preeln-paradata">Toomey served in the U.S. House from 1999 to 2005, stepping down after three terms to honor his personal term-limit pledge. He narrowly lost the GOP Senate primary to Sen. Arlen Specter in 2004.</p>
+        <p class="preeln-paradata">He became president in 2005 of the Club for Growth, where he advocated conservative economic policies. He left in 2009 and began his campaign for Senate.</p>
+        <p class="preeln-paradata">Toomey and his wife, Kris, have three children.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">Pat Toomey was elected to Congress in 1998, succeeding retiring Democratic Rep. Paul McHale. He pledged to serve just three terms and touted his proposal for a 17 percent flat tax to replace what he considered a complex and unfair tax code.</p>
+        <p class="preeln-paradata">"A flat tax taxes all income one time and at one low rate &#8212; regardless of its source and regardless of how it is spent," he said. "It eliminates the loopholes, shelters and write-offs that make us all pay more."</p>
+        <p class="preeln-paradata">He also said current tax laws impede economic growth by discouraging investments that would improve productivity and wages.</p>
+        <p class="preeln-paradata">"Today's businesses, mired in countless restrictions, are forced to make decisions based on tax consequences rather than on business merits," he said.</p>
+        <p class="preeln-paradata">As a first-term congressman, Toomey became a key conservative voice on the budget, sponsoring successful legislation that guaranteed some budget surplus money would be used to reduce the national debt rather than for program spending. He also advocated privatizing Social Security.</p>
+        <p class="preeln-paradata">Toomey once supported abortion rights, although he opposed the use of federal funds for abortions and a form of late-term abortion denounced by critics as "partial-birth abortion." He later changed his position on abortion rights and now opposes them.</p>
+        <p class="preeln-paradata">Toomey in 2004 came within 17,200 votes, or 2 percentage points, of knocking off longtime incumbent and party-backed Republican Sen. Arlen Specter in the GOP Senate primary, riding a wave of conservative antipathy for the moderate senator.</p>
+        <p class="preeln-paradata">He left the House in 2005 and took the helm of the Club for Growth, an anti-tax group with Wall Street connections that helps finance the campaigns of pro-business candidates.</p>
+        <p class="preeln-paradata">He announced in 2008 he was considering a run for Pennsylvania governor. In early 2009, he switched his sights back to the Senate after conservatives became newly disenchanted with Specter's vote for the approximately $800 billion economic stimulus package backed by President Barack Obama.</p>
+        <p class="preeln-paradata">With polling showing a Toomey victory in a 2010 GOP primary, Specter switched parties in April 2009. The GOP eventually endorsed Toomey and he won the party's nomination in May 2010, the same month Specter lost in the state's Democratic primary.</p>
+        <p class="preeln-paradata">Toomey clearly relished his impact on the race. In a May 2009 speech, he told a Pennsylvania Press Club luncheon: "A kind of funny thing happened on the way to the Republican primary for U.S. Senate. I will confess I had every intention of beating Arlen Specter soundly in the primary. But I didn't know I was going to drive him clear out of the party."</p>
+        <p class="preeln-paradata">Toomey opposed the financial industry and auto industry bailouts of 2008 and 2009, the 2009 approximately $800 billion economic stimulus package and the 2010 federal health care reform bill, positions he's highlighted for his Pennsylvania constituents.</p>
+        <p class="preeln-paradata">Since his election, he has been at the forefront of attempts to balance the budget, calling for fiscal responsibility. As a senator, he introduced a 10-year balanced budget proposal that received more votes in the Senate than any other budget plan in 2011. He's also worked to cut federal red tape for local communities and job creators in Pennsylvania through his "Had Enough?" constituent services program.</p>
+        <p class="preeln-paradata">For a time, in the summer of 2012, his name came up in discussions as a possible running mate for Mitt Romney though he never raised it and he was not picked.</p>
+        <p class="preeln-paradata">Committee Assignments: Budget; Banking, Housing and Urban Affairs ; Commerce, Science and Transportation; Joint Economic</p>
+        <p class="preeln-paradata">American Conservative Union Rating: 90</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: 10</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">Pat Toomey is not up for re-election in 2014.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on June 10, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_candidates/PA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

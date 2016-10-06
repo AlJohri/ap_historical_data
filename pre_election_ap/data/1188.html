@@ -1,0 +1,341 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/1188.jpg"><div class="preeln-entityname">Mark Lunsford Pryor </div>
+	  (Dem)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">202-224-2353 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">501-353-1116 (Main campaign number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://www.pryor.senate.gov">http://www.pryor.senate.gov</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">&#160;</span><span class="field"><a href="http://www.pryorforsenate.com/">http://www.pryorforsenate.com/</a></span>
+</div>
+<a href="../finance/1188.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1963-1-10</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">Fayetteville, AR </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">Little Rock, AR</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Christian</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">2002</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Democratic</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">Senate</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/AR.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">AR</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Incumbent</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2014</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          University of Arkansas
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">BA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+<h2 class="preeln-secthead">Graduate education: 
+          University of Arkansas
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">JD</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">Mark Pryor was born in Fayetteville, Ark., and now lives in Little Rock. He attended the University of Arkansas where he earned a bachelor's degree in history and a law degree.</p>
+        <p class="preeln-paradata">Pryor's father, David, was Arkansas' governor from 1975 to 1979, and served as a U.S. senator for 18 years before retiring in 1997.</p>
+        <p class="preeln-paradata">Mark Pryor worked in private practice at the Wright, Lindsey and Jennings law firm in Little Rock for eight years. He was elected to the state House in 1990, serving two terms.</p>
+        <p class="preeln-paradata">He was elected Arkansas' attorney general in 1998, and was elected to the U.S. Senate in 2002.</p>
+        <p class="preeln-paradata">Pryor and his wife, Jill, have two children.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">Mark Pryor has managed to separate himself from the political legacy of his father, David Pryor, who was governor of Arkansas and one of the state's longtime senators. He easily won his second term to the U.S. Senate, receiving nearly 80 percent of the vote.</p>
+        <p class="preeln-paradata">Knocking down rumors that he was considering a run for governor or retiring, Pryor in early 2012 announced that he planned to seek a third term in the Senate in 2014.</p>
+        <p class="preeln-paradata">Pryor's moderate stances have helped him avoid a Republican wave that has hit Arkansas in recent years, but it also has made him more vulnerable as he prepares for his 2014 re-election bid.</p>
+        <p class="preeln-paradata">Pryor voted for the 2010 health care reform bill that passed the Senate in 2009, but joined fellow Democratic Sen. Blanche Lincoln in voting against a companion measure that was signed into law by President Barack Obama in March 2010.</p>
+        <p class="preeln-paradata">Pryor said he believed the companion bill fell short of the goals to make health care affordable, reliable and accessible.</p>
+        <p class="preeln-paradata">"As more and more details of the package were released, I spent considerable time weighing the benefits and drawbacks to Arkansas," Pryor said after his vote. "In the end, I believe this legislation is a step we don't need to take."</p>
+        <p class="preeln-paradata">Pryor's also made other high-profile breaks with the Obama administration. He was the only Democrat in the Senate in 2012 to join with Republicans to block legislation forcing the nation's top earners to pay at least 30 percent of their income in taxes.</p>
+        <p class="preeln-paradata">Pryor voted in 2009 for the approximately $800 billion economic stimulus package backed by Obama. He voted in 2008 for the $700 billion financial industry bailout backed by President George W. Bush.</p>
+        <p class="preeln-paradata">Pryor pushed in 2008 for tougher regulation of consumer products, and Bush signed into law a measure sponsored by Pryor that imposes the toughest lead standards in the world on children's products. Pryor pushed for the new restrictions in response to the recall of millions of children's items.</p>
+        <p class="preeln-paradata">In 2007 he called for a military withdrawal from Iraq but said details of the pullout should be kept secret.</p>
+        <p class="preeln-paradata">Pryor has emerged in the Senate as a swing vote, particularly on judicial nominations. He was among 14 senators in 2005 who averted a Senate showdown on judicial nominees when they crafted an agreement to oppose nominees only under "extraordinary circumstances."</p>
+        <p class="preeln-paradata">Pryor downplayed his party identity during his 2002 election campaign. He kept Democratic issues such the flagging economy and soaring prescription drug costs at his campaign's forefront, yet he embraced Bush's fight against terrorism and supported capital gains tax cuts that many Democrats opposed.</p>
+        <p class="preeln-paradata">"Unlike some Democrats in Washington, I believe in strengthening the military," began one campaign ad in which Pryor wore a camouflage hunting outfit, toted a hunting rifle and pledged to protect gun owners' rights. Another ad showed Pryor holding the Bible.</p>
+        <p class="preeln-paradata">Pryor voted in favor of military action against Iraq, but he became more critical of the government's handling of the occupation, calling on the Bush administration to be more specific about its post-war plans.</p>
+        <p class="preeln-paradata">During his time as Arkansas' attorney general, he began a do-not-call list for residents so they could avoid getting calls from telemarketers.</p>
+        <p class="preeln-paradata">He also pushed for successful legislation to increase penalties for nursing home deaths and a state law that requires removal of harmful children's products from daycare facilities.</p>
+        <p class="preeln-paradata">Committee Assignments: Commerce, Science, and Transportation; Homeland Security and Governmental Affairs; Select Ethics; Rules and Administration; Small Business and Entrepreneurship; Appropriations</p>
+        <p class="preeln-paradata">American Conservative Union Rating: 20</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: 75</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">Mark Pryor won his May 2014 primary, he will face Tom Cotton in November.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on June 5, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_candidates/AR.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

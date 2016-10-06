@@ -1,0 +1,2 @@
+| ra_number  |re_number  |dist_type|dist_number|dist_name   |dist_precincts|st_postal|
+

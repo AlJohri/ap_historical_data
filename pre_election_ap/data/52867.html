@@ -1,0 +1,335 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/52867.jpg"><div class="preeln-entityname">Robert Julian Bentley </div>
+	  (Rep)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">334-242-7100 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://governor.alabama.gov/">http://governor.alabama.gov/</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">&#160;</span><span class="field"><a href="http://bentleyforgovernor.com/">http://bentleyforgovernor.com/</a></span>
+</div>
+<a href="../finance/52867.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1943-2-3</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">Columbiana, AL </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">Tuscaloosa, AL</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Southern Baptist</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">2010</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Republican</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">Governor</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/AL.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">AL</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Incumbent</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2014</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          University of Alabama
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">BS</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+<h2 class="preeln-secthead">Graduate education: 
+          University of Alabama at Birmingham
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">MD</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">Robert Bentley was born in Columbiana, Ala., and now resides in Tuscaloosa. He earned a bachelor's degree from the University of Alabama and a medical degree from the University of Alabama-Birmingham.</p>
+        <p class="preeln-paradata">Bentley joined the Air Force in 1969 and was commissioned as a captain. He was stationed at Pope Air Force Base in North Carolina, where he served as a medical officer and interim commander of the base hospital.</p>
+        <p class="preeln-paradata">Bentley did a three-year residency in dermatology at the University of Alabama and then set up a medical practice in Tuscaloosa. His practice grew into Alabama Dermatology Associates. He retired in 2009 after entering the governor's race.</p>
+        <p class="preeln-paradata">He was elected to the Alabama House in 2002 and re-elected in 2006. He was elected governor in 2010.</p>
+        <p class="preeln-paradata">Bentley and his wife, Dianne, have four grown sons.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">Robert Bentley's first two years as governor were marked by deadly tornadoes, budget problems, mixed success with his own party in the Legislature, and an industrial recruitment prize that drew international attention to Alabama.</p>
+        <p class="preeln-paradata">On April 27, 2011 &#8212; Bentley's 100th day in office &#8212; tornadoes tore across the state, claiming 253 lives. Bentley spent weeks traveling the state to comfort victims and oversee the recovery. His response drew high marks in polls.</p>
+        <p class="preeln-paradata">In Montgomery, Bentley refused to support new taxes and had to cut spending for most state agencies due to declining tax revenue and the need for more money to keep the Medicaid program operating.</p>
+        <p class="preeln-paradata">He pushed for and got what he called the nation's toughest immigration law. The law contained provisions not in Arizona's law, and civil rights and immigrant groups joined the Justice Department in challenging it.</p>
+        <p class="preeln-paradata">Bentley also supported and signed laws in April 2012 to make current state workers pay more toward their pension benefits and to reduce the pension benefits for future state workers. But the Republican governor couldn't hold enough votes together to get the Republican-controlled Legislature to legalize charter schools or approve all the new tax breaks he wanted to offer companies opening plants in Alabama.</p>
+        <p class="preeln-paradata">Despite that loss, Airbus chose Mobile, Ala., in July 2012 for its first North American aircraft assembly plant &#8212; a $600 million investment that will employ 1,000 when it reaches full production in 2017. The selection made Bentley a celebrity the following week at the Farnborough Air Show in England.</p>
+        <p class="preeln-paradata">Before his election, few people gave Bentley any chance of winning. The two-term state representative entered a crowded field for the 2010 gubernatorial race with little notice. Only one reporter showed up at his campaign announcement in Tuscaloosa and Bentley's wife, Dianne, admits that even she wondered what he was doing.</p>
+        <p class="preeln-paradata">"Everybody wanted something different. They had become tired of politicians," his wife said.</p>
+        <p class="preeln-paradata">Bentley's campaign began to catch on when he promised to serve without a salary until Alabama's near record unemployment falls to normal levels.</p>
+        <p class="preeln-paradata">He finished second among seven candidates in the 2010 Republican primary, then defeated Bradley Byrne, who was favored by sitting Alabama Gov. Bob Riley and much of the Republican establishment, in the runoff.</p>
+        <p class="preeln-paradata">Bentley portrayed himself in the lead-up to the runoff for the GOP nomination as an outsider who would shake up state politics. He also received helped from the state teachers' organization, which attacked Byrne with more than $1 million in critical ads. He won 56 percent of the vote, reflecting the anti-incumbent mood of voters.</p>
+        <p class="preeln-paradata">Bentley attracted few contributions during the primary campaign because the business groups that normally fund GOP candidates in Alabama did not back him. He ran his campaign largely with $1.9 million in personal loans.</p>
+        <p class="preeln-paradata">But money started flowing in the general election campaign against the Democratic nominee, state Agriculture Commissioner Ron Sparks, and he jumped to a 3-to-1 financial advantage. He ended up winning with 58 percent of the vote and led a GOP ticket that won every statewide race.</p>
+        <p class="preeln-paradata">Nearly halfway into his term, Bentley had seen Alabama's unemployment rate drop from a high of 10 percent in July 2011 to 7.8 percent a year later, but he was still a long way from the 5.2 percent figure where he will start to draw a salary.</p>
+        <p class="preeln-paradata">American Conservative Union Rating: Not rated</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: Not rated</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">Robert Bentley won his June 2014 primary, he will face Parker Griffith in November.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on June 12, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_candidates/AL.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

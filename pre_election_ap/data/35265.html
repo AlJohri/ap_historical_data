@@ -1,0 +1,348 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/35265.jpg"><div class="preeln-entityname">Patrick Timothy McHenry </div>
+	  (Rep)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">202-225-2576 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">828-441-2006 (Main campaign number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://mchenry.house.gov/">http://mchenry.house.gov/</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">&#160;</span><span class="field"><a href="http://www.mchenryforcongress.com">http://www.mchenryforcongress.com</a></span>
+</div>
+<a href="../finance/35265.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1975-10-22</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">Mecklenburg, NC </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">Denver, NC</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Catholic</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">2004</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Republican</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">House</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/NC.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">NC</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">District:</span><span class="field"><a href="../profilesdistricts/NC10.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">District 10</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Incumbent</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2014</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          North Carolina State University
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">Attended</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          Belmont Abbey College
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">BA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">Patrick McHenry was born in Mecklenburg, N.C., and resides in Cherryville. He attended North Carolina State University and earned a bachelor's degree from Belmont Abbey College in 1999.</p>
+        <p class="preeln-paradata">McHenry served as chairman of the North Carolina Federation of College Republicans and national treasurer of the College Republican National Committee. While in college, he worked on Robin Hayes' 1996 gubernatorial campaign and was the Republican nominee in 1998 for a district seat in the North Carolina House.</p>
+        <p class="preeln-paradata">He was an executive with a Washington, D.C.-based consulting firm and worked on the 2000 presidential campaign of George W. Bush, who later appointed him special assistant to the U.S. Secretary of Labor.</p>
+        <p class="preeln-paradata">McHenry is a licensed real estate broker and the owner of McHenry Real Estate.</p>
+        <p class="preeln-paradata">He was elected to the U.S. House in 2004.</p>
+        <p class="preeln-paradata">McHenry married his wife, Giulia, in 2010.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">Patrick McHenry has emerged as a staunch conservative for a new generation. He suggested in 2010 putting the face of former President Ronald Reagan on the $50 bill, replacing the likeness of Ulysses S. Grant, the former Union general and president.</p>
+        <p class="preeln-paradata">"Every generation needs its own heroes," McHenry said.</p>
+        <p class="preeln-paradata">McHenry was 29 and the youngest member of the congressional delegation when he took office in 2005. He had served a single term in the North Carolina General Assembly before winning the seat of outgoing, nine-term Rep. Cass Ballenger in the state's Republican-majority 10th Congressional District.</p>
+        <p class="preeln-paradata">Brash and enthusiastic with a head of graying hair that makes him look more mature than his age, McHenry is a strong believer in an aggressive conservative agenda.</p>
+        <p class="preeln-paradata">In the November 2012 general election, McHenry faces a challenge from state Rep. Patsy Keever. He beat out challengers Ken Fortenberry, a newspaper publisher, and Cramerton resident Don Peterson in the May 2012 Republican primary.</p>
+        <p class="preeln-paradata">In July 2012, he voted with a majority in the House to repeal the 2010 health care reform bill, a largely symbolic vote following the Supreme Court decision upholding the legislation. "Increasing taxes on hard-working Americans and small businesses by nearly $800 billion over the next decade will not fix our healthcare system," he said in a statement.</p>
+        <p class="preeln-paradata">He voted in 2012 to hold Attorney General Eric Holder in contempt of Congress for refusing to turn over documents related to the Justice Department's Operation Fast and Furious.</p>
+        <p class="preeln-paradata">McHenry joined with fellow Republicans in 2009 to oppose the passage of the approximately $800 billion economic stimulus package. He also opposed the financial industry bailouts of 2008 and 2009.</p>
+        <p class="preeln-paradata">In March 2012, after the media reported a growing trend of employers demanding that job applicants provide passwords to their private Facebook accounts to check for embarrassing or damaging information, McHenry drafted legislation that would prevent this.</p>
+        <p class="preeln-paradata">"Requiring an individual to provide access to their personal social media account is an invasion of privacy, plain and simple," a McHenry spokesman said.</p>
+        <p class="preeln-paradata">He broke from Republican leadership in 2005 by upholding a campaign promise to vote against the Central American Free Trade Agreement. He did not attend when then-President George W. Bush visited a college in his home county to promote CAFTA. McHenry had called the North American Free Trade Agreement that preceded it "disastrous" for industries such as textiles, furniture and other manufacturing sectors that were a big part of his district's economy.</p>
+        <p class="preeln-paradata">McHenry says he believes taxes are too high at all levels of government. As a state legislator, he never voted for a tax increase.</p>
+        <p class="preeln-paradata">He pushed in the Statehouse for medical malpractice reform, allowing small business owners to pool their health benefits and using the community college system as an engine for job training and growth.</p>
+        <p class="preeln-paradata">McHenry said when he first started telling people he was thinking about running for the U.S. House, the reaction "wasn't applause. It was laughter. They did not take me seriously."</p>
+        <p class="preeln-paradata">Despite lacking the experience, funding and connections of his GOP primary rivals, McHenry waged a grass-roots campaign to win the blue-collar, conservative district in the Blue Ridge foothills of western North Carolina.</p>
+        <p class="preeln-paradata">He has emphasized his Christian-based conservative views and opposition to same-sex marriage, human embryonic stem cell research, abortion, taxes and gun control.</p>
+        <p class="preeln-paradata">Within a year of joining Congress, he described the body as "a much more sophisticated junior high school."</p>
+        <p class="preeln-paradata">"There are the nice guys that everybody likes, the jocks, the geeks, the bullies &#8212; they're all here. It's a representative democracy," he said.</p>
+        <p class="preeln-paradata">Committee Assignments: Financial Services; Oversight and Government Reform</p>
+        <p class="preeln-paradata">American Conservative Union Rating: 96</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: 5</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">Patrick McHenry won his May 2014 primary, he will face Tate MacQueen in November.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on June 9, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_districts/NC.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__#10"><span class="bracket">[</span>districts in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../state_candidates/NC.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

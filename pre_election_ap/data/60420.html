@@ -1,0 +1,329 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/60420.jpg"><div class="preeln-entityname">Nimrata 'Nikki' Randhawa Haley </div>
+	  (Rep)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field"> 803-734-2100 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">803-834-7065  (Main campaign number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://governor.sc.gov">http://governor.sc.gov</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">&#160;</span><span class="field"><a href="http://www.nikkihaley.com/">http://www.nikkihaley.com/</a></span>
+</div>
+<a href="../finance/60420.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1972-1-20</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">Bamberg, SC </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">Lexington, SC</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Methodist</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">2010</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Republican</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">Governor</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/SC.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">SC</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Incumbent</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2014</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          Clemson University
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">BS</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">Nikki Haley was born in Bamberg, S.C. She lives in the Governor's Mansion and still owns a home outside Lexington, where her children attend school. She earned a bachelor's in accounting from Clemson University.</p>
+        <p class="preeln-paradata">Haley is the daughter of Indian immigrants and grew up in rural Bamberg, where she says her family was the sole Indian family. She was raised in the Sikh faith and baptized a Methodist. She says she wants her children to know both faith traditions.</p>
+        <p class="preeln-paradata">Haley worked as an accountant for a Charlotte, N.C., recycling company and returned to help run the family's business, the clothing store Exotica, which she says grew into a multimillion-dollar enterprise.</p>
+        <p class="preeln-paradata">When the store closed, the CEO of Lexington Medical Center created a paid position for her in August 2008 working as a fundraiser for the hospital's foundation. She negotiated a severance agreement in April 2010 after her bosses wanted to let her go for not coming to work amid her election campaign that year.</p>
+        <p class="preeln-paradata">Haley also worked as a consultant for the engineering firm Wilbur Smith Inc. from 2007 to 2009.</p>
+        <p class="preeln-paradata">She won her first election to the state House in 2004 and was re-elected in 2006 and 2008. She announced her bid for governor in May 2009 and won election in 2010, becoming the state's first female governor and its first minority governor.</p>
+        <p class="preeln-paradata">She and her husband, Michael, have two children.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">Nikki Haley took office in January 2011, becoming South Carolina's first female governor and its first minority governor. She also became the nation's second Indian-American chief executive of a state.</p>
+        <p class="preeln-paradata">The historic nature of her win in the Deep South, along with her rapid-fire speaking abilities, catapulted her onto the national scene even before she took office. The attention led to a book deal within several months. Promotion of her memoir, "Can't Is Not an Option," released in April 2012, included book tour stops in Washington and New York. Photos of her in Vogue soon followed.</p>
+        <p class="preeln-paradata">The national recognition, along with her early backing and out-of-state campaigning for GOP presidential nominee Mitt Romney, generated speculation that she was on the short list to be Romney's running mate. But Haley repeatedly dismissed the question, saying she would refuse any job he offered and would finish her term.</p>
+        <p class="preeln-paradata">Haley also holds the distinction of being the first South Carolina governor to be under investigation by legislators. The Republican-controlled House Ethics Committee twice in two months cleared Haley of charges that she improperly lobbied and used her position for personal gain while a member of the state House.</p>
+        <p class="preeln-paradata">The complaint, which focused on her work as a hospital fundraiser and a consultant for an engineering firm, was brought by long-time GOP activist and former Board of Economic Advisors Chairman John Rainey.</p>
+        <p class="preeln-paradata">The Ethics Committee initially voted in May 2012 to dismiss the charges. But the panel reopened the case four weeks later, after Rainey successfully appealed and a legislator requested a reconsideration to avoid the appearance of a sham. The committee cleared Haley again in June 2012 after hearing 12 hours of testimony, which included a surprise appearance by Haley herself.</p>
+        <p class="preeln-paradata">She came into office as a tea party favorite, buoyed by an endorsement during the 2010 primary from former vice presidential candidate Sarah Palin. However, though her star rose nationally after her election, Haley's support within the state shrank. Many tea party activists who helped elect her quickly distanced themselves, saying they were disappointed by her job performance.</p>
+        <p class="preeln-paradata">Haley backed Romney in December 2011, a month before her state's voters chose former House Speaker Newt Gingrich in the presidential primary. Critics, including former supporters, have accused Haley of becoming a member of the entrenched system she has said she despises.</p>
+        <p class="preeln-paradata">In her book, Haley wrote that her disdain for such politics includes the appointment of financial backers. However, she appointed one of her donor's to chair the board of the Department of Health and Environmental Control, an appointment that drew fire after the board approved a permit &#8212; initially rejected by its staff &#8212; allowing the expansion of the port of Savannah, Ga., on the river shared by the two states.</p>
+        <p class="preeln-paradata">The permit's approval prompted senators to subpoena Haley's staff to testify before a committee. Haley repeatedly said she asked the board's chairman only to consider Georgia's appeal and that she did not engage in any pressuring. The final outcome of the permit remains tied up in court.</p>
+        <p class="preeln-paradata">Haley also faced backlash when she ousted popular University of South Carolina benefactor Darla Moore from the school's board of trustees and replaced her with a male campaign donor. She also saw the approval of her choice to lead the Budget and Control Board, which oversees the state's bureaucracy: Eleanor Kitzman, a close friend of Haley's whom Haley credits in her book with getting her involved in politics.</p>
+        <p class="preeln-paradata">Haley insists she did not appoint people because they are donors: "You get people who think like you, who are loyal, who you know will always have that pro-business mindset. If they happen to be donors, yes, but you're going for that thought process," she told The Associated Press at the time of her book release.</p>
+        <p class="preeln-paradata">Haley promised on the campaign trail that she would have a better working relationship with the Republican-controlled Legislature than did her political mentor, former GOP Gov. Mark Sanford. But contention remains. One of the first public disputes was over whether to uphold incentives, such as a five-year hiatus from in-state online sales taxes, than Sanford promised to Internet retailer Amazon.</p>
+        <p class="preeln-paradata">Legislators said Haley almost single-handedly killed the deal and its promised 2,000 full-time jobs. However, the Legislature pushed through a bill in June 2011 granting the incentives and, as promised, Haley let it become law without her signature.</p>
+        <p class="preeln-paradata">Since that fight, Haley's administration has not hesitated to provide incentives to bring jobs to the state, something that has prompted criticism from tea party activists who believe the incentives amount to corporate welfare.</p>
+        <p class="preeln-paradata">American Conservative Union Rating: Not rated</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: Not rated</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">Nikki Haley won her June 2014 primary, she will face Vincent Sheheen in November.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on June 17, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_candidates/SC.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

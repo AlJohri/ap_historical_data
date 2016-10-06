@@ -1,0 +1,325 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/501.jpg"><div class="preeln-entityname">Clement 'Butch' Leroy Otter </div>
+	  (Rep)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">208-334-2100 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">208-424-8683 (Main campaign number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://gov.idaho.gov/">http://gov.idaho.gov/</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">&#160;</span><span class="field"><a href="http://otter4idaho.com/">http://otter4idaho.com/</a></span>
+</div>
+<a href="../finance/501.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1942-5-3</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">Caldwell, ID </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">Star, ID</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Catholic</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">2006</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Republican</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">Governor</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/ID.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">ID</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Incumbent</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2014</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          College of Idaho
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">BA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">Butch Otter was born in Caldwell, Idaho, and resides in Star. He spent three semesters studying for the priesthood at St. Martin's Abby in Olympia, Wash., before earning a bachelor's in political science from the College of Idaho, now known as the Albertson College of Idaho.</p>
+        <p class="preeln-paradata">Otter served in the Idaho Army National Guard's 116th Armored Cavalry from 1968 to 1973, attending intelligence and reconnaissance school at Fort Knox, Ky., in 1968.</p>
+        <p class="preeln-paradata">Otter is a former president of Simplot International Inc. and a former director of Farmers and Merchants State Bank. He has a sizable interest in Western Capital Associates.</p>
+        <p class="preeln-paradata">He was lieutenant governor for 14 years before being elected to Congress in 2000. He was elected governor in 2006 and re-elected in 2010.</p>
+        <p class="preeln-paradata">Otter married his second wife, Lori, in 2006. He has four children from a previous marriage.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">Butch Otter's guiding philosophy during most of his political life has been steered by a libertarian bent and a commitment to hold the federal government in check.</p>
+        <p class="preeln-paradata">He padded his anti-federal resume in early in 2009 when he made national headlines by expressing doubts that he would let Idaho accept federal economic stimulus money. Ultimately he changed his mind, and formed a panel to chart a strategy for accepting and spending the state's $1.2 billion share of the federal funds. His caveat: Don't use federal cash to pay for new or expanded programs that the state might be liable for funding in the future.</p>
+        <p class="preeln-paradata">In 2010, after being sworn in for his second term, Otter became the first governor to sign legislation authorizing a state to sue the federal government over the 2010 health care reform bill backed by President Barack Obama. Idaho later joined the coalition of states that argued the case all the way to the U.S. Supreme Court.</p>
+        <p class="preeln-paradata">"This thing is so convoluted that it wouldn't surprise me if they don't end up violating the Third Amendment of the Constitution, put a soldier in your house, just to make sure you buy the insurance," Otter said at a press conference in the Idaho Capitol in March 2010. "It's a takeover of a health care system that's provided the best health care in the world."</p>
+        <p class="preeln-paradata">He's taken federal officials to task for introducing wolves into Idaho, and in 1987, when he served as lieutenant governor, he vetoed raising the state's drinking age to 21. His reason: Washington, D.C., was forcing the requirement on Idaho.</p>
+        <p class="preeln-paradata">Otter easily won a second term in the governorship in November 2010, and as recently as December 2011 he began raising money for a run at a third term in 2014.</p>
+        <p class="preeln-paradata">In 2011, he and Superintendent of Public Instruction Tom Luna successfully pushed through a series of education reforms, including limits on teacher's union bargaining and requirements that every student take online courses before they graduate.</p>
+        <p class="preeln-paradata">Otter, once an avid jogger and rodeo cowboy, has proved he can deflate criticism and succeed in Idaho politics while overcoming personal foibles.</p>
+        <p class="preeln-paradata">He won an unprecedented fourth term as lieutenant governor after a 1993 drunken driving conviction. He then lost a protracted dispute later in the decade with the Environmental Protection Agency after he converted a swamp near the Boise River into a pond, which the EPA said amounted to destruction of a wetland without a modification permit. Otter ultimately paid a $50,000 fine to put the episode behind him &#8212; with little apparent damage to his career.</p>
+        <p class="preeln-paradata">"He has so much charm and charisma, and he's obscenely handsome," said Caldwell livestock dealer Ralph Smeed, a libertarian activist who helped shape Otter's philosophy on government.</p>
+        <p class="preeln-paradata">Otter has also made a mark in conservative Idaho for his libertarian, limited government positions. In his first term in Congress, he made national headlines in 2001 as one of just three Republicans to vote against the Patriot Act &#8212; a clear nod to his libertarian roots. As governor, however, he has put more emphasis on his business resume as a former executive &#8212; especially at a time when Idaho's economic growth has ground to a halt due to layoffs and the slumping housing market.</p>
+        <p class="preeln-paradata">The gregarious Otter briefly flirted with becoming a priest and once described abandoning his priestly intentions as a decision prompted by a lack of upward mobility.</p>
+        <p class="preeln-paradata">"When they told me I couldn't be pope, I said, "The hell with it," Otter told a group in 2007.</p>
+        <p class="preeln-paradata">American Conservative Union Rating: Not rated</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: Not rated</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">Butch Otter won his May 2014 primary, he will face A.J. Balukoff in November.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on June 10, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_candidates/ID.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

@@ -1,0 +1,12 @@
+| ra_number  |re_number  |dist_type|dist_number|dist_name   |dist_precincts|st_postal|
+|  28213|  27016|AtLarge  |901|At Large|   871|MT   |
+|  28213|  27017|PLEO |902|PLEO|   871|MT   |
+|  28213|  27018|DD   |101|Delegate District West  |   472|MT   |
+|  28213|  27019|DD   |102|Delegate District East  |   399|MT   |
+|  28219|  27016|AtLarge  |901|At Large|   871|MT   |
+|  33748|  32014|AtLarge  |901|At Large|  1633|NM   |
+|  42208|  42006|AtLarge  |901|At Large|   762|SD   |
+|  42231|  42005|CD   |  1|Congressional District 1|   762|SD   |
+|  42231|  42006|AtLarge  |901|At Large|   762|SD   |
+|  42231|  42007|PLEO |902|PLEO|   762|SD   |
+

@@ -1,0 +1,343 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/1099.jpg"><div class="preeln-entityname">Frank James 'Jim' Sensenbrenner Jr.</div>
+	  (Rep)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">202-225-5101 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">414-967-9292 (Main campaign number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://sensenbrenner.house.gov/">http://sensenbrenner.house.gov/</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">&#160;</span><span class="field"><a href="http://www.sensenbrenner.org">http://www.sensenbrenner.org</a></span>
+</div>
+<a href="../finance/1099.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1943-6-14</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">Chicago, IL </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">Menomonee Falls, WI</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Episcopalian</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">1978</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Republican</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">House</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/WI.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">WI</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">District:</span><span class="field"><a href="../profilesdistricts/WI05.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">District 5</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Incumbent</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2014</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          Stanford University
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">BA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+<h2 class="preeln-secthead">Graduate education: 
+          University of Wisconsin - Madison
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">JD</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">Jim Sensenbrenner was born in Chicago, the heir to paper manufacturer Kimberly-Clark Corp. He currently lives in Menomonee Falls, Wis. He earned a bachelor's degree from Stanford University and a law degree from the University of Wisconsin.</p>
+        <p class="preeln-paradata">Sensenbrenner was a staff assistant to then-Rep. J. Arthur Younger of California in 1965. He practiced law and served in the Wisconsin Assembly, from 1969 to 1974, and the state Senate, from 1975 to 1979. He was first elected to the U.S. House in 1978 and has been re-elected ever since.</p>
+        <p class="preeln-paradata">Sensenbrenner announced in August 2010 he had prostate cancer. His office said the cancer was caught before it spread out of his prostate gland and he planned to undergo radiation therapy.</p>
+        <p class="preeln-paradata">Sensenbrenner and his wife, Cheryl, have two sons.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">Jim Sensenbrenner is combative, unyielding and blunt &#8212; all qualities he used to bolster his influence when he served for six years as the chairman of the House Judiciary Committee.</p>
+        <p class="preeln-paradata">Sensenbrenner sided with his fellow Republicans and voted against the 2010 health care reform bill saying he feared what another government entitlement program would do to the nation. He criticized President Barack Obama for not taking him up on his offer to help craft pieces of the legislation. He vowed to repeal the law.</p>
+        <p class="preeln-paradata">He serves on the House Judiciary Committee and is the vice chairman of the Committee on Science and Technology.</p>
+        <p class="preeln-paradata">At a committee hearing in 2011 he told Attorney General Eric Holder he could face impeachment if Holder failed to fully investigate a flawed arms-trafficking investigation called Operation Fast and Furious.</p>
+        <p class="preeln-paradata">Sensenbrenner helped lead the House effort to impeach U.S. District Judge G. Thomas Porteus of Louisiana. Porteus was accused of taking kickbacks, filing a fraudulent bankruptcy and lying to Congress. The House voted unanimously to impeach him in March 2010.</p>
+        <p class="preeln-paradata">Sensenbrenner co-introduced a bill with 18 other Republicans that would require the U.S. Department of Justice to consult with national intelligence officials and the secretary of defense before giving terrorists their Miranda rights. He also questioned NASA Administrator Charles F. Bolden Jr. during an appearance before the Committee on Science and Technology about why the agency spent $10.3 billion on the Constellation program only to have Obama scrap it. He called the move wasteful.</p>
+        <p class="preeln-paradata">He ruffled some feathers in 2011 when, during a private conversation about Michelle Obama and her efforts to combat childhood obesity, he reportedly made a comment about "her big butt." He later said he apologized to the first lady.</p>
+        <p class="preeln-paradata">He announced in July 2010 he would work personally with the Federal Aviation Administration to ensure better communication between air traffic controllers after a flight he was on in June had to perform an evasive maneuver to avoid a collision with another plane over Washington, D.C., during a thunderstorm.</p>
+        <p class="preeln-paradata">He's also been active in increasing his role dealing with environmental issues. Sensenbrenner served as the ranking member of the Select Energy Independence and Global Warming Committee. He sponsored a bipartisan bill in 2009 to establish a research and development program for heavy-duty plug-in hybrid vehicles, and in December 2008 he traveled to Poland to be the official U.S. observer to the United Nations Framework Convention on Climate Change.</p>
+        <p class="preeln-paradata">In the 2008 legislative session, Sensenbrenner also authored legislation requiring doctors to give information about caring for special-needs children to parents whose babies could be born with Down syndrome.</p>
+        <p class="preeln-paradata">Sensenbrenner has pushed immigration reform through the REAL ID Act, which requires states to verify that people who apply for a driver's license are in the country legally. He also sponsored a controversial immigration bill that would have made it a felony to be in the United States illegally.</p>
+        <p class="preeln-paradata">Sensenbrenner denounced an Obama administration policy in June 2012 that acted to make illegal immigrants immune from deportation if they were brought to the U.S. before they turned 16 and are younger than 30, have been in the country for at least five continuous years, have no criminal history, graduated from a U.S. high school or earned a GED diploma or certificate, or served in the military.</p>
+        <p class="preeln-paradata">"The president's amnesty will have lasting effects. It is offensive to the millions of Americans still out of work. It rewards law-breaking. And it's deeply unfair to those who came to this country legally," he said.</p>
+        <p class="preeln-paradata">He was co-sponsor of a bill that sought to undercut a 2005 Supreme Court ruling that gives state and local governments eminent domain authority to seize private property for economic development projects. As a result of the ruling, he said in 2012, the "government's power of eminent domain has become almost limitless, providing citizens with few means to protect their property."</p>
+        <p class="preeln-paradata">Some of his considerable status diminished when he lost the chairmanship of the Judiciary Committee in 2007, both because of GOP term limits and the Democrats' takeover of the House. He also lost a bid to become the top Republican on the Science, Space, and Technology Committee, a panel he once chaired.</p>
+        <p class="preeln-paradata">Committee Assignments: Science, Space, and Technology; Judiciary</p>
+        <p class="preeln-paradata">American Conservative Union Rating: 92</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: 5</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">Jim Sensenbrenner won his August 2014 primary, he will face Chris Rockwood in November.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on August 14, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_districts/WI.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__#5"><span class="bracket">[</span>districts in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../state_candidates/WI.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

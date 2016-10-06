@@ -1,0 +1,323 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/899.jpg"><div class="preeln-entityname">Mary Loretta Landrieu </div>
+	  (Dem)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">202-224-5824 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://www.landrieu.senate.gov/">http://www.landrieu.senate.gov/</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">&#160;</span><span class="field"><a href="http://www.marylandrieu.com">http://www.marylandrieu.com</a></span>
+</div>
+<a href="../finance/899.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1955-11-23</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">Arlington, VA </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">New Orleans, LA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Catholic</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">1996</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Democratic</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">Senate</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/LA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">LA</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Incumbent</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2014</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          Louisiana State University
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">BA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">Mary Landrieu was born in Arlington, Va., and raised in New Orleans, where she currently resides. She earned a bachelor's degree from Louisiana State University in 1977.</p>
+        <p class="preeln-paradata">Her father, Moon Landrieu, served as mayor of New Orleans, secretary of Housing and Urban Development under President Jimmy Carter and as a state appeal court judge. Her brother Mitch served in the state Legislature and as lieutenant governor before becoming New Orleans' mayor in 2010.</p>
+        <p class="preeln-paradata">Mary Landrieu spent 10 years in the real estate business but her primary occupation was always politics. She was elected to the state Legislature at age 23 and was state treasurer before she was elected to the U.S. Senate in 1996.</p>
+        <p class="preeln-paradata">Landrieu and her husband, Frank, have two children.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">Mary Landrieu has been able to hold onto her position as a moderate Democrat in a state that has turned strongly red and in a nation that has become increasingly polarized.</p>
+        <p class="preeln-paradata">While she votes regularly with President Barack Obama and Democratic Party leaders, she also breaks with the party often on energy issues, pushing for more drilling and development.</p>
+        <p class="preeln-paradata">Her actions following the 2010 BP oil spill in the Gulf of Mexico provided a textbook example of Democratic survival tactics in a state that has been shifting Republican for years and where the oil and gas industry is critical to the local economy.</p>
+        <p class="preeln-paradata">Out front during congressional hearings on the issue &#8212; and part of the chorus bemoaning the responses of the federal government and BP &#8212; Landrieu protested the Obama administration's moratorium on deep-water drilling by blocking Senate approval of Obama's choice of Jacob Lew to head the Office of Management and Budget. Even after the Obama administration lifted the moratorium, Landrieu kept the hold in place while observing how fast drilling resumed.</p>
+        <p class="preeln-paradata">She also successfully pushed for passage of the RESTORE Act in 2012, legislation that will steer billions of dollars in oil spill penalties to Gulf Coast states for coastal restoration.</p>
+        <p class="preeln-paradata">Landrieu is from a family heavily involved in Democratic politics, including her father, Moon Landrieu, a former New Orleans mayor, retired judge and cabinet member in then-President Jimmy Carter's administration. Her brother Mitch was elected mayor of New Orleans in 2010.</p>
+        <p class="preeln-paradata">Landrieu has kept together a base of black and liberal Democratic voters while building support in the business community and reaching out to moderates.</p>
+        <p class="preeln-paradata">Republicans thought they could oust Landrieu in 2008 after Hurricane Katrina scattered her New Orleans base, but she capitalized on voter enthusiasm for then-presidential candidate Obama and picked up backing from voters who supported Republican John McCain for the presidency. McCain carried the state in the general election.</p>
+        <p class="preeln-paradata">Landrieu had support from some local GOP officials who praised her handling of hurricane recovery issues. She received further attention for her ability to win passage of a long-sought Louisiana effort to gain a bigger share of revenue for offshore oil and gas drilling near Louisiana's coast.</p>
+        <p class="preeln-paradata">Landrieu won her third term in 2008 with a larger margin of victory than her two previous races, receiving 52 percent of the vote. She returned to the Senate to work on continued recovery needs and agriculture aid for a state still struggling to rebuild after hurricanes Katrina and Rita in 2005 and Gustav and Ike in 2008.</p>
+        <p class="preeln-paradata">In early 2009, Landrieu was a strong supporter of the approximately $800 billion economic stimulus package. She voted for the 2010 health care reform bill.</p>
+        <p class="preeln-paradata">Conservatives accused her of making an unsavory deal when she voted for a Senate version of the health care bill after winning backing from the Obama administration for a provision giving Louisiana an estimated $300 million in Medicaid money. Conservative talk show hosts Rush Limbaugh and Glenn Beck labeled Landrieu a "prostitute."</p>
+        <p class="preeln-paradata">She made no apologies, saying the state was due the money because Louisiana stood to lose federal reimbursements for Medicaid because aid received after Katrina temporarily inflated per-capita income, which is used to determine Medicaid payments.</p>
+        <p class="preeln-paradata">Landrieu, a Roman Catholic who supports abortion rights, has managed to survive strong anti-abortion sentiment, including a statement from a retired archbishop who said before the 1996 election that voting for her would be a sin.</p>
+        <p class="preeln-paradata">Committee Assignments: Appropriations; Homeland Security and Governmental Affairs; Energy and Natural Resources; Small Business and Entrepreneurship(Chair)</p>
+        <p class="preeln-paradata">American Conservative Union Rating: 10</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: 85</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">Recent winning percentages for office currently held: 52% (2008).</p>
+        <p class="preeln-paradata">(Last updated by Melinda Deslatte on July 31, 2012.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_candidates/LA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

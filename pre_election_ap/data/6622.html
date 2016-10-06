@@ -1,0 +1,340 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/6622.jpg"><div class="preeln-entityname">Edmund Gerald 'Jerry' Brown Jr.</div>
+	  (Dem)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">916-445-2841  (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">510-628-0202 (Main campaign number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://gov.ca.gov/">http://gov.ca.gov/</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">&#160;</span><span class="field"><a href="http://www.jerrybrown.org/">http://www.jerrybrown.org/</a></span>
+</div>
+<a href="../finance/6622.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1938-4-7</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">San Francisco, CA </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">Oakland, CA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Catholic</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">2010</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Democratic</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">Governor</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/CA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">CA</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Incumbent</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2014</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          University of California - Berkeley
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">BA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+<h2 class="preeln-secthead">Graduate education: 
+          Yale University
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">JD</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">Jerry Brown was born and raised in San Francisco. He earned a bachelor's degree from the University of California-Berkley and a law degree from Yale University.</p>
+        <p class="preeln-paradata">His experience in statewide office dates to 1970, when he was elected secretary of state. He won the first of his two terms as governor in 1974, becoming one of California's youngest chief executives at age 36. His father, Pat Brown, was governor from 1959 to 1967.</p>
+        <p class="preeln-paradata">Jerry Brown ran unsuccessfully three times for the Democratic Party's nomination for president and once for the U.S. Senate. He became Oakland mayor in 1998, a post he held until 2006, when he was elected state attorney general.</p>
+        <p class="preeln-paradata">Brown and his wife, Anne Gust, live in Oakland.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">Jerry Brown drew national attention as one of the youngest chief executives when he was elected California governor in 1974. Brown reclaimed the office in 2010, defeating former eBay chief executive Meg Whitman in the general election after promising during his successful campaign to bring his experience to Sacramento to fix the state's persistent budget problems.</p>
+        <p class="preeln-paradata">On the 2010 campaign trail, Brown's key message was that Californians have tested out a political rookie and now need someone with experience in government to help solve the state's fiscal woes. Brown's predecessor, Gov. Arnold Schwarzenegger, was unable to reach a deal with the Legislature to close the state's budget gap, and less than three months after Brown took office California faced a $27 billion deficit.</p>
+        <p class="preeln-paradata">A solution to the state's budget problems remained elusive during the first half of Brown's first term, though it was not for lack of trying. As teacher layoffs continued in 2011 because of budget cuts, he found support among teachers and parents for his proposal that would extend temporary increases in the sales, personal income and vehicle taxes for five years. Lack of Republican support prevented the initiative from going anywhere in the Legislature, but voters will be asked to weigh in on the matter as they face a slate of tax and reform measures on the November 2012 ballot.</p>
+        <p class="preeln-paradata">Another problem cropped up for Brown in early 2011: the state teacher pension was running at a $56 billion shortfall. However, unlike the larger general budget issue, Brown was able to push for a reform bill that, among other changes, increased the retirement age for new workers and capped annual payouts. The measure passed the Legislature in September 2012 and is expected to save taxpayers billions of dollars.</p>
+        <p class="preeln-paradata">Budget problems aside, Brown successfully shepherded several other initiatives though the Legislature.</p>
+        <p class="preeln-paradata">In April 2011, he signed into law a bill requiring that by 2020 California utilities must get one-third of their power from renewable sources, giving the state the most aggressive alternative energy mandate in the U.S.</p>
+        <p class="preeln-paradata">Brown signed a bill in August 2011 making California one of eight states to pass a law designating that all of its Electoral College votes will be awarded to the winner of the national popular vote, no matter which presidential candidate wins the most votes in the state.</p>
+        <p class="preeln-paradata">After riding to Google headquarters in a self-driven car, Brown signed legislation in September 2012 paving the way for driverless cars in California.</p>
+        <p class="preeln-paradata">"Today we're looking at science fiction becoming tomorrow's reality the self-driving car," Brown said. "Anyone who gets inside a car and finds out the car is driving will be a little skittish, but they'll get over it."</p>
+        <p class="preeln-paradata">Brown also remained a proponent of California's high-speed rail plan, even as voters began to sour on it.</p>
+        <p class="preeln-paradata">During Brown's first two terms as California governor &#8212; from 1975 to 1983 &#8212; he gained a reputation as a fiscal moderate, cutting state employee raises and proposing only moderate increases in education spending. He rejected most proposals to raise taxes and declared himself a born-again tax cutter after voters in 1978 adopted Proposition 13, which rolled back and capped property taxes.</p>
+        <p class="preeln-paradata">He championed environmental protection, the development of high-speed rail and mass transit. He earned the nickname "Governor Moonbeam" by Chicago columnist Mike Royko for proposing that California deploy a communications satellite into space. Royko later retracted the nickname.</p>
+        <p class="preeln-paradata">He twice ran for the Democratic presidential nomination while governor &#8212; in 1976 and 1980. He failed to capture the nomination in 1992 against Bill Clinton.</p>
+        <p class="preeln-paradata">Brown briefly left politics in 1982 after losing a U.S. Senate bid against Republican Pete Wilson, who later became governor. Brown studied Buddhism in Japan for six months and ministered to the ill with Mother Theresa in India.</p>
+        <p class="preeln-paradata">Brown re-entered politics in 1989 as chairman of the California Democratic Party, but resigned in 1991 to run for president. He again left political life until 1998 when he ran for mayor of Oakland, where he honed his tough-on-crime credentials for his next job. Brown was elected state attorney general in 2006, where he has used the office to promote his defense of the California global warming laws and spoken out on the state's gay marriage ban.</p>
+        <p class="preeln-paradata">He drew unwanted attention during the 2010 race when he compared Whitman to Nazi propagandist Joseph Goebbels. Brown later apologized to Jewish leaders for the remark and insisted his conversation was an off-record exchange with a journalist.</p>
+        <p class="preeln-paradata">Brown also drew scrutiny during his 2010 campaign for flying on a state plane as attorney general after repeatedly criticizing Whitman for chartering private jets for her campaign travel. At the same time, he has promoted his own use of commercial air travel and highlighted how he got rid of the governor's plane when he served in the statehouse the first time around.</p>
+        <p class="preeln-paradata">American Conservative Union Rating: Not rated</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: Not rated</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">Jerry Brown won his June 2014 primary, he will face Neel Kashkari in November.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on June 12, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_candidates/CA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

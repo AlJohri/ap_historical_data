@@ -1,0 +1,349 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/51423.jpg"><div class="preeln-entityname">Timothy 'Tim' Michael Kaine </div>
+	  (Dem)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">202-224-4024 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">804-359-7100 (Main campaign number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://www.kaine.senate.gov/">http://www.kaine.senate.gov/</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">&#160;</span><span class="field"><a href="http://www.kaineforva.com/">http://www.kaineforva.com/</a></span>
+</div>
+<a href="../finance/51423.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1956-2-26</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">St. Paul, MN </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">Richmond, VA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Roman Catholic</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">2012</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Democratic</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">Senate</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/VA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">VA</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Incumbent</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2018</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          University of Missouri
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">BA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+<h2 class="preeln-secthead">Graduate education: 
+          Harvard Law School
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">JD</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">Tim Kaine was born in St. Paul, Minn., grew up in Overland Park, Kan., and now resides in Richmond, Va. He earned a bachelor's degree from the University of Missouri in 1979.</p>
+        <p class="preeln-paradata">An interest in civil rights inspired him to pursue a career in law. He attended Harvard Law School, but confusion over his faith and career path prompted him to take a year off to work in Honduras, where he ran a small vocational school.</p>
+        <p class="preeln-paradata">Kaine, stunned by the poverty and moved by the community's spiritual dedication in Honduras, returned to Harvard determined to pursue a career that would help those less fortunate. He earned a law degree in 1983.</p>
+        <p class="preeln-paradata">He began working as a lawyer in Richmond in 1984. He served as a member of Richmond City Council, from 1994 to 1998, and as mayor, from 1998 to 2001.</p>
+        <p class="preeln-paradata">He was elected lieutenant governor in 2001 and was elected governor in 2005.</p>
+        <p class="preeln-paradata">Kaine and his wife, Anne Holton, have three children.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">Tim Kaine almost stumbled into politics, but reached elite levels in the Democratic Party nationally with a diverse partisan pedigree.</p>
+        <p class="preeln-paradata">He could have become a Republican. In law school at Harvard University, he met his future wife, Ann, whose father, A. Linwood Holton, was the first Republican to be elected governor of Virginia since Reconstruction.</p>
+        <p class="preeln-paradata">"For me, bipartisanship begins at home," Kaine now says in campaign appearances.</p>
+        <p class="preeln-paradata">Kaine settled in Virginia and got into politics against his father-in-law's advice. He won a Richmond City Council seat in 1994, narrowly defeating an incumbent. Four years later, his fellow council members elected him mayor, making him the first white to win the office with the support of the council's black majority.</p>
+        <p class="preeln-paradata">His entry into statewide politics came early and unexpectedly after state Sen. Emily Couric was diagnosed with pancreatic cancer and asked him to take her place in the 2001 race for lieutenant governor. He won, on the same Democratic ticket as Mark R. Warner, who was elected governor.</p>
+        <p class="preeln-paradata">In 2005, Kaine ran for governor essentially as the little brother of the popular centrist Warner, promising to continue his pro-business, middle-of-the-road, restrained approach to government in Virginia. He easily defeated Republican Attorney General Jerry W. Kilgore.</p>
+        <p class="preeln-paradata">In February 2007, Kaine took what appeared to be a long-shot bet in the 2008 presidential race by backing a charismatic freshman senator from Illinois. On election night 2008, Virginia gave its 13 electoral votes to a Democrat for the first time in 44 years, a victory that helped clinch the presidency for Barack Obama.</p>
+        <p class="preeln-paradata">The day after the election, when asked by reporters what role he might play in an Obama administration, Kaine flatly ruled out heading the Democratic National Committee.</p>
+        <p class="preeln-paradata">Less than two months later, however, he was doing just that, having relented to Obama's direct and repeated appeals.</p>
+        <p class="preeln-paradata">As a gubernatorial candidate, Kaine had promised to bolster spending to ease the chronic traffic gridlock that threatened the vitality of the Washington, D.C., suburbs, Virginia's economic bread basket, and for pre-kindergarten programs.</p>
+        <p class="preeln-paradata">Twice, Kaine convened special legislative sessions to fund transportation initiatives only to have the anti-tax Republican House of Delegates reject them.</p>
+        <p class="preeln-paradata">Most of his single, nonrenewable four-year was defined by events beyond his control.</p>
+        <p class="preeln-paradata">On April 16, 2007, Seung Hui Cho, a heavily armed and profoundly troubled student at Virginia Tech, shot and killed 32 people on the campus, then fatally shot himself. It was the deadliest shooting rampage in U.S. history.</p>
+        <p class="preeln-paradata">Kaine was in Japan on a trade mission at the time. He booked the next flight home, arriving in time to travel aboard Air Force One with President George W. Bush to a memorial at the stunned and grieving Virginia Tech campus.</p>
+        <p class="preeln-paradata">Bleary-eyed, emotional, Kaine buoyed the mourning crowd in Cassell Coliseum and impressed a global television audience.</p>
+        <p class="preeln-paradata">Kaine later convened a blue-ribbon review panel to investigate the massacre and what led to it and recommend reforms to keep it from happening again.</p>
+        <p class="preeln-paradata">The commission found that Cho had slipped through Virginia's porous and ineffective mental health system and that Virginia Tech had been slow to alert its students after the day's first two slayings in a dormitory, hours before the subsequent carnage in a classroom building across campus.</p>
+        <p class="preeln-paradata">Based on the panel's report, Kaine proposed and the General Assembly overwhelmingly adopted reforms and new funding for the state mental health system and strengthened requirements for reporting mentally unstable people to the firearms database.</p>
+        <p class="preeln-paradata">But 2007 was also the year when the slowing economy reduced state revenues. By 2009, Kaine's final year in office, deep cuts were being made to state agencies and the legislature was forced to draw from its "rainy day" emergency reserves.</p>
+        <p class="preeln-paradata">At the same time, Kaine was moonlighting as DNC chairman, spending nights and weekends traveling the nation and appearing on national television defending the initiatives of the Obama White House and a Democratic Congress.</p>
+        <p class="preeln-paradata">Frustrated with legislative inaction on transportation revenues by late 2009, Kaine ordered 19 of Virginia's 42 interstate highway rest areas closed. In the two-year state budget he submitted just weeks before his Republican successor, Bob McDonnell, took office, Kaine proposed a $2 billion annual increase in the state income tax.</p>
+        <p class="preeln-paradata">The cloud under which Kaine exited his office darkened after the Roanoke Times, on Kaine's penultimate day as governor, reported that he had secretly agreed to a deal with Germany to transfer Jens Soering, a former German diplomat's son, to a German prison from Virginia, where he was serving two life sentences after being convicted of stabbing the parents of his former girlfriend. In Germany, he could have been freed after two years.</p>
+        <p class="preeln-paradata">In an Associated Press interview after he left the DNC, Kaine said he felt his decision was justified because it was time for Germany to pick up the tab for Soering's incarceration. When he made the decision, he said, he believed he would never again see his name on an election ballot.</p>
+        <p class="preeln-paradata">In early 2011, though, Democratic Sen. Jim Webb decided not to seek re-election to a second term. At first, Kaine professed little interest in the race, but changed his mind after three months of reflection. He declared his candidacy for Senate in April, resigning as DNC chairman the same day.</p>
+        <p class="preeln-paradata">American Conservative Union Rating: Not rated</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: Not rated</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">Tim Kaine is not up for re-election in 2014.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on June 17, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_candidates/VA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

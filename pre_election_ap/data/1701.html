@@ -1,0 +1,331 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/1701.jpg"><div class="preeln-entityname">John S. McCain III</div>
+	  (Rep)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">202-224-2235 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">602-604-2010 (Main campaign number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://www.mccain.senate.gov/">http://www.mccain.senate.gov/</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">&#160;</span><span class="field"><a href="http://www.johnmccain.com/">http://www.johnmccain.com/</a></span>
+</div>
+<a href="../finance/1701.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1936-8-29</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">Panama Canal Zone  </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">Phoenix, AZ</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Baptist</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">1986</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Republican</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">Senate</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/AZ.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">AZ</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Incumbent</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2016</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          U.S. Naval Academy
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">BS</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">John McCain was born in the Panama Canal Zone and now resides in Phoenix.</p>
+        <p class="preeln-paradata">He is the son and grandson of Navy admirals and spent more than 20 years in the Navy, a quarter of it in a North Vietnamese prisoner-of-war camp.</p>
+        <p class="preeln-paradata">McCain's jet was shot down on Oct. 26, 1967, over Hanoi during a bombing mission. He broke both arms and shattered a shoulder and a knee while ejecting from the aircraft. When he landed, he was pulled from a lake by a North Vietnamese mob and stabbed with bayonets.</p>
+        <p class="preeln-paradata">McCain was beaten repeatedly over the next 5 1/2 years. When his captors learned he was the son of a prominent Navy admiral, they offered to release him early. McCain refused to go along with what he saw as a propaganda ploy, and he insisted that soldiers captured before him leave first.</p>
+        <p class="preeln-paradata">McCain moved to Arizona after retiring from the Navy and in 1982 was elected to Congress. McCain served two terms in the U.S. House before he ran successfully for the Senate in 1986.</p>
+        <p class="preeln-paradata">He was the Republican Party's nominee for president in 2008 but lost in the general election to then-Sen. Barack Obama.</p>
+        <p class="preeln-paradata">McCain and his wife, Cindy, have four children. McCain also has three children from his first marriage.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">John McCain is the incumbent U.S. Senator for Arizona. His next election will be in 2016, when he'll be 80.</p>
+        <p class="preeln-paradata">Since losing the presidential race in 2008 and winning re-election to the Senate in 2010, McCain has spent most of his time working on defense and diplomatic issues, jetting across the world to meet with other national leaders.</p>
+        <p class="preeln-paradata">He's been highly critical of President Barack Obama's international leadership. He strongly opposes automatic cuts to the military budget that will go into affect in January 2013 if a budget deal isn't reached. He voted for the deal in 2011, but has spent much of 2012 trying to organize a bypass to its mandatory defense cuts.</p>
+        <p class="preeln-paradata">He beat back a serious primary challenge in 2010 from former U.S. Rep. J.D. Hayworth, who said McCain can't be trusted to adhere to Republican principles. McCain's victory came at a cost &#8212; he spent $20 million, moved far to the right and cast aside his carefully crafted identity as a maverick willing to buck his party.</p>
+        <p class="preeln-paradata">McCain was once a champion of comprehensive immigration reform that would have allowed illegal immigrants to stay in the country longer and possibly gain citizenship, but has become one of Washington's leading border-security hawks. He regularly decries violence on the border and has advocated the deployment of 3,000 National Guard troops to the region. He says he's still committed to immigration reform but not until the flow of illegal immigrants is curtailed.</p>
+        <p class="preeln-paradata">McCain has emerged as one of the president's leading critics in Congress since losing the presidency to Obama in 2008. He says Obama hasn't done enough to secure the border, and he's blasted the administration's decision to challenge a controversial Arizona immigration law in federal court.</p>
+        <p class="preeln-paradata">McCain has also opposed the health care and financial system reforms, as well as the president's economic stimulus packages.</p>
+        <p class="preeln-paradata">He's backed the administration on plans to draw down troops in Iraq and to revamp military contracting, but he's scolded Obama for setting a date for American troops to begin withdrawing from Afghanistan.</p>
+        <p class="preeln-paradata">McCain picked former Alaska Gov. Sarah Palin as his running mate in his second bid for the presidency in 2008. Palin is popular among conservative Republican voters, some of whom criticized McCain in the past for his views on immigration, campaign finance and other issues. Palin campaigned in March 2010 with McCain in Arizona to boost his Senate re-election bid and lent her clout to his conservative credentials.</p>
+        <p class="preeln-paradata">After his 2000 bid for the presidency, McCain became one of the Senate's most high-profile members.</p>
+        <p class="preeln-paradata">He helped create a coalition of Republican and Democratic senators, known as the Gang of 14, who pulled the Senate back from the brink of a disastrous blowup over judicial nominations.</p>
+        <p class="preeln-paradata">He was a member of the conference committee that crafted the Aviation and Transportation Security Act, resulting in the creation of the Transportation Security Administration.</p>
+        <p class="preeln-paradata">McCain also co-sponsored legislation that created an independent commission to investigate the Sept. 11 terrorist attacks. He co-sponsored the joint resolution to authorize the use of force against Iraq, and became the most vocal Senate advocate of President George W. Bush's 2007 troop surge strategy.</p>
+        <p class="preeln-paradata">McCain's Senate tenure has not been without scandal. He was one of several senators called before the Senate Ethics Committee in 1991 to answer allegations that they had improperly intervened on savings and loan financier Charles Keating's behalf with federal banking regulators. McCain later returned $112,000 in campaign loans he had received from Keating, who was convicted of securities fraud.</p>
+        <p class="preeln-paradata">McCain went on to take charge of a movement to change campaign finance laws.</p>
+        <p class="preeln-paradata">He achieved a significant legislative victory in December 2005 when Bush signed his detainee amendment into law. The amendment prohibits cruel, inhumane and degrading treatment of foreign suspects captured in the war on terror. The amendment also grants CIA and civilian interrogators the same legal rights as military interrogators who break interrogation guidelines.</p>
+        <p class="preeln-paradata">Committee Assignments: Armed Services; Homeland Security and Governmental Affairs; Indian Affairs; Health, Education, Labor, and Pensions</p>
+        <p class="preeln-paradata">American Conservative Union Rating: 80</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: 15</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">John McCain is not up for re-election in 2014.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on September 5, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_candidates/AZ.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

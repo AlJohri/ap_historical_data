@@ -1,0 +1,342 @@
+<style type="text/css">
+/* wrapper for everything */
+div.preeln-content {
+  padding: 0px 1em 0px 1em;
+  margin: 0px;
+  font-family: Helvetica, sans-serif;
+}
+
+/* picture with caption */
+.preeln-entitypic {
+  float: left;
+  margin: 1em 1em 1em 0em;
+  /* setting the width here is dangerous but lets the caption wrap at the right edge of the image */
+  width: 100px;
+}
+
+/* name of whatever object we're looking at */
+.preeln-entityname {
+  font-weight: bold;
+}
+
+/* data flowed like a paragraph */
+.preeln-paradata {
+  margin: 2ex 0em 2ex 0em;
+}
+
+/* section heading */
+.preeln-secthead {
+  padding-top: 1ex;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-size: 120%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+h1.preeln-secthead {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h1.preeln-secthead-topdir {
+  font-size: 16px;
+  color: #993333;
+  padding-left: 5px;
+  padding-bottom: 6px;
+  background: url("http://pre-election.ap.org/images/no_title.gif") no-repeat left bottom;
+}
+h2.preeln-secthead {
+  font-size: 120%;
+}
+h3.preeln-secthead {
+  font-size: 110%;
+}
+
+.preeln-timestamp { 
+  font-size: 80%;
+}
+.preeln-strong { 
+  font-weight: bold;
+}
+
+p.preeln-divider { 
+  clear: both;
+  margin: 1em;
+}
+
+/* candidates summary item, repeated per state or district */
+.preeln-candidate-list-elem { 
+  clear: left;
+}
+
+/* on the candidate summary, we want to keep the text flowing in one "column" */
+.preeln-candidate-summary {
+  margin: 1em 0ex 2em 120px;
+  /* account for entitypic top margin */
+  padding-top: 0.8em;
+}
+
+/*
+ * div/span stylings for basic 'label: field' output
+ */
+div.preeln-labelset {
+  margin: 3px 3px 3px 0px;
+}
+div.preeln-labelset .label {
+  float: left;
+  /* fixme: this doesn't degrade very well if label text is too wide */
+  width: 6em;
+  text-transform: capitalize;
+}
+/* special case for wide field labels */
+div.preeln-labelset .widelabel {
+  float: left;
+  width: 10em;
+  text-transform: capitalize;
+}
+div.preeln-labelset .field {
+  text-align: left;
+  padding-left: 1em;
+  /* another technique is to float this field as well; it will float
+     up to the level of the label if there's room, horizontally, so you have
+     to set a width; you'll also have to mess with preeln-labelset padding or margins  */
+}
+
+/*
+ * basic field/label tabular output
+ */
+table.preeln tr.odd {
+  background: #EEEEEE;
+}
+table.preeln tr td.label {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 0.5ex;
+}
+table.preeln tr td.field {
+  text-transform: capitalize;
+  padding: 0.5ex 3ex 0.5ex 3ex;
+  text-align: right;
+}
+table.preeln tr td { 
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  font-size: 90%;
+}
+table.preeln tr th.pacname {
+  text-align: left;
+}
+table.preeln tr th.pacdate {
+  text-align: center;
+}
+table.preeln tr th.pacamt, table.preeln tr td.pacdate, table.preeln tr td.pacamt {
+  text-align: right;
+}
+
+/*
+ * navigational button list
+ */
+div.preeln-navbutton {
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist { 
+  /* buttons are 152x33; allow room for 2 columns */
+  width: 340px;
+  margin-bottom: 1em;
+}
+ul.preeln-navbuttonlist li { 
+  width: 170px;
+  float: left;
+  list-style-type: none;
+}
+br.preeln-navbuttonlist { 
+  clear: left;
+  margin: 1em;
+}
+
+/*
+ * link found on footer pages
+ */
+.preeln-footlink {
+  text-align: right;
+  font-weight: bold;
+}
+.preeln-footlink .bracket {
+  color: gray;
+  padding: 0px 3px 0px 3px;
+}
+.preeln-footlink a:visited {
+  text-decoration: none;
+  color: #003366;
+}
+.preeln-footlink a:hover {
+  text-decoration: underline;
+  color: #003366;
+}
+
+/*
+ * this stuff should be in nn_style.css; here's what's there now:
+ * .storylink: { color: #003366; font: bold 12px Verdana, Geneva, Arial, Helvetica, sans-serif }
+ * A {text-decoration: none; color: #000066}
+ */
+.storylink a:link, .ap-headline-1 a:link, .ap-headline-2 a:link {
+  color: #003366;
+  text-decoration: none;
+}
+.storylink a:visited, .ap-headline-1 a:visited, .ap-headline-2 a:visited {
+  color: #000066;
+  text-decoration: none;
+}
+.storylink a:hover, .ap-headline-1 a:hover, .ap-headline-2 a:hover {
+  color: #003366;
+  text-decoration: underline;
+}
+
+/*
+ * votes, calendar, poll tables
+ */
+table.preeln-votes tr td {
+/*  padding: 0 0.5ex 0 0.5ex; */
+}
+table.preeln-votes tr.even, table.preeln-cal tr.even, table.preeln-poll tr.even {
+  background: #EEEEEE;
+}
+table.preeln-votes tr.head td {
+  font-weight: bold;
+  border-bottom: 1px dotted black;
+}
+table.preeln-votes tr td.votes, table.preeln-votes tr td.percent {
+  text-align: right;
+}
+table.preeln-votes tr.election td {
+  padding-top: 2ex;
+  font-size: 120%;
+  font-weight: bold;
+  color: gray;
+}
+table.preeln-cal tr th, table.preeln-poll tr th {
+  font-weight: normal;
+  border-bottom: 1px dotted black;
+  text-align: left;
+}
+table.preeln-cal tr td { 
+  padding: 0 0.1ex 0 0.1ex;
+}
+table.preeln-cal tr td.state {
+  text-align: left;  
+}
+</style><div class="preeln-content">
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<h1 class="preeln-secthead">Candidates</h1>
+<div class="preeln-entitypic">
+<img src="http://pre-election.ap.org/photos/39527.jpg"><div class="preeln-entityname">Robert 'Bob' Patrick Casey Jr.</div>
+	  (Dem)
+	</div>
+<h2 class="preeln-secthead">Contact Information</h2>
+<div class="preeln-labelset">
+<span class="widelabel">Telephone:</span><span class="field">202-224-6324 (Main phone number)</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Fax:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">Website:</span><span class="field"><a href="http://casey.senate.gov/">http://casey.senate.gov/</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="widelabel">&#160;</span><span class="field"><a href="http://bobcasey.com/">http://bobcasey.com/</a></span>
+</div>
+<a href="../finance/39527.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><img src="http://pre-election.ap.org/images/campaignfinance_button.gif" border="0" alt="Campaign finance"></a><h2 class="preeln-secthead" style="clear: left">Candidate Background</h2>
+<div class="preeln-labelset">
+<span class="label">Birthdate:</span><span class="field">1960-4-13</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Birth place:</span><span class="field">Scranton, PA </span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Residence:</span><span class="field">Scanton, PA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Religion:</span><span class="field">Catholic</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">First&#160;Elected:</span><span class="field">2006</span>
+</div>
+<h2 class="preeln-secthead" style="clear: both">Candidacy</h2>
+<div class="preeln-labelset">
+<span class="label">Party:</span><span class="field">Democratic</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Office:</span><span class="field">Senate</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">State:</span><span class="field"><a href="../state_candidates/PA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__">PA</a></span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Status:</span><span class="field">Incumbent</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Next&#160;Election:</span><span class="field">2018</span>
+</div>
+<h2 class="preeln-secthead">Undergraduate education: 
+          College of the Holy Cross
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">BA</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+<h2 class="preeln-secthead">Graduate education: 
+          Catholic University
+        </h2>
+<div class="preeln-labelset">
+<span class="label">Major:</span><span class="field">&#160;</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Degree:</span><span class="field">JD</span>
+</div>
+<div class="preeln-labelset">
+<span class="label">Location:</span><span class="field">&#160;</span>
+</div>
+        <p class="preeln-paradata">Bob Casey was born in Scranton, Pa., where he now resides. He earned a bachelor's degree at College of the Holy Cross in 1982 and a law degree at Catholic University of America in 1988.</p>
+        <p class="preeln-paradata">Casey is the oldest son of the late Gov. Robert P. Casey.</p>
+        <p class="preeln-paradata">The younger Casey worked in private law practice from 1990 to 1996. He was Pennsylvania's auditor general from 1997 to 2005. He then served as state treasurer until winning election to the U.S. Senate in 2006.</p>
+        <p class="preeln-paradata">He ran for governor in 2002, but lost in the Democratic primary to Ed Rendell, a former Philadelphia mayor who was elected in the general election.</p>
+        <p class="preeln-paradata">Casey and his wife, Terese, have four children.</p>
+      <h2 class="preeln-secthead">Profile</h2>
+        <p class="preeln-paradata">Bob Casey has maintained high visibility in his 2012 bid for re-election to the Senate, despite not being on the campaign trail.</p>
+        <p class="preeln-paradata">He helped craft language in the 2010 health care reform bill that gave anti-abortion Democrats the political cover they needed to vote for the bill. He also pressed for tougher environmental regulation of natural gas drilling and was one of 18 senators who called for lifting a lifetime ban on donating blood for any man who has had gay sex since 1977.</p>
+        <p class="preeln-paradata">In the 2012 election, Casey faces Republican nominee Tom Smith, a former mining industry executive and newcomer to statewide politics who spent several millions dollars of his own money to win a five-way GOP Senate primary.</p>
+        <p class="preeln-paradata">In an AP interview in July 2012, Casey said he was undecided about whether to support President Barack Obama and top Democrats on a plan to allow tax rates to rise for people making at least $200,000 or families making $250,000. As members of Congress gird for a heated post-election showdown over federal taxes and spending, Casey said he preferred a plan that would limit the increases to people making $1 million or more.</p>
+        <p class="preeln-paradata">"I think you could probably get consensus on that (with Republicans), which is ultimately what we're going to need," he said.</p>
+        <p class="preeln-paradata">Casey's surprise endorsement of then-Sen. Obama in Pennsylvania's contentious Democratic presidential primary in 2008 catapulted the freshman senator into the national spotlight. The gamble paid off, giving him exposure as he was seen bowling and making diner stops with Obama.</p>
+        <p class="preeln-paradata">Casey was given a primetime speech at the 2008 Democratic National Convention in which he talked about his opposition to abortion &#8212; an opportunity denied to his father, the late Pennsylvania Gov. Robert P. Casey, 16 years earlier.</p>
+        <p class="preeln-paradata">"Barack Obama and I have an honest disagreement on the issue of abortion," Casey said. "But the fact that I'm speaking here tonight is testament to Barack's ability to show respect for the views of people who may disagree with him."</p>
+        <p class="preeln-paradata">Casey played basketball with Obama on Election Day in Chicago, and later scored an invite to the White House to watch the Super Bowl.</p>
+        <p class="preeln-paradata">He has focused in the Senate on domestic issues such as strengthening the State Children's Health Insurance Program and funding nutrition programs. He's advocated for measures to combat global warming and sought aid for dairy farmers and growers of specialty crops.</p>
+        <p class="preeln-paradata">Casey opposes federal funding for embryonic stem cell research and abortion, although he does support federal funding for contraception and making the so-called morning after pill available to adults.</p>
+        <p class="preeln-paradata">He has slowly worked to bolster his foreign relations credentials. In February 2009, he was named chairman of the Senate Foreign Relations' Near Eastern and South and Central Asian Affairs subcommittee. The subcommittee has since taken on issues such as the increased violence in Sri Lanka and the settlement of displaced Iraqis.</p>
+        <p class="preeln-paradata">Casey voted for the 2009 approximately $800 billion economic stimulus package, the 2010 health care reform bill, the immigration bill known as the DREAM Act, the bailout of U.S. automakers, the overhaul of financial services regulations and the repeal of the military's ban on gays serving openly. He nonetheless casts himself as a moderate who eschews partisan fights and is willing to vote against Obama and the Democratic Party.</p>
+        <p class="preeln-paradata">His focus, he said, has been on tax bills that encourage investment and hiring &#8212; he hasn't always won GOP support &#8212; while trying to meet Republicans in the middle.</p>
+        <p class="preeln-paradata">Casey took a stand on a couple hot-button state issues at a luncheon in July 2012, supporting the NCAA sanctions against Penn State's football team in the aftermath of the Jerry Sandusky child sexual abuse scandal and opposing a new state law that requires all voters to show a photo ID in order for their ballots to count.</p>
+        <p class="preeln-paradata">National Democratic Party leaders persuaded Casey to run in 2006 against Republican Sen. Rick Santorum, then the No. 3 Senate Republican leader. At the time, Casey was Pennsylvania's state treasurer.</p>
+        <p class="preeln-paradata">The national Democratic Party's endorsement earned the ire of abortion rights advocates, but party leaders were rightly convinced that by choosing a more conservative candidate, they could tap into Santorum's base.</p>
+        <p class="preeln-paradata">Casey worked throughout the campaign to portray himself as a uniter. He connected with Santorum's traditional base of religious voters by talking openly about his faith and privately engaging religious leaders around the state.</p>
+        <p class="preeln-paradata">"I think what people are most frustrated by in Washington, second only to the inability to deal with ... basic issues, is the sense that it's all about partisanship and ideology, and there's no sense that people are working together," Casey said.</p>
+        <p class="preeln-paradata">Casey ousted Santorum in a 17-point landslide.</p>
+        <p class="preeln-paradata">Committee Assignments: Foreign Relations; Agriculture, Nutrition, and Forestry; Joint Economic(Chair); Special Aging; Health, Education, Labor, and Pensions</p>
+        <p class="preeln-paradata">American Conservative Union Rating: 0</p>
+        <p class="preeln-paradata">Americans for Democratic Action Rating: 95</p>
+      <h2 class="preeln-secthead">Campaigns</h2>
+        <p class="preeln-paradata">Bob Casey is not up for re-election in 2014.</p>
+        <p class="preeln-paradata">(Last updated by The Associated Press on June 10, 2014.)</p>
+      <p class="preeln-divider"><img src="http://pre-election.ap.org/images/horiz_divider.gif" width="470" height="3"></p>
+<div class="preeln-footlink"><a href="../state_candidates/PA.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>candidates in this state<span class="bracket">]</span></a></div>
+<div class="preeln-footlink"><a href="../index.html?SITE=__SITE__&amp;SECTION=__SECTION__&amp;TEMPLATE=__TEMPLATE__"><span class="bracket">[</span>US political map<span class="bracket">]</span></a></div>
+<div class="preeln-timestamp">Last updated 12:16am October 5, 2016</div>
+</div>

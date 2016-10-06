@@ -1,0 +1,7 @@
+| ra_number  |of_number  |se_number  |race_id|office_id|ra_num_winners|rt_number  |rt_party_name|of_description  |ot_number  |ot_name |se_name |of_scope|race_order |el_date |ra_uncontested|ra_tabulate|st_postal|
+|  28213|  27325|  0|D  |P| 1|  1|Dem  ||  1|President   ||S   |109|20080603| 0|  1|MT   |
+|  28219|  27325|  0|R  |P| 1|  2|GOP  ||  1|President   ||S   |111|20080603| 0|  1|MT   |
+|  33748|  32585|  0|R  |P| 1|  2|GOP  ||  1|President   ||S   |168|20080603| 0|  1|NM   |
+|  42208|  42000|  0|R  |P| 1|  2|GOP  ||  1|President   ||S   |130|20080603| 0|  1|SD   |
+|  42231|  42000|  0|D  |P| 1|  1|Dem  ||  1|President   ||S   |120|20080603| 0|  1|SD   |
+
