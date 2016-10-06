@@ -5,7 +5,7 @@ Collection of publically available sources of AP data, particularly politician i
 ## Output
 
 - pre_election_ap
-	- [pol_ids.txt](./pre_election_ap/data/pol_ids.txt)
+	- [pol_ids.csv](./pre_election_ap/data/pol_ids.csv)
 
 ## Sources
 
